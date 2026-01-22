@@ -2,8 +2,9 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import { Button } from '@/components/ui/button'
 import { ArrowLeft } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 import { getProfileBySlug } from '@/data/apexProfiles'
 import apexLogo from '@/assets/apex-magazine-logo.png'
 
@@ -12,7 +13,6 @@ interface ApexProfileProps {
 }
 
 const ApexProfile = ({ slug }: ApexProfileProps) => {
-  console.log(slug)
   const profile = slug ? getProfileBySlug(slug) : undefined
 
   if (!profile) {
@@ -40,10 +40,8 @@ const ApexProfile = ({ slug }: ApexProfileProps) => {
   return (
     <>
       <div className='min-h-screen bg-white'>
-        {/* Hero Section */}
         <section className='bg-apex-bg pt-32 pb-16 relative overflow-hidden'>
           <div className='container mx-auto px-6'>
-            {/* Breadcrumb */}
             <Link
               href='/resources/apex'
               className='inline-flex items-center gap-2 text-apex-accent hover:text-apex-accent-warm transition-colors mb-8'
@@ -53,7 +51,6 @@ const ApexProfile = ({ slug }: ApexProfileProps) => {
             </Link>
 
             <div className='grid md:grid-cols-2 gap-12 items-center'>
-              {/* Image */}
               <div className='relative'>
                 <Image
                   src={profile.image}
@@ -64,7 +61,6 @@ const ApexProfile = ({ slug }: ApexProfileProps) => {
                 />
               </div>
 
-              {/* Content */}
               <div>
                 <Image
                   src={apexLogo}
@@ -89,15 +85,12 @@ const ApexProfile = ({ slug }: ApexProfileProps) => {
           </div>
         </section>
 
-        {/* Content Section */}
         <section className='py-16 md:py-24'>
           <div className='container mx-auto px-6 max-w-4xl'>
-            {/* Intro */}
             <p className='text-lg md:text-xl text-gray-700 leading-relaxed mb-12 border-l-4 border-apex-accent pl-6'>
               {profile.intro}
             </p>
 
-            {/* Sections */}
             {profile.sections.map((section, index) => (
               <div
                 key={index}
@@ -117,7 +110,6 @@ const ApexProfile = ({ slug }: ApexProfileProps) => {
               </div>
             ))}
 
-            {/* CTA */}
             <div className='mt-16 p-8 bg-gray-50 rounded-2xl text-center'>
               <h3 className='text-2xl font-bold text-gray-900 mb-4'>
                 Interested to share your story?

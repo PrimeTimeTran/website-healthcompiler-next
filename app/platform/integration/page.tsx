@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
-import { toast } from '@/hooks/use-toast'
 import { IntegrationScene3D } from '@/components/integration/IntegrationScene3D'
 
 const Integration = () => {
@@ -12,10 +11,6 @@ const Integration = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     if (email) {
-      toast({
-        title: 'Request submitted!',
-        description: "We'll be in touch about building your integration.",
-      })
       setEmail('')
     }
   }
