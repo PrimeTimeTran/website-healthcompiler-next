@@ -325,7 +325,7 @@ export const Header = () => {
               onMouseLeave={handleMouseLeave}
             >
               <Link
-                href='/who-we-serve'
+                href='#'
                 className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-foreground py-2 ${
                   pathname === '/who-we-serve'
                     ? 'text-foreground'
@@ -378,7 +378,7 @@ export const Header = () => {
               onMouseLeave={handleMouseLeave}
             >
               <Link
-                href='/resources'
+                href='#'
                 className={`flex items-center gap-1.5 text-[15px] font-medium transition-colors hover:text-foreground py-2 ${
                   pathname === '/resources'
                     ? 'text-foreground'

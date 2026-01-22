@@ -2,33 +2,46 @@ import { ReactNode } from 'react'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
-import { Header } from './Header'
-import { Footer } from './Footer'
+import { Header } from '../components/layout/Header'
+import { Footer } from '../components/layout/Footer'
 
-interface LayoutProps {
+interface RootLayoutProps {
   children: ReactNode
 }
 
-const RootLayout = ({ children }: LayoutProps) => {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html
       lang='en'
       suppressHydrationWarning
     >
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                const theme = localStorage.getItem('theme') || 'light';
+                if (theme === 'dark') {
+                  document.documentElement.classList.add('dark');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              } catch (e) {}
+            `,
+          }}
+        />
         <ThemeProvider
           attribute='class'
-          defaultTheme='system'
-          enableSystem
+          storageKey='theme'
+          defaultTheme='light'
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Header />
-          <main className='min-h-screen pt-20'>{children}</main>
+          <main className='min-h-screen'>{children}</main>
           <Footer />
         </ThemeProvider>
       </body>
     </html>
   )
 }
-
-export default RootLayout
