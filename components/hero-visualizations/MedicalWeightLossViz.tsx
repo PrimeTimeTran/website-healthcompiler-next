@@ -1,5 +1,12 @@
 import { useState, useEffect } from 'react'
-import { Heart, Users, TrendingUp, Activity, Target, CheckCircle } from 'lucide-react'
+import {
+  Heart,
+  Users,
+  TrendingUp,
+  Activity,
+  Target,
+  CheckCircle,
+} from 'lucide-react'
 
 const MedicalWeightLossViz = () => {
   const [activeMetric, setActiveMetric] = useState(0)
@@ -25,15 +32,17 @@ const MedicalWeightLossViz = () => {
         <div className='absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse' />
 
         <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
+          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
 
           <div className='relative space-y-4'>
             <div className='flex items-center gap-3'>
-              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+              <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
                 <Heart className='w-6 h-6 text-white' />
               </div>
               <div>
-                <div className='text-sm font-semibold text-foreground'>Long-Term</div>
+                <div className='text-sm font-semibold text-foreground'>
+                  Long-Term
+                </div>
                 <div className='text-xs text-muted-foreground'>Progress</div>
               </div>
             </div>
@@ -77,7 +86,9 @@ const MedicalWeightLossViz = () => {
           >
             <div
               className={`w-[110px] px-3 py-3 rounded-xl border backdrop-blur-sm transition-all duration-500 ${
-                isActive ? 'bg-white shadow-lg border-primary/30' : 'bg-white/80 border-border/50'
+                isActive
+                  ? 'bg-white shadow-lg border-primary/30'
+                  : 'bg-white/80 border-border/50'
               }`}
               style={{
                 boxShadow: isActive ? `0 0 25px ${metric.color}40` : 'none',
@@ -88,9 +99,14 @@ const MedicalWeightLossViz = () => {
                   className='w-8 h-8 rounded-lg flex items-center justify-center'
                   style={{ backgroundColor: `${metric.color}15` }}
                 >
-                  <Icon className='w-4 h-4' style={{ color: metric.color }} />
+                  <Icon
+                    className='w-4 h-4'
+                    style={{ color: metric.color }}
+                  />
                 </div>
-                <span className='text-xs font-medium text-foreground'>{metric.label}</span>
+                <span className='text-xs font-medium text-foreground'>
+                  {metric.label}
+                </span>
               </div>
               <div className='flex items-center gap-1'>
                 <TrendingUp className='w-3 h-3 text-green-500' />
@@ -106,13 +122,36 @@ const MedicalWeightLossViz = () => {
       {/* Connection Lines */}
       <svg className='absolute inset-0 w-full h-full pointer-events-none'>
         <defs>
-          <linearGradient id='weightLossGrad' x1='0%' y1='0%' x2='100%' y2='0%'>
-            <stop offset='0%' stopColor='#E94E87' stopOpacity='0.2' />
-            <stop offset='50%' stopColor='#E94E87' stopOpacity='0.5' />
-            <stop offset='100%' stopColor='#E94E87' stopOpacity='0.2' />
+          <linearGradient
+            id='weightLossGrad'
+            x1='0%'
+            y1='0%'
+            x2='100%'
+            y2='0%'
+          >
+            <stop
+              offset='0%'
+              stopColor='#E94E87'
+              stopOpacity='0.2'
+            />
+            <stop
+              offset='50%'
+              stopColor='#E94E87'
+              stopOpacity='0.5'
+            />
+            <stop
+              offset='100%'
+              stopColor='#E94E87'
+              stopOpacity='0.2'
+            />
           </linearGradient>
         </defs>
-        {[{ x: -125, y: -60 }, { x: 125, y: -60 }, { x: -125, y: 60 }, { x: 125, y: 60 }].map((pos, idx) => (
+        {[
+          { x: -125, y: -60 },
+          { x: 125, y: -60 },
+          { x: -125, y: 60 },
+          { x: 125, y: 60 },
+        ].map((pos, idx) => (
           <line
             key={idx}
             x1='50%'

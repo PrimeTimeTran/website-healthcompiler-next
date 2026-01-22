@@ -327,7 +327,7 @@ const Payors = () => {
                   key={index}
                   className='bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-shadow'
                 >
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6'>
+                  <div className='w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6'>
                     <Icon className='w-7 h-7 text-primary' />
                   </div>
                   <h3 className='text-xl font-semibold text-foreground mb-3'>
@@ -385,7 +385,7 @@ const Payors = () => {
             </div>
 
             <div className='relative'>
-              <div className='bg-gradient-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 border border-border'>
+              <div className='bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 border border-border'>
                 <div className='bg-white rounded-xl p-6 shadow-sm border border-border mb-4'>
                   <div className='flex items-center justify-between mb-4'>
                     <span className='text-sm font-medium text-muted-foreground'>
@@ -453,7 +453,7 @@ const Payors = () => {
                   key={index}
                   className='bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow'
                 >
-                  <div className='w-12 h-12 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4'>
+                  <div className='w-12 h-12 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4'>
                     <Icon className='w-6 h-6 text-primary' />
                   </div>
                   <p className='font-medium text-foreground'>{metric.label}</p>
@@ -492,7 +492,7 @@ const Payors = () => {
             </div>
 
             <div className='relative'>
-              <div className='bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-border'>
+              <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-border'>
                 <div className='grid grid-cols-2 gap-4'>
                   <div className='bg-white rounded-xl p-5 border border-border'>
                     <p className='text-2xl font-bold text-foreground mb-1'>

@@ -1,11 +1,12 @@
-import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { buttonVariants } from '@/components/ui/button'
+import { ArrowRight } from 'lucide-react'
+
 import { cn } from '@/lib/utils'
+import { buttonVariants } from '@/components/ui/button'
 
 export const PlatformCTASection = () => {
   return (
-    <section className='py-24 lg:py-32 bg-gradient-to-br from-foreground via-foreground to-foreground/95 overflow-hidden'>
+    <section className='py-24 lg:py-32 bg-linear-to-br from-foreground via-foreground to-foreground/95 overflow-hidden'>
       <div className='container mx-auto px-6'>
         <div className='max-w-3xl mx-auto text-center'>
           <h2 className='text-3xl lg:text-4xl xl:text-5xl font-bold text-background leading-tight mb-6'>

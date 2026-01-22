@@ -252,7 +252,7 @@ const CapabilitiesContent = () => {
 
   return (
     <>
-      <section className='section-padding bg-gradient-to-b from-background to-background-secondary'>
+      <section className='section-padding bg-linear-to-b from-background to-background-secondary'>
         <div className='container-tight mx-auto text-center'>
           <p className='text-accent font-medium text-sm uppercase tracking-widest mb-4'>
             Our Capabilities

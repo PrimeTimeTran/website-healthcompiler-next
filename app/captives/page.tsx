@@ -212,7 +212,7 @@ const Captives = () => {
                 key={index}
                 className='bg-card border border-border rounded-xl p-8 hover:shadow-lg transition-shadow'
               >
-                <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6'>
+                <div className='w-14 h-14 rounded-xl bg-linear-to-br from-primary/20 to-accent/20 flex items-center justify-center mb-6'>
                   <capability.icon className='w-7 h-7 text-primary' />
                 </div>
                 <h3 className='text-xl font-semibold text-foreground mb-3'>
@@ -395,7 +395,7 @@ const Captives = () => {
       </section>
 
       {/* Final CTA */}
-      <section className='py-20 bg-gradient-to-br from-primary/5 via-background to-accent/5'>
+      <section className='py-20 bg-linear-to-br from-primary/5 via-background to-accent/5'>
         <div className='container mx-auto px-6 text-center'>
           <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
             Bring clarity and control to pooled self-funded risk

@@ -24,7 +24,7 @@ const whitepapers = [
 const Whitepaper = () => {
   return (
     <>
-      <section className='relative py-16 md:py-24 bg-gradient-to-br from-primary/5 to-secondary/10'>
+      <section className='relative py-16 md:py-24 bg-linear-to-br from-primary/5 to-secondary/10'>
         <div className='container mx-auto px-4 text-center'>
           <p className='text-primary font-medium mb-4'>Whitepaper</p>
           <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-foreground'>

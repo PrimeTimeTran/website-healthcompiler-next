@@ -83,7 +83,7 @@ const DirectPrimaryCareGuide = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
+      <section className='relative bg-linear-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent' />
         <div className='container mx-auto px-4 md:px-6 relative'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -113,7 +113,7 @@ const DirectPrimaryCareGuide = () => {
             </div>
             <div className='slide-up stagger-2'>
               <div className='relative'>
-                <div className='absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
+                <div className='absolute -inset-4 bg-linear-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
                 <Image
                   src='https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/How-to-DPC-whitepaper-thumbnail-1920w.png'
                   alt='Direct Primary Care Guide'
@@ -281,7 +281,7 @@ const DirectPrimaryCareGuide = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className='bg-gradient-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
+                className='bg-linear-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
               >
                 <item.icon className='h-8 w-8 text-primary mb-4' />
                 <h4 className='text-lg font-bold text-foreground mb-2'>

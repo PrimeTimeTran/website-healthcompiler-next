@@ -1,6 +1,6 @@
-import { ArrowRight, Check } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
+import { ArrowRight, Check } from 'lucide-react'
 
 const dataInputs = [
   'Claims Data',
@@ -115,7 +115,7 @@ export const DAPFlowSection = ({
   }, [flowPhase])
 
   return (
-    <section className='py-16 md:py-24 bg-gradient-to-b from-secondary/50 to-background relative overflow-hidden'>
+    <section className='py-16 md:py-24 bg-linear-to-b from-secondary/50 to-background relative overflow-hidden'>
       {/* Enhanced CSS Animations */}
       <style>{`
         @keyframes flowRight {
@@ -329,7 +329,7 @@ export const DAPFlowSection = ({
                   key={idx}
                   className={`relative rounded-2xl p-5 min-h-[180px] shadow-lg transition-all duration-500 z-10 ${
                     isHighlight
-                      ? 'bg-gradient-to-br from-[#E94E87] to-[#F97316] text-white scale-[1.02]'
+                      ? 'bg-linear-to-br from-[#E94E87] to-[#F97316] text-white scale-[1.02]'
                       : 'bg-card text-card-foreground border border-border'
                   } ${isProcessing ? 'ring-2 ring-[#E94E87] ring-offset-2' : ''}`}
                 >
@@ -440,10 +440,10 @@ export const DAPFlowSection = ({
                     <span
                       className={`w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5 transition-all duration-300 ${
                         isActive
-                          ? 'bg-gradient-to-br from-[#E94E87] to-[#F97316] scale-110 shadow-lg shadow-[#E94E87]/30'
+                          ? 'bg-linear-to-br from-[#E94E87] to-[#F97316] scale-110 shadow-lg shadow-[#E94E87]/30'
                           : isPast
-                            ? 'bg-gradient-to-br from-[#E94E87]/30 to-[#F97316]/30 border border-[#E94E87]/50'
-                            : 'bg-gradient-to-br from-[#E94E87]/10 to-[#F97316]/10 border border-[#E94E87]/20'
+                            ? 'bg-linear-to-br from-[#E94E87]/30 to-[#F97316]/30 border border-[#E94E87]/50'
+                            : 'bg-linear-to-br from-[#E94E87]/10 to-[#F97316]/10 border border-[#E94E87]/20'
                       }`}
                     >
                       <Check

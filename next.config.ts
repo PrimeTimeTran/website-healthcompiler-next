@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next'
 
-const nextConfig: NextConfig = {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const nextConfig: NextConfig & { turbopack?: any } = {
   images: {
     remotePatterns: [
       {
@@ -8,6 +9,9 @@ const nextConfig: NextConfig = {
         hostname: 'lirp.cdn-website.com',
       },
     ],
+  },
+  turbopack: {
+    root: process.cwd(),
   },
 }
 

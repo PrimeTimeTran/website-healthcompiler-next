@@ -1,7 +1,7 @@
-import { Canvas, useFrame } from '@react-three/fiber'
+import * as THREE from 'three'
 import { Html } from '@react-three/drei'
 import { useRef, useMemo, Suspense } from 'react'
-import * as THREE from 'three'
+import { Canvas, useFrame } from '@react-three/fiber'
 
 const integrations = [
   { name: 'Stripe', x: 48, y: 8, highlighted: false },
@@ -46,7 +46,7 @@ const integrations = [
 const to3DPosition = (
   x: number,
   y: number,
-  index: number
+  index: number,
 ): [number, number, number] => {
   const xPos = ((x - 50) / 50) * 5
   const yPos = ((50 - y) / 50) * 3.5
@@ -64,7 +64,7 @@ const IntegrationCard = ({
 }) => {
   const position = useMemo(
     () => to3DPosition(integration.x, integration.y, index),
-    [integration.x, integration.y, index]
+    [integration.x, integration.y, index],
   )
 
   return (
@@ -112,7 +112,7 @@ const ConnectionLine = ({
 
   const lineGeometry = useMemo(
     () => new THREE.BufferGeometry().setFromPoints(points),
-    [points]
+    [points],
   )
   const lineMaterial = useMemo(
     () =>
@@ -121,11 +121,11 @@ const ConnectionLine = ({
         transparent: true,
         opacity: 0.5,
       }),
-    []
+    [],
   )
   const lineObject = useMemo(
     () => new THREE.Line(lineGeometry, lineMaterial),
-    [lineGeometry, lineMaterial]
+    [lineGeometry, lineMaterial],
   )
 
   useFrame(({ clock }) => {
@@ -166,7 +166,7 @@ const ConnectionLines = () => {
       new THREE.Vector3(-1.5, -3, 0),
       new THREE.Vector3(2, -3, 0),
     ],
-    []
+    [],
   )
 
   return (
@@ -232,7 +232,7 @@ const CentralHub = () => {
 
 export const IntegrationScene3D = () => {
   return (
-    <div className='w-full h-[550px] md:h-[650px] rounded-2xl overflow-hidden bg-gradient-to-br from-slate-50 to-white border border-border/50'>
+    <div className='w-full h-[550px] md:h-[650px] rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-border/50'>
       <Canvas
         camera={{ position: [0, 0, 8], fov: 50 }}
         style={{ background: 'transparent' }}

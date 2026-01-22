@@ -1,15 +1,15 @@
 import { useState, useRef, useEffect } from 'react'
 import {
-  BarChart3,
-  Database,
   Zap,
-  Shield,
-  LineChart,
-  CheckCircle,
-  Clock,
-  FileCheck,
   Link2,
+  Clock,
+  Shield,
   Server,
+  Database,
+  LineChart,
+  FileCheck,
+  BarChart3,
+  CheckCircle,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -83,7 +83,7 @@ export const WhatWeDoSection = () => {
       ([entry]) => {
         setIsInView(entry.isIntersecting)
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     )
 
     if (sectionRef.current) {
@@ -149,7 +149,7 @@ export const WhatWeDoSection = () => {
                   'relative px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300',
                   activeIndex === index
                     ? 'bg-accent text-foreground'
-                    : 'bg-secondary/50 text-muted-foreground hover:bg-secondary'
+                    : 'bg-secondary/50 text-muted-foreground hover:bg-secondary',
                 )}
               >
                 {cap.number}
@@ -177,7 +177,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Right - Floating Pills Container */}
-          <div className='relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden bg-gradient-to-br from-secondary via-secondary/80 to-primary/20 order-3'>
+          <div className='relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden bg-linear-to-br from-secondary via-secondary/80 to-primary/20 order-3'>
             <CapabilityVisual
               active={active}
               activeIndex={activeIndex}
@@ -244,7 +244,7 @@ const CapabilityVisual = ({
             Processing...
           </div>
           <div className='flex items-center gap-2 lg:gap-3 mb-2 lg:mb-3'>
-            <div className='w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+            <div className='w-8 h-8 lg:w-10 lg:h-10 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center'>
               {(() => {
                 const Icon = active.pills[0].icon
                 return (

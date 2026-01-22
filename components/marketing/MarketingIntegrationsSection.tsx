@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { Shield } from 'lucide-react'
 
 const MarketingIntegrationsSection = () => {
@@ -31,7 +31,8 @@ const MarketingIntegrationsSection = () => {
             Designed to Fit Your Existing Stack
           </h2>
           <p className='text-lg text-muted-foreground'>
-            Health Compiler works alongside the tools practices already use—no forced rip-and-replace.
+            Health Compiler works alongside the tools practices already use—no
+            forced rip-and-replace.
           </p>
         </div>
 
@@ -45,7 +46,9 @@ const MarketingIntegrationsSection = () => {
                 {integrations
                   .filter((i) => i.category === category)
                   .map((integration, index) => {
-                    const globalIndex = integrations.findIndex((i) => i.name === integration.name)
+                    const globalIndex = integrations.findIndex(
+                      (i) => i.name === integration.name,
+                    )
                     return (
                       <div
                         key={integration.name}
@@ -61,7 +64,9 @@ const MarketingIntegrationsSection = () => {
                         onMouseEnter={() => setHoveredIndex(globalIndex)}
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        <span className='font-medium text-foreground'>{integration.name}</span>
+                        <span className='font-medium text-foreground'>
+                          {integration.name}
+                        </span>
                       </div>
                     )
                   })}
@@ -74,7 +79,8 @@ const MarketingIntegrationsSection = () => {
         <div className='flex items-center justify-center gap-3 p-4 rounded-xl bg-muted/30 border border-border/50'>
           <Shield className='w-5 h-5 text-primary' />
           <p className='text-sm text-muted-foreground'>
-            HIPAA-aware workflows with role-based access and audit-ready reporting.
+            HIPAA-aware workflows with role-based access and audit-ready
+            reporting.
           </p>
         </div>
       </div>

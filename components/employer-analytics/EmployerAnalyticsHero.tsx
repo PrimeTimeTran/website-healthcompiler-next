@@ -95,9 +95,9 @@ export function EmployerAnalyticsHero() {
 
               {/* Core card */}
               <div className='relative bg-white rounded-2xl border-2 border-primary/20 shadow-2xl p-6 w-[180px] z-10'>
-                <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
+                <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
                 <div className='relative text-center space-y-3'>
-                  <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+                  <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
                     <TrendingUp className='w-7 h-7 text-white' />
                   </div>
                   <div>

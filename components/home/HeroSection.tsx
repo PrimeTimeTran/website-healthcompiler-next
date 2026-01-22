@@ -2,7 +2,7 @@ import { HeroVisualization } from './HeroVisualization'
 
 export const HeroSection = () => {
   return (
-    <section className='relative overflow-hidden bg-gradient-to-b from-background to-background-secondary min-h-[calc(100vh-80px)]'>
+    <section className='relative overflow-hidden bg-linear-to-b from-background to-background-secondary min-h-[calc(100vh-80px)]'>
       {/* Background decoration */}
       <div className='absolute inset-0 overflow-hidden pointer-events-none'>
         <div className='absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl' />

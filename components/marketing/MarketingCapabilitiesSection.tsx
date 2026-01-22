@@ -1,4 +1,4 @@
-import { Mail, BarChart3, DollarSign, Zap, Users, RefreshCcw, Target, Clock, TrendingUp, ArrowRight } from 'lucide-react'
+import { Mail, BarChart3, DollarSign, ArrowRight } from 'lucide-react'
 
 const MarketingCapabilitiesSection = () => {
   const capabilities = [
@@ -45,7 +45,8 @@ const MarketingCapabilitiesSection = () => {
             Marketing That Runs Itself — Analytics That Prove ROI
           </h2>
           <p className='text-lg text-muted-foreground'>
-            Automate outreach across email, SMS, and campaigns—while tracking conversions, appointments, and revenue attribution in one system.
+            Automate outreach across email, SMS, and campaigns—while tracking
+            conversions, appointments, and revenue attribution in one system.
           </p>
         </div>
 
@@ -60,16 +61,23 @@ const MarketingCapabilitiesSection = () => {
                 <div className='w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4'>
                   <Icon className='w-6 h-6 text-primary' />
                 </div>
-                <h3 className='text-xl font-semibold text-foreground mb-4'>{cap.title}</h3>
+                <h3 className='text-xl font-semibold text-foreground mb-4'>
+                  {cap.title}
+                </h3>
                 <ul className='space-y-2 mb-4'>
                   {cap.features.map((feature, i) => (
-                    <li key={i} className='flex items-start gap-2 text-sm text-muted-foreground'>
+                    <li
+                      key={i}
+                      className='flex items-start gap-2 text-sm text-muted-foreground'
+                    >
                       <ArrowRight className='w-4 h-4 text-primary mt-0.5 flex-shrink-0' />
                       <span>{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <p className='text-xs text-primary font-medium italic'>{cap.caption}</p>
+                <p className='text-xs text-primary font-medium italic'>
+                  {cap.caption}
+                </p>
               </div>
             )
           })}

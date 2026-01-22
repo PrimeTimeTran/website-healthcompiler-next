@@ -37,10 +37,10 @@ const DPCNetworksViz = () => {
         <div className='absolute inset-0 -m-6 rounded-full bg-gradient-to-r from-pink-500/15 to-violet-500/15 blur-2xl animate-pulse' />
 
         <div className='relative bg-white rounded-2xl border border-pink-500/20 shadow-2xl p-6 w-[180px]'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-pink-500/5 to-violet-500/5' />
+          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-pink-500/5 to-violet-500/5' />
 
           <div className='relative space-y-4 text-center'>
-            <div className='w-14 h-14 mx-auto rounded-full bg-gradient-to-br from-pink-500 to-violet-500 flex items-center justify-center'>
+            <div className='w-14 h-14 mx-auto rounded-full bg-linear-to-br from-pink-500 to-violet-500 flex items-center justify-center'>
               <Network className='w-7 h-7 text-white' />
             </div>
             <div>

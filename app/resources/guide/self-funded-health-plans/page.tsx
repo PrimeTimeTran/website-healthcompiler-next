@@ -164,7 +164,7 @@ const SelfFundedHealthPlansGuide = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
+      <section className='relative bg-linear-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent' />
         <div className='container mx-auto px-4 md:px-6 relative'>
           <div className='max-w-4xl mx-auto text-center fade-in'>
@@ -211,7 +211,7 @@ const SelfFundedHealthPlansGuide = () => {
               healthcare costs.
             </p>
             <div className='relative'>
-              <div className='absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
+              <div className='absolute -inset-4 bg-linear-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
               <Image
                 src='https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/pexels-photo-7821915-1920w.jpeg'
                 alt='Self-Funded Health Plans'
@@ -259,7 +259,7 @@ const SelfFundedHealthPlansGuide = () => {
               premiums to an insurance carrier, which assumes the financial risk
               for employee healthcare costs.
             </p>
-            <div className='bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl p-6 md:p-8 border border-border'>
+            <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-6 md:p-8 border border-border'>
               <p className='text-foreground font-medium'>
                 In contrast, a self-funded plan shifts this risk to the
                 employer. The employer directly pays for employee healthcare
@@ -421,7 +421,7 @@ const SelfFundedHealthPlansGuide = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className='bg-gradient-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
+                className='bg-linear-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
               >
                 <item.icon className='h-8 w-8 text-primary mb-4' />
                 <h4 className='text-lg font-bold text-foreground mb-1'>

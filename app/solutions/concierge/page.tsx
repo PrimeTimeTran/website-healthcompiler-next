@@ -263,7 +263,7 @@ const ConciergeMedicine = () => {
               </div>
             </div>
             <div className='relative'>
-              <div className='bg-gradient-to-br from-primary/5 to-accent/10 rounded-2xl p-8 border border-primary/20'>
+              <div className='bg-linear-to-br from-primary/5 to-accent/10 rounded-2xl p-8 border border-primary/20'>
                 <div className='space-y-4'>
                   <div className='flex items-center justify-between p-4 bg-background rounded-xl'>
                     <span className='text-sm font-medium text-foreground'>
@@ -293,7 +293,7 @@ const ConciergeMedicine = () => {
       </section>
 
       {/* CTA Section */}
-      <section className='py-20 bg-gradient-to-br from-primary/5 via-background to-primary/5'>
+      <section className='py-20 bg-linear-to-br from-primary/5 via-background to-primary/5'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>

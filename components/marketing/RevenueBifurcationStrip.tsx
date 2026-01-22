@@ -45,7 +45,9 @@ const RevenueBifurcationStrip = () => {
                   <div className='w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center'>
                     <Icon className='w-5 h-5 text-primary' />
                   </div>
-                  <h3 className='font-semibold text-foreground'>{item.title}</h3>
+                  <h3 className='font-semibold text-foreground'>
+                    {item.title}
+                  </h3>
                 </div>
                 <div className='flex flex-wrap gap-2'>
                   {item.items.map((tag, i) => (
@@ -63,7 +65,8 @@ const RevenueBifurcationStrip = () => {
         </div>
 
         <p className='text-sm text-muted-foreground text-center'>
-          All revenue insights are viewable over time and exportable for finance, ops, or advisors.
+          All revenue insights are viewable over time and exportable for
+          finance, ops, or advisors.
         </p>
       </div>
     </section>

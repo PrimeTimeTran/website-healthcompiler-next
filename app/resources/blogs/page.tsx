@@ -69,7 +69,7 @@ const Blogs = () => {
     <>
       <section className='relative py-20 md:py-28 overflow-hidden'>
         {/* Background gradients */}
-        <div className='absolute inset-0 bg-gradient-to-b from-secondary/50 via-background to-background' />
+        <div className='absolute inset-0 bg-linear-to-b from-secondary/50 via-background to-background' />
         <div className='absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-primary/10 blur-3xl opacity-60' />
 
         <div className='container mx-auto px-4 text-center relative z-10'>

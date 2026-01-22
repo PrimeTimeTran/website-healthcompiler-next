@@ -63,7 +63,7 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section className='relative min-h-[90vh] bg-gradient-to-br from-slate-50 via-white to-slate-50 overflow-hidden'>
+    <section className='relative min-h-[90vh] bg-linear-to-br from-slate-50 via-white to-slate-50 overflow-hidden'>
       {/* Subtle grid */}
       <div
         className='absolute inset-0 opacity-[0.03] pointer-events-none'
@@ -287,7 +287,7 @@ const WhyItMattersSection = () => {
                 key={idx}
                 className='group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-7 h-7 text-primary' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -350,7 +350,7 @@ const HowItWorksSection = () => {
   return (
     <section
       ref={sectionRef}
-      className='py-24 bg-gradient-to-b from-slate-50 to-white'
+      className='py-24 bg-linear-to-b from-slate-50 to-white'
     >
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>
@@ -404,7 +404,7 @@ const HowItWorksSection = () => {
                   <div
                     className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-4 transition-all duration-500 ${
                       idx <= activeStep
-                        ? 'bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30'
+                        ? 'bg-linear-to-br from-primary to-accent shadow-lg shadow-primary/30'
                         : 'bg-slate-100 border border-border'
                     }`}
                     style={{
@@ -503,7 +503,7 @@ const WhatImprovesSection = () => {
                 onMouseLeave={() => setHoveredTile(null)}
               >
                 <div className='flex items-start gap-4'>
-                  <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
+                  <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
                     <Icon className='w-6 h-6 text-primary' />
                   </div>
                   <div>
@@ -551,7 +551,7 @@ const PerformanceSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-white to-slate-50'>
+    <section className='py-24 bg-linear-to-b from-white to-slate-50'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
@@ -583,8 +583,8 @@ const PerformanceSection = () => {
                   </div>
 
                   {/* After - Back */}
-                  <div className='absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center'>
-                    <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4'>
+                  <div className='absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-linear-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center'>
+                    <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center mb-4'>
                       <Icon className='w-6 h-6 text-white' />
                     </div>
                     <div className='text-xs uppercase tracking-wider text-primary mb-2'>
@@ -646,7 +646,7 @@ const BuiltForSection = () => {
                   key={idx}
                   className='flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300'
                 >
-                  <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
+                  <div className='w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
                     <Icon className='w-5 h-5 text-primary' />
                   </div>
                   <p className='text-foreground leading-relaxed'>
@@ -665,7 +665,7 @@ const BuiltForSection = () => {
 // ========== FINAL CTA SECTION ==========
 const FinalCTASection = () => {
   return (
-    <section className='py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
+    <section className='py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
       {/* Background pattern */}
       <div className='absolute inset-0 opacity-10'>
         <div

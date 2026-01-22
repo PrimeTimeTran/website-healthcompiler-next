@@ -1,13 +1,25 @@
 import { useState, useEffect } from 'react'
-import { Building2, Users, Heart, DollarSign, Shield, TrendingUp } from 'lucide-react'
+import {
+  Building2,
+  Users,
+  Heart,
+  DollarSign,
+  Shield,
+  TrendingUp,
+} from 'lucide-react'
 
 const EmployersViz = () => {
   const [activePillar, setActivePillar] = useState(0)
-  
+
   const pillars = [
     { icon: Users, label: 'Engagement', value: '87%', color: '#8B5CF6' },
     { icon: Heart, label: 'Utilization', value: 'Optimized', color: '#E94E87' },
-    { icon: DollarSign, label: 'Cost Control', value: '-15%', color: '#10B981' },
+    {
+      icon: DollarSign,
+      label: 'Cost Control',
+      value: '-15%',
+      color: '#10B981',
+    },
     { icon: Shield, label: 'Compliance', value: 'Active', color: '#06B6D4' },
   ]
 
@@ -23,23 +35,29 @@ const EmployersViz = () => {
       {/* Central Employer Hub */}
       <div className='relative'>
         <div className='absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse' />
-        
+
         <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[180px]'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
-          
+          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
+
           <div className='relative space-y-4 text-center'>
-            <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+            <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
               <Building2 className='w-7 h-7 text-white' />
             </div>
             <div>
-              <div className='text-sm font-semibold text-foreground'>Employer View</div>
-              <div className='text-xs text-muted-foreground mt-1'>Fiduciary oversight</div>
+              <div className='text-sm font-semibold text-foreground'>
+                Employer View
+              </div>
+              <div className='text-xs text-muted-foreground mt-1'>
+                Fiduciary oversight
+              </div>
             </div>
-            
+
             <div className='pt-3 border-t border-border/50'>
               <div className='flex items-center justify-center gap-2'>
                 <TrendingUp className='w-4 h-4 text-green-500' />
-                <span className='text-xs text-green-600 font-medium'>All metrics visible</span>
+                <span className='text-xs text-green-600 font-medium'>
+                  All metrics visible
+                </span>
               </div>
             </div>
           </div>
@@ -69,7 +87,9 @@ const EmployersViz = () => {
           >
             <div
               className={`w-[100px] px-3 py-3 rounded-xl flex flex-col items-center gap-2 border backdrop-blur-sm transition-all duration-500 ${
-                isActive ? 'bg-white shadow-lg border-primary/30' : 'bg-white/80 border-border/50'
+                isActive
+                  ? 'bg-white shadow-lg border-primary/30'
+                  : 'bg-white/80 border-border/50'
               }`}
               style={{
                 boxShadow: isActive ? `0 0 25px ${pillar.color}40` : 'none',
@@ -79,11 +99,21 @@ const EmployersViz = () => {
                 className='w-10 h-10 rounded-lg flex items-center justify-center'
                 style={{ backgroundColor: `${pillar.color}15` }}
               >
-                <Icon className='w-5 h-5' style={{ color: pillar.color }} />
+                <Icon
+                  className='w-5 h-5'
+                  style={{ color: pillar.color }}
+                />
               </div>
               <div className='text-center'>
-                <div className='text-xs font-medium text-foreground'>{pillar.label}</div>
-                <div className='text-[10px] font-semibold' style={{ color: pillar.color }}>{pillar.value}</div>
+                <div className='text-xs font-medium text-foreground'>
+                  {pillar.label}
+                </div>
+                <div
+                  className='text-[10px] font-semibold'
+                  style={{ color: pillar.color }}
+                >
+                  {pillar.value}
+                </div>
               </div>
             </div>
           </div>
@@ -93,13 +123,36 @@ const EmployersViz = () => {
       {/* Connection Lines */}
       <svg className='absolute inset-0 w-full h-full pointer-events-none'>
         <defs>
-          <linearGradient id='empGrad' x1='0%' y1='0%' x2='100%' y2='100%'>
-            <stop offset='0%' stopColor='#8B5CF6' stopOpacity='0.3' />
-            <stop offset='50%' stopColor='#E94E87' stopOpacity='0.5' />
-            <stop offset='100%' stopColor='#06B6D4' stopOpacity='0.3' />
+          <linearGradient
+            id='empGrad'
+            x1='0%'
+            y1='0%'
+            x2='100%'
+            y2='100%'
+          >
+            <stop
+              offset='0%'
+              stopColor='#8B5CF6'
+              stopOpacity='0.3'
+            />
+            <stop
+              offset='50%'
+              stopColor='#E94E87'
+              stopOpacity='0.5'
+            />
+            <stop
+              offset='100%'
+              stopColor='#06B6D4'
+              stopOpacity='0.3'
+            />
           </linearGradient>
         </defs>
-        {[{ x: -110, y: 0 }, { x: 0, y: -80 }, { x: 110, y: 0 }, { x: 0, y: 80 }].map((pos, idx) => (
+        {[
+          { x: -110, y: 0 },
+          { x: 0, y: -80 },
+          { x: 110, y: 0 },
+          { x: 0, y: 80 },
+        ].map((pos, idx) => (
           <line
             key={idx}
             x1='50%'

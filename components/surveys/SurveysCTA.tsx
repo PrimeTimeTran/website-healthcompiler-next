@@ -7,7 +7,7 @@ export function SurveysCTA() {
   return (
     <section className='relative py-24 md:py-32 overflow-hidden'>
       {/* Animated background */}
-      <div className='absolute inset-0 bg-gradient-to-br from-background via-muted/50 to-background'>
+      <div className='absolute inset-0 bg-linear-to-br from-background via-muted/50 to-background'>
         {/* Floating particles */}
         {[...Array(20)].map((_, i) => (
           <div

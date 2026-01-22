@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, Play } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 
 // Healthcare metric cards with mini graphs
 const metricCards = [
@@ -275,12 +276,12 @@ export const HeroSectionAlt = () => {
   return (
     <section
       ref={heroRef}
-      className='relative min-h-screen overflow-hidden bg-gradient-to-br from-slate-50 via-white to-slate-100'
+      className='relative min-h-screen overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100'
     >
       {/* Animated background gradient */}
       <div className='absolute inset-0'>
         <div
-          className='absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-80'
+          className='absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5 opacity-80'
           style={{
             transform: `translate(${mousePos.x * 2}px, ${mousePos.y * 2}px)`,
             transition: 'transform 0.3s ease-out',
@@ -489,8 +490,8 @@ export const HeroSectionAlt = () => {
                 style={{ animation: 'glow-light 4s ease-in-out infinite' }}
               >
                 {/* Glass sphere effect */}
-                <div className='absolute inset-0 rounded-full bg-gradient-to-br from-primary/25 via-white to-accent/25 border-2 border-primary/20 shadow-2xl' />
-                <div className='absolute inset-2 rounded-full bg-gradient-to-br from-white via-white to-white/90' />
+                <div className='absolute inset-0 rounded-full bg-linear-to-br from-primary/25 via-white to-accent/25 border-2 border-primary/20 shadow-2xl' />
+                <div className='absolute inset-2 rounded-full bg-linear-to-br from-white via-white to-white/90' />
                 <div className='absolute inset-4 rounded-full bg-white border border-border shadow-inner flex items-center justify-center overflow-hidden'>
                   {/* Inner content */}
                   <Link
@@ -702,7 +703,7 @@ export const HeroSectionAlt = () => {
       {/* Scroll indicator */}
       <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground'>
         <span className='text-xs uppercase tracking-widest'>Scroll</span>
-        <div className='w-px h-8 bg-gradient-to-b from-muted-foreground to-transparent animate-pulse' />
+        <div className='w-px h-8 bg-linear-to-b from-muted-foreground to-transparent animate-pulse' />
       </div>
     </section>
   )

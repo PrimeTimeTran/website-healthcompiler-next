@@ -34,11 +34,11 @@ const TPAHealthPlansViz = () => {
         <div className='absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse' />
 
         <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
+          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
 
           <div className='relative space-y-4'>
             <div className='flex items-center gap-3'>
-              <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+              <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
                 <BarChart3 className='w-6 h-6 text-white' />
               </div>
               <div>

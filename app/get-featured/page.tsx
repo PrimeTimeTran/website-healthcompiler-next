@@ -44,7 +44,7 @@ const GetFeatured = () => {
   return (
     <>
       {/* Hero */}
-      <section className='pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-background to-background-secondary'>
+      <section className='pt-32 pb-16 md:pt-40 md:pb-20 bg-linear-to-b from-background to-background-secondary'>
         <div className='container mx-auto px-6 text-center'>
           <p className='text-sm uppercase tracking-widest text-accent mb-4'>
             APEX Magazine

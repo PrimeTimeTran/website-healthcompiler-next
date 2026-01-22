@@ -52,12 +52,12 @@ const CaptivesViz = () => {
         <div className='absolute inset-0 -m-12 rounded-full bg-gradient-to-r from-primary/15 to-accent/15 blur-3xl animate-pulse' />
 
         <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]'>
-          <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
+          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
 
           <div className='relative space-y-4'>
             {/* Header */}
             <div className='flex items-center gap-3'>
-              <div className='w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+              <div className='w-10 h-10 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
                 <PieChart className='w-5 h-5 text-white' />
               </div>
               <div>

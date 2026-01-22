@@ -81,7 +81,7 @@ const CINs = () => {
       </section>
 
       {/* Quality Reporting Section */}
-      <section className='relative py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white overflow-hidden'>
+      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
         <div className='container mx-auto px-6'>
           <div className='max-w-4xl'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>

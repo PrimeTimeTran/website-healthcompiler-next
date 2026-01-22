@@ -1,7 +1,8 @@
 import { Quote } from 'lucide-react'
 import Image, { StaticImageData } from 'next/image'
-import brianFretwellImg from '@/assets/testimonial-brian-fretwell.png'
+
 import drKenRictorImg from '@/assets/dr-ken-rictor.png'
+import brianFretwellImg from '@/assets/testimonial-brian-fretwell.png'
 import drWilliamBurkhartImg from '@/assets/dr-william-burkhart.png'
 
 interface Testimonial {

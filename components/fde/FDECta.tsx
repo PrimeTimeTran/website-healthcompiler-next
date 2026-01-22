@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 
 export const FDECta = () => {
   return (
-    <section className='py-24 lg:py-32 bg-gradient-to-br from-secondary/50 via-background to-secondary/30'>
+    <section className='py-24 lg:py-32 bg-linear-to-br from-secondary/50 via-background to-secondary/30'>
       <div className='container mx-auto px-6 lg:px-12'>
         <div className='max-w-4xl mx-auto text-center'>
           {/* Decorative element */}

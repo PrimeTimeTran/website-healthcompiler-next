@@ -45,7 +45,7 @@ export function DataFoundationPipeline() {
                   </div>
 
                   {/* Flow line */}
-                  <div className='hidden lg:block absolute left-1/2 -bottom-6 w-0.5 h-6 bg-gradient-to-b from-border to-primary/30' />
+                  <div className='hidden lg:block absolute left-1/2 -bottom-6 w-0.5 h-6 bg-linear-to-b from-border to-primary/30' />
                 </div>
               ))}
             </div>

@@ -119,7 +119,7 @@ const CareCoordinationSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-4xl'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -227,7 +227,7 @@ const ACOSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -249,7 +249,7 @@ const ACOSection = () => {
                 key={idx}
                 className='group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
               >
-                <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-6 h-6 text-primary' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -293,7 +293,7 @@ const RegistrySection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-3xl mx-auto text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -315,7 +315,7 @@ const RegistrySection = () => {
                 key={idx}
                 className='group p-6 rounded-2xl border border-border/50 bg-white hover:shadow-xl hover:border-accent/20 transition-all duration-300'
               >
-                <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-accent/10 to-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-12 h-12 rounded-xl bg-linear-to-br from-accent/10 to-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-6 h-6 text-accent' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -354,7 +354,7 @@ const SharedPlatformSection = () => {
           {/* Split Visual */}
           <div className='grid md:grid-cols-2 gap-8'>
             {/* ACO Side */}
-            <div className='bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl border border-primary/20 p-8'>
+            <div className='bg-linear-to-br from-primary/5 to-primary/10 rounded-2xl border border-primary/20 p-8'>
               <h3 className='font-semibold text-foreground mb-6 flex items-center gap-2'>
                 <Target className='w-5 h-5 text-primary' />
                 ACO Performance
@@ -399,7 +399,7 @@ const SharedPlatformSection = () => {
               </div>
             </div>
 
-            <div className='bg-gradient-to-br from-accent/5 to-accent/10 rounded-2xl border border-accent/20 p-8'>
+            <div className='bg-linear-to-br from-accent/5 to-accent/10 rounded-2xl border border-accent/20 p-8'>
               <h3 className='font-semibold text-foreground mb-6 flex items-center gap-2'>
                 <ClipboardList className='w-5 h-5 text-accent' />
                 Registry Outcomes
@@ -485,7 +485,7 @@ const AISection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-4xl mx-auto'>
           <div className='text-center mb-16'>
@@ -554,7 +554,7 @@ const ReportingSection = () => {
                   key={idx}
                   className='group p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center'
                 >
-                  <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                  <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                     <Icon className='w-7 h-7 text-primary' />
                   </div>
                   <p className='font-medium text-foreground'>{report.title}</p>

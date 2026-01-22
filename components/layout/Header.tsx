@@ -1,4 +1,5 @@
 'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -14,8 +15,8 @@ import {
   LucideIcon,
 } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
 import logo from '@/assets/favicon.png'
+import { Button } from '@/components/ui/button'
 
 interface PlatformCard {
   title: string

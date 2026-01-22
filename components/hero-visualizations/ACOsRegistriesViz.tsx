@@ -87,7 +87,7 @@ const ACOsRegistriesViz = () => {
         {/* Split Dashboard View */}
         <div className='grid grid-cols-2 gap-3 mb-4'>
           {/* ACO Side */}
-          <div className='bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-3'>
+          <div className='bg-linear-to-br from-primary/5 to-primary/10 rounded-xl p-3'>
             <p className='text-[10px] font-medium text-primary mb-2'>
               ACO Performance
             </p>
@@ -108,7 +108,7 @@ const ACOsRegistriesViz = () => {
           </div>
 
           {/* Registry Side */}
-          <div className='bg-gradient-to-br from-accent/5 to-accent/10 rounded-xl p-3'>
+          <div className='bg-linear-to-br from-accent/5 to-accent/10 rounded-xl p-3'>
             <p className='text-[10px] font-medium text-accent mb-2'>
               Registry Tracking
             </p>

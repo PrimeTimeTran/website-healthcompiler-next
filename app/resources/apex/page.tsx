@@ -367,7 +367,7 @@ const ProfileCard = ({
           className='object-cover object-top transition-all duration-700 group-hover:scale-105'
         />
       ) : (
-        <div className='w-full h-full bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center'>
+        <div className='w-full h-full bg-linear-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center'>
           <div className='w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg'>
             <span className='text-2xl font-apex-display font-bold text-apex-bg'>
               {initials}
@@ -489,7 +489,7 @@ const Apex = () => {
           <WordGrid />
 
           {/* Gradient overlays */}
-          <div className='absolute inset-0 bg-gradient-to-b from-apex-bg via-transparent to-apex-bg pointer-events-none' />
+          <div className='absolute inset-0 bg-linear-to-b from-apex-bg via-transparent to-apex-bg pointer-events-none' />
           <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-apex-bg to-transparent pointer-events-none' />
 
           <div

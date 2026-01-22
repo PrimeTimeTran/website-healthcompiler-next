@@ -192,9 +192,9 @@ const HeroSection = () => {
 
                 {/* Engine card */}
                 <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]'>
-                  <div className='absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-accent/5' />
+                  <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
                   <div className='relative space-y-4'>
-                    <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center'>
+                    <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
                       <Target className='w-6 h-6 text-white' />
                     </div>
                     <div>
@@ -253,7 +253,7 @@ const WhyItMattersSection = () => {
   ]
 
   return (
-    <section className='py-20 md:py-28 bg-gradient-to-b from-background to-muted/20'>
+    <section className='py-20 md:py-28 bg-linear-to-b from-background to-muted/20'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
@@ -269,7 +269,7 @@ const WhyItMattersSection = () => {
                 key={idx}
                 className='group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-7 h-7 text-primary' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -364,7 +364,7 @@ const HowItWorksSection = () => {
                 <div
                   className={`w-16 h-16 mx-auto rounded-2xl flex items-center justify-center text-2xl mb-4 transition-all duration-500 ${
                     idx <= activeStep
-                      ? 'bg-gradient-to-br from-primary to-accent shadow-lg shadow-primary/30'
+                      ? 'bg-linear-to-br from-primary to-accent shadow-lg shadow-primary/30'
                       : 'bg-slate-100 border border-border'
                   }`}
                   style={{
@@ -453,8 +453,8 @@ const ResultsSection = () => {
                   </div>
 
                   {/* After - Back */}
-                  <div className='absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center'>
-                    <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center mb-4'>
+                  <div className='absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-linear-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center'>
+                    <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center mb-4'>
                       <Icon className='w-6 h-6 text-white' />
                     </div>
                     <div className='text-xs uppercase tracking-wider text-primary mb-2'>
@@ -519,7 +519,7 @@ const BuiltForHealthcareSection = () => {
                   key={idx}
                   className='flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300'
                 >
-                  <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
+                  <div className='w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
                     <Icon className='w-5 h-5 text-primary' />
                   </div>
                   <p className='text-foreground leading-relaxed'>
@@ -538,7 +538,7 @@ const BuiltForHealthcareSection = () => {
 // ========== FINAL CTA SECTION ==========
 const FinalCTASection = () => {
   return (
-    <section className='py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
+    <section className='py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
       {/* Background pattern */}
       <div className='absolute inset-0 opacity-10'>
         <div

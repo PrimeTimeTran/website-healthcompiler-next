@@ -68,7 +68,7 @@ const Employers = () => {
           </div>
         </div>
       </section>
-      <section className='relative py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white overflow-hidden'>
+      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
         <div
           className='absolute inset-0 opacity-[0.02] pointer-events-none'
           style={{

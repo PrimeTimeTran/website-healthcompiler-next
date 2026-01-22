@@ -144,7 +144,7 @@ const FunctionalMedicine = () => {
                 key={index}
                 className='bg-background rounded-2xl p-8 shadow-sm border border-border hover:border-primary/30 transition-colors group'
               >
-                <div className='w-16 h-16 bg-gradient-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform'>
+                <div className='w-16 h-16 bg-linear-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform'>
                   <solution.icon className='h-8 w-8 text-primary' />
                 </div>
                 <h3 className='text-xl font-bold text-foreground mb-4'>
@@ -221,7 +221,7 @@ const FunctionalMedicine = () => {
       </section>
 
       {/* Final CTA */}
-      <section className='py-20 bg-gradient-to-br from-primary/5 via-background to-primary/5'>
+      <section className='py-20 bg-linear-to-br from-primary/5 via-background to-primary/5'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>

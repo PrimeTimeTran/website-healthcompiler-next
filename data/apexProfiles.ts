@@ -1640,6 +1640,5 @@ export const apexProfiles: ApexProfile[] = [
 
 // Helper to get profile by slug
 export const getProfileBySlug = (slug: string): ApexProfile | undefined => {
-  console.log(slug)
   return apexProfiles.find((profile) => profile.slug === slug)
 }

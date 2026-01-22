@@ -73,7 +73,7 @@ export const FDEHero = () => {
             <div className='relative bg-card/50 backdrop-blur-xl border border-border/50 rounded-3xl p-8 shadow-elevated'>
               {/* Subtle background pattern */}
               <div className='absolute inset-0 rounded-3xl overflow-hidden'>
-                <div className='absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5' />
+                <div className='absolute inset-0 bg-linear-to-br from-accent/5 via-transparent to-primary/5' />
                 <svg
                   className='absolute inset-0 w-full h-full opacity-[0.03]'
                   xmlns='http://www.w3.org/2000/svg'
@@ -111,7 +111,7 @@ export const FDEHero = () => {
               {/* Timeline phases */}
               <div className='relative space-y-6'>
                 {/* Connection line */}
-                <div className='absolute left-[22px] top-8 bottom-8 w-px bg-gradient-to-b from-accent/50 via-accent/30 to-border' />
+                <div className='absolute left-[22px] top-8 bottom-8 w-px bg-linear-to-b from-accent/50 via-accent/30 to-border' />
 
                 {timelinePhases.map((phase, index) => (
                   <div

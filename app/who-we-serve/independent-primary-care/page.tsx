@@ -109,7 +109,7 @@ const EarlierVisibilitySection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-4xl'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -180,7 +180,7 @@ const CollaborationSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-4xl'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -238,7 +238,7 @@ const EHRCompatibilitySection = () => {
 // Growth Support Section
 const GrowthSupportSection = () => {
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='max-w-4xl'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -308,7 +308,7 @@ const RealitySection = () => {
                 key={idx}
                 className='group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
               >
-                <div className='w-12 h-12 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-6 h-6 text-primary' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -358,7 +358,7 @@ const SolutionSection = () => {
   return (
     <section
       id='how-it-works'
-      className='py-24 bg-gradient-to-b from-slate-50 to-white'
+      className='py-24 bg-linear-to-b from-slate-50 to-white'
     >
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16 max-w-3xl mx-auto'>
@@ -381,7 +381,7 @@ const SolutionSection = () => {
                 className='group p-8 rounded-2xl border border-border/50 bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
               >
                 <div className='flex items-start gap-5'>
-                  <div className='w-14 h-14 rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
+                  <div className='w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
                     <Icon className='w-7 h-7 text-primary' />
                   </div>
                   <div>
@@ -426,7 +426,7 @@ const IntegrationSection = () => {
                 </span>
               </div>
             </div>
-            <div className='bg-gradient-to-br from-slate-50 to-white rounded-2xl border border-border p-8'>
+            <div className='bg-linear-to-br from-slate-50 to-white rounded-2xl border border-border p-8'>
               <div className='space-y-4'>
                 <div className='flex items-center gap-3 p-4 bg-white rounded-xl border border-border/50'>
                   <div className='w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center'>
@@ -494,7 +494,7 @@ const DashboardSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
@@ -514,7 +514,7 @@ const DashboardSection = () => {
                 key={idx}
                 className='group p-5 rounded-xl border border-border/50 bg-white hover:shadow-lg hover:border-primary/20 transition-all duration-300 text-center'
               >
-                <div className='w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform'>
+                <div className='w-12 h-12 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform'>
                   <Icon className='w-6 h-6 text-primary' />
                 </div>
                 <p className='text-sm text-muted-foreground'>{item.label}</p>
@@ -570,7 +570,7 @@ const PersonaSection = () => {
                 key={idx}
                 className='group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center'
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
+                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
                   <Icon className='w-7 h-7 text-primary' />
                 </div>
                 <h3 className='font-semibold text-foreground mb-2'>
@@ -604,7 +604,7 @@ const OutcomesSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-gradient-to-b from-slate-50 to-white'>
+    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>
           <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
@@ -620,7 +620,7 @@ const OutcomesSection = () => {
                 key={idx}
                 className='flex items-center gap-3 p-4 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-primary/20 transition-all'
               >
-                <div className='w-10 h-10 rounded-lg bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
+                <div className='w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
                   <Icon className='w-5 h-5 text-primary' />
                 </div>
                 <p className='text-sm font-medium text-foreground'>

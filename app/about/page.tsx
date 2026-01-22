@@ -283,7 +283,7 @@ const About = () => {
                 key={name}
                 className='flex items-center gap-3 py-1'
               >
-                <div className='w-9 h-9 rounded-full bg-gradient-to-br from-primary/25 to-primary/10 flex items-center justify-center text-foreground font-medium text-xs shrink-0 border border-primary/10'>
+                <div className='w-9 h-9 rounded-full bg-linear-to-br from-primary/25 to-primary/10 flex items-center justify-center text-foreground font-medium text-xs shrink-0 border border-primary/10'>
                   {name
                     .split(' ')
                     .map((n) => n[0])

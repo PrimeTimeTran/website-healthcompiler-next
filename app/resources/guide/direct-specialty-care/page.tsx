@@ -76,7 +76,7 @@ const DirectSpecialtyCareGuide = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className='relative bg-gradient-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
+      <section className='relative bg-linear-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent' />
         <div className='container mx-auto px-4 md:px-6 relative'>
           <div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -105,7 +105,7 @@ const DirectSpecialtyCareGuide = () => {
             </div>
             <div className='slide-up stagger-2'>
               <div className='relative'>
-                <div className='absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
+                <div className='absolute -inset-4 bg-linear-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
                 <Image
                   src='https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Direct+Specialty+Care-1920w.webp'
                   alt='Direct Specialty Care'
@@ -319,7 +319,7 @@ const DirectSpecialtyCareGuide = () => {
                 </h3>
               </div>
 
-              <div className='bg-gradient-to-br from-primary/5 to-accent/5 rounded-xl p-6 border border-border'>
+              <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-6 border border-border'>
                 <p className='text-muted-foreground mb-4'>
                   Many DSC practices utilize a subscription model where patients
                   pay a recurring fee. This fee often covers:
@@ -471,7 +471,7 @@ const DirectSpecialtyCareGuide = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className='bg-gradient-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
+                className='bg-linear-to-br from-primary/5 to-transparent rounded-xl p-6 border border-border'
               >
                 <h4 className='font-bold text-foreground mb-2'>{item.title}</h4>
                 <p className='text-muted-foreground text-sm'>{item.desc}</p>

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { TrendingUp, Users, DollarSign, BarChart2, PieChart } from 'lucide-react'
+import { TrendingUp, BarChart2 } from 'lucide-react'
 
 const RevenueAnalyticsModule = () => {
   const [animateCharts, setAnimateCharts] = useState(false)
@@ -13,7 +13,7 @@ const RevenueAnalyticsModule = () => {
           }
         })
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     )
 
     const element = document.getElementById('revenue-analytics-module')
@@ -45,7 +45,10 @@ const RevenueAnalyticsModule = () => {
   ]
 
   return (
-    <section id='revenue-analytics-module' className='py-20 bg-background'>
+    <section
+      id='revenue-analytics-module'
+      className='py-20 bg-background'
+    >
       <div className='container mx-auto px-4'>
         <div className='mb-12'>
           <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
@@ -74,20 +77,31 @@ const RevenueAnalyticsModule = () => {
             <div className='flex items-center justify-between mb-6'>
               <div className='flex items-center gap-2'>
                 <BarChart2 className='w-5 h-5 text-primary' />
-                <span className='font-semibold text-foreground'>Revenue Dashboard</span>
+                <span className='font-semibold text-foreground'>
+                  Revenue Dashboard
+                </span>
               </div>
-              <span className='text-xs text-muted-foreground'>Live Preview</span>
+              <span className='text-xs text-muted-foreground'>
+                Live Preview
+              </span>
             </div>
 
             {/* Revenue by Source Chart */}
             <div className='mb-6'>
-              <div className='text-sm text-muted-foreground mb-3'>Revenue by Source</div>
+              <div className='text-sm text-muted-foreground mb-3'>
+                Revenue by Source
+              </div>
               <div className='space-y-3'>
                 {chartBars.map((bar, index) => (
-                  <div key={index} className='space-y-1'>
+                  <div
+                    key={index}
+                    className='space-y-1'
+                  >
                     <div className='flex justify-between text-xs'>
                       <span className='text-foreground'>{bar.label}</span>
-                      <span className='text-muted-foreground'>${Math.round(bar.value * 1.2)}K</span>
+                      <span className='text-muted-foreground'>
+                        ${Math.round(bar.value * 1.2)}K
+                      </span>
                     </div>
                     <div className='h-2 bg-muted rounded-full overflow-hidden'>
                       <div
@@ -105,7 +119,9 @@ const RevenueAnalyticsModule = () => {
 
             {/* Conversion Funnel */}
             <div className='mb-6'>
-              <div className='text-sm text-muted-foreground mb-3'>Conversion Funnel</div>
+              <div className='text-sm text-muted-foreground mb-3'>
+                Conversion Funnel
+              </div>
               <div className='space-y-2'>
                 {funnelSteps.map((step, index) => (
                   <div
@@ -113,7 +129,9 @@ const RevenueAnalyticsModule = () => {
                     className='flex items-center gap-3'
                     style={{
                       opacity: animateCharts ? 1 : 0,
-                      transform: animateCharts ? 'translateX(0)' : 'translateX(-20px)',
+                      transform: animateCharts
+                        ? 'translateX(0)'
+                        : 'translateX(-20px)',
                       transition: `all 0.5s ease-out ${index * 100 + 400}ms`,
                     }}
                   >
@@ -121,9 +139,13 @@ const RevenueAnalyticsModule = () => {
                       className='h-8 bg-gradient-to-r from-primary/80 to-primary/40 rounded flex items-center px-3'
                       style={{ width: step.width }}
                     >
-                      <span className='text-xs text-white font-medium truncate'>{step.label}</span>
+                      <span className='text-xs text-white font-medium truncate'>
+                        {step.label}
+                      </span>
                     </div>
-                    <span className='text-sm font-semibold text-foreground'>{step.value}</span>
+                    <span className='text-sm font-semibold text-foreground'>
+                      {step.value}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -131,18 +153,22 @@ const RevenueAnalyticsModule = () => {
 
             {/* Monthly Trend */}
             <div>
-              <div className='text-sm text-muted-foreground mb-3'>Monthly Revenue Trend</div>
+              <div className='text-sm text-muted-foreground mb-3'>
+                Monthly Revenue Trend
+              </div>
               <div className='flex items-end justify-between h-16 gap-1'>
-                {[40, 55, 45, 70, 65, 85, 75, 90, 80, 95, 88, 100].map((height, index) => (
-                  <div
-                    key={index}
-                    className='flex-1 bg-gradient-to-t from-primary to-primary/50 rounded-t transition-all duration-700 ease-out'
-                    style={{
-                      height: animateCharts ? `${height}%` : '0%',
-                      transitionDelay: `${index * 50 + 800}ms`,
-                    }}
-                  />
-                ))}
+                {[40, 55, 45, 70, 65, 85, 75, 90, 80, 95, 88, 100].map(
+                  (height, index) => (
+                    <div
+                      key={index}
+                      className='flex-1 bg-gradient-to-t from-primary to-primary/50 rounded-t transition-all duration-700 ease-out'
+                      style={{
+                        height: animateCharts ? `${height}%` : '0%',
+                        transitionDelay: `${index * 50 + 800}ms`,
+                      }}
+                    />
+                  ),
+                )}
               </div>
               <div className='flex justify-between text-xs text-muted-foreground mt-1'>
                 <span>Jan</span>
