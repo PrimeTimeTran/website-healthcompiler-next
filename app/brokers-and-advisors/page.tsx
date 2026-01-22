@@ -1,21 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import {
-  CheckCircle,
-  BarChart3,
   Bot,
-  Megaphone,
   Workflow,
-  ArrowRight,
   FileText,
+  BarChart3,
+  Megaphone,
+  ArrowRight,
+  CheckCircle,
 } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 import { CTAButton, GridSection } from '@/components/ui'
 import BrokersAdvisorsViz from '@/components/hero-visualizations/BrokersAdvisorsViz'
 
-import elationLogo from '@/assets/elation-logo.png'
 import hintLogo from '@/assets/hint-logo.png'
+import elationLogo from '@/assets/elation-logo.png'
 import akuteLogo from '@/assets/akute-health-logo.png'
 
 const BrokersAndAdvisors = () => {
@@ -215,20 +217,13 @@ const BrokersAndAdvisors = () => {
                   key={index}
                   className='h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm'
                 >
-                  <img
+                  <Image
                     src={logo.src}
                     alt={logo.name}
+                    width={128}
+                    height={48}
                     className='max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity'
-                    onError={(e) => {
-                      e.currentTarget.style.display = 'none'
-                      e.currentTarget.nextElementSibling?.classList.remove(
-                        'hidden',
-                      )
-                    }}
                   />
-                  <span className='hidden text-muted-foreground font-medium'>
-                    {logo.name}
-                  </span>
                 </div>
               ))}
               <div className='h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm'>
@@ -326,6 +321,7 @@ const BrokersAndAdvisors = () => {
           />
         </div>
       </section>
+    </>
   )
 }
 

@@ -1,26 +1,27 @@
 'use client'
 
 import { Button } from '@/components/ui/button'
-import { Link, useSearchParams } from 'react-router-dom'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import Link from 'next/link'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import {
-  BarChart3,
-  Database,
-  Workflow,
   Plug,
   Cloud,
+  Pill,
+  Heart,
+  Users,
+  Server,
+  Sparkles,
+  Workflow,
+  Database,
+  FileText,
+  Stethoscope,
+  Smartphone,
+  BarChart3,
+  TrendingUp,
   ArrowRight,
   LucideIcon,
   FlaskConical,
-  Pill,
-  FileText,
-  Stethoscope,
-  Heart,
-  Smartphone,
-  Server,
-  TrendingUp,
-  Sparkles,
-  Users,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
@@ -108,7 +109,6 @@ const capabilities: Capability[] = [
   },
 ]
 
-// Platform pipeline data
 const dataSources = [
   { icon: FlaskConical, label: 'Labs' },
   { icon: Pill, label: 'Pharmacy' },
@@ -157,8 +157,9 @@ const outcomes = [
   { icon: Users, label: 'Reduce provider burden' },
 ]
 
-const Capabilities = () => {
-  const [searchParams, setSearchParams] = useSearchParams()
+const CapabilitiesContent = () => {
+  const searchParams = useSearchParams()
+  const router = useRouter()
   const tabFromUrl = searchParams.get('tab') as TabType | null
   const [activeTab, setActiveTab] = useState<TabType>(
     tabFromUrl === 'platform' ? 'platform' : 'capabilities',
@@ -181,9 +182,9 @@ const Capabilities = () => {
   const handleTabChange = (tab: TabType) => {
     setActiveTab(tab)
     if (tab === 'platform') {
-      setSearchParams({ tab: 'platform' })
+      router.push('?tab=platform')
     } else {
-      setSearchParams({})
+      router.push('?')
     }
   }
 
@@ -213,7 +214,6 @@ const Capabilities = () => {
   const handleTabClick = (index: number) => {
     setActiveIndex(index)
     setIsAutoPlaying(false)
-    // Resume autoplay after 10 seconds of inactivity
     setTimeout(() => setIsAutoPlaying(true), 10000)
   }
 
@@ -245,7 +245,8 @@ const Capabilities = () => {
     }
   }, [handleWheel])
 
-  return (      {/* Hero */}
+  return (
+    <>
       <section className='section-padding bg-gradient-to-b from-background to-background-secondary'>
         <div className='container-tight mx-auto text-center'>
           <p className='text-accent font-medium text-sm uppercase tracking-widest mb-4'>
@@ -261,7 +262,6 @@ const Capabilities = () => {
             built with security and scalability at the core.
           </p>
 
-          {/* Tab Switcher */}
           <div className='inline-flex bg-secondary rounded-full p-1'>
             <button
               onClick={() => handleTabChange('capabilities')}
@@ -291,14 +291,12 @@ const Capabilities = () => {
 
       {activeTab === 'capabilities' ? (
         <>
-          {/* Capabilities Tabs Section */}
           <section
             ref={sectionRef}
             className='section-padding bg-background min-h-[80vh]'
           >
             <div className='container-tight mx-auto'>
               <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16'>
-                {/* Left Side - Tabs */}
                 <div className='lg:col-span-5'>
                   <div className='space-y-1'>
                     {capabilities.map((capability, index) => (
@@ -312,7 +310,6 @@ const Capabilities = () => {
                             : 'hover:bg-secondary/50',
                         )}
                       >
-                        {/* Progress bar for active item */}
                         {activeIndex === index && isAutoPlaying && (
                           <div className='absolute bottom-0 left-0 h-1 bg-accent animate-progress' />
                         )}
@@ -356,19 +353,16 @@ const Capabilities = () => {
                   </div>
                 </div>
 
-                {/* Right Side - Content */}
                 <div className='lg:col-span-7'>
                   <div className='sticky top-24'>
                     <div
                       key={activeIndex}
                       className='bg-card rounded-2xl p-8 lg:p-12 shadow-card border border-border/50 animate-fade-in'
                     >
-                      {/* Icon */}
                       <div className='w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-8'>
                         <activeCapability.icon className='w-8 h-8 text-accent' />
                       </div>
 
-                      {/* Title & Description */}
                       <h2 className='font-display text-2xl md:text-3xl font-bold text-foreground mb-4'>
                         {activeCapability.title}
                       </h2>
@@ -376,7 +370,6 @@ const Capabilities = () => {
                         {activeCapability.description}
                       </p>
 
-                      {/* Features */}
                       <ul className='space-y-4 mb-8'>
                         {activeCapability.features.map((feature, idx) => (
                           <li
@@ -390,7 +383,6 @@ const Capabilities = () => {
                         ))}
                       </ul>
 
-                      {/* CTA */}
                       <Button
                         variant='outline'
                         asChild
@@ -412,10 +404,8 @@ const Capabilities = () => {
           </section>
         </>
       ) : (
-        /* Platform Section */
         <section className='section-padding bg-background overflow-hidden min-h-[80vh]'>
           <div className='container-tight mx-auto'>
-            {/* Platform Title */}
             <div className='text-center mb-16'>
               <h2 className='font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4'>
                 DAP turns healthcare data into
@@ -430,10 +420,8 @@ const Capabilities = () => {
               </p>
             </div>
 
-            {/* Pipeline Visualization */}
             <div className='relative'>
               <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 items-center'>
-                {/* Left - Data Sources */}
                 <div className='lg:col-span-2'>
                   <div className='space-y-3'>
                     {dataSources.map((source, idx) => (
@@ -451,10 +439,8 @@ const Capabilities = () => {
                   </div>
                 </div>
 
-                {/* Center - Pipeline Steps */}
                 <div className='lg:col-span-8'>
                   <div className='relative'>
-                    {/* Connecting Line */}
                     <div className='absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 hidden lg:block' />
 
                     <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
@@ -469,7 +455,6 @@ const Capabilities = () => {
                           )}
                           style={{ animationDelay: `${idx * 150}ms` }}
                         >
-                          {/* Step Icon */}
                           <div
                             className={cn(
                               'w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center',
@@ -519,7 +504,6 @@ const Capabilities = () => {
                   </div>
                 </div>
 
-                {/* Right - Outcomes */}
                 <div className='lg:col-span-2'>
                   <div className='space-y-4'>
                     {outcomes.map((outcome, idx) => (
@@ -544,7 +528,6 @@ const Capabilities = () => {
         </section>
       )}
 
-      {/* CTA */}
       <section className='section-padding bg-background-secondary'>
         <div className='container-tight mx-auto text-center'>
           <h2 className='font-display text-3xl md:text-4xl font-bold text-foreground mb-4'>
@@ -569,7 +552,14 @@ const Capabilities = () => {
           </Button>
         </div>
       </section>
+    </>
   )
 }
 
-export default Capabilities
+export default function Capabilities() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CapabilitiesContent />
+    </Suspense>
+  )
+}

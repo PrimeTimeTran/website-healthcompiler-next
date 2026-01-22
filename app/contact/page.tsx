@@ -39,7 +39,7 @@ const Contact = () => {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(body),
-        }
+        },
       )
 
       if (!response.ok) {
@@ -58,7 +58,7 @@ const Contact = () => {
   }
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -66,7 +66,9 @@ const Contact = () => {
     }))
   }
 
-  return (      {/* Contact Form */}
+  return (
+    <>
+      {/* Contact Form */}
       <section className='section-padding bg-background'>
         <div className='container-tight mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16'>
@@ -226,6 +228,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

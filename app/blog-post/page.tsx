@@ -1,12 +1,15 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
-import { useBlogPost } from '@/hooks/useBlogPosts'
-import { useParams, Link } from 'react-router-dom'
+import { useParams } from 'next/navigation'
 import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
+
+import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
-import { Badge } from '@/components/ui/badge'
+
+import { useBlogPost } from '@/hooks/useBlogPosts'
 
 const BlogPostSkeleton = () => (
   <div className='space-y-8'>
@@ -25,39 +28,38 @@ const BlogPostSkeleton = () => (
 )
 
 const BlogPost = () => {
-  const { slug } = useParams<{ slug: string }>()
+  const params = useParams<{ slug: string | string[] }>()
+  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug
   const { blogPost, loading, error } = useBlogPost(slug || '')
   console.log({ blogPost })
 
   if (loading) {
     return (
-    <>
       <div className='container mx-auto px-4 py-20'>
-          <BlogPostSkeleton />
-        </div>
+        <BlogPostSkeleton />
+      </div>
     )
   }
 
   if (error || !blogPost) {
     return (
-    <>
       <div className='container mx-auto px-4 py-20 text-center'>
-          <div className='w-20 h-20 mx-auto mb-6 rounded-2xl bg-destructive/10 flex items-center justify-center'>
-            <Share2 className='w-8 h-8 text-destructive' />
-          </div>
-          <h1 className='text-2xl font-bold text-foreground mb-4'>
-            Blog Post Not Found
-          </h1>
-          <p className='text-muted-foreground mb-8'>
-            {error || "The blog post you're looking for doesn't exist."}
-          </p>
-          <Button asChild>
-            <Link href='/blogs'>
-              <ArrowLeft className='w-4 h-4 mr-2' />
-              Back to Blogs
-            </Link>
-          </Button>
+        <div className='w-20 h-20 mx-auto mb-6 rounded-2xl bg-destructive/10 flex items-center justify-center'>
+          <Share2 className='w-8 h-8 text-destructive' />
         </div>
+        <h1 className='text-2xl font-bold text-foreground mb-4'>
+          Blog Post Not Found
+        </h1>
+        <p className='text-muted-foreground mb-8'>
+          {error || "The blog post you're looking for doesn't exist."}
+        </p>
+        <Button asChild>
+          <Link href='/blogs'>
+            <ArrowLeft className='w-4 h-4 mr-2' />
+            Back to Blogs
+          </Link>
+        </Button>
+      </div>
     )
   }
 
@@ -69,7 +71,8 @@ const BlogPost = () => {
     })
   }
 
-  return (      {/* Back Navigation */}
+  return (
+    <>
       <div className='border-b bg-background/50 backdrop-blur-sm sticky top-0 z-40'>
         <div className='container mx-auto px-4 py-4'>
           <Button
@@ -89,9 +92,7 @@ const BlogPost = () => {
       </div>
 
       <article className='container mx-auto px-4 py-12 max-w-4xl'>
-        {/* Article Header */}
         <header className='mb-12'>
-          {/* Meta Information */}
           <div className='flex items-center gap-4 mb-6'>
             <Badge
               variant='secondary'
@@ -108,33 +109,29 @@ const BlogPost = () => {
             </Badge>
           </div>
 
-          {/* Title */}
           <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight font-display'>
             {blogPost.title}
           </h1>
 
-          {/* Description */}
           <p className='text-xl text-muted-foreground leading-relaxed max-w-3xl'>
             {blogPost.description}
           </p>
         </header>
 
-        {/* Featured Image */}
         {blogPost.image && (
           <div className='mb-12'>
             <div className='relative overflow-hidden rounded-2xl bg-muted'>
               <Image
-                src={blogPost.image}
-                alt={blogPost.title}
                 width={800}
                 height={400}
+                src={blogPost.image}
+                alt={blogPost.title}
                 className='w-full h-auto'
               />
             </div>
           </div>
         )}
 
-        {/* Article Content */}
         <div className='prose prose-lg max-w-none'>
           {blogPost.content ? (
             <div
@@ -148,7 +145,6 @@ const BlogPost = () => {
           )}
         </div>
 
-        {/* Article Footer */}
         <footer className='mt-16 pt-8 border-t'>
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-4'>
@@ -166,6 +162,7 @@ const BlogPost = () => {
           </div>
         </footer>
       </article>
+    </>
   )
 }
 

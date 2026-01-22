@@ -43,9 +43,11 @@ const Whitepaper = () => {
                 className='flex flex-col md:flex-row bg-card border border-border rounded-2xl overflow-hidden hover:shadow-xl transition-shadow'
               >
                 <div className='md:w-1/2 bg-pink-100'>
-                  <img
+                  <Image
                     src={whitepaper.image}
                     alt={whitepaper.title}
+                    width={600}
+                    height={500}
                     className='w-full h-full object-cover'
                   />
                 </div>

@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState, useEffect, useRef, useCallback, Suspense } from 'react'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import {
   Plug,
@@ -158,7 +158,7 @@ const outcomes = [
   { icon: Users, label: 'Reduce provider burden' },
 ]
 
-const Capabilities = () => {
+const CapabilitiesContent = () => {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
@@ -573,6 +573,14 @@ const Capabilities = () => {
         </div>
       </section>
     </>
+  )
+}
+
+const Capabilities = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CapabilitiesContent />
+    </Suspense>
   )
 }
 

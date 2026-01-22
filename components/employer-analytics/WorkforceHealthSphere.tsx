@@ -1,6 +1,4 @@
-/** @jsxImportSource react */
 'use client'
-import React from 'react'
 import * as THREE from 'three'
 import { Html } from '@react-three/drei'
 import { useRef, useMemo, Suspense } from 'react'
@@ -67,15 +65,11 @@ function PopulationNodes({ count = 150 }: { count?: number }) {
       <bufferGeometry>
         <bufferAttribute
           attach='attributes-position'
-          count={count}
-          array={positions}
-          itemSize={3}
+          args={[positions, 3]}
         />
         <bufferAttribute
           attach='attributes-color'
-          count={count}
-          array={colors}
-          itemSize={3}
+          args={[colors, 3]}
         />
       </bufferGeometry>
       <pointsMaterial
@@ -185,13 +179,11 @@ export function WorkforceHealthSphere() {
         </div>
 
         <div className='grid lg:grid-cols-2 gap-12 items-center'>
-          {/* 3D Sphere */}
           <div className='h-[400px] md:h-[500px] relative'>
             <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
               <Scene />
             </Canvas>
 
-            {/* Animated overlay effects */}
             <div className='absolute inset-0 pointer-events-none'>
               <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-primary/20 animate-ping-slow' />
               <div
@@ -201,7 +193,6 @@ export function WorkforceHealthSphere() {
             </div>
           </div>
 
-          {/* Insights */}
           <div className='space-y-6'>
             <h3 className='text-xl font-semibold mb-6'>Key Insights</h3>
             <div className='space-y-4'>

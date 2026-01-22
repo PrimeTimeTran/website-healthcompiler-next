@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight, Target, Code2, Heart, Handshake } from 'lucide-react'
 
-
 import { Button } from '@/components/ui/button'
 import mehulPhoto from '@/assets/mehul-agarwal.png'
 import santoshPhoto from '@/assets/santosh-pujari.png'
@@ -330,6 +329,7 @@ const About = () => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

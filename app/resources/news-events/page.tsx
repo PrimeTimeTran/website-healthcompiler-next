@@ -249,9 +249,11 @@ const NewsEvents = () => {
                       rel='noopener noreferrer'
                       className='w-full h-full'
                     >
-                      <img
+                      <Image
                         src={item.image}
                         alt={item.title}
+                        width={400}
+                        height={192}
                         className='w-full h-48 object-cover'
                       />
                     </a>

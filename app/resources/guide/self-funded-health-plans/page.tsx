@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import {
   Users,
@@ -161,7 +162,7 @@ const SelfFundedHealthPlansGuide = () => {
   ]
 
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className='relative bg-gradient-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent' />
@@ -211,9 +212,11 @@ const SelfFundedHealthPlansGuide = () => {
             </p>
             <div className='relative'>
               <div className='absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
-              <img
+              <Image
                 src='https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/pexels-photo-7821915-1920w.jpeg'
                 alt='Self-Funded Health Plans'
+                width={800}
+                height={400}
                 className='relative rounded-xl shadow-elevated w-full'
               />
             </div>
@@ -640,7 +643,7 @@ const SelfFundedHealthPlansGuide = () => {
           </Link>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }
 

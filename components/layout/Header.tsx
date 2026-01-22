@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
 import { usePathname } from 'next/navigation'
-import { Button } from '@/components/ui/button'
 import {
   X,
   Plug,
@@ -12,14 +11,17 @@ import {
   Users,
   ChevronDown,
   ChevronRight,
+  LucideIcon,
 } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 import logo from '@/assets/favicon.png'
 
 interface PlatformCard {
   title: string
   description: string
   href: string
-  icon: React.ElementType
+  icon: LucideIcon
   bgColor: string
 }
 

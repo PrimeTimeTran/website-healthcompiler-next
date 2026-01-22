@@ -1,15 +1,15 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import {
   Users,
-  Activity,
-  TrendingUp,
   Receipt,
-  LayoutDashboard,
+  Activity,
   ArrowRight,
+  TrendingUp,
+  LayoutDashboard,
 } from 'lucide-react'
+import { Button } from '@/components/ui/button'
 
 const solutions = [
   {
@@ -66,7 +66,8 @@ const solutions = [
 ]
 
 const Solutions = () => {
-  return (      {/* Hero */}
+  return (
+    <>
       <section className='section-padding bg-gradient-to-b from-background to-background-secondary'>
         <div className='container-tight mx-auto text-center'>
           <h1 className='font-display text-4xl md:text-5xl font-bold text-foreground mb-6'>
@@ -143,6 +144,7 @@ const Solutions = () => {
           </Button>
         </div>
       </section>
+    </>
   )
 }
 

@@ -1,8 +1,8 @@
 'use client'
 
-
 const Terms = () => {
-  return (      {/* Hero Section */}
+  return (
+    <>
       <section className='relative py-20 md:py-28 bg-gradient-to-b from-secondary/50 to-background overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(var(--primary)/0.1),transparent_50%)]' />
         <div className='container mx-auto px-4 relative z-10'>
@@ -1010,6 +1010,7 @@ const Terms = () => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

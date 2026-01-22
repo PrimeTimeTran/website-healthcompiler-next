@@ -1,5 +1,5 @@
-import { Layout } from '@/components/layout/gogogo'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowLeft } from 'lucide-react'
 
 interface ArticleLayoutProps {
@@ -14,15 +14,15 @@ export const ArticleLayout = ({
   children,
 }: ArticleLayoutProps) => {
   return (
-    <Layout>
+    <>
       {/* Hero Section */}
       <section className='relative py-16 md:py-24 bg-gradient-to-br from-primary/5 to-secondary/10'>
         <div className='container mx-auto px-4'>
           <Link
             href='/resources/news-events'
-            className='inline-flex items-center text-primary hover:underline mb-6'
+            className='inline-flex items-center text-primary hover:underline mb-6 gap-2'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
+            <ArrowLeft className='w-4 h-4' />
             Back to News & Events
           </Link>
           <h1 className='text-3xl md:text-4xl lg:text-5xl font-bold text-foreground max-w-4xl'>
@@ -35,9 +35,11 @@ export const ArticleLayout = ({
       <section className='py-8 bg-background'>
         <div className='container mx-auto px-4'>
           <div className='max-w-4xl mx-auto'>
-            <img
+            <Image
               src={heroImage}
               alt={title}
+              width={800}
+              height={400}
               className='w-full h-auto rounded-2xl shadow-lg'
             />
           </div>
@@ -70,6 +72,6 @@ export const ArticleLayout = ({
           </Link>
         </div>
       </section>
-    </Layout>
+    </>
   )
 }

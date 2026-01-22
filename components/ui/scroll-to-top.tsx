@@ -1,16 +1,18 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { usePathname } from 'next/navigation'
 import { ArrowUp } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false)
-  const location = useLocation()
+  const pathname = usePathname()
 
   // Scroll to top on route change
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' })
-  }, [location.pathname])
+  }, [pathname])
 
   // Show button when scrolled down
   useEffect(() => {

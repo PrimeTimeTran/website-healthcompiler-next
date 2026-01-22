@@ -497,18 +497,15 @@ const Apex = () => {
             className='container mx-auto px-6 relative z-10'
           >
             <div className='flex flex-col items-center text-center'>
-              {/* APEX Logo */}
               <div className='mb-8 animate-fade-in'>
                 <Image
                   src={apexLogo}
                   alt='APEX Magazine'
                   height={112}
-                  width='auto'
                   className='h-20 md:h-28 w-auto brightness-0 invert'
                 />
               </div>
 
-              {/* Eyebrow */}
               <p
                 className='text-secondary font-apex-body text-sm md:text-base tracking-widest uppercase mb-6 animate-fade-in'
                 style={{ animationDelay: '100ms' }}
@@ -516,15 +513,12 @@ const Apex = () => {
                 {apexData.hero.eyebrow}
               </p>
 
-              {/* Headline */}
               <h1
                 className='font-apex-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-apex-foreground leading-tight max-w-5xl animate-fade-in'
                 style={{ animationDelay: '200ms' }}
               >
                 {apexData.hero.h1}
               </h1>
-
-              {/* Decorative line */}
               <div
                 className='mt-12 w-24 h-1 bg-gradient-to-r from-apex-accent to-apex-accent-warm rounded-full animate-fade-in'
                 style={{ animationDelay: '300ms' }}

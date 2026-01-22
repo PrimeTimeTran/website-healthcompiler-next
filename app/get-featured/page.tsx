@@ -1,9 +1,10 @@
 'use client'
 
-import { useState } from 'react'
-import { Button } from '@/components/ui/button'
 import { toast } from 'sonner'
+import { useState } from 'react'
 import { ArrowRight, CheckCircle } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 
 const GetFeatured = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +24,7 @@ const GetFeatured = () => {
     await new Promise((resolve) => setTimeout(resolve, 1500))
 
     toast.success(
-      "Thank you! Your submission has been received. We'll be in touch soon."
+      "Thank you! Your submission has been received. We'll be in touch soon.",
     )
     setFormData({ name: '', email: '', organization: '', role: '', story: '' })
     setIsSubmitting(false)
@@ -32,7 +33,7 @@ const GetFeatured = () => {
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
+    >,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -40,7 +41,9 @@ const GetFeatured = () => {
     }))
   }
 
-  return (      {/* Hero */}
+  return (
+    <>
+      {/* Hero */}
       <section className='pt-32 pb-16 md:pt-40 md:pb-20 bg-gradient-to-b from-background to-background-secondary'>
         <div className='container mx-auto px-6 text-center'>
           <p className='text-sm uppercase tracking-widest text-accent mb-4'>
@@ -234,6 +237,7 @@ const GetFeatured = () => {
           </div>
         </div>
       </section>
+    </>
   )
 }
 

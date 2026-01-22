@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import {
   Heart,
@@ -113,9 +114,11 @@ const DirectPrimaryCareGuide = () => {
             <div className='slide-up stagger-2'>
               <div className='relative'>
                 <div className='absolute -inset-4 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl blur-2xl' />
-                <img
+                <Image
                   src='https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/How-to-DPC-whitepaper-thumbnail-1920w.png'
                   alt='Direct Primary Care Guide'
+                  width={800}
+                  height={400}
                   className='relative rounded-xl shadow-elevated w-full'
                 />
               </div>

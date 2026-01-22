@@ -1,5 +1,5 @@
 import { Quote } from 'lucide-react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import brianFretwellImg from '@/assets/testimonial-brian-fretwell.png'
 import drKenRictorImg from '@/assets/dr-ken-rictor.png'
 import drWilliamBurkhartImg from '@/assets/dr-william-burkhart.png'
@@ -9,7 +9,7 @@ interface Testimonial {
   name: string
   title: string
   initials?: string
-  image?: string
+  image?: string | StaticImageData
 }
 
 const testimonials: Testimonial[] = [
@@ -56,13 +56,11 @@ export const TestimonialsSection = () => {
                   fill='currentColor'
                 />
 
-                {/* Quote Text */}
                 <p className='text-foreground leading-relaxed text-[15px]'>
                   {testimonial.quote}
                 </p>
               </div>
 
-              {/* Author Info */}
               <div className='flex items-center justify-between mt-8 pt-6 border-t border-border/30'>
                 <div>
                   <p className='font-semibold text-foreground'>
