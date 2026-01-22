@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Linkedin, Instagram, Mail, Youtube } from 'lucide-react'
+
+import fmmaBadge from '@/assets/fmma-badge.png'
 import logo from '@/assets/healthcompiler-logo.webp'
 import hipaaSoc2Badge from '@/assets/hipaa-soc2-badge.png'
-import fmmaBadge from '@/assets/fmma-badge.png'
+
 const quickLinks = [
   { label: 'Home', href: '/' },
   { label: 'Platform', href: '/platform' },

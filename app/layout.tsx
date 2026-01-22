@@ -1,5 +1,6 @@
 import { ReactNode } from 'react'
 import './globals.css'
+import { ThemeProvider } from '@/components/theme-provider'
 
 import { Header } from './Header'
 import { Footer } from './Footer'
@@ -8,16 +9,26 @@ interface LayoutProps {
   children: ReactNode
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const RootLayout = ({ children }: LayoutProps) => {
   return (
-    <html lang='en'>
+    <html
+      lang='en'
+      suppressHydrationWarning
+    >
       <body>
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className='min-h-screen pt-20'>{children}</main>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
 }
 
-export default Layout
+export default RootLayout

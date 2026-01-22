@@ -26,6 +26,7 @@ const buttonVariants = cva(
         link: 'bg-transparent text-primary underline-offset-4 hover:underline',
       },
       size: {
+        default: 'h-10 px-5 text-sm',
         sm: 'h-9 px-4 text-sm',
         md: 'h-10 px-5 text-sm',
         lg: 'h-12 px-8 text-base',
@@ -36,14 +37,14 @@ const buttonVariants = cva(
     compoundVariants: [
       {
         variant: 'link',
-        size: ['sm', 'md', 'lg', 'xl'],
+        size: ['default', 'sm', 'md', 'lg', 'xl'],
         className: 'h-auto px-0',
       },
     ],
 
     defaultVariants: {
       variant: 'primary',
-      size: 'md',
+      size: 'default',
     },
   },
 )

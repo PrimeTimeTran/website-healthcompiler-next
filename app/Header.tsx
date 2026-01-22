@@ -266,7 +266,6 @@ export const Header = () => {
               )}
             </div>
 
-            {/* Solutions Dropdown */}
             <div
               className='relative group'
               onMouseEnter={() => handleMouseEnter('Solutions')}
@@ -498,7 +497,6 @@ export const Header = () => {
               )}
             </div>
 
-            {/* APEX (no dropdown) */}
             <Link
               href='/resources/apex'
               className={`text-[15px] font-medium transition-colors hover:text-foreground py-2 ${
@@ -511,7 +509,6 @@ export const Header = () => {
             </Link>
           </div>
 
-          {/* Desktop CTA - Right side */}
           <div className='hidden lg:flex items-center gap-6'>
             <a
               href='https://insights.healthcompiler.com/'
@@ -534,7 +531,6 @@ export const Header = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-foreground'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -544,11 +540,9 @@ export const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className='lg:hidden mt-4 pb-4 border-t border-border/50 pt-4 animate-fade-in'>
             <div className='flex flex-col gap-2'>
-              {/* Platform */}
               <div>
                 <button
                   onClick={() =>
@@ -585,7 +579,6 @@ export const Header = () => {
                 )}
               </div>
 
-              {/* Solutions */}
               <div>
                 <button
                   onClick={() =>
@@ -677,7 +670,6 @@ export const Header = () => {
                 )}
               </div>
 
-              {/* Resources */}
               <div>
                 <button
                   onClick={() =>
