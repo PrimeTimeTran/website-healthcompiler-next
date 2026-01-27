@@ -170,7 +170,7 @@ const Payors = () => {
       </section>
 
       {/* Risk and HCC Section */}
-      <section className='py-20 bg-gradient-to-b from-slate-50 to-white'>
+      <section className='py-20 bg-linear-to-b from-slate-50 to-white'>
         <div className='container mx-auto px-6'>
           <div className='max-w-4xl mb-12'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
@@ -236,7 +236,7 @@ const Payors = () => {
       </section>
 
       {/* Designed for Payer Environments Section */}
-      <section className='py-20 bg-gradient-to-b from-slate-50 to-white'>
+      <section className='py-20 bg-linear-to-b from-slate-50 to-white'>
         <div className='container mx-auto px-6'>
           <div className='max-w-4xl mb-12'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
@@ -306,7 +306,7 @@ const Payors = () => {
       </section>
 
       {/* Section 2 - Core Capabilities */}
-      <section className='relative py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white overflow-hidden'>
+      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
         <div className='container mx-auto px-6'>
           <div className='max-w-3xl mb-12'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
@@ -432,7 +432,7 @@ const Payors = () => {
       </section>
 
       {/* Section 4 - Network & Partner Visibility */}
-      <section className='relative py-20 md:py-28 bg-gradient-to-b from-slate-50 to-white overflow-hidden'>
+      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
         <div className='container mx-auto px-6'>
           <div className='max-w-3xl mb-12'>
             <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
