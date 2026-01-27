@@ -15,7 +15,7 @@ import {
   LucideIcon,
 } from 'lucide-react'
 
-import logo from '@/assets/favicon.png'
+import logo from '@/assets/logo.webp'
 import { Button } from '@/components/ui/button'
 
 interface PlatformCard {
