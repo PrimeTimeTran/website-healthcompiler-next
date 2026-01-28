@@ -40,6 +40,10 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       headers: {
         Authorization: `Bearer ${STRAPI_TOKEN}`,
       },
+      next: {
+        tags: ['blog-posts'],
+        revalidate: 86400, // optional safety net
+      },
     })
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
