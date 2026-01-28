@@ -10,7 +10,7 @@ export async function GET(req: Request) {
     return NextResponse.json({ message: 'Nope' }, { status: 403 })
   }
 
-  revalidateTag('blog-posts', 'page')
+  revalidateTag('blog-posts', 'max')
 
   return NextResponse.json({ revalidated: true })
 }
