@@ -1,44 +1,23 @@
-'use client'
-
 import Link from 'next/link'
 import Image from 'next/image'
 import ReactMarkdown from 'react-markdown'
-import { useParams } from 'next/navigation'
 import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
-import { Skeleton } from '@/components/ui/skeleton'
+import { fetchBlogPostBySlug } from '@/services/strapi'
 
-import { useBlogPost } from '@/hooks/useBlogPosts'
+const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
+  const params = await props.params
+  const { slug } = params
 
-const BlogPostSkeleton = () => (
-  <div className='space-y-8'>
-    <div className='space-y-4'>
-      <Skeleton className='h-4 w-24' />
-      <Skeleton className='h-12 w-full' />
-      <Skeleton className='h-6 w-3/4' />
-    </div>
-    <Skeleton className='h-96 w-full rounded-2xl' />
-    <div className='space-y-4'>
-      <Skeleton className='h-4 w-full' />
-      <Skeleton className='h-4 w-full' />
-      <Skeleton className='h-4 w-3/4' />
-    </div>
-  </div>
-)
+  let error = null
+  let blogPost = null
 
-const BlogPost = () => {
-  const params = useParams<{ slug: string | string[] }>()
-  const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug
-  const { blogPost, loading, error } = useBlogPost(slug || '')
-
-  if (loading) {
-    return (
-      <div className='container mx-auto px-4 py-20'>
-        <BlogPostSkeleton />
-      </div>
-    )
+  try {
+    blogPost = await fetchBlogPostBySlug(slug)
+  } catch (err) {
+    error = err instanceof Error ? err.message : 'Failed to load blog post'
   }
 
   if (error || !blogPost) {
@@ -54,7 +33,7 @@ const BlogPost = () => {
           {error || "The blog post you're looking for doesn't exist."}
         </p>
         <Button asChild>
-          <Link href='/blogs'>
+          <Link href='/resources/blogs'>
             <ArrowLeft className='w-4 h-4 mr-2' />
             Back to Blogs
           </Link>
@@ -122,6 +101,7 @@ const BlogPost = () => {
           <div className='mb-12'>
             <div className='relative overflow-hidden rounded-2xl bg-muted'>
               <Image
+                unoptimized
                 width={800}
                 height={400}
                 src={blogPost.image}
@@ -149,7 +129,6 @@ const BlogPost = () => {
                 )
 
               case 'shared.media':
-                // You’ll need to populate media here
                 return null
 
               case 'shared.slider':
@@ -173,7 +152,7 @@ const BlogPost = () => {
               </Button>
             </div>
             <Button asChild>
-              <Link href='/blogs'>Read More Articles</Link>
+              <Link href='/resources/blogs'>Read More Articles</Link>
             </Button>
           </div>
         </footer>

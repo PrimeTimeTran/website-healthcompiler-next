@@ -31,6 +31,7 @@ export interface BlogPost {
   slug?: string
   image: string
   link: string
+  blocks?: any[]
 }
 
 export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
@@ -58,6 +59,58 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
     }))
   } catch (error) {
     console.error('Error fetching blog posts:', error)
+    throw error
+  }
+}
+
+export const fetchBlogPostBySlug = async (
+  slug: string,
+): Promise<BlogPost | null> => {
+  try {
+    const response = await fetch(
+      `${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
+      {
+        headers: {
+          Authorization: `Bearer ${STRAPI_TOKEN}`,
+        },
+      },
+    )
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`)
+    }
+
+    const data = await response.json()
+    const item = data.data?.[0]
+
+    if (!item) return null
+
+    // Helper to get image URL safely
+    const getImageUrl = (item: any) => {
+      // Check for direct property or attributes
+      const attributes = item.attributes || item
+      const cover = attributes.cover?.data?.attributes || attributes.cover
+
+      if (cover?.url) {
+        return `${STRAPI_URL}${cover.url}`
+      }
+
+      return ''
+    }
+
+    return {
+      id: item.id,
+      title: item.title || item.attributes?.title,
+      date: item.createdAt || item.attributes?.date,
+      description: item.description || item.attributes?.description,
+      content: item.content || item.attributes?.content,
+      slug: item.slug || item.attributes?.slug,
+      image: getImageUrl(item),
+      link: item.link || item.attributes?.link,
+      blocks: item.blocks || item.attributes?.blocks || [],
+    }
+  } catch (error) {
+    console.error('Error fetching blog post by slug:', error)
     throw error
   }
 }
