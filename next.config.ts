@@ -14,6 +14,11 @@ const nextConfig: NextConfig & { turbopack?: any } = {
         port: '8080',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'api.marketing.compile.health',
+        pathname: '/uploads/**',
+      },
     ],
   },
   turbopack: {
