@@ -65,7 +65,7 @@ const Terms = () => {
                   meaning it is accessed through the Platform and not installed
                   locally on your devices. This ensures efficient delivery but
                   requires uniform application of these Terms. For inquiries,
-                  please contact us at support@compile.health.
+                  please contact us at support@healthcompiler.com.
                 </p>
 
                 <p className='text-muted-foreground leading-relaxed'>
@@ -999,10 +999,10 @@ const Terms = () => {
                 <p className='mt-4'>
                   Email:{' '}
                   <a
-                    href='mailto:support@compile.health'
+                    href='mailto:support@healthcompiler.com'
                     className='text-primary hover:underline'
                   >
-                    support@compile.health
+                    support@healthcompiler.com
                   </a>
                 </p>
               </div>

@@ -426,7 +426,7 @@ const Privacy = () => {
                     Minors under 18 years of age may have the Personal
                     Information that they have provided to Health Compiler, Inc.
                     through the Site deleted by sending an email to
-                    support@compile.health requesting deletion. Please note
+                    support@healthcompiler.com requesting deletion. Please note
                     that, while we make reasonable efforts to comply with such
                     requests, deletion of your personal information does not
                     ensure complete and comprehensive removal of that data from
@@ -524,10 +524,10 @@ const Privacy = () => {
                     <p>
                       Email:{' '}
                       <a
-                        href='mailto:support@compile.health'
+                        href='mailto:support@healthcompiler.com'
                         className='text-primary hover:underline'
                       >
-                        support@compile.health
+                        support@healthcompiler.com
                       </a>
                     </p>
                   </div>
