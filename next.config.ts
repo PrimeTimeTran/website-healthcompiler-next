@@ -8,6 +8,12 @@ const nextConfig: NextConfig & { turbopack?: any } = {
         protocol: 'https',
         hostname: 'lirp.cdn-website.com',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '8080',
+        pathname: '/uploads/**',
+      },
     ],
   },
   turbopack: {

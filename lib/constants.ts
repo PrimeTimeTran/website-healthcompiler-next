@@ -1,4 +1,3 @@
-export const VITE_STRAPI_URL = ''
-export const VITE_STRAPI_API_TOKEN = ''
-// export const VITE_STRAPI_URL = import.meta.env.VITE_STRAPI_URL
-// export const VITE_STRAPI_API_TOKEN = import.meta.env.VITE_STRAPI_API_TOKEN
+export const STRAPI_URL = 'http://localhost:8080'
+export const STRAPI_TOKEN =
+  '3729639169d357ee7b052d041c4815eb1bccec3f00f43197910a160b44adc6aa412b6d17bc7c208e1a5385351a57a19322d56c5877e8178508ec90724e12f234ea1c7859ede88cda23efd6129bfcd34b6a02bb02adaac61ac1206ac824149ea43e93e678883b4c228adf220efa71f82ae5aee60e177be7d2ff17afdb736b1db4'

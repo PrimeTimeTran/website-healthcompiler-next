@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
+import ReactMarkdown from 'react-markdown'
 import { useParams } from 'next/navigation'
 import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
 
@@ -31,7 +32,6 @@ const BlogPost = () => {
   const params = useParams<{ slug: string | string[] }>()
   const slug = Array.isArray(params.slug) ? params.slug[0] : params.slug
   const { blogPost, loading, error } = useBlogPost(slug || '')
-  console.log({ blogPost })
 
   if (loading) {
     return (
@@ -133,16 +133,32 @@ const BlogPost = () => {
         )}
 
         <div className='prose prose-lg max-w-none'>
-          {blogPost.content ? (
-            <div
-              className='text-foreground leading-relaxed space-y-6'
-              dangerouslySetInnerHTML={{ __html: blogPost.content }}
-            />
-          ) : (
-            <div className='text-muted-foreground italic'>
-              Content for this blog post is not available yet.
-            </div>
-          )}
+          {blogPost.blocks?.map((block: any) => {
+            switch (block.__component) {
+              case 'shared.rich-text':
+                return (
+                  <ReactMarkdown key={block.id}>{block.body}</ReactMarkdown>
+                )
+
+              case 'shared.quote':
+                return (
+                  <blockquote key={block.id}>
+                    <p>{block.body}</p>
+                    {block.title && <cite>— {block.title}</cite>}
+                  </blockquote>
+                )
+
+              case 'shared.media':
+                // You’ll need to populate media here
+                return null
+
+              case 'shared.slider':
+                return null
+
+              default:
+                return null
+            }
+          })}
         </div>
 
         <footer className='mt-16 pt-8 border-t'>

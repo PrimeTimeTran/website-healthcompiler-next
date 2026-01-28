@@ -2,7 +2,12 @@
 import { useState, useEffect } from 'react'
 import { fetchBlogPosts, BlogPost } from '@/services/strapi'
 
-import { VITE_STRAPI_URL, VITE_STRAPI_API_TOKEN } from '../lib/constants'
+import { STRAPI_URL, STRAPI_TOKEN } from '../lib/constants'
+
+console.log({
+  STRAPI_URL,
+  STRAPI_TOKEN,
+})
 
 export const useBlogPosts = () => {
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([])
@@ -18,7 +23,7 @@ export const useBlogPosts = () => {
         setError(null)
       } catch (err) {
         setError(
-          err instanceof Error ? err.message : 'Failed to load blog posts'
+          err instanceof Error ? err.message : 'Failed to load blog posts',
         )
         console.error('Error loading blog posts:', err)
       } finally {
@@ -34,12 +39,12 @@ export const useBlogPosts = () => {
 
 export async function getBlogPostBySlug(slug: string) {
   const res = await fetch(
-    `${VITE_STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
+    `${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
     {
       headers: {
-        Authorization: `Bearer ${VITE_STRAPI_API_TOKEN}`,
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
       },
-    }
+    },
   )
 
   if (!res.ok) {
@@ -66,7 +71,7 @@ export const useBlogPost = (slug: string) => {
         setError(null)
       } catch (err) {
         setError(
-          err instanceof Error ? err.message : 'Failed to load blog post'
+          err instanceof Error ? err.message : 'Failed to load blog post',
         )
         console.error('Error loading blog post:', err)
       } finally {

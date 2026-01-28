@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
 import Image from 'next/image'
+import { useState } from 'react'
 import { Search, Loader2, Calendar, ArrowRight } from 'lucide-react'
+
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { Skeleton } from '@/components/ui/skeleton'
@@ -11,7 +12,6 @@ import Link from 'next/link'
 
 const POSTS_PER_PAGE = 9
 
-// Skeleton card component for loading state
 const BlogCardSkeleton = () => (
   <div className='group block animate-pulse'>
     <div className='relative overflow-hidden rounded-2xl bg-muted h-52 md:h-60 mb-5' />
@@ -154,9 +154,10 @@ const Blogs = () => {
                   <div className='relative overflow-hidden rounded-2xl mb-5 bg-muted'>
                     <div className='aspect-[16/10]'>
                       <Image
+                        fill
+                        unoptimized
                         src={post.image}
                         alt={post.title}
-                        fill
                         className='object-cover transition-all duration-500 group-hover:scale-105'
                       />
                     </div>
