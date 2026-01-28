@@ -8,6 +8,8 @@ export const metadata = {
     'Discover insights on Direct Primary Care, Wellness, Health Analytics, and innovative healthcare solutions.',
 }
 
+export const revalidate = 86400
+
 const Blogs = async () => {
   let error = null
   let blogPosts: BlogPost[] = []
