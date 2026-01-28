@@ -1,14 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import {
-  Activity,
-  MessageSquare,
-  Pill,
-  Heart,
-  TrendingUp,
-  Users,
-} from 'lucide-react'
+import { Activity, MessageSquare, Pill, Heart, TrendingUp, Users } from 'lucide-react'
 
 const IndependentPrimaryCareViz = () => {
   const [activeMetric, setActiveMetric] = useState(0)
@@ -66,40 +59,30 @@ const IndependentPrimaryCareViz = () => {
   }, [metrics.length])
 
   return (
-    <div className='relative h-[450px] flex items-center justify-center'>
+    <div className="relative h-[450px] flex items-center justify-center">
       {/* Central Dashboard Card */}
-      <div className='relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-72'>
-        <div className='flex items-center justify-between mb-4'>
+      <div className="relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-72">
+        <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className='font-semibold text-foreground text-sm'>
-              IPC Intelligence
-            </h3>
-            <p className='text-xs text-muted-foreground'>
-              Value-Based Analytics
-            </p>
+            <h3 className="font-semibold text-foreground text-sm">IPC Intelligence</h3>
+            <p className="text-xs text-muted-foreground">Value-Based Analytics</p>
           </div>
-          <div className='flex items-center gap-1.5'>
-            <span className='text-xs text-muted-foreground'>Live</span>
-            <span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs text-muted-foreground">Live</span>
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           </div>
         </div>
 
         {/* Main Metric Display */}
-        <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-4 mb-4'>
-          <div className='flex items-center gap-3'>
+        <div className="bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-4 mb-4">
+          <div className="flex items-center gap-3">
             {(() => {
               const Icon = metrics[activeMetric].icon
-              return (
-                <Icon className={`w-8 h-8 ${metrics[activeMetric].color}`} />
-              )
+              return <Icon className={`w-8 h-8 ${metrics[activeMetric].color}`} />
             })()}
             <div>
-              <p className='text-2xl font-bold text-foreground'>
-                {metrics[activeMetric].value}
-              </p>
-              <p className='text-xs text-muted-foreground'>
-                {metrics[activeMetric].label}
-              </p>
+              <p className="text-2xl font-bold text-foreground">{metrics[activeMetric].value}</p>
+              <p className="text-xs text-muted-foreground">{metrics[activeMetric].label}</p>
             </div>
             <span
               className={`ml-auto text-xs font-medium px-2 py-1 rounded-full ${
@@ -116,24 +99,20 @@ const IndependentPrimaryCareViz = () => {
         </div>
 
         {/* Mini Metrics Grid */}
-        <div className='grid grid-cols-3 gap-2'>
+        <div className="grid grid-cols-3 gap-2">
           {metrics.slice(0, 6).map((metric, idx) => {
             const Icon = metric.icon
             return (
               <div
                 key={idx}
                 className={`p-2 rounded-lg text-center transition-all duration-300 ${
-                  idx === activeMetric
-                    ? 'bg-primary/10 border border-primary/30'
-                    : 'bg-slate-50'
+                  idx === activeMetric ? 'bg-primary/10 border border-primary/30' : 'bg-slate-50'
                 }`}
               >
                 <Icon
                   className={`w-4 h-4 mx-auto mb-1 ${idx === activeMetric ? metric.color : 'text-muted-foreground'}`}
                 />
-                <p className='text-[10px] text-muted-foreground truncate'>
-                  {metric.label}
-                </p>
+                <p className="text-[10px] text-muted-foreground truncate">{metric.label}</p>
               </div>
             )
           })}
@@ -165,12 +144,8 @@ const IndependentPrimaryCareViz = () => {
             >
               <Icon className={`w-4 h-4 ${metric.color}`} />
               <div>
-                <p className='text-xs font-semibold text-foreground'>
-                  {metric.value}
-                </p>
-                <p className='text-[10px] text-muted-foreground'>
-                  {metric.label}
-                </p>
+                <p className="text-xs font-semibold text-foreground">{metric.value}</p>
+                <p className="text-[10px] text-muted-foreground">{metric.label}</p>
               </div>
             </div>
           </div>
@@ -179,38 +154,24 @@ const IndependentPrimaryCareViz = () => {
 
       {/* Connection Ring */}
       <svg
-        className='absolute inset-0 w-full h-full pointer-events-none'
+        className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ transform: 'rotate(-90deg)' }}
       >
         <defs>
-          <linearGradient
-            id='ipcRingGradient'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor='hsl(var(--primary))'
-              stopOpacity='0.3'
-            />
-            <stop
-              offset='100%'
-              stopColor='hsl(var(--accent))'
-              stopOpacity='0.3'
-            />
+          <linearGradient id="ipcRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.3" />
           </linearGradient>
         </defs>
         <circle
-          cx='50%'
-          cy='50%'
-          r='180'
-          fill='none'
-          stroke='url(#ipcRingGradient)'
-          strokeWidth='1'
-          strokeDasharray='8 4'
-          className='animate-spin'
+          cx="50%"
+          cy="50%"
+          r="180"
+          fill="none"
+          stroke="url(#ipcRingGradient)"
+          strokeWidth="1"
+          strokeDasharray="8 4"
+          className="animate-spin"
           style={{ animationDuration: '30s' }}
         />
       </svg>

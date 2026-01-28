@@ -35,12 +35,12 @@ const CTAButton = ({
   suffixIconDefault,
 }: CTAButtonProps) => {
   const content = (
-    <span className='inline-flex items-center gap-2'>
+    <span className="inline-flex items-center gap-2">
       {iconPrefix}
       {text}
       {iconSuffix}
       {suffixIconDefault && (
-        <ArrowRight className='ml-2 transition-transform group-hover:translate-x-1' />
+        <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
       )}
     </span>
   )
@@ -50,10 +50,7 @@ const CTAButton = ({
   // ✅ Navigation case
   if (link) {
     return (
-      <Link
-        href={link}
-        className={classes}
-      >
+      <Link href={link} className={classes}>
         {content}
       </Link>
     )
@@ -61,11 +58,7 @@ const CTAButton = ({
 
   // ✅ Action case
   return (
-    <button
-      type='button'
-      className={classes}
-      onClick={onClick}
-    >
+    <button type="button" className={classes} onClick={onClick}>
       {content}
     </button>
   )

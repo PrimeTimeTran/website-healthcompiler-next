@@ -24,31 +24,29 @@ const MarketingIntegrationsSection = () => {
   const categories = [...new Set(integrations.map((i) => i.category))]
 
   return (
-    <section className='py-20 bg-background'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-3xl mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
+    <section className="py-20 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="max-w-3xl mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Designed to Fit Your Existing Stack
           </h2>
-          <p className='text-lg text-muted-foreground'>
-            Health Compiler works alongside the tools practices already use—no
-            forced rip-and-replace.
+          <p className="text-lg text-muted-foreground">
+            Health Compiler works alongside the tools practices already use—no forced
+            rip-and-replace.
           </p>
         </div>
 
-        <div className='space-y-8 mb-12'>
+        <div className="space-y-8 mb-12">
           {categories.map((category) => (
             <div key={category}>
-              <h3 className='text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide'>
+              <h3 className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wide">
                 {category}
               </h3>
-              <div className='flex flex-wrap gap-4'>
+              <div className="flex flex-wrap gap-4">
                 {integrations
                   .filter((i) => i.category === category)
                   .map((integration, index) => {
-                    const globalIndex = integrations.findIndex(
-                      (i) => i.name === integration.name,
-                    )
+                    const globalIndex = integrations.findIndex((i) => i.name === integration.name)
                     return (
                       <div
                         key={integration.name}
@@ -64,9 +62,7 @@ const MarketingIntegrationsSection = () => {
                         onMouseEnter={() => setHoveredIndex(globalIndex)}
                         onMouseLeave={() => setHoveredIndex(null)}
                       >
-                        <span className='font-medium text-foreground'>
-                          {integration.name}
-                        </span>
+                        <span className="font-medium text-foreground">{integration.name}</span>
                       </div>
                     )
                   })}
@@ -76,11 +72,10 @@ const MarketingIntegrationsSection = () => {
         </div>
 
         {/* Trust Line */}
-        <div className='flex items-center justify-center gap-3 p-4 rounded-xl bg-muted/30 border border-border/50'>
-          <Shield className='w-5 h-5 text-primary' />
-          <p className='text-sm text-muted-foreground'>
-            HIPAA-aware workflows with role-based access and audit-ready
-            reporting.
+        <div className="flex items-center justify-center gap-3 p-4 rounded-xl bg-muted/30 border border-border/50">
+          <Shield className="w-5 h-5 text-primary" />
+          <p className="text-sm text-muted-foreground">
+            HIPAA-aware workflows with role-based access and audit-ready reporting.
           </p>
         </div>
       </div>

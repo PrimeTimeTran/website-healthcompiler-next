@@ -51,15 +51,7 @@ const metricCards = [
 ]
 
 // Mini 3D chart component
-const MiniChart = ({
-  data,
-  color,
-  type,
-}: {
-  data: number[]
-  color: string
-  type: string
-}) => {
+const MiniChart = ({ data, color, type }: { data: number[]; color: string; type: string }) => {
   const maxVal = Math.max(...data)
   const width = 80
   const height = 40
@@ -68,29 +60,11 @@ const MiniChart = ({
   if (type === 'bar') {
     const barWidth = (width - padding * 2) / data.length - 2
     return (
-      <svg
-        width={width}
-        height={height}
-        className='transform perspective-[100px] rotateX-[10deg]'
-      >
+      <svg width={width} height={height} className="transform perspective-[100px] rotateX-[10deg]">
         <defs>
-          <linearGradient
-            id={`barGrad-${color}`}
-            x1='0%'
-            y1='0%'
-            x2='0%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor={color}
-              stopOpacity='1'
-            />
-            <stop
-              offset='100%'
-              stopColor={color}
-              stopOpacity='0.3'
-            />
+          <linearGradient id={`barGrad-${color}`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor={color} stopOpacity="1" />
+            <stop offset="100%" stopColor={color} stopOpacity="0.3" />
           </linearGradient>
         </defs>
         {data.map((val, i) => {
@@ -106,8 +80,8 @@ const MiniChart = ({
                 width={barWidth}
                 height={barHeight}
                 fill={color}
-                opacity='0.2'
-                rx='1'
+                opacity="0.2"
+                rx="1"
               />
               {/* Main bar */}
               <rect
@@ -116,8 +90,8 @@ const MiniChart = ({
                 width={barWidth}
                 height={barHeight}
                 fill={`url(#barGrad-${color})`}
-                rx='1'
-                className='animate-pulse'
+                rx="1"
+                className="animate-pulse"
                 style={{
                   animationDelay: `${i * 0.1}s`,
                   animationDuration: '2s',
@@ -144,45 +118,22 @@ const MiniChart = ({
     },${height - padding}`
 
     return (
-      <svg
-        width={width}
-        height={height}
-        className='transform perspective-[100px] rotateX-[10deg]'
-      >
+      <svg width={width} height={height} className="transform perspective-[100px] rotateX-[10deg]">
         <defs>
-          <linearGradient
-            id={`areaGrad-${color}`}
-            x1='0%'
-            y1='0%'
-            x2='0%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor={color}
-              stopOpacity='0.6'
-            />
-            <stop
-              offset='100%'
-              stopColor={color}
-              stopOpacity='0'
-            />
+          <linearGradient id={`areaGrad-${color}`} x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stopColor={color} stopOpacity="0.6" />
+            <stop offset="100%" stopColor={color} stopOpacity="0" />
           </linearGradient>
         </defs>
-        {type === 'area' && (
-          <polygon
-            points={areaPoints}
-            fill={`url(#areaGrad-${color})`}
-          />
-        )}
+        {type === 'area' && <polygon points={areaPoints} fill={`url(#areaGrad-${color})`} />}
         <polyline
           points={points}
-          fill='none'
+          fill="none"
           stroke={color}
-          strokeWidth='2'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          className='animate-[dash_3s_ease-in-out_infinite]'
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="animate-[dash_3s_ease-in-out_infinite]"
           style={{
             strokeDasharray: '200',
             strokeDashoffset: '200',
@@ -197,9 +148,9 @@ const MiniChart = ({
               key={i}
               cx={x}
               cy={y}
-              r='2'
+              r="2"
               fill={color}
-              className='animate-pulse'
+              className="animate-pulse"
               style={{ animationDelay: `${i * 0.15}s` }}
             />
           )
@@ -212,13 +163,7 @@ const MiniChart = ({
 }
 
 // Floating data particles
-const FloatingParticle = ({
-  index,
-  total,
-}: {
-  index: number
-  total: number
-}) => {
+const FloatingParticle = ({ index, total }: { index: number; total: number }) => {
   const angle = (index / total) * Math.PI * 2
   const radius = 220 + Math.random() * 80
   const duration = 25 + Math.random() * 15
@@ -227,7 +172,7 @@ const FloatingParticle = ({
 
   return (
     <div
-      className='absolute rounded-full bg-gradient-to-r from-accent to-primary opacity-30'
+      className="absolute rounded-full bg-gradient-to-r from-accent to-primary opacity-30"
       style={
         {
           width: size,
@@ -276,12 +221,12 @@ export const HeroSectionAlt = () => {
   return (
     <section
       ref={heroRef}
-      className='relative min-h-screen overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100'
+      className="relative min-h-screen overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
     >
       {/* Animated background gradient */}
-      <div className='absolute inset-0'>
+      <div className="absolute inset-0">
         <div
-          className='absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5 opacity-80'
+          className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5 opacity-80"
           style={{
             transform: `translate(${mousePos.x * 2}px, ${mousePos.y * 2}px)`,
             transition: 'transform 0.3s ease-out',
@@ -289,7 +234,7 @@ export const HeroSectionAlt = () => {
         />
         {/* Radial glow */}
         <div
-          className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full'
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
           style={{
             background:
               'radial-gradient(circle, rgba(233,78,135,0.08) 0%, rgba(249,115,22,0.05) 40%, transparent 70%)',
@@ -301,7 +246,7 @@ export const HeroSectionAlt = () => {
 
       {/* Grid pattern overlay */}
       <div
-        className='absolute inset-0 opacity-[0.03] pointer-events-none'
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
                            linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
@@ -355,14 +300,14 @@ export const HeroSectionAlt = () => {
         }
       `}</style>
 
-      <div className='container mx-auto px-6 relative z-10 min-h-screen flex items-center'>
-        <div className='grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-20'>
+      <div className="container mx-auto px-6 relative z-10 min-h-screen flex items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-20">
           {/* Left - Content */}
-          <div className='space-y-8'>
+          <div className="space-y-8">
             {/* Main headline */}
-            <div className='space-y-2'>
-              <h1 className='text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05]'>
-                <span className='block opacity-90'>
+            <div className="space-y-2">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05]">
+                <span className="block opacity-90">
                   {words.map((word, idx) => (
                     <span
                       key={word}
@@ -376,91 +321,78 @@ export const HeroSectionAlt = () => {
                     </span>
                   ))}
                 </span>
-                <span className='block mt-2'>Healthcare Data.</span>
-                <span className='block text-muted-foreground mt-1'>
-                  Drive Outcomes.
-                </span>
+                <span className="block mt-2">Healthcare Data.</span>
+                <span className="block text-muted-foreground mt-1">Drive Outcomes.</span>
               </h1>
             </div>
 
             {/* Description */}
-            <p className='text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl'>
-              Unifying healthcare data and AI-driven workflows to lower costs
-              and improve care across
-              <span className='text-foreground font-medium'> self-funded</span>,
-              <span className='text-foreground font-medium'> direct care</span>,
-              and
-              <span className='text-foreground font-medium'>
-                {' '}
-                value-based
-              </span>{' '}
-              organizations.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Unifying healthcare data and AI-driven workflows to lower costs and improve care
+              across
+              <span className="text-foreground font-medium"> self-funded</span>,
+              <span className="text-foreground font-medium"> direct care</span>, and
+              <span className="text-foreground font-medium"> value-based</span> organizations.
             </p>
 
             {/* CTAs */}
-            <div className='flex flex-col sm:flex-row gap-4 pt-4'>
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
-                size='lg'
-                className='group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105'
+                size="lg"
+                className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
                 asChild
               >
-                <Link href='/book-a-demo'>
+                <Link href="/book-a-demo">
                   Request Demo
-                  <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
               <Button
-                variant='outline'
-                size='lg'
-                className='border-border text-foreground hover:bg-muted px-8 py-6 text-base group'
+                variant="outline"
+                size="lg"
+                className="border-border text-foreground hover:bg-muted px-8 py-6 text-base group"
                 asChild
               >
-                <Link href='/capabilities'>
-                  <Play className='mr-2 w-4 h-4 group-hover:scale-110 transition-transform' />
+                <Link href="/capabilities">
+                  <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
                   See How It Works
                 </Link>
               </Button>
             </div>
 
             {/* Trust indicators */}
-            <div className='flex items-center gap-6 pt-6 border-t border-border'>
-              <div className='text-center'>
-                <div className='text-2xl font-bold text-foreground'>10M+</div>
-                <div className='text-xs text-muted-foreground uppercase tracking-wider'>
+            <div className="flex items-center gap-6 pt-6 border-t border-border">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">10M+</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
                   Lives Managed
                 </div>
               </div>
-              <div className='w-px h-10 bg-border' />
-              <div className='text-center'>
-                <div className='text-2xl font-bold text-foreground'>$2B+</div>
-                <div className='text-xs text-muted-foreground uppercase tracking-wider'>
+              <div className="w-px h-10 bg-border" />
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">$2B+</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">
                   Claims Processed
                 </div>
               </div>
-              <div className='w-px h-10 bg-border' />
-              <div className='text-center'>
-                <div className='text-2xl font-bold text-foreground'>99.9%</div>
-                <div className='text-xs text-muted-foreground uppercase tracking-wider'>
-                  Uptime
-                </div>
+              <div className="w-px h-10 bg-border" />
+              <div className="text-center">
+                <div className="text-2xl font-bold text-foreground">99.9%</div>
+                <div className="text-xs text-muted-foreground uppercase tracking-wider">Uptime</div>
               </div>
             </div>
           </div>
 
           {/* Right - Visualization */}
-          <div className='relative h-[600px] w-full flex items-center justify-center'>
+          <div className="relative h-[600px] w-full flex items-center justify-center">
             {/* Floating particles */}
             {Array.from({ length: 15 }).map((_, i) => (
-              <FloatingParticle
-                key={i}
-                index={i}
-                total={15}
-              />
+              <FloatingParticle key={i} index={i} total={15} />
             ))}
 
             {/* Main orb - centered and prominent */}
             <div
-              className='absolute left-1/2 top-1/2 z-20'
+              className="absolute left-1/2 top-1/2 z-20"
               style={{
                 transform: `translate(calc(-50% + ${
                   mousePos.x * -3
@@ -469,39 +401,36 @@ export const HeroSectionAlt = () => {
               }}
             >
               {/* Outer glow rings */}
-              <div className='absolute -inset-16'>
+              <div className="absolute -inset-16">
                 <div
-                  className='absolute inset-0 rounded-full border-2 border-primary/30'
+                  className="absolute inset-0 rounded-full border-2 border-primary/30"
                   style={{ animation: 'pulse-ring 3s ease-out infinite' }}
                 />
                 <div
-                  className='absolute inset-0 rounded-full border-2 border-accent/30'
+                  className="absolute inset-0 rounded-full border-2 border-accent/30"
                   style={{ animation: 'pulse-ring 3s ease-out infinite 1s' }}
                 />
                 <div
-                  className='absolute inset-0 rounded-full border-2 border-primary/30'
+                  className="absolute inset-0 rounded-full border-2 border-primary/30"
                   style={{ animation: 'pulse-ring 3s ease-out infinite 2s' }}
                 />
               </div>
 
               {/* Central orb - larger */}
               <div
-                className='relative w-52 h-52 rounded-full'
+                className="relative w-52 h-52 rounded-full"
                 style={{ animation: 'glow-light 4s ease-in-out infinite' }}
               >
                 {/* Glass sphere effect */}
-                <div className='absolute inset-0 rounded-full bg-linear-to-br from-primary/25 via-white to-accent/25 border-2 border-primary/20 shadow-2xl' />
-                <div className='absolute inset-2 rounded-full bg-linear-to-br from-white via-white to-white/90' />
-                <div className='absolute inset-4 rounded-full bg-white border border-border shadow-inner flex items-center justify-center overflow-hidden'>
+                <div className="absolute inset-0 rounded-full bg-linear-to-br from-primary/25 via-white to-accent/25 border-2 border-primary/20 shadow-2xl" />
+                <div className="absolute inset-2 rounded-full bg-linear-to-br from-white via-white to-white/90" />
+                <div className="absolute inset-4 rounded-full bg-white border border-border shadow-inner flex items-center justify-center overflow-hidden">
                   {/* Inner content */}
-                  <Link
-                    href='/platform/infera'
-                    className='text-center group cursor-pointer'
-                  >
-                    <div className='text-[10px] text-muted-foreground uppercase tracking-widest mb-1'>
+                  <Link href="/platform/infera" className="text-center group cursor-pointer">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">
                       Powered by
                     </div>
-                    <div className='text-2xl font-display font-bold text-primary group-hover:scale-105 transition-transform'>
+                    <div className="text-2xl font-display font-bold text-primary group-hover:scale-105 transition-transform">
                       Infera
                     </div>
                   </Link>
@@ -525,7 +454,7 @@ export const HeroSectionAlt = () => {
               return (
                 <div
                   key={card.label}
-                  className='metric-card absolute cursor-pointer'
+                  className="metric-card absolute cursor-pointer"
                   style={{
                     ...pos,
                     animationDelay: `${idx * 0.8}s`,
@@ -535,43 +464,37 @@ export const HeroSectionAlt = () => {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div
-                    className='relative px-4 py-3 rounded-xl bg-white border-2 transition-all duration-300 shadow-lg'
+                    className="relative px-4 py-3 rounded-xl bg-white border-2 transition-all duration-300 shadow-lg"
                     style={{
-                      borderColor:
-                        hoveredCard === idx ? card.color : `${card.color}40`,
+                      borderColor: hoveredCard === idx ? card.color : `${card.color}40`,
                       boxShadow:
                         hoveredCard === idx
                           ? `0 8px 30px ${card.color}30, 0 4px 15px rgba(0,0,0,0.1)`
                           : `0 4px 20px ${card.color}15, 0 2px 10px rgba(0,0,0,0.05)`,
-                      transform:
-                        hoveredCard === idx ? 'scale(1.1)' : 'scale(1)',
+                      transform: hoveredCard === idx ? 'scale(1.1)' : 'scale(1)',
                     }}
                   >
                     {/* Card content */}
-                    <div className='relative z-10'>
+                    <div className="relative z-10">
                       <div
-                        className='text-[12px] font-bold tracking-wide mb-2 whitespace-nowrap'
+                        className="text-[12px] font-bold tracking-wide mb-2 whitespace-nowrap"
                         style={{ color: card.color }}
                       >
                         {card.label}
                       </div>
 
                       {/* Mini 3D Chart */}
-                      <div className='transform perspective-[200px]'>
-                        <MiniChart
-                          data={card.data}
-                          color={card.color}
-                          type={card.chartType}
-                        />
+                      <div className="transform perspective-[200px]">
+                        <MiniChart data={card.data} color={card.color} type={card.chartType} />
                       </div>
 
                       {/* Metric indicator */}
-                      <div className='flex items-center gap-1.5 mt-2'>
+                      <div className="flex items-center gap-1.5 mt-2">
                         <div
-                          className='w-2 h-2 rounded-full animate-pulse'
+                          className="w-2 h-2 rounded-full animate-pulse"
                           style={{ backgroundColor: card.color }}
                         />
-                        <span className='text-[10px] font-semibold text-slate-600 max-w-[100px] truncate'>
+                        <span className="text-[10px] font-semibold text-slate-600 max-w-[100px] truncate">
                           {card.metric}
                         </span>
                       </div>
@@ -582,27 +505,19 @@ export const HeroSectionAlt = () => {
             })}
 
             {/* Animated connection lines */}
-            <svg className='absolute inset-0 w-full h-full pointer-events-none z-10'>
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
               <defs>
                 {metricCards.map((card, idx) => (
                   <linearGradient
                     key={`grad-${idx}`}
                     id={`flowGrad-${idx}`}
-                    x1='0%'
-                    y1='0%'
-                    x2='100%'
-                    y2='100%'
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
                   >
-                    <stop
-                      offset='0%'
-                      stopColor={card.color}
-                      stopOpacity='0.6'
-                    />
-                    <stop
-                      offset='100%'
-                      stopColor={card.color}
-                      stopOpacity='0.1'
-                    />
+                    <stop offset="0%" stopColor={card.color} stopOpacity="0.6" />
+                    <stop offset="100%" stopColor={card.color} stopOpacity="0.1" />
                   </linearGradient>
                 ))}
               </defs>
@@ -660,9 +575,9 @@ export const HeroSectionAlt = () => {
                     x2={line.x2}
                     y2={line.y2}
                     stroke={line.color}
-                    strokeWidth='2'
-                    strokeOpacity='0.15'
-                    strokeDasharray='8 6'
+                    strokeWidth="2"
+                    strokeOpacity="0.15"
+                    strokeDasharray="8 6"
                   />
                   {/* Animated flowing overlay */}
                   <line
@@ -671,10 +586,10 @@ export const HeroSectionAlt = () => {
                     x2={line.x2}
                     y2={line.y2}
                     stroke={line.color}
-                    strokeWidth='2'
-                    strokeDasharray='12 24'
-                    strokeLinecap='round'
-                    className='animate-flow-line'
+                    strokeWidth="2"
+                    strokeDasharray="12 24"
+                    strokeLinecap="round"
+                    className="animate-flow-line"
                     style={{
                       animationDelay: `${idx * 0.4}s`,
                     }}
@@ -698,12 +613,12 @@ export const HeroSectionAlt = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent' />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
 
       {/* Scroll indicator */}
-      <div className='absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground'>
-        <span className='text-xs uppercase tracking-widest'>Scroll</span>
-        <div className='w-px h-8 bg-linear-to-b from-muted-foreground to-transparent animate-pulse' />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
+        <span className="text-xs uppercase tracking-widest">Scroll</span>
+        <div className="w-px h-8 bg-linear-to-b from-muted-foreground to-transparent animate-pulse" />
       </div>
     </section>
   )

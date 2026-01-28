@@ -58,35 +58,34 @@ const Partners = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className='py-20 md:py-28 bg-background'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-16'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4'>
-              Together, We're{' '}
-              <span className='text-primary italic'>Reimagining</span> Care
+      <section className="py-20 md:py-28 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+              Together, We're <span className="text-primary italic">Reimagining</span> Care
             </h1>
-            <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-              Partnering with Industry Leaders to Advance Direct Primary Care,
-              Health Innovation, and Patient-Centered Solutions
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Partnering with Industry Leaders to Advance Direct Primary Care, Health Innovation,
+              and Patient-Centered Solutions
             </p>
           </div>
 
           {/* Partners Grid */}
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {partners.map((partner, index) => (
               <div
                 key={index}
-                className='group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col'
+                className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
                 {/* Logo Area */}
-                <div className='bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-[180px] relative'>
+                <div className="bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-[180px] relative">
                   {/* Corner brackets */}
-                  <div className='absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-border/50'></div>
-                  <div className='absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-border/50'></div>
-                  <div className='absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-border/50'></div>
-                  <div className='absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-border/50'></div>
+                  <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-border/50"></div>
+                  <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-border/50"></div>
+                  <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-border/50"></div>
+                  <div className="absolute bottom-4 right-4 w-6 h-6 border-r-2 border-b-2 border-border/50"></div>
 
-                  <div className='text-center'>
+                  <div className="text-center">
                     <Image
                       src={partner.logoImage}
                       alt={partner.name}
@@ -102,23 +101,17 @@ const Partners = () => {
                 </div>
 
                 {/* Content */}
-                <div className='p-6 flex flex-col flex-1'>
-                  <h3 className='text-xl font-bold text-foreground mb-3'>
-                    {partner.name}
-                  </h3>
-                  <p className='text-muted-foreground text-sm leading-relaxed flex-1'>
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-xl font-bold text-foreground mb-3">{partner.name}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed flex-1">
                     {partner.description}
                   </p>
 
-                  <div className='mt-6'>
-                    <a
-                      href={partner.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                    >
+                  <div className="mt-6">
+                    <a href={partner.link} target="_blank" rel="noopener noreferrer">
                       <Button
-                        variant='outline'
-                        className='w-full border-primary/50 text-primary hover:bg-primary/10 hover:text-primary'
+                        variant="outline"
+                        className="w-full border-primary/50 text-primary hover:bg-primary/10 hover:text-primary"
                       >
                         Learn more
                       </Button>
@@ -132,19 +125,14 @@ const Partners = () => {
       </section>
 
       {/* CTA Section */}
-      <section className='py-20 bg-muted/30'>
-        <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4'>
-            Become a Partner
-          </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-8'>
-            Join our growing network of healthcare innovators and help shape the
-            future of patient care.
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Become a Partner</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            Join our growing network of healthcare innovators and help shape the future of patient
+            care.
           </p>
-          <Button
-            size='lg'
-            className='px-10'
-          >
+          <Button size="lg" className="px-10">
             Get in Touch
           </Button>
         </div>

@@ -95,40 +95,31 @@ const Payors = () => {
   return (
     <>
       <GridSection>
-        <div className='container mx-auto px-6 py-24 lg:py-32'>
-          <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
-            <div className='space-y-8'>
-              <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20'>
-                <Shield className='w-4 h-4 text-primary' />
-                <span className='text-sm font-medium text-primary'>
-                  Value-Based Care
-                </span>
+        <div className="container mx-auto px-6 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
+                <Shield className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium text-primary">Value-Based Care</span>
               </div>
 
-              <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
                 Healthcare Payer Analytics Solutions
               </h1>
 
-              <p className='text-xl text-muted-foreground'>
-                Health Compiler helps health plans move beyond claims-only views
-                by adding timely clinical context. This payer analytics solution
-                enables earlier visibility into risk, quality, and utilization,
-                so payer teams can act before issues surface late in the cycle.
+              <p className="text-xl text-muted-foreground">
+                Health Compiler helps health plans move beyond claims-only views by adding timely
+                clinical context. This payer analytics solution enables earlier visibility into
+                risk, quality, and utilization, so payer teams can act before issues surface late in
+                the cycle.
               </p>
 
-              <div className='flex flex-wrap gap-4'>
-                <Button
-                  asChild
-                  size='lg'
-                >
-                  <Link href='/contact'>Request a Demo</Link>
+              <div className="flex flex-wrap gap-4">
+                <Button asChild size="lg">
+                  <Link href="/contact">Request a Demo</Link>
                 </Button>
-                <Button
-                  asChild
-                  variant='outline'
-                  size='lg'
-                >
-                  <Link href='/capabilities'>See the Platform</Link>
+                <Button asChild variant="outline" size="lg">
+                  <Link href="/capabilities">See the Platform</Link>
                 </Button>
               </div>
             </div>
@@ -138,30 +129,26 @@ const Payors = () => {
       </GridSection>
 
       {/* Go Beyond Claims Section */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-4xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Go beyond healthcare claims data analysis
             </h2>
-            <p className='text-lg text-muted-foreground mb-8'>
-              Healthcare claims data analysis is essential, but incomplete on
-              its own. Health Compiler strengthens claims data analysis by
-              helping payers:
+            <p className="text-lg text-muted-foreground mb-8">
+              Healthcare claims data analysis is essential, but incomplete on its own. Health
+              Compiler strengthens claims data analysis by helping payers:
             </p>
-            <div className='space-y-4 mb-8'>
+            <div className="space-y-4 mb-8">
               {[
                 'Identify care gaps and quality exposure earlier',
                 'See risk-relevant conditions before claims mature',
                 'Understand utilization trends with clinical context',
                 'Reduce reliance on broad, retrospective chart reviews',
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className='flex items-start gap-3'
-                >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground'>{item}</p>
+                <div key={idx} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -170,64 +157,53 @@ const Payors = () => {
       </section>
 
       {/* Risk and HCC Section */}
-      <section className='py-20 bg-linear-to-b from-slate-50 to-white'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-4xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-linear-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Improve risk and HCC performance
             </h2>
-            <p className='text-lg text-muted-foreground mb-8'>
-              As part of a modern health plan data platform, Health Compiler
-              supports payer-facing provider analytics solutions that improve
-              accuracy and efficiency.
+            <p className="text-lg text-muted-foreground mb-8">
+              As part of a modern health plan data platform, Health Compiler supports payer-facing
+              provider analytics solutions that improve accuracy and efficiency.
             </p>
-            <div className='space-y-4 mb-8'>
+            <div className="space-y-4 mb-8">
               {[
                 'Aggregate longitudinal clinical activity across encounters and diagnoses',
                 'Surface population- and provider-level risk patterns',
                 'Highlight documentation gaps that affect risk scores',
                 'Focus outreach and review where it matters most',
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className='flex items-start gap-3'
-                >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground'>{item}</p>
+                <div key={idx} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground">{item}</p>
                 </div>
               ))}
             </div>
-            <Button
-              size='lg'
-              variant='outline'
-              asChild
-            >
-              <Link href='/capabilities'>Learn more</Link>
+            <Button size="lg" variant="outline" asChild>
+              <Link href="/capabilities">Learn more</Link>
             </Button>
           </div>
         </div>
       </section>
 
       {/* What This Delivers Section */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-4xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               What this delivers for payer teams
             </h2>
-            <div className='space-y-4 mb-8'>
+            <div className="space-y-4 mb-8">
               {[
                 'Lower operational cost from reduced manual reviews',
                 'Earlier visibility into HEDIS and quality gaps',
                 'Fewer late-cycle cleanups',
                 'Stronger oversight of value-based arrangements',
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className='flex items-start gap-3'
-                >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground'>{item}</p>
+                <div key={idx} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -236,68 +212,56 @@ const Payors = () => {
       </section>
 
       {/* Designed for Payer Environments Section */}
-      <section className='py-20 bg-linear-to-b from-slate-50 to-white'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-4xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-linear-to-b from-slate-50 to-white">
+        <div className="container mx-auto px-6">
+          <div className="max-w-4xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Designed for payer environments
             </h2>
-            <div className='space-y-4 mb-8'>
+            <div className="space-y-4 mb-8">
               {[
                 'Integrates with existing payer systems',
                 'Complements claims and risk platforms',
                 'No workflow disruption',
               ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className='flex items-start gap-3'
-                >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground'>{item}</p>
+                <div key={idx} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground">{item}</p>
                 </div>
               ))}
             </div>
-            <CTAButton
-              link='/contact'
-              text='Request a Demo'
-              suffixIconDefault
-            />
+            <CTAButton link="/contact" text="Request a Demo" suffixIconDefault />
           </div>
         </div>
       </section>
 
       {/* Section 1 - The Payer Operating Reality */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-3xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Built for payer-scale complexity
             </h2>
-            <p className='text-lg text-muted-foreground'>
-              Modern health plans operate across fragmented data sources,
-              diverse provider networks, and increasingly complex value-based
-              contracts. Health Compiler provides the intelligence layer needed
-              to turn this complexity into clarity and action.
+            <p className="text-lg text-muted-foreground">
+              Modern health plans operate across fragmented data sources, diverse provider networks,
+              and increasingly complex value-based contracts. Health Compiler provides the
+              intelligence layer needed to turn this complexity into clarity and action.
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {challenges.map((challenge, index) => {
               const Icon = challenge.icon
               return (
                 <div
                   key={index}
-                  className='bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow'
+                  className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className='w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4'>
-                    <Icon className='w-6 h-6 text-primary' />
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <h3 className='font-semibold text-foreground mb-2'>
-                    {challenge.title}
-                  </h3>
-                  <p className='text-sm text-muted-foreground'>
-                    {challenge.description}
-                  </p>
+                  <h3 className="font-semibold text-foreground mb-2">{challenge.title}</h3>
+                  <p className="text-sm text-muted-foreground">{challenge.description}</p>
                 </div>
               )
             })}
@@ -306,36 +270,32 @@ const Payors = () => {
       </section>
 
       {/* Section 2 - Core Capabilities */}
-      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-3xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               A unified intelligence layer for payer operations
             </h2>
-            <p className='text-lg text-muted-foreground'>
-              Health Compiler acts as a neutral data activation layer—connecting
-              plan data with provider and clinical signals to drive insight,
-              accountability, and measurable performance.
+            <p className="text-lg text-muted-foreground">
+              Health Compiler acts as a neutral data activation layer—connecting plan data with
+              provider and clinical signals to drive insight, accountability, and measurable
+              performance.
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-6'>
+          <div className="grid md:grid-cols-2 gap-6">
             {capabilities.map((capability, index) => {
               const Icon = capability.icon
               return (
                 <div
                   key={index}
-                  className='bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-shadow'
+                  className="bg-white border border-border rounded-xl p-8 hover:shadow-lg transition-shadow"
                 >
-                  <div className='w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6'>
-                    <Icon className='w-7 h-7 text-primary' />
+                  <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-6">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className='text-xl font-semibold text-foreground mb-3'>
-                    {capability.title}
-                  </h3>
-                  <p className='text-muted-foreground'>
-                    {capability.description}
-                  </p>
+                  <h3 className="text-xl font-semibold text-foreground mb-3">{capability.title}</h3>
+                  <p className="text-muted-foreground">{capability.description}</p>
                 </div>
               )
             })}
@@ -344,84 +304,74 @@ const Payors = () => {
       </section>
 
       {/* Section 3 - AI-Powered Insight */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='grid lg:grid-cols-2 gap-16 items-center'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6'>
-                <Brain className='w-4 h-4 text-accent' />
-                <span className='text-sm font-medium text-accent'>
-                  AI-Powered
-                </span>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 mb-6">
+                <Brain className="w-4 h-4 text-accent" />
+                <span className="text-sm font-medium text-accent">AI-Powered</span>
               </div>
 
-              <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 AI that supports payer decisions
               </h2>
-              <p className='text-lg text-muted-foreground mb-8'>
-                Health Compiler applies AI to summarize population trends,
-                detect material changes, and surface risks and gaps—helping
-                payer teams act faster with confidence.
+              <p className="text-lg text-muted-foreground mb-8">
+                Health Compiler applies AI to summarize population trends, detect material changes,
+                and surface risks and gaps—helping payer teams act faster with confidence.
               </p>
 
-              <div className='space-y-4'>
+              <div className="space-y-4">
                 {aiInsights.map((insight, index) => {
                   const Icon = insight.icon
                   return (
                     <div
                       key={index}
-                      className='flex items-center gap-4 p-4 bg-card rounded-lg border border-border'
+                      className="flex items-center gap-4 p-4 bg-card rounded-lg border border-border"
                     >
-                      <div className='w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center'>
-                        <Icon className='w-5 h-5 text-primary' />
+                      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-primary" />
                       </div>
-                      <span className='font-medium text-foreground'>
-                        {insight.label}
-                      </span>
+                      <span className="font-medium text-foreground">{insight.label}</span>
                     </div>
                   )
                 })}
               </div>
             </div>
 
-            <div className='relative'>
-              <div className='bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 border border-border'>
-                <div className='bg-white rounded-xl p-6 shadow-sm border border-border mb-4'>
-                  <div className='flex items-center justify-between mb-4'>
-                    <span className='text-sm font-medium text-muted-foreground'>
+            <div className="relative">
+              <div className="bg-linear-to-br from-primary/5 via-accent/5 to-primary/5 rounded-2xl p-8 border border-border">
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-border mb-4">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium text-muted-foreground">
                       Population Insight
                     </span>
-                    <span className='text-xs px-2 py-1 rounded-full bg-amber-100 text-amber-700'>
+                    <span className="text-xs px-2 py-1 rounded-full bg-amber-100 text-amber-700">
                       Alert
                     </span>
                   </div>
-                  <p className='text-sm text-foreground mb-2'>
-                    <span className='font-semibold'>
-                      Rising risk cluster detected
-                    </span>{' '}
-                    in diabetic population segment
+                  <p className="text-sm text-foreground mb-2">
+                    <span className="font-semibold">Rising risk cluster detected</span> in diabetic
+                    population segment
                   </p>
-                  <p className='text-xs text-muted-foreground'>
+                  <p className="text-xs text-muted-foreground">
                     12% increase in A1C values across 847 members over 90 days
                   </p>
                 </div>
 
-                <div className='bg-white rounded-xl p-6 shadow-sm border border-border'>
-                  <div className='flex items-center justify-between mb-4'>
-                    <span className='text-sm font-medium text-muted-foreground'>
+                <div className="bg-white rounded-xl p-6 shadow-sm border border-border">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="text-sm font-medium text-muted-foreground">
                       Quality Signal
                     </span>
-                    <span className='text-xs px-2 py-1 rounded-full bg-green-100 text-green-700'>
+                    <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-700">
                       Positive
                     </span>
                   </div>
-                  <p className='text-sm text-foreground mb-2'>
-                    <span className='font-semibold'>
-                      HEDIS measure improvement
-                    </span>{' '}
-                    detected
+                  <p className="text-sm text-foreground mb-2">
+                    <span className="font-semibold">HEDIS measure improvement</span> detected
                   </p>
-                  <p className='text-xs text-muted-foreground'>
+                  <p className="text-xs text-muted-foreground">
                     Colorectal screening rate up 8.2% QoQ
                   </p>
                 </div>
@@ -432,31 +382,31 @@ const Payors = () => {
       </section>
 
       {/* Section 4 - Network & Partner Visibility */}
-      <section className='relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-3xl mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="relative py-20 md:py-28 bg-linear-to-b from-slate-50 to-white overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               See performance across your network
             </h2>
-            <p className='text-lg text-muted-foreground'>
-              Health Compiler provides transparency across ACOs, IPAs, and
-              independent provider groups—enabling payers to understand how care
-              is delivered and where performance varies.
+            <p className="text-lg text-muted-foreground">
+              Health Compiler provides transparency across ACOs, IPAs, and independent provider
+              groups—enabling payers to understand how care is delivered and where performance
+              varies.
             </p>
           </div>
 
-          <div className='grid md:grid-cols-3 gap-6'>
+          <div className="grid md:grid-cols-3 gap-6">
             {networkMetrics.map((metric, index) => {
               const Icon = metric.icon
               return (
                 <div
                   key={index}
-                  className='bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow'
+                  className="bg-white border border-border rounded-xl p-6 hover:shadow-lg transition-shadow"
                 >
-                  <div className='w-12 h-12 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4'>
-                    <Icon className='w-6 h-6 text-primary' />
+                  <div className="w-12 h-12 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className='font-medium text-foreground'>{metric.label}</p>
+                  <p className="font-medium text-foreground">{metric.label}</p>
                 </div>
               )
             })}
@@ -465,66 +415,47 @@ const Payors = () => {
       </section>
 
       {/* Section 5 - Value-Based Contract Enablement */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='grid lg:grid-cols-2 gap-16 items-center'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Built for value-based care at scale
               </h2>
-              <p className='text-lg text-muted-foreground mb-8'>
-                From shared savings to downside risk and capitation, Health
-                Compiler supports the analytics and reporting needed to manage
-                value-based contracts across populations and partners.
+              <p className="text-lg text-muted-foreground mb-8">
+                From shared savings to downside risk and capitation, Health Compiler supports the
+                analytics and reporting needed to manage value-based contracts across populations
+                and partners.
               </p>
 
-              <div className='space-y-4'>
+              <div className="space-y-4">
                 {useCases.map((useCase, index) => (
-                  <div
-                    key={index}
-                    className='flex items-start gap-3'
-                  >
-                    <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                    <p className='text-foreground'>{useCase}</p>
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <p className="text-foreground">{useCase}</p>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className='relative'>
-              <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-border'>
-                <div className='grid grid-cols-2 gap-4'>
-                  <div className='bg-white rounded-xl p-5 border border-border'>
-                    <p className='text-2xl font-bold text-foreground mb-1'>
-                      $4.2M
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Shared Savings
-                    </p>
+            <div className="relative">
+              <div className="bg-linear-to-br from-primary/5 to-accent/5 rounded-2xl p-8 border border-border">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white rounded-xl p-5 border border-border">
+                    <p className="text-2xl font-bold text-foreground mb-1">$4.2M</p>
+                    <p className="text-xs text-muted-foreground">Shared Savings</p>
                   </div>
-                  <div className='bg-white rounded-xl p-5 border border-border'>
-                    <p className='text-2xl font-bold text-foreground mb-1'>
-                      142K
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Attributed Lives
-                    </p>
+                  <div className="bg-white rounded-xl p-5 border border-border">
+                    <p className="text-2xl font-bold text-foreground mb-1">142K</p>
+                    <p className="text-xs text-muted-foreground">Attributed Lives</p>
                   </div>
-                  <div className='bg-white rounded-xl p-5 border border-border'>
-                    <p className='text-2xl font-bold text-foreground mb-1'>
-                      4.1
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Stars Rating
-                    </p>
+                  <div className="bg-white rounded-xl p-5 border border-border">
+                    <p className="text-2xl font-bold text-foreground mb-1">4.1</p>
+                    <p className="text-xs text-muted-foreground">Stars Rating</p>
                   </div>
-                  <div className='bg-white rounded-xl p-5 border border-border'>
-                    <p className='text-2xl font-bold text-foreground mb-1'>
-                      91%
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Quality Score
-                    </p>
+                  <div className="bg-white rounded-xl p-5 border border-border">
+                    <p className="text-2xl font-bold text-foreground mb-1">91%</p>
+                    <p className="text-xs text-muted-foreground">Quality Score</p>
                   </div>
                 </div>
               </div>
@@ -534,32 +465,29 @@ const Payors = () => {
       </section>
 
       {/* Section 6 - Trust & Compliance */}
-      <section className='py-12 bg-slate-50 border-y border-border'>
-        <div className='container mx-auto px-6'>
-          <div className='text-center mb-8'>
-            <h2 className='text-2xl font-bold text-foreground mb-4'>
-              Built for healthcare trust
-            </h2>
-            <p className='text-muted-foreground max-w-2xl mx-auto'>
-              Health Compiler is designed for secure, compliant, and
-              interoperable healthcare data exchange—meeting payer-grade
-              governance and scale requirements.
+      <section className="py-12 bg-slate-50 border-y border-border">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-foreground mb-4">Built for healthcare trust</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Health Compiler is designed for secure, compliant, and interoperable healthcare data
+              exchange—meeting payer-grade governance and scale requirements.
             </p>
           </div>
 
-          <div className='flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground'>
-            <div className='flex items-center gap-2'>
-              <Shield className='w-5 h-5 text-primary' />
+          <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground">
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-primary" />
               <span>HIPAA-ready</span>
             </div>
-            <div className='w-px h-4 bg-border hidden sm:block' />
-            <div className='flex items-center gap-2'>
-              <Shield className='w-5 h-5 text-primary' />
+            <div className="w-px h-4 bg-border hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <Shield className="w-5 h-5 text-primary" />
               <span>Secure by design</span>
             </div>
-            <div className='w-px h-4 bg-border hidden sm:block' />
-            <div className='flex items-center gap-2'>
-              <Network className='w-5 h-5 text-primary' />
+            <div className="w-px h-4 bg-border hidden sm:block" />
+            <div className="flex items-center gap-2">
+              <Network className="w-5 h-5 text-primary" />
               <span>Interoperable across ecosystems</span>
             </div>
           </div>
@@ -567,17 +495,13 @@ const Payors = () => {
       </section>
 
       {/* Final CTA */}
-      <section className='py-24 bg-background'>
-        <div className='container mx-auto px-6'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Turn payer data into value-based intelligence
             </h2>
-            <CTAButton
-              link='/contact'
-              text='Talk to Health Compiler'
-              suffixIconDefault
-            />
+            <CTAButton link="/contact" text="Talk to Health Compiler" suffixIconDefault />
           </div>
         </div>
       </section>

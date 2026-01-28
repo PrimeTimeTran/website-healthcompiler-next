@@ -56,8 +56,7 @@ const apexData = {
         {
           name: 'Dr. Sabina Singh',
           linkUrl: '/apex-magazine/dr-sabina-singh',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Image-800w.jpeg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Image-800w.jpeg',
         },
         {
           name: 'Dr. Hertz',
@@ -74,26 +73,22 @@ const apexData = {
         {
           name: 'Allison De Paoli',
           linkUrl: '/apex-magazine/allison-de-paoli',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/1656768758328-800w.jpeg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/1656768758328-800w.jpeg',
         },
         {
           name: 'Dr. Garrison Bliss',
           linkUrl: '/apex-magazine/dr-garrison-bliss',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Garrison_bliss-800w.jpeg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Garrison_bliss-800w.jpeg',
         },
         {
           name: 'Dr. Brad Brown',
           linkUrl: '/apex-magazine/dr-brad',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Brad+Brown-800w.jpg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Brad+Brown-800w.jpg',
         },
         {
           name: 'Dr. Alex Bugg',
           linkUrl: '/apex-magazine/dr-alex-bugg',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Alex+bugg-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Alex+bugg-800w.png',
         },
       ],
     },
@@ -140,8 +135,7 @@ const apexData = {
         {
           name: 'Dr. Ben Aiken',
           linkUrl: '/apex-magazine/dr-ben-aiken',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Ben+Aiken-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Ben+Aiken-800w.png',
         },
         {
           name: 'David Contorno',
@@ -152,8 +146,7 @@ const apexData = {
         {
           name: 'Bryan Perry',
           linkUrl: '/apex-magazine/bryan-perry',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Bryan-Perry-800w.jpg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Bryan-Perry-800w.jpg',
         },
       ],
     },
@@ -170,8 +163,7 @@ const apexData = {
         {
           name: 'Monica McKitterick',
           linkUrl: '/apex-magazine/monica-mckitterick',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Monica-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Monica-800w.png',
         },
         {
           name: 'Dr. Grace Torres-Hodges',
@@ -194,8 +186,7 @@ const apexData = {
         {
           name: 'Dylan Gray',
           linkUrl: '/apex-magazine/dylan-gray',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dylan+Gray-800w.jpeg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dylan+Gray-800w.jpeg',
         },
         {
           name: 'Andrew Roberts',
@@ -212,32 +203,27 @@ const apexData = {
         {
           name: 'Dr. Dunbar',
           linkUrl: '/apex-magazine/dr-dunbar',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dunbar-800w.webp',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dunbar-800w.webp',
         },
         {
           name: 'Jessica McCartin',
           linkUrl: '/apex-magazine/jessica-mccartin',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Jessica-800w.jpg',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Jessica-800w.jpg',
         },
         {
           name: 'Dakotah Asher',
           linkUrl: '/apex-magazine/dakotah-asher',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dakotah-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dakotah-800w.png',
         },
         {
           name: 'Matt Ohrt',
           linkUrl: '/apex-magazine/matt-ohrt',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Matt+Ohrt+-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Matt+Ohrt+-800w.png',
         },
         {
           name: 'Neer Patel',
           linkUrl: '/apex-magazine/neer-patel',
-          image:
-            'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Neer+Patel-800w.png',
+          image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Neer+Patel-800w.png',
         },
         {
           name: 'Dr. Jeffrey Hockings',
@@ -275,12 +261,12 @@ const allCategories = apexData.sections
 
 // Word Grid Background Component
 const WordGrid = () => (
-  <div className='absolute inset-0 overflow-hidden opacity-[0.08]'>
-    <div className='grid grid-cols-6 md:grid-cols-10 gap-4 p-4 -rotate-12 scale-125 origin-center'>
+  <div className="absolute inset-0 overflow-hidden opacity-[0.08]">
+    <div className="grid grid-cols-6 md:grid-cols-10 gap-4 p-4 -rotate-12 scale-125 origin-center">
       {[...gridWords, ...gridWords, ...gridWords].map((word, i) => (
         <span
           key={i}
-          className='font-apex-display text-xl md:text-2xl font-bold text-apex-foreground whitespace-nowrap'
+          className="font-apex-display text-xl md:text-2xl font-bold text-apex-foreground whitespace-nowrap"
           style={{ opacity: 0.3 + (i % 5) * 0.15 }}
         >
           {word}
@@ -291,13 +277,7 @@ const WordGrid = () => (
 )
 
 // Flip Category Tile Component
-const CategoryTile = ({
-  title,
-  subtitle,
-}: {
-  title: string
-  subtitle: string
-}) => {
+const CategoryTile = ({ title, subtitle }: { title: string; subtitle: string }) => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   useEffect(() => {
@@ -309,7 +289,7 @@ const CategoryTile = ({
 
   return (
     <div
-      className='aspect-[4/5] perspective-1000 cursor-pointer group'
+      className="aspect-[4/5] perspective-1000 cursor-pointer group"
       onMouseEnter={() => setIsFlipped(true)}
       onMouseLeave={() => setIsFlipped(false)}
     >
@@ -319,18 +299,18 @@ const CategoryTile = ({
         }`}
       >
         {/* Front */}
-        <div className='absolute inset-0 backface-hidden bg-white rounded-xl flex flex-col items-center justify-center p-6 shadow-lg'>
-          <h2 className='text-2xl md:text-3xl lg:text-4xl font-apex-display font-bold text-apex-bg text-center leading-tight tracking-tight'>
+        <div className="absolute inset-0 backface-hidden bg-white rounded-xl flex flex-col items-center justify-center p-6 shadow-lg">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-apex-display font-bold text-apex-bg text-center leading-tight tracking-tight">
             {title}
           </h2>
         </div>
 
         {/* Back */}
-        <div className='absolute inset-0 backface-hidden rotate-y-180 bg-primary-accent rounded-xl flex flex-col items-center justify-center p-6 shadow-lg'>
-          <span className='text-lg md:text-xl font-apex-body font-semibold text-apex-bg text-center'>
+        <div className="absolute inset-0 backface-hidden rotate-y-180 bg-primary-accent rounded-xl flex flex-col items-center justify-center p-6 shadow-lg">
+          <span className="text-lg md:text-xl font-apex-body font-semibold text-apex-bg text-center">
             {subtitle}
           </span>
-          <div className='mt-4 w-12 h-0.5 bg-apex-bg/50 rounded-full' />
+          <div className="mt-4 w-12 h-0.5 bg-apex-bg/50 rounded-full" />
         </div>
       </div>
     </div>
@@ -358,43 +338,37 @@ const ProfileCard = ({
     .slice(0, 2)
 
   const cardContent = (
-    <div className='aspect-[4/5] bg-gray-100 relative overflow-hidden'>
+    <div className="aspect-[4/5] bg-gray-100 relative overflow-hidden">
       {image ? (
         <Image
           src={image}
           alt={name}
           fill
-          className='object-cover object-top transition-all duration-700 group-hover:scale-105'
+          className="object-cover object-top transition-all duration-700 group-hover:scale-105"
         />
       ) : (
-        <div className='w-full h-full bg-linear-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center'>
-          <div className='w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg'>
-            <span className='text-2xl font-apex-display font-bold text-apex-bg'>
-              {initials}
-            </span>
+        <div className="w-full h-full bg-linear-to-br from-gray-100 via-gray-200 to-gray-300 flex items-center justify-center">
+          <div className="w-24 h-24 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-lg">
+            <span className="text-2xl font-apex-display font-bold text-apex-bg">{initials}</span>
           </div>
         </div>
       )}
 
       {/* Name overlay at bottom */}
-      <div className='absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-12'>
-        <h3 className='font-apex-body font-medium text-white text-sm md:text-base'>
-          {name}
-        </h3>
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-12">
+        <h3 className="font-apex-body font-medium text-white text-sm md:text-base">{name}</h3>
       </div>
     </div>
   )
 
   if (!isClickable) {
-    return (
-      <div className='rounded-xl overflow-hidden shadow-lg'>{cardContent}</div>
-    )
+    return <div className="rounded-xl overflow-hidden shadow-lg">{cardContent}</div>
   }
 
   return (
     <Link
       href={linkUrl}
-      className='block rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 group'
+      className="block rounded-xl overflow-hidden shadow-lg transition-all duration-500 hover:shadow-2xl hover:-translate-y-1 group"
     >
       {cardContent}
     </Link>
@@ -442,26 +416,16 @@ const Apex = () => {
       .map((section) => ({
         ...section,
         profiles: section.profiles.filter((profile) => {
-          const matchesSearch = profile.name
-            .toLowerCase()
-            .includes(searchQuery.toLowerCase())
-          const matchesCategory =
-            !activeCategory || section.categoryTitle === activeCategory
+          const matchesSearch = profile.name.toLowerCase().includes(searchQuery.toLowerCase())
+          const matchesCategory = !activeCategory || section.categoryTitle === activeCategory
           return matchesSearch && matchesCategory
         }),
       }))
-      .filter(
-        (section) =>
-          section.profiles.length > 0 ||
-          (section.categoryTitle && !searchQuery),
-      )
+      .filter((section) => section.profiles.length > 0 || (section.categoryTitle && !searchQuery))
   }, [searchQuery, activeCategory])
 
   // Build grid items
-  const gridItems = useMemo(
-    () => buildGridItems(filteredSections),
-    [filteredSections],
-  )
+  const gridItems = useMemo(() => buildGridItems(filteredSections), [filteredSections])
 
   return (
     <>
@@ -482,45 +446,42 @@ const Apex = () => {
       `}</style>
 
       {/* APEX Page Wrapper with light/white theme for grid section */}
-      <div className='apex-page min-h-screen font-lato'>
+      <div className="apex-page min-h-screen font-lato">
         {/* Hero Section - Dark */}
-        <section className='relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-apex-bg'>
+        <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-apex-bg">
           {/* Word Grid Background */}
           <WordGrid />
 
           {/* Gradient overlays */}
-          <div className='absolute inset-0 bg-linear-to-b from-apex-bg via-transparent to-apex-bg pointer-events-none' />
-          <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-apex-bg to-transparent pointer-events-none' />
+          <div className="absolute inset-0 bg-linear-to-b from-apex-bg via-transparent to-apex-bg pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-apex-bg to-transparent pointer-events-none" />
 
-          <div
-            ref={heroRef}
-            className='container mx-auto px-6 relative z-10'
-          >
-            <div className='flex flex-col items-center text-center'>
-              <div className='mb-8 animate-fade-in'>
+          <div ref={heroRef} className="container mx-auto px-6 relative z-10">
+            <div className="flex flex-col items-center text-center">
+              <div className="mb-8 animate-fade-in">
                 <Image
                   src={apexLogo}
-                  alt='APEX Magazine'
+                  alt="APEX Magazine"
                   height={112}
-                  className='h-20 md:h-28 w-auto brightness-0 invert'
+                  className="h-20 md:h-28 w-auto brightness-0 invert"
                 />
               </div>
 
               <p
-                className='text-secondary font-apex-body text-sm md:text-base tracking-widest uppercase mb-6 animate-fade-in'
+                className="text-secondary font-apex-body text-sm md:text-base tracking-widest uppercase mb-6 animate-fade-in"
                 style={{ animationDelay: '100ms' }}
               >
                 {apexData.hero.eyebrow}
               </p>
 
               <h1
-                className='font-apex-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-apex-foreground leading-tight max-w-5xl animate-fade-in'
+                className="font-apex-display text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-apex-foreground leading-tight max-w-5xl animate-fade-in"
                 style={{ animationDelay: '200ms' }}
               >
                 {apexData.hero.h1}
               </h1>
               <div
-                className='mt-12 w-24 h-1 bg-gradient-to-r from-apex-accent to-apex-accent-warm rounded-full animate-fade-in'
+                className="mt-12 w-24 h-1 bg-gradient-to-r from-apex-accent to-apex-accent-warm rounded-full animate-fade-in"
                 style={{ animationDelay: '300ms' }}
               />
             </div>
@@ -528,18 +489,18 @@ const Apex = () => {
         </section>
 
         {/* Filter Section */}
-        <section className='py-6 bg-white border-b border-gray-200 sticky top-[72px] z-40 backdrop-blur-xl'>
-          <div className='container mx-auto px-6'>
-            <div className='flex justify-center'>
+        <section className="py-6 bg-white border-b border-gray-200 sticky top-[72px] z-40 backdrop-blur-xl">
+          <div className="container mx-auto px-6">
+            <div className="flex justify-center">
               {/* Search */}
-              <div className='relative w-full max-w-md'>
-                <Search className='absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400' />
+              <div className="relative w-full max-w-md">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
-                  type='text'
-                  placeholder='Search changemakers...'
+                  type="text"
+                  placeholder="Search changemakers..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className='w-full pl-11 pr-4 py-3 rounded-full border border-gray-200 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-apex-accent/50 focus:border-apex-accent/50 transition-all duration-300 font-apex-body'
+                  className="w-full pl-11 pr-4 py-3 rounded-full border border-gray-200 bg-gray-50 text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-apex-accent/50 focus:border-apex-accent/50 transition-all duration-300 font-apex-body"
                 />
               </div>
             </div>
@@ -547,9 +508,9 @@ const Apex = () => {
         </section>
 
         {/* Profiles Grid - Light Background */}
-        <section className='py-8 md:py-12 bg-white'>
-          <div className='container mx-auto px-6'>
-            <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6'>
+        <section className="py-8 md:py-12 bg-white">
+          <div className="container mx-auto px-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
               {gridItems.map((item, index) =>
                 item.type === 'category' ? (
                   <CategoryTile
@@ -566,19 +527,19 @@ const Apex = () => {
                     index={index}
                     isClickable={item.name !== 'Russell DuBose'}
                   />
-                ),
+                )
               )}
             </div>
 
             {/* No results */}
             {gridItems.length === 0 && (
-              <div className='text-center py-20'>
-                <p className='text-gray-500 text-lg font-apex-body'>
+              <div className="text-center py-20">
+                <p className="text-gray-500 text-lg font-apex-body">
                   No profiles found matching your criteria.
                 </p>
                 <Button
-                  variant='outline'
-                  className='mt-4 border-gray-300 text-gray-700 hover:bg-gray-100'
+                  variant="outline"
+                  className="mt-4 border-gray-300 text-gray-700 hover:bg-gray-100"
                   onClick={() => {
                     setSearchQuery('')
                     setActiveCategory(null)
@@ -592,31 +553,28 @@ const Apex = () => {
         </section>
 
         {/* CTA Section - Dark */}
-        <section className='py-20 md:py-28 relative overflow-hidden bg-apex-bg'>
+        <section className="py-20 md:py-28 relative overflow-hidden bg-apex-bg">
           {/* Background pattern */}
-          <div className='absolute inset-0 opacity-5'>
+          <div className="absolute inset-0 opacity-5">
             <WordGrid />
           </div>
 
-          <div className='container mx-auto px-6 relative z-10'>
-            <div className='max-w-3xl mx-auto text-center bg-apex-bg-secondary rounded-3xl p-10 md:p-16 border border-apex-border/50 shadow-[0_0_60px_-20px_rgba(245,158,11,0.2)]'>
-              <h2 className='text-3xl md:text-4xl lg:text-5xl font-apex-display font-bold text-primary mb-6 tracking-wide'>
+          <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-3xl mx-auto text-center bg-apex-bg-secondary rounded-3xl p-10 md:p-16 border border-apex-border/50 shadow-[0_0_60px_-20px_rgba(245,158,11,0.2)]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-apex-display font-bold text-primary mb-6 tracking-wide">
                 {apexData.finalCta.title}
               </h2>
-              <p className='text-lg text-white mb-10 font-apex-body leading-relaxed'>
+              <p className="text-lg text-white mb-10 font-apex-body leading-relaxed">
                 {apexData.finalCta.body}
               </p>
               <Button
-                size='lg'
-                className='bg-secondary hover:bg-apex-accent-warm text-apex-bg font-apex-body font-semibold px-10 py-6 text-lg transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(245,158,11,0.5)]'
+                size="lg"
+                className="bg-secondary hover:bg-apex-accent-warm text-apex-bg font-apex-body font-semibold px-10 py-6 text-lg transition-all duration-300 hover:shadow-[0_10px_40px_-10px_rgba(245,158,11,0.5)]"
                 asChild
               >
-                <Link
-                  href={apexData.finalCta.buttonUrl}
-                  className='gap-3'
-                >
+                <Link href={apexData.finalCta.buttonUrl} className="gap-3">
                   {apexData.finalCta.buttonLabel}
-                  <ArrowRight className='w-5 h-5' />
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
             </div>

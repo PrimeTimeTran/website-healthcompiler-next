@@ -1,7 +1,7 @@
 const Developer = () => {
   return (
     <>
-      <div className='p-24'>
+      <div className="p-24">
         <div>
           <h1>Strapi Url Public</h1>
           {process.env.NEXT_PUBLIC_STRAPI_URL}

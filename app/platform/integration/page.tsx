@@ -17,48 +17,44 @@ const Integration = () => {
 
   return (
     <>
-      <section className='relative py-16 md:py-24 bg-linear-to-br from-slate-50 via-white to-slate-50 overflow-hidden'>
+      <section className="relative py-16 md:py-24 bg-linear-to-br from-slate-50 via-white to-slate-50 overflow-hidden">
         <div
-          className='absolute inset-0 opacity-[0.03]'
+          className="absolute inset-0 opacity-[0.03]"
           style={{
             backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
                            linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
             backgroundSize: '80px 80px',
           }}
         />
-        <div className='container mx-auto px-4 relative'>
-          <div className='text-center mb-12'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
-              Connect with your{' '}
-              <span className='text-primary'>existing apps</span>
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
+              Connect with your <span className="text-primary">existing apps</span>
             </h1>
-            <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Seamlessly integrate with 50+ healthcare and business applications
             </p>
           </div>
-          <div className='max-w-6xl mx-auto mb-16'>
+          <div className="max-w-6xl mx-auto mb-16">
             <IntegrationScene3D />
           </div>
-          <div className='max-w-xl mx-auto text-center'>
-            <p className='text-lg text-foreground mb-8'>
+          <div className="max-w-xl mx-auto text-center">
+            <p className="text-lg text-foreground mb-8">
               If your app is missing, we can help quickly build an integration
             </p>
-            <form
-              onSubmit={handleSubmit}
-              className='space-y-4'
-            >
+            <form onSubmit={handleSubmit} className="space-y-4">
               <Input
-                type='email'
-                placeholder='Enter your email'
+                type="email"
+                placeholder="Enter your email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className='h-14 text-base bg-white border-border rounded-lg'
+                className="h-14 text-base bg-white border-border rounded-lg"
                 required
               />
               <Button
-                size='lg'
-                type='submit'
-                className='w-full sm:w-auto h-14 px-16 text-base font-semibold rounded-lg bg-primary hover:bg-primary/90'
+                size="lg"
+                type="submit"
+                className="w-full sm:w-auto h-14 px-16 text-base font-semibold rounded-lg bg-primary hover:bg-primary/90"
               >
                 Submit
               </Button>

@@ -50,24 +50,19 @@ export function HealthBenefitsLayers() {
   const [activeLayer, setActiveLayer] = useState<string | null>(null)
 
   return (
-    <section className='py-20 md:py-28 bg-linear-to-b from-background to-muted/20'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            Health Benefits Intelligence
-          </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
+    <section className="py-20 md:py-28 bg-linear-to-b from-background to-muted/20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Health Benefits Intelligence</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Know where every dollar goes — and whether it worked.
           </p>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-12 items-center'>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* 3D Stacked Layers */}
-          <div className='relative perspective-1000'>
-            <div
-              className='relative w-full max-w-lg mx-auto'
-              style={{ perspective: '1000px' }}
-            >
+          <div className="relative perspective-1000">
+            <div className="relative w-full max-w-lg mx-auto" style={{ perspective: '1000px' }}>
               {layers.map((layer, index) => {
                 const isActive = activeLayer === layer.id
                 return (
@@ -84,13 +79,11 @@ export function HealthBenefitsLayers() {
                     onMouseLeave={() => setActiveLayer(null)}
                   >
                     <div
-                      className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${
-                        layer.color
-                      } ${
+                      className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${layer.color} ${
                         isActive ? 'opacity-100' : 'opacity-60'
                       } transition-opacity`}
                     />
-                    <div className='relative flex items-center gap-4'>
+                    <div className="relative flex items-center gap-4">
                       <div
                         className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                           isActive ? 'bg-primary/20' : 'bg-muted/50'
@@ -111,7 +104,7 @@ export function HealthBenefitsLayers() {
                       </span>
                     </div>
                     {isActive && (
-                      <div className='absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse' />
+                      <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse" />
                     )}
                   </div>
                 )
@@ -119,23 +112,23 @@ export function HealthBenefitsLayers() {
             </div>
 
             {/* Decorative elements */}
-            <div className='absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl' />
-            <div className='absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl' />
+            <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+            <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl" />
           </div>
 
           {/* Data Points */}
-          <div className='space-y-4'>
-            <h3 className='text-xl font-semibold mb-6'>Key Data Insights</h3>
-            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold mb-6">Key Data Insights</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {dataPoints.map((point, index) => (
                 <div
                   key={index}
-                  className='flex items-center gap-3 p-4 rounded-xl bg-card border hover:border-primary/30 transition-colors group'
+                  className="flex items-center gap-3 p-4 rounded-xl bg-card border hover:border-primary/30 transition-colors group"
                 >
-                  <div className='w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors'>
-                    <point.icon className='w-5 h-5 text-primary' />
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <point.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <span className='text-sm font-medium'>{point.label}</span>
+                  <span className="text-sm font-medium">{point.label}</span>
                 </div>
               ))}
             </div>

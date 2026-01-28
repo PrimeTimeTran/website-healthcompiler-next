@@ -37,24 +37,18 @@ export function MissedBetweenVisits() {
   const [activeChallenge, setActiveChallenge] = useState<string | null>(null)
 
   return (
-    <section className='py-20 md:py-28 bg-background'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            What Gets Missed Between Visits
-          </h2>
-          <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-            Care teams deliver excellent care during visits. What's harder is
-            maintaining visibility into patient health between visits, where
-            small changes can quietly impact outcomes.
+    <section className="py-20 md:py-28 bg-background">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">What Gets Missed Between Visits</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Care teams deliver excellent care during visits. What's harder is maintaining visibility
+            into patient health between visits, where small changes can quietly impact outcomes.
           </p>
         </div>
 
-        <div className='max-w-4xl mx-auto'>
-          <div
-            className='relative'
-            style={{ perspective: '1000px' }}
-          >
+        <div className="max-w-4xl mx-auto">
+          <div className="relative" style={{ perspective: '1000px' }}>
             {challenges.map((challenge, index) => {
               const isActive = activeChallenge === challenge.id
               return (
@@ -71,22 +65,18 @@ export function MissedBetweenVisits() {
                   onMouseLeave={() => setActiveChallenge(null)}
                 >
                   <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${
-                      challenge.color
-                    } ${
+                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${challenge.color} ${
                       isActive ? 'opacity-100' : 'opacity-60'
                     } transition-opacity`}
                   />
-                  <div className='relative flex items-center gap-4'>
+                  <div className="relative flex items-center gap-4">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                         isActive ? 'bg-primary/20' : 'bg-muted/50'
                       } transition-colors`}
                     >
                       <challenge.icon
-                        className={`w-6 h-6 ${
-                          isActive ? 'text-primary' : 'text-muted-foreground'
-                        }`}
+                        className={`w-6 h-6 ${isActive ? 'text-primary' : 'text-muted-foreground'}`}
                       />
                     </div>
                     <span
@@ -98,7 +88,7 @@ export function MissedBetweenVisits() {
                     </span>
                   </div>
                   {isActive && (
-                    <div className='absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse' />
+                    <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse" />
                   )}
                 </div>
               )
@@ -106,8 +96,8 @@ export function MissedBetweenVisits() {
           </div>
 
           {/* Decorative elements */}
-          <div className='absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl' />
-          <div className='absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl' />
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl" />
         </div>
       </div>
     </section>

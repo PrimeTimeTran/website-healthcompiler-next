@@ -39,37 +39,28 @@ const testimonials: Testimonial[] = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className='py-20 md:py-28 bg-background-secondary'>
-      <div className='container mx-auto px-6'>
-        <h2 className='font-display text-3xl md:text-4xl font-bold text-foreground mb-12'>
-          Our <span className='text-primary'>testimonials</span>
+    <section className="py-20 md:py-28 bg-background-secondary">
+      <div className="container mx-auto px-6">
+        <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+          Our <span className="text-primary">testimonials</span>
         </h2>
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className='bg-muted/50 rounded-xl p-8 flex flex-col justify-between min-h-[320px]'
+              className="bg-muted/50 rounded-xl p-8 flex flex-col justify-between min-h-[320px]"
             >
               <div>
-                <Quote
-                  className='w-8 h-8 text-accent mb-6 rotate-180'
-                  fill='currentColor'
-                />
+                <Quote className="w-8 h-8 text-accent mb-6 rotate-180" fill="currentColor" />
 
-                <p className='text-foreground leading-relaxed text-[15px]'>
-                  {testimonial.quote}
-                </p>
+                <p className="text-foreground leading-relaxed text-[15px]">{testimonial.quote}</p>
               </div>
 
-              <div className='flex items-center justify-between mt-8 pt-6 border-t border-border/30'>
+              <div className="flex items-center justify-between mt-8 pt-6 border-t border-border/30">
                 <div>
-                  <p className='font-semibold text-foreground'>
-                    {testimonial.name}
-                  </p>
-                  <p className='text-sm text-muted-foreground'>
-                    {testimonial.title}
-                  </p>
+                  <p className="font-semibold text-foreground">{testimonial.name}</p>
+                  <p className="text-sm text-muted-foreground">{testimonial.title}</p>
                 </div>
 
                 {/* Photo or Initials */}
@@ -79,13 +70,11 @@ export const TestimonialsSection = () => {
                     height={56}
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className='w-14 h-14 rounded-full object-cover object-top border-2 border-accent/20'
+                    className="w-14 h-14 rounded-full object-cover object-top border-2 border-accent/20"
                   />
                 ) : (
-                  <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center'>
-                    <span className='text-xs font-bold text-primary'>
-                      {testimonial.initials}
-                    </span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                    <span className="text-xs font-bold text-primary">{testimonial.initials}</span>
                   </div>
                 )}
               </div>

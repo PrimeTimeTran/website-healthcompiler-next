@@ -32,31 +32,23 @@ export const metadata = {
 const HeroSection = () => {
   return (
     <GridSection>
-      <div className='container mx-auto px-6 py-24 lg:py-32'>
-        <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
-          <div className='space-y-8'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
+      <div className="container mx-auto px-6 py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
               Independent Primary Care,{' '}
-              <span className='text-primary'>Built for Value-Based Care</span>
+              <span className="text-primary">Built for Value-Based Care</span>
             </h1>
 
-            <p className='text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl'>
-              Health Compiler supports independent primary care practices by
-              helping teams make better use of the data they already generate.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Health Compiler supports independent primary care practices by helping teams make
+              better use of the data they already generate.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <CTAButton
-                link='/contact'
-                text='Book a Demo'
-                suffixIconDefault
-              />
-              <Button
-                size='lg'
-                variant='outline'
-                asChild
-              >
-                <Link href='#how-it-works'>See How It Works</Link>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <CTAButton link="/contact" text="Book a Demo" suffixIconDefault />
+              <Button size="lg" variant="outline" asChild>
+                <Link href="#how-it-works">See How It Works</Link>
               </Button>
             </div>
           </div>
@@ -77,20 +69,17 @@ const LowerCostSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Lower operational cost
           </h2>
-          <div className='space-y-4'>
+          <div className="space-y-4">
             {benefits.map((benefit, idx) => (
-              <div
-                key={idx}
-                className='flex items-start gap-3'
-              >
-                <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                <p className='text-foreground'>{benefit}</p>
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground">{benefit}</p>
               </div>
             ))}
           </div>
@@ -109,20 +98,17 @@ const EarlierVisibilitySection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Earlier visibility into quality and risk
           </h2>
-          <div className='space-y-4'>
+          <div className="space-y-4">
             {benefits.map((benefit, idx) => (
-              <div
-                key={idx}
-                className='flex items-start gap-3'
-              >
-                <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                <p className='text-foreground'>{benefit}</p>
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground">{benefit}</p>
               </div>
             ))}
           </div>
@@ -141,29 +127,22 @@ const LessDisruptionSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Less disruption to day-to-day practice
           </h2>
-          <div className='space-y-4 mb-8'>
+          <div className="space-y-4 mb-8">
             {benefits.map((benefit, idx) => (
-              <div
-                key={idx}
-                className='flex items-start gap-3'
-              >
-                <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                <p className='text-foreground'>{benefit}</p>
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground">{benefit}</p>
               </div>
             ))}
           </div>
-          <Button
-            size='lg'
-            variant='outline'
-            asChild
-          >
-            <Link href='/capabilities'>Learn More</Link>
+          <Button size="lg" variant="outline" asChild>
+            <Link href="/capabilities">Learn More</Link>
           </Button>
         </div>
       </div>
@@ -180,20 +159,17 @@ const CollaborationSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Stronger collaboration with external partners
           </h2>
-          <div className='space-y-4'>
+          <div className="space-y-4">
             {benefits.map((benefit, idx) => (
-              <div
-                key={idx}
-                className='flex items-start gap-3'
-              >
-                <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                <p className='text-foreground'>{benefit}</p>
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground">{benefit}</p>
               </div>
             ))}
           </div>
@@ -212,20 +188,17 @@ const EHRCompatibilitySection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Works with your existing EHR
           </h2>
-          <div className='space-y-4'>
+          <div className="space-y-4">
             {points.map((point, idx) => (
-              <div
-                key={idx}
-                className='flex items-start gap-3'
-              >
-                <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                <p className='text-foreground'>{point}</p>
+              <div key={idx} className="flex items-start gap-3">
+                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <p className="text-foreground">{point}</p>
               </div>
             ))}
           </div>
@@ -238,22 +211,17 @@ const EHRCompatibilitySection = () => {
 // Growth Support Section
 const GrowthSupportSection = () => {
   return (
-    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Built to support independent practices as they grow
           </h2>
-          <p className='text-lg text-muted-foreground mb-8'>
-            Health Compiler helps practices stay focused on care while being
-            better prepared for quality reviews, partner requests, and evolving
-            expectations.
+          <p className="text-lg text-muted-foreground mb-8">
+            Health Compiler helps practices stay focused on care while being better prepared for
+            quality reviews, partner requests, and evolving expectations.
           </p>
-          <CTAButton
-            link='/contact'
-            text='Request a Demo'
-            suffixIconDefault
-          />
+          <CTAButton link="/contact" text="Request a Demo" suffixIconDefault />
         </div>
       </div>
     </section>
@@ -271,8 +239,7 @@ const RealitySection = () => {
     {
       icon: Eye,
       title: 'Limited Visibility',
-      description:
-        'Limited visibility into quality, attribution, and utilization',
+      description: 'Limited visibility into quality, attribution, and utilization',
     },
     {
       icon: FileText,
@@ -287,36 +254,32 @@ const RealitySection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16 max-w-3xl mx-auto'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             The challenge of staying independent under value-based care
           </h2>
-          <p className='text-lg text-muted-foreground'>
-            Independent primary care practices are increasingly asked to perform
-            like risk-bearing organizations—without the data infrastructure,
-            analytics teams, or payer insight to support it.
+          <p className="text-lg text-muted-foreground">
+            Independent primary care practices are increasingly asked to perform like risk-bearing
+            organizations—without the data infrastructure, analytics teams, or payer insight to
+            support it.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {painPoints.map((point, idx) => {
             const Icon = point.icon
             return (
               <div
                 key={idx}
-                className='group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
+                className="group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
-                <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
-                  <Icon className='w-6 h-6 text-primary' />
+                <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3 className='font-semibold text-foreground mb-2'>
-                  {point.title}
-                </h3>
-                <p className='text-sm text-muted-foreground'>
-                  {point.description}
-                </p>
+                <h3 className="font-semibold text-foreground mb-2">{point.title}</h3>
+                <p className="text-sm text-muted-foreground">{point.description}</p>
               </div>
             )
           })}
@@ -350,47 +313,39 @@ const SolutionSection = () => {
     {
       icon: FileText,
       title: 'Actionable Reporting',
-      description:
-        'Clean, defensible reports aligned to ACO, CIN, and payer requirements.',
+      description: 'Clean, defensible reports aligned to ACO, CIN, and payer requirements.',
     },
   ]
 
   return (
-    <section
-      id='how-it-works'
-      className='py-24 bg-linear-to-b from-slate-50 to-white'
-    >
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16 max-w-3xl mx-auto'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section id="how-it-works" className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             Turning primary care into a value-based operating model
           </h2>
-          <p className='text-lg text-muted-foreground'>
-            Health Compiler acts as the intelligence and activation layer around
-            your clinical system—connecting data, surfacing insights, and
-            translating performance into measurable outcomes.
+          <p className="text-lg text-muted-foreground">
+            Health Compiler acts as the intelligence and activation layer around your clinical
+            system—connecting data, surfacing insights, and translating performance into measurable
+            outcomes.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
+        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {features.map((feature, idx) => {
             const Icon = feature.icon
             return (
               <div
                 key={idx}
-                className='group p-8 rounded-2xl border border-border/50 bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
+                className="group p-8 rounded-2xl border border-border/50 bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
-                <div className='flex items-start gap-5'>
-                  <div className='w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
-                    <Icon className='w-7 h-7 text-primary' />
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <div>
-                    <h3 className='font-semibold text-lg text-foreground mb-2'>
-                      {feature.title}
-                    </h3>
-                    <p className='text-muted-foreground'>
-                      {feature.description}
-                    </p>
+                    <h3 className="font-semibold text-lg text-foreground mb-2">{feature.title}</h3>
+                    <p className="text-muted-foreground">{feature.description}</p>
                   </div>
                 </div>
               </div>
@@ -405,73 +360,58 @@ const SolutionSection = () => {
 // Elation Integration Section
 const IntegrationSection = () => {
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-4xl mx-auto'>
-          <div className='grid md:grid-cols-2 gap-12 items-center'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
                 Built to extend modern primary care systems
               </h2>
-              <p className='text-lg text-muted-foreground mb-8'>
-                Health Compiler integrates seamlessly with Elation Health and
-                other modern EHRs—operationalizing clinical data for analytics,
-                reporting, and value-based performance without disrupting
-                clinical workflows.
+              <p className="text-lg text-muted-foreground mb-8">
+                Health Compiler integrates seamlessly with Elation Health and other modern
+                EHRs—operationalizing clinical data for analytics, reporting, and value-based
+                performance without disrupting clinical workflows.
               </p>
-              <div className='flex items-center gap-4'>
-                <Plug className='w-6 h-6 text-primary' />
-                <span className='text-muted-foreground'>
-                  Seamless EHR integration
-                </span>
+              <div className="flex items-center gap-4">
+                <Plug className="w-6 h-6 text-primary" />
+                <span className="text-muted-foreground">Seamless EHR integration</span>
               </div>
             </div>
-            <div className='bg-linear-to-br from-slate-50 to-white rounded-2xl border border-border p-8'>
-              <div className='space-y-4'>
-                <div className='flex items-center gap-3 p-4 bg-white rounded-xl border border-border/50'>
-                  <div className='w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center'>
-                    <FileText className='w-5 h-5 text-blue-600' />
+            <div className="bg-linear-to-br from-slate-50 to-white rounded-2xl border border-border p-8">
+              <div className="space-y-4">
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-border/50">
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
+                    <FileText className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <p className='font-medium text-foreground text-sm'>
-                      Clinical Data
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Notes, labs, encounters
-                    </p>
+                    <p className="font-medium text-foreground text-sm">Clinical Data</p>
+                    <p className="text-xs text-muted-foreground">Notes, labs, encounters</p>
                   </div>
-                  <ArrowRight className='w-4 h-4 text-muted-foreground ml-auto' />
+                  <ArrowRight className="w-4 h-4 text-muted-foreground ml-auto" />
                 </div>
-                <div className='flex items-center justify-center'>
-                  <div className='w-px h-8 bg-border' />
+                <div className="flex items-center justify-center">
+                  <div className="w-px h-8 bg-border" />
                 </div>
-                <div className='flex items-center gap-3 p-4 bg-primary/5 rounded-xl border border-primary/20'>
-                  <div className='w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center'>
-                    <Brain className='w-5 h-5 text-primary' />
+                <div className="flex items-center gap-3 p-4 bg-primary/5 rounded-xl border border-primary/20">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Brain className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <p className='font-medium text-foreground text-sm'>
-                      Health Compiler
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      Analytics & Intelligence
-                    </p>
+                    <p className="font-medium text-foreground text-sm">Health Compiler</p>
+                    <p className="text-xs text-muted-foreground">Analytics & Intelligence</p>
                   </div>
                 </div>
-                <div className='flex items-center justify-center'>
-                  <div className='w-px h-8 bg-border' />
+                <div className="flex items-center justify-center">
+                  <div className="w-px h-8 bg-border" />
                 </div>
-                <div className='flex items-center gap-3 p-4 bg-white rounded-xl border border-border/50'>
-                  <div className='w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center'>
-                    <TrendingUp className='w-5 h-5 text-green-600' />
+                <div className="flex items-center gap-3 p-4 bg-white rounded-xl border border-border/50">
+                  <div className="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <p className='font-medium text-foreground text-sm'>
-                      Value-Based Reports
-                    </p>
-                    <p className='text-xs text-muted-foreground'>
-                      ACO, CIN, payer-ready
-                    </p>
+                    <p className="font-medium text-foreground text-sm">Value-Based Reports</p>
+                    <p className="text-xs text-muted-foreground">ACO, CIN, payer-ready</p>
                   </div>
                 </div>
               </div>
@@ -494,30 +434,30 @@ const DashboardSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-6'>
+    <section className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-6">
             See what matters—across care and performance
           </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-            Everything surfaced in one place—built for operators, clinicians,
-            and payer conversations.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Everything surfaced in one place—built for operators, clinicians, and payer
+            conversations.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 max-w-5xl mx-auto">
           {highlights.map((item, idx) => {
             const Icon = item.icon
             return (
               <div
                 key={idx}
-                className='group p-5 rounded-xl border border-border/50 bg-white hover:shadow-lg hover:border-primary/20 transition-all duration-300 text-center'
+                className="group p-5 rounded-xl border border-border/50 bg-white hover:shadow-lg hover:border-primary/20 transition-all duration-300 text-center"
               >
-                <div className='w-12 h-12 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform'>
-                  <Icon className='w-6 h-6 text-primary' />
+                <div className="w-12 h-12 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                  <Icon className="w-6 h-6 text-primary" />
                 </div>
-                <p className='text-sm text-muted-foreground'>{item.label}</p>
+                <p className="text-sm text-muted-foreground">{item.label}</p>
               </div>
             )
           })}
@@ -548,37 +488,32 @@ const PersonaSection = () => {
     {
       icon: Shield,
       title: 'Independence Focused',
-      description:
-        'Primary care teams that want to stay independent—and competitive',
+      description: 'Primary care teams that want to stay independent—and competitive',
     },
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             Designed for independent practices at every stage
           </h2>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {personas.map((persona, idx) => {
             const Icon = persona.icon
             return (
               <div
                 key={idx}
-                className='group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center'
+                className="group p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 text-center"
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
-                  <Icon className='w-7 h-7 text-primary' />
+                <div className="w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className='font-semibold text-foreground mb-2'>
-                  {persona.title}
-                </h3>
-                <p className='text-sm text-muted-foreground'>
-                  {persona.description}
-                </p>
+                <h3 className="font-semibold text-foreground mb-2">{persona.title}</h3>
+                <p className="text-sm text-muted-foreground">{persona.description}</p>
               </div>
             )
           })}
@@ -604,28 +539,26 @@ const OutcomesSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-slate-50 to-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             From care delivery to contract performance
           </h2>
         </div>
 
-        <div className='flex flex-wrap justify-center gap-6 max-w-4xl mx-auto'>
+        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {outcomes.map((outcome, idx) => {
             const Icon = outcome.icon
             return (
               <div
                 key={idx}
-                className='flex items-center gap-3 p-4 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-primary/20 transition-all'
+                className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-primary/20 transition-all"
               >
-                <div className='w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
-                  <Icon className='w-5 h-5 text-primary' />
+                <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0">
+                  <Icon className="w-5 h-5 text-primary" />
                 </div>
-                <p className='text-sm font-medium text-foreground'>
-                  {outcome.text}
-                </p>
+                <p className="text-sm font-medium text-foreground">{outcome.text}</p>
               </div>
             )
           })}
@@ -638,21 +571,21 @@ const OutcomesSection = () => {
 // Trust Strip
 const TrustStrip = () => {
   return (
-    <section className='py-12 bg-slate-50 border-y border-border/50'>
-      <div className='container mx-auto px-6'>
-        <div className='flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground'>
-          <div className='flex items-center gap-2'>
-            <Shield className='w-5 h-5 text-primary' />
+    <section className="py-12 bg-slate-50 border-y border-border/50">
+      <div className="container mx-auto px-6">
+        <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-muted-foreground">
+          <div className="flex items-center gap-2">
+            <Shield className="w-5 h-5 text-primary" />
             <span>HIPAA-ready</span>
           </div>
-          <span className='hidden md:inline text-border'>•</span>
-          <div className='flex items-center gap-2'>
-            <CheckCircle className='w-5 h-5 text-primary' />
+          <span className="hidden md:inline text-border">•</span>
+          <div className="flex items-center gap-2">
+            <CheckCircle className="w-5 h-5 text-primary" />
             <span>Secure by design</span>
           </div>
-          <span className='hidden md:inline text-border'>•</span>
-          <div className='flex items-center gap-2'>
-            <Plug className='w-5 h-5 text-primary' />
+          <span className="hidden md:inline text-border">•</span>
+          <div className="flex items-center gap-2">
+            <Plug className="w-5 h-5 text-primary" />
             <span>Built for healthcare data interoperability</span>
           </div>
         </div>
@@ -664,21 +597,21 @@ const TrustStrip = () => {
 // CTA Section
 const CTASection = () => {
   return (
-    <section className='py-24 bg-primary text-primary-foreground'>
-      <div className='container mx-auto px-6 text-center'>
-        <h2 className='text-3xl md:text-4xl font-display font-bold mb-6'>
+    <section className="py-24 bg-primary text-primary-foreground">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">
           Make independent primary care value-based ready
         </h2>
-        <p className='text-lg opacity-90 mb-8 max-w-2xl mx-auto'>
-          Turn clinical and claims data into actionable intelligence that
-          supports value-based success.
+        <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
+          Turn clinical and claims data into actionable intelligence that supports value-based
+          success.
         </p>
         <CTAButton
-          link='/contact'
-          text='Talk to Health Compiler'
-          variant='secondary'
+          link="/contact"
+          text="Talk to Health Compiler"
+          variant="secondary"
           iconSuffix={
-            <ArrowRight className='ml-2 transition-transform group-hover:translate-x-1' />
+            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
           }
         />
       </div>

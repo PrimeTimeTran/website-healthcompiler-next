@@ -1,14 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import {
-  Activity,
-  Users,
-  Target,
-  FileText,
-  TrendingUp,
-  Heart,
-} from 'lucide-react'
+import { Activity, Users, Target, FileText, TrendingUp, Heart } from 'lucide-react'
 
 const ACOsRegistriesViz = () => {
   const [activeMetric, setActiveMetric] = useState(0)
@@ -66,85 +59,63 @@ const ACOsRegistriesViz = () => {
   }, [metrics.length])
 
   return (
-    <div className='relative h-[450px] flex items-center justify-center'>
+    <div className="relative h-[450px] flex items-center justify-center">
       {/* Central Dashboard Card */}
-      <div className='relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-80'>
-        <div className='flex items-center justify-between mb-4'>
+      <div className="relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-80">
+        <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className='font-semibold text-foreground text-sm'>
-              ACO & Registry Intelligence
-            </h3>
-            <p className='text-xs text-muted-foreground'>
-              Population Performance
-            </p>
+            <h3 className="font-semibold text-foreground text-sm">ACO & Registry Intelligence</h3>
+            <p className="text-xs text-muted-foreground">Population Performance</p>
           </div>
-          <div className='flex items-center gap-1.5'>
-            <span className='text-xs text-muted-foreground'>Live</span>
-            <span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs text-muted-foreground">Live</span>
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           </div>
         </div>
 
         {/* Split Dashboard View */}
-        <div className='grid grid-cols-2 gap-3 mb-4'>
+        <div className="grid grid-cols-2 gap-3 mb-4">
           {/* ACO Side */}
-          <div className='bg-linear-to-br from-primary/5 to-primary/10 rounded-xl p-3'>
-            <p className='text-[10px] font-medium text-primary mb-2'>
-              ACO Performance
-            </p>
-            <div className='space-y-2'>
-              <div className='flex items-center justify-between'>
-                <span className='text-[10px] text-muted-foreground'>
-                  MSSP Score
-                </span>
-                <span className='text-xs font-bold text-foreground'>94%</span>
+          <div className="bg-linear-to-br from-primary/5 to-primary/10 rounded-xl p-3">
+            <p className="text-[10px] font-medium text-primary mb-2">ACO Performance</p>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-muted-foreground">MSSP Score</span>
+                <span className="text-xs font-bold text-foreground">94%</span>
               </div>
-              <div className='flex items-center justify-between'>
-                <span className='text-[10px] text-muted-foreground'>
-                  Savings
-                </span>
-                <span className='text-xs font-bold text-green-600'>+$2.1M</span>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-muted-foreground">Savings</span>
+                <span className="text-xs font-bold text-green-600">+$2.1M</span>
               </div>
             </div>
           </div>
 
           {/* Registry Side */}
-          <div className='bg-linear-to-br from-accent/5 to-accent/10 rounded-xl p-3'>
-            <p className='text-[10px] font-medium text-accent mb-2'>
-              Registry Tracking
-            </p>
-            <div className='space-y-2'>
-              <div className='flex items-center justify-between'>
-                <span className='text-[10px] text-muted-foreground'>
-                  Cohorts
-                </span>
-                <span className='text-xs font-bold text-foreground'>12</span>
+          <div className="bg-linear-to-br from-accent/5 to-accent/10 rounded-xl p-3">
+            <p className="text-[10px] font-medium text-accent mb-2">Registry Tracking</p>
+            <div className="space-y-2">
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-muted-foreground">Cohorts</span>
+                <span className="text-xs font-bold text-foreground">12</span>
               </div>
-              <div className='flex items-center justify-between'>
-                <span className='text-[10px] text-muted-foreground'>
-                  Outcomes
-                </span>
-                <span className='text-xs font-bold text-foreground'>8.4K</span>
+              <div className="flex items-center justify-between">
+                <span className="text-[10px] text-muted-foreground">Outcomes</span>
+                <span className="text-xs font-bold text-foreground">8.4K</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Main Metric Display */}
-        <div className='bg-slate-50 rounded-xl p-3 mb-4'>
-          <div className='flex items-center gap-3'>
+        <div className="bg-slate-50 rounded-xl p-3 mb-4">
+          <div className="flex items-center gap-3">
             {(() => {
               const Icon = metrics[activeMetric].icon
-              return (
-                <Icon className={`w-6 h-6 ${metrics[activeMetric].color}`} />
-              )
+              return <Icon className={`w-6 h-6 ${metrics[activeMetric].color}`} />
             })()}
-            <div className='flex-1'>
-              <p className='text-lg font-bold text-foreground'>
-                {metrics[activeMetric].value}
-              </p>
-              <p className='text-[10px] text-muted-foreground'>
-                {metrics[activeMetric].label}
-              </p>
+            <div className="flex-1">
+              <p className="text-lg font-bold text-foreground">{metrics[activeMetric].value}</p>
+              <p className="text-[10px] text-muted-foreground">{metrics[activeMetric].label}</p>
             </div>
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
@@ -161,16 +132,14 @@ const ACOsRegistriesViz = () => {
         </div>
 
         {/* Mini Metrics Grid */}
-        <div className='grid grid-cols-6 gap-1.5'>
+        <div className="grid grid-cols-6 gap-1.5">
           {metrics.map((metric, idx) => {
             const Icon = metric.icon
             return (
               <div
                 key={idx}
                 className={`p-2 rounded-lg text-center transition-all duration-300 ${
-                  idx === activeMetric
-                    ? 'bg-primary/10 border border-primary/30'
-                    : 'bg-slate-50'
+                  idx === activeMetric ? 'bg-primary/10 border border-primary/30' : 'bg-slate-50'
                 }`}
               >
                 <Icon
@@ -207,12 +176,8 @@ const ACOsRegistriesViz = () => {
             >
               <Icon className={`w-4 h-4 ${metric.color}`} />
               <div>
-                <p className='text-xs font-semibold text-foreground'>
-                  {metric.value}
-                </p>
-                <p className='text-[10px] text-muted-foreground'>
-                  {metric.label}
-                </p>
+                <p className="text-xs font-semibold text-foreground">{metric.value}</p>
+                <p className="text-[10px] text-muted-foreground">{metric.label}</p>
               </div>
             </div>
           </div>
@@ -221,38 +186,24 @@ const ACOsRegistriesViz = () => {
 
       {/* Connection Ring */}
       <svg
-        className='absolute inset-0 w-full h-full pointer-events-none'
+        className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ transform: 'rotate(-90deg)' }}
       >
         <defs>
-          <linearGradient
-            id='acoRegRingGradient'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor='hsl(var(--primary))'
-              stopOpacity='0.3'
-            />
-            <stop
-              offset='100%'
-              stopColor='hsl(var(--accent))'
-              stopOpacity='0.3'
-            />
+          <linearGradient id="acoRegRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.3" />
           </linearGradient>
         </defs>
         <circle
-          cx='50%'
-          cy='50%'
-          r='190'
-          fill='none'
-          stroke='url(#acoRegRingGradient)'
-          strokeWidth='1'
-          strokeDasharray='8 4'
-          className='animate-spin'
+          cx="50%"
+          cy="50%"
+          r="190"
+          fill="none"
+          stroke="url(#acoRegRingGradient)"
+          strokeWidth="1"
+          strokeDasharray="8 4"
+          className="animate-spin"
           style={{ animationDuration: '30s' }}
         />
       </svg>

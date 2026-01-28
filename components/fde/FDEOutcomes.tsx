@@ -1,22 +1,22 @@
-import { Clock, Settings, TrendingUp } from "lucide-react";
+import { Clock, Settings, TrendingUp } from 'lucide-react'
 
 const outcomes = [
   {
     icon: Clock,
-    title: "Faster Time-to-Value",
-    description: "Ship production outcomes in weeks, not quarters",
+    title: 'Faster Time-to-Value',
+    description: 'Ship production outcomes in weeks, not quarters',
   },
   {
     icon: Settings,
-    title: "Lower Ops Load",
-    description: "Reduce manual processes with automated workflows",
+    title: 'Lower Ops Load',
+    description: 'Reduce manual processes with automated workflows',
   },
   {
     icon: TrendingUp,
-    title: "Measurable ROI",
-    description: "Track metrics that move from day one",
+    title: 'Measurable ROI',
+    description: 'Track metrics that move from day one',
   },
-];
+]
 
 export const FDEOutcomes = () => {
   return (
@@ -41,5 +41,5 @@ export const FDEOutcomes = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

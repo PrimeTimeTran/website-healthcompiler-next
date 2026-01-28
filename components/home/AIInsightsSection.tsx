@@ -1,9 +1,24 @@
 import { Sparkles, TrendingUp, AlertTriangle, Activity } from 'lucide-react'
 
 const annotations = [
-  { label: 'Change detected', icon: TrendingUp, position: 'top-8 left-8', color: 'bg-accent text-accent-foreground' },
-  { label: 'New risk surfaced', icon: AlertTriangle, position: 'top-24 right-12', color: 'bg-destructive/20 text-destructive' },
-  { label: 'Engagement drop', icon: Activity, position: 'bottom-20 left-16', color: 'bg-primary/30 text-primary-foreground' },
+  {
+    label: 'Change detected',
+    icon: TrendingUp,
+    position: 'top-8 left-8',
+    color: 'bg-accent text-accent-foreground',
+  },
+  {
+    label: 'New risk surfaced',
+    icon: AlertTriangle,
+    position: 'top-24 right-12',
+    color: 'bg-destructive/20 text-destructive',
+  },
+  {
+    label: 'Engagement drop',
+    icon: Activity,
+    position: 'bottom-20 left-16',
+    color: 'bg-primary/30 text-primary-foreground',
+  },
 ]
 
 export const AIInsightsSection = () => {
@@ -23,7 +38,7 @@ export const AIInsightsSection = () => {
                 </div>
                 <span className="text-xs text-muted-foreground">Updated 2m ago</span>
               </div>
-              
+
               {/* Metrics grid */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="bg-muted/50 rounded-xl p-4">
@@ -47,7 +62,7 @@ export const AIInsightsSection = () => {
                   <p className="text-xs text-accent">↑ 3% vs prior</p>
                 </div>
               </div>
-              
+
               {/* AI insight highlight */}
               <div className="bg-accent/10 rounded-xl p-4 border border-accent/20">
                 <div className="flex items-start gap-3">
@@ -71,9 +86,13 @@ export const AIInsightsSection = () => {
                   className={`absolute ${annotation.position} animate-fade-in`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className={`flex items-center gap-2 ${annotation.color} rounded-full px-3 py-1.5 shadow-lg`}>
+                  <div
+                    className={`flex items-center gap-2 ${annotation.color} rounded-full px-3 py-1.5 shadow-lg`}
+                  >
                     <Icon className="w-3.5 h-3.5" />
-                    <span className="text-xs font-medium whitespace-nowrap">{annotation.label}</span>
+                    <span className="text-xs font-medium whitespace-nowrap">
+                      {annotation.label}
+                    </span>
                   </div>
                 </div>
               )
@@ -89,7 +108,9 @@ export const AIInsightsSection = () => {
               From raw data to real understanding
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              AI continuously summarizes records, highlights what has changed since the last interaction, and surfaces risks, gaps, and opportunities across care delivery, cost drivers, and engagement patterns.
+              AI continuously summarizes records, highlights what has changed since the last
+              interaction, and surfaces risks, gaps, and opportunities across care delivery, cost
+              drivers, and engagement patterns.
             </p>
           </div>
         </div>

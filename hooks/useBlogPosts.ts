@@ -4,14 +4,11 @@ import { BlogPost } from '@/services/strapi'
 import { STRAPI_URL, STRAPI_TOKEN } from '../lib/constants'
 
 export async function getBlogPostBySlug(slug: string) {
-  const res = await fetch(
-    `${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
-    {
-      headers: {
-        Authorization: `Bearer ${STRAPI_TOKEN}`,
-      },
+  const res = await fetch(`${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`, {
+    headers: {
+      Authorization: `Bearer ${STRAPI_TOKEN}`,
     },
-  )
+  })
 
   if (!res.ok) {
     throw new Error('Failed to fetch blog post')
@@ -36,9 +33,7 @@ export const useBlogPost = (slug: string) => {
         setBlogPost(post)
         setError(null)
       } catch (err) {
-        setError(
-          err instanceof Error ? err.message : 'Failed to load blog post',
-        )
+        setError(err instanceof Error ? err.message : 'Failed to load blog post')
         console.error('Error loading blog post:', err)
       } finally {
         setLoading(false)

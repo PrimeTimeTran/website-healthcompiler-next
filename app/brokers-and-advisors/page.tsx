@@ -64,37 +64,32 @@ const BrokersAndAdvisors = () => {
   return (
     <>
       <GridSection>
-        <div className='container mx-auto px-6 py-24 lg:py-32'>
-          <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
-            <div className='space-y-8'>
-              <div className='max-w-3xl'>
-                <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
-                  <span className='text-primary'>Use Data</span> to Win and
-                  Retain Clients
+        <div className="container mx-auto px-6 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="space-y-8">
+              <div className="max-w-3xl">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
+                  <span className="text-primary">Use Data</span> to Win and Retain Clients
                 </h1>
 
-                <p className='text-xl text-muted-foreground mt-6 mb-8'>
-                  Move beyond anecdotes. Prove impact with real performance data
-                  that supports strategy decisions and strengthens client trust.
+                <p className="text-xl text-muted-foreground mt-6 mb-8">
+                  Move beyond anecdotes. Prove impact with real performance data that supports
+                  strategy decisions and strengthens client trust.
                 </p>
 
-                <CTAButton
-                  link='/contact'
-                  text='Book a Demo'
-                  suffixIconDefault
-                />
+                <CTAButton link="/contact" text="Book a Demo" suffixIconDefault />
 
-                <div className='flex items-center gap-6 text-sm text-muted-foreground mt-6'>
-                  <span className='flex items-center gap-1.5'>
-                    <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+                <div className="flex items-center gap-6 text-sm text-muted-foreground mt-6">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                     Client-ready reports
                   </span>
-                  <span className='flex items-center gap-1.5'>
-                    <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                     ROI tracking
                   </span>
-                  <span className='flex items-center gap-1.5'>
-                    <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                     Benchmarking
                   </span>
                 </div>
@@ -102,33 +97,33 @@ const BrokersAndAdvisors = () => {
             </div>
 
             {/* Right: Visualization */}
-            <div className='lg:pl-8'>
+            <div className="lg:pl-8">
               <BrokersAdvisorsViz />
             </div>
           </div>
         </div>
       </GridSection>
 
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Evidence That Wins RFPs and Renewals
             </h2>
 
-            <p className='text-lg text-muted-foreground mb-8'>
-              Health Compiler helps brokers and advisors clearly demonstrate how
-              strategies perform after implementation — across all plan designs.
+            <p className="text-lg text-muted-foreground mb-8">
+              Health Compiler helps brokers and advisors clearly demonstrate how strategies perform
+              after implementation — across all plan designs.
             </p>
 
-            <div className='grid md:grid-cols-2 gap-4'>
+            <div className="grid md:grid-cols-2 gap-4">
               {dataBenefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className='flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50'
+                  className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground'>{benefit}</p>
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -137,42 +132,33 @@ const BrokersAndAdvisors = () => {
       </section>
 
       {/* How We Support Brokers & Advisors */}
-      <section className='py-20 bg-muted/30'>
-        <div className='container mx-auto px-4'>
-          <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4 text-center'>
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             How We Support Brokers & Advisors
           </h2>
-          <p className='text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto'>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Comprehensive tools designed to help your advisory practice thrive
           </p>
-          <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className='bg-background rounded-2xl p-8 shadow-sm border border-border hover:border-primary/30 transition-colors group'
+                className="bg-background rounded-2xl p-8 shadow-sm border border-border hover:border-primary/30 transition-colors group"
               >
-                <div className='w-16 h-16 bg-linear-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform'>
-                  <solution.icon className='h-8 w-8 text-primary' />
+                <div className="w-16 h-16 bg-linear-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <solution.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className='text-xl font-bold text-foreground mb-4'>
-                  {solution.title}
-                </h3>
-                <p className='text-muted-foreground leading-relaxed'>
-                  {solution.description}
-                </p>
+                <h3 className="text-xl font-bold text-foreground mb-4">{solution.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
               </div>
             ))}
           </div>
-          <div className='flex justify-center mt-12'>
-            <Button
-              asChild
-              variant='outline'
-              size='lg'
-              className='gap-2'
-            >
-              <Link href='/platform'>
+          <div className="flex justify-center mt-12">
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <Link href="/platform">
                 Explore
-                <ArrowRight className='h-4 w-4' />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -180,56 +166,51 @@ const BrokersAndAdvisors = () => {
       </section>
 
       {/* Integration */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4'>
-              <Workflow className='h-4 w-4' />
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <Workflow className="h-4 w-4" />
               Seamless Integration
             </div>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Integration Without Workflow Disruption
             </h2>
 
-            <p className='text-lg text-muted-foreground mb-4'>
+            <p className="text-lg text-muted-foreground mb-4">
               Designed to fit into existing ecosystems — not replace them.
             </p>
-            <p className='text-xl font-semibold text-foreground mb-12'>
+            <p className="text-xl font-semibold text-foreground mb-12">
               No system changes. No workflow disruption.
             </p>
 
-            <div className='space-y-4 max-w-lg mx-auto mb-12'>
+            <div className="space-y-4 max-w-lg mx-auto mb-12">
               {integrationBenefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className='flex items-start gap-3'
-                >
-                  <CheckCircle className='h-6 w-6 text-primary flex-shrink-0 mt-0.5' />
-                  <p className='text-foreground text-left'>{benefit}</p>
+                <div key={index} className="flex items-start gap-3">
+                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <p className="text-foreground text-left">{benefit}</p>
                 </div>
               ))}
             </div>
 
             {/* Integration logos */}
-            <div className='flex flex-wrap justify-center items-center gap-8 md:gap-12 p-8 bg-muted/30 rounded-2xl border border-border/50'>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 p-8 bg-muted/30 rounded-2xl border border-border/50">
               {integrationLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className='h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm'
+                  className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm"
                 >
                   <Image
                     src={logo.src}
                     alt={logo.name}
                     width={128}
                     height={48}
-                    className='max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity'
+                    className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
-              <div className='h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm'>
-                <span className='text-muted-foreground text-sm font-medium'>
-                  + More
-                </span>
+              <div className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm">
+                <span className="text-muted-foreground text-sm font-medium">+ More</span>
               </div>
             </div>
           </div>
@@ -237,64 +218,52 @@ const BrokersAndAdvisors = () => {
       </section>
 
       {/* Designed for Advisor Success */}
-      <section className='py-20 bg-muted/30'>
-        <div className='container mx-auto px-4'>
-          <div className='grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto'>
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
             <div>
-              <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4'>
-                <FileText className='h-4 w-4' />
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+                <FileText className="h-4 w-4" />
                 Client Success
               </div>
-              <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
                 Built to Support Durable Client Relationships
               </h2>
-              <p className='text-lg text-muted-foreground mb-6'>
-                Deliver consistent insight, credible results, and shared
-                visibility — without adding operational burden.
+              <p className="text-lg text-muted-foreground mb-6">
+                Deliver consistent insight, credible results, and shared visibility — without adding
+                operational burden.
               </p>
-              <div className='space-y-3'>
-                <div className='flex items-center gap-3'>
-                  <CheckCircle className='h-5 w-5 text-primary flex-shrink-0' />
-                  <span className='text-foreground'>
-                    Client-ready reporting and dashboards
-                  </span>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-foreground">Client-ready reporting and dashboards</span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <CheckCircle className='h-5 w-5 text-primary flex-shrink-0' />
-                  <span className='text-foreground'>
-                    ROI tracking and benchmarking
-                  </span>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-foreground">ROI tracking and benchmarking</span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <CheckCircle className='h-5 w-5 text-primary flex-shrink-0' />
-                  <span className='text-foreground'>
-                    Data-backed plan recommendations
-                  </span>
+                <div className="flex items-center gap-3">
+                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <span className="text-foreground">Data-backed plan recommendations</span>
                 </div>
               </div>
             </div>
-            <div className='relative'>
-              <div className='bg-linear-to-br from-primary/5 to-accent/10 rounded-2xl p-8 border border-primary/20'>
-                <div className='space-y-4'>
-                  <div className='flex items-center justify-between p-4 bg-background rounded-xl'>
-                    <span className='text-sm font-medium text-foreground'>
+            <div className="relative">
+              <div className="bg-linear-to-br from-primary/5 to-accent/10 rounded-2xl p-8 border border-primary/20">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between p-4 bg-background rounded-xl">
+                    <span className="text-sm font-medium text-foreground">
                       Client Portfolio Health
                     </span>
-                    <span className='text-lg font-bold text-primary'>92%</span>
+                    <span className="text-lg font-bold text-primary">92%</span>
                   </div>
-                  <div className='flex items-center justify-between p-4 bg-background rounded-xl'>
-                    <span className='text-sm font-medium text-foreground'>
-                      Avg. Client Savings
-                    </span>
-                    <span className='text-lg font-bold text-green-600'>
-                      18%
-                    </span>
+                  <div className="flex items-center justify-between p-4 bg-background rounded-xl">
+                    <span className="text-sm font-medium text-foreground">Avg. Client Savings</span>
+                    <span className="text-lg font-bold text-green-600">18%</span>
                   </div>
-                  <div className='flex items-center justify-between p-4 bg-background rounded-xl'>
-                    <span className='text-sm font-medium text-foreground'>
-                      Client Retention
-                    </span>
-                    <span className='text-lg font-bold text-primary'>96%</span>
+                  <div className="flex items-center justify-between p-4 bg-background rounded-xl">
+                    <span className="text-sm font-medium text-foreground">Client Retention</span>
+                    <span className="text-lg font-bold text-primary">96%</span>
                   </div>
                 </div>
               </div>
@@ -304,21 +273,17 @@ const BrokersAndAdvisors = () => {
       </section>
 
       {/* Final CTA */}
-      <section className='py-20 bg-linear-to-br from-primary/5 via-background to-primary/5'>
-        <div className='container mx-auto px-4 text-center'>
-          <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-linear-to-br from-primary/5 via-background to-primary/5">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
             Ready to Strengthen Your Advisory Practice?
           </h2>
 
-          <p className='text-lg text-muted-foreground mb-8 max-w-2xl mx-auto'>
+          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             Get started with clear insights for your client portfolio.
           </p>
 
-          <CTAButton
-            link='/contact'
-            text='Request a Demo'
-            suffixIconDefault
-          />
+          <CTAButton link="/contact" text="Request a Demo" suffixIconDefault />
         </div>
       </section>
     </>

@@ -29,8 +29,7 @@ const outcomes = [
     icon: AlertTriangle,
     label: 'Early risk signals',
     color: 'text-orange-500',
-    description:
-      'Patients showing early risk signals requiring proactive outreach',
+    description: 'Patients showing early risk signals requiring proactive outreach',
   },
   {
     icon: CheckCircle,
@@ -75,29 +74,17 @@ function PopulationNodes({ count = 150 }: { count?: number }) {
   useFrame((state) => {
     if (pointsRef.current) {
       pointsRef.current.rotation.y += 0.002
-      pointsRef.current.rotation.x =
-        Math.sin(state.clock.elapsedTime * 0.3) * 0.1
+      pointsRef.current.rotation.x = Math.sin(state.clock.elapsedTime * 0.3) * 0.1
     }
   })
 
   return (
     <points ref={pointsRef}>
       <bufferGeometry>
-        <bufferAttribute
-          attach='attributes-position'
-          args={[positions, 3]}
-        />
-        <bufferAttribute
-          attach='attributes-color'
-          args={[colors, 3]}
-        />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+        <bufferAttribute attach="attributes-color" args={[colors, 3]} />
       </bufferGeometry>
-      <pointsMaterial
-        size={0.06}
-        vertexColors
-        transparent
-        opacity={0.9}
-      />
+      <pointsMaterial size={0.06} vertexColors transparent opacity={0.9} />
     </points>
   )
 }
@@ -115,32 +102,20 @@ function ClusterLabel({
 
   useFrame((state) => {
     if (ref.current) {
-      ref.current.position.x =
-        position[0] + Math.sin(state.clock.elapsedTime + position[1]) * 0.1
-      ref.current.position.y =
-        position[1] + Math.cos(state.clock.elapsedTime + position[0]) * 0.1
+      ref.current.position.x = position[0] + Math.sin(state.clock.elapsedTime + position[1]) * 0.1
+      ref.current.position.y = position[1] + Math.cos(state.clock.elapsedTime + position[0]) * 0.1
     }
   })
 
   return (
-    <group
-      ref={ref}
-      position={position as [number, number, number]}
-    >
+    <group ref={ref} position={position as [number, number, number]}>
       <mesh>
         <sphereGeometry args={[0.15, 16, 16]} />
-        <meshBasicMaterial
-          color={color}
-          transparent
-          opacity={0.8}
-        />
+        <meshBasicMaterial color={color} transparent opacity={0.8} />
       </mesh>
-      <Html
-        center
-        distanceFactor={8}
-      >
+      <Html center distanceFactor={8}>
         <div
-          className='px-2 py-1 rounded text-[10px] font-medium whitespace-nowrap backdrop-blur-sm'
+          className="px-2 py-1 rounded text-[10px] font-medium whitespace-nowrap backdrop-blur-sm"
           style={{ backgroundColor: `${color}30`, color }}
         >
           {label}
@@ -154,30 +129,20 @@ function Scene() {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <pointLight
-        position={[10, 10, 10]}
-        intensity={0.8}
-      />
+      <pointLight position={[10, 10, 10]} intensity={0.8} />
 
       <Suspense fallback={<div>Loading 3D cluster...</div>}>
         <PopulationNodes />
       </Suspense>
       <Suspense fallback={<div>Loading 3D cluster...</div>}>
         {clusters.map((cluster, i) => (
-          <ClusterLabel
-            key={i}
-            {...cluster}
-          />
+          <ClusterLabel key={i} {...cluster} />
         ))}
       </Suspense>
 
       <mesh>
         <sphereGeometry args={[0.5, 32, 32]} />
-        <meshBasicMaterial
-          color='#1a1a2e'
-          transparent
-          opacity={0.5}
-        />
+        <meshBasicMaterial color="#1a1a2e" transparent opacity={0.5} />
       </mesh>
     </>
   )
@@ -185,53 +150,49 @@ function Scene() {
 
 export function HowWeImprove() {
   return (
-    <section className='py-20 md:py-28 bg-muted/40'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
+    <section className="py-20 md:py-28 bg-muted/40">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
             How Health Compiler Improves Health Outcomes
           </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-            Health Compiler provides continuous population health visibility,
-            not point-in-time snapshots. Care teams can quickly identify:
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Health Compiler provides continuous population health visibility, not point-in-time
+            snapshots. Care teams can quickly identify:
           </p>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-12 items-center'>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* 3D Sphere */}
-          <div className='h-[400px] md:h-[500px] relative'>
+          <div className="h-[400px] md:h-[500px] relative">
             <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
               <Scene />
             </Canvas>
 
-            <div className='absolute inset-0 pointer-events-none'>
-              <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-primary/20 animate-ping-slow' />
+            <div className="absolute inset-0 pointer-events-none">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 rounded-full border border-primary/20 animate-ping-slow" />
               <div
-                className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-accent/10 animate-ping-slow'
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full border border-accent/10 animate-ping-slow"
                 style={{ animationDelay: '0.5s' }}
               />
             </div>
           </div>
 
           {/* Outcomes */}
-          <div className='space-y-6'>
-            <h3 className='text-xl font-semibold mb-6'>
-              Patient Outcomes Visibility
-            </h3>
-            <div className='space-y-4'>
+          <div className="space-y-6">
+            <h3 className="text-xl font-semibold mb-6">Patient Outcomes Visibility</h3>
+            <div className="space-y-4">
               {outcomes.map((outcome, index) => (
                 <div
                   key={index}
-                  className='flex items-center gap-4 p-5 rounded-xl bg-card border hover:shadow-lg transition-all group'
+                  className="flex items-center gap-4 p-5 rounded-xl bg-card border hover:shadow-lg transition-all group"
                 >
-                  <div className='w-12 h-12 rounded-xl bg-muted flex items-center justify-center group-hover:scale-110 transition-transform'>
+                  <div className="w-12 h-12 rounded-xl bg-muted flex items-center justify-center group-hover:scale-110 transition-transform">
                     <outcome.icon className={`w-6 h-6 ${outcome.color}`} />
                   </div>
                   <div>
-                    <span className='font-semibold'>{outcome.label}</span>
-                    <p className='text-sm text-muted-foreground mt-0.5'>
-                      {outcome.description}
-                    </p>
+                    <span className="font-semibold">{outcome.label}</span>
+                    <p className="text-sm text-muted-foreground mt-0.5">{outcome.description}</p>
                   </div>
                 </div>
               ))}

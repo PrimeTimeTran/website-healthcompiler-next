@@ -19,14 +19,12 @@ const steps = [
   {
     title: 'Integrate',
     kicker: '',
-    description:
-      'Raw data ingested from TPAs, carriers, EHRs & stored securely.',
+    description: 'Raw data ingested from TPAs, carriers, EHRs & stored securely.',
   },
   {
     title: 'Harmonize',
     kicker: '',
-    description:
-      'Data is parsed, codified & mapped to standardized structures.',
+    description: 'Data is parsed, codified & mapped to standardized structures.',
   },
   {
     title: 'Unify',
@@ -36,14 +34,12 @@ const steps = [
   {
     title: 'Enrich',
     kicker: '',
-    description:
-      'AI layers on risk scores, care gaps, HCC codes & quality measures.',
+    description: 'AI layers on risk scores, care gaps, HCC codes & quality measures.',
   },
   {
     title: 'Activate',
     kicker: '',
-    description:
-      'Deliver insights to workflows, dashboards & automated outreach.',
+    description: 'Deliver insights to workflows, dashboards & automated outreach.',
   },
 ]
 
@@ -72,9 +68,7 @@ export const DAPFlowSection = ({
   const [activeSource, setActiveSource] = useState(0)
   const [activeStep, setActiveStep] = useState(0)
   const [activeOutcome, setActiveOutcome] = useState(-1)
-  const [flowPhase, setFlowPhase] = useState<
-    'source' | 'processing' | 'outcome'
-  >('source')
+  const [flowPhase, setFlowPhase] = useState<'source' | 'processing' | 'outcome'>('source')
 
   // Main flow animation cycle
   useEffect(() => {
@@ -115,7 +109,7 @@ export const DAPFlowSection = ({
   }, [flowPhase])
 
   return (
-    <section className='py-16 md:py-24 bg-linear-to-b from-secondary/50 to-background relative overflow-hidden'>
+    <section className="py-16 md:py-24 bg-linear-to-b from-secondary/50 to-background relative overflow-hidden">
       {/* Enhanced CSS Animations */}
       <style>{`
         @keyframes flowRight {
@@ -189,25 +183,25 @@ export const DAPFlowSection = ({
       `}</style>
 
       {/* Background gradient accent */}
-      <div className='absolute inset-0 bg-[radial-gradient(ellipse_1000px_500px_at_50%_0%,hsl(var(--accent)/0.12),transparent_60%)]' />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_1000px_500px_at_50%_0%,hsl(var(--accent)/0.12),transparent_60%)]" />
 
-      <div className='container mx-auto px-6 relative z-10'>
+      <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
-        <header className='text-center mb-10 md:mb-14'>
+        <header className="text-center mb-10 md:mb-14">
           {eyebrow && (
-            <div className='inline-block px-4 py-2 border border-accent/30 rounded-full text-accent text-xs tracking-wider uppercase mb-4 bg-accent/5'>
+            <div className="inline-block px-4 py-2 border border-accent/30 rounded-full text-accent text-xs tracking-wider uppercase mb-4 bg-accent/5">
               {eyebrow}
             </div>
           )}
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-display text-foreground'>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight font-display text-foreground">
             {title}
           </h2>
           {(subtitle || poweredBy) && (
-            <div className='mt-4 text-muted-foreground text-sm flex items-center justify-center gap-3 flex-wrap'>
+            <div className="mt-4 text-muted-foreground text-sm flex items-center justify-center gap-3 flex-wrap">
               {subtitle && <span>{subtitle}</span>}
               {poweredBy && (
-                <span className='inline-flex items-center gap-2 px-3 py-1.5 border border-accent/30 rounded-full text-accent bg-accent/5'>
-                  <span className='w-2.5 h-2.5 rounded-full bg-[#E94E87] shadow-[0_0_0_4px_rgba(233,78,135,0.2)] animate-pulse' />
+                <span className="inline-flex items-center gap-2 px-3 py-1.5 border border-accent/30 rounded-full text-accent bg-accent/5">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#E94E87] shadow-[0_0_0_4px_rgba(233,78,135,0.2)] animate-pulse" />
                   {poweredBy}
                 </span>
               )}
@@ -216,10 +210,10 @@ export const DAPFlowSection = ({
         </header>
 
         {/* Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-[200px_1fr_220px] gap-4 items-stretch'>
+        <div className="grid grid-cols-1 lg:grid-cols-[200px_1fr_220px] gap-4 items-stretch">
           {/* Left Rail - Data Inputs */}
-          <aside className='bg-card border border-border rounded-2xl p-5 shadow-sm relative'>
-            <div className='text-xs tracking-wider uppercase text-muted-foreground mb-3'>
+          <aside className="bg-card border border-border rounded-2xl p-5 shadow-sm relative">
+            <div className="text-xs tracking-wider uppercase text-muted-foreground mb-3">
               Data Sources
             </div>
             <ul>
@@ -237,7 +231,7 @@ export const DAPFlowSection = ({
                           : 'text-muted-foreground'
                     }`}
                   >
-                    <span className='relative'>
+                    <span className="relative">
                       <span
                         className={`w-2.5 h-2.5 rounded-full transition-all duration-300 block ${
                           isActive
@@ -249,9 +243,9 @@ export const DAPFlowSection = ({
                       />
                       {isActive && (
                         <>
-                          <span className='absolute inset-0 rounded-full bg-[#E94E87] animate-ping' />
+                          <span className="absolute inset-0 rounded-full bg-[#E94E87] animate-ping" />
                           <span
-                            className='absolute inset-0 rounded-full bg-[#E94E87]/50'
+                            className="absolute inset-0 rounded-full bg-[#E94E87]/50"
                             style={{ animation: 'ripple 1s ease-out infinite' }}
                           />
                         </>
@@ -260,10 +254,10 @@ export const DAPFlowSection = ({
                     {item}
                     {/* Shooting particle when active */}
                     {isActive && (
-                      <span className='ml-auto flex items-center gap-1'>
-                        <span className='w-1 h-1 rounded-full bg-[#E94E87] animate-ping' />
+                      <span className="ml-auto flex items-center gap-1">
+                        <span className="w-1 h-1 rounded-full bg-[#E94E87] animate-ping" />
                         <span
-                          className='w-1.5 h-1.5 rounded-full bg-[#F97316] animate-ping'
+                          className="w-1.5 h-1.5 rounded-full bg-[#F97316] animate-ping"
                           style={{ animationDelay: '0.2s' }}
                         />
                       </span>
@@ -274,8 +268,8 @@ export const DAPFlowSection = ({
             </ul>
 
             {/* Flow connector to steps */}
-            <div className='hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-20'>
-              <div className='relative w-8 h-8'>
+            <div className="hidden lg:block absolute -right-4 top-1/2 -translate-y-1/2 z-20">
+              <div className="relative w-8 h-8">
                 <div
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${flowPhase === 'source' ? 'scale-125' : 'scale-100'}`}
                 >
@@ -284,9 +278,9 @@ export const DAPFlowSection = ({
                   />
                 </div>
                 {flowPhase === 'source' && (
-                  <div className='absolute inset-0 flex items-center justify-center'>
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <div
-                      className='w-6 h-6 rounded-full border-2 border-[#E94E87]'
+                      className="w-6 h-6 rounded-full border-2 border-[#E94E87]"
                       style={{ animation: 'ripple 1s ease-out infinite' }}
                     />
                   </div>
@@ -296,18 +290,18 @@ export const DAPFlowSection = ({
           </aside>
 
           {/* Steps */}
-          <div className='grid grid-cols-1 md:grid-cols-5 gap-3 relative'>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3 relative">
             {/* Main flowing stream line (desktop) */}
-            <div className='hidden lg:block absolute top-1/2 left-0 right-0 h-1.5 -translate-y-1/2 z-0 rounded-full overflow-hidden bg-border/30'>
-              <div className='h-full stream-line rounded-full' />
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-1.5 -translate-y-1/2 z-0 rounded-full overflow-hidden bg-border/30">
+              <div className="h-full stream-line rounded-full" />
             </div>
 
             {/* Traveling particles */}
-            <div className='hidden lg:block absolute top-1/2 left-0 right-0 -translate-y-1/2 z-0 pointer-events-none'>
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 -translate-y-1/2 z-0 pointer-events-none">
               {[0, 1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className='absolute top-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] shadow-lg shadow-[#E94E87]/50'
+                  className="absolute top-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] shadow-lg shadow-[#E94E87]/50"
                   style={{
                     animation: `particleStream 4s ease-in-out infinite`,
                     animationDelay: `${i * 0.8}s`,
@@ -318,11 +312,9 @@ export const DAPFlowSection = ({
 
             {steps.map((step, idx) => {
               const isHighlight = idx === highlightStepIndex
-              const isProcessing =
-                flowPhase === 'processing' && activeStep === idx
+              const isProcessing = flowPhase === 'processing' && activeStep === idx
               const isPast =
-                flowPhase === 'outcome' ||
-                (flowPhase === 'processing' && activeStep > idx)
+                flowPhase === 'outcome' || (flowPhase === 'processing' && activeStep > idx)
 
               return (
                 <article
@@ -347,9 +339,9 @@ export const DAPFlowSection = ({
                   >
                     {isProcessing && (
                       <>
-                        <span className='absolute inset-0 rounded-full bg-[#E94E87] animate-ping' />
+                        <span className="absolute inset-0 rounded-full bg-[#E94E87] animate-ping" />
                         <span
-                          className='absolute -inset-1 rounded-full border border-[#E94E87]'
+                          className="absolute -inset-1 rounded-full border border-[#E94E87]"
                           style={{ animation: 'ripple 1s ease-out infinite' }}
                         />
                       </>
@@ -367,7 +359,7 @@ export const DAPFlowSection = ({
                     }`}
                   />
 
-                  <h3 className='text-lg font-semibold mb-2'>{step.title}</h3>
+                  <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                   {step.kicker && (
                     <div
                       className={`text-xs font-semibold mb-2 ${isHighlight ? 'text-white/85' : 'text-[#E94E87]'}`}
@@ -383,7 +375,7 @@ export const DAPFlowSection = ({
 
                   {/* Connector between steps */}
                   {idx < steps.length - 1 && (
-                    <div className='hidden lg:flex absolute -right-1.5 top-1/2 -translate-y-1/2 items-center z-20'>
+                    <div className="hidden lg:flex absolute -right-1.5 top-1/2 -translate-y-1/2 items-center z-20">
                       <div
                         className={`w-3 h-1 rounded-full transition-all duration-300 ${
                           isProcessing || isPast
@@ -399,10 +391,10 @@ export const DAPFlowSection = ({
           </div>
 
           {/* Right Rail - Outcomes */}
-          <aside className='bg-card border border-border rounded-2xl p-5 shadow-sm relative'>
+          <aside className="bg-card border border-border rounded-2xl p-5 shadow-sm relative">
             {/* Flow indicator from steps */}
-            <div className='hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 z-20'>
-              <div className='relative w-8 h-8'>
+            <div className="hidden lg:block absolute -left-4 top-1/2 -translate-y-1/2 z-20">
+              <div className="relative w-8 h-8">
                 <div
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${flowPhase === 'outcome' ? 'scale-125' : 'scale-100'}`}
                 >
@@ -411,9 +403,9 @@ export const DAPFlowSection = ({
                   />
                 </div>
                 {flowPhase === 'outcome' && (
-                  <div className='absolute inset-0 flex items-center justify-center'>
+                  <div className="absolute inset-0 flex items-center justify-center">
                     <div
-                      className='w-6 h-6 rounded-full border-2 border-[#F97316]'
+                      className="w-6 h-6 rounded-full border-2 border-[#F97316]"
                       style={{ animation: 'ripple 1s ease-out infinite' }}
                     />
                   </div>
@@ -421,13 +413,12 @@ export const DAPFlowSection = ({
               </div>
             </div>
 
-            <div className='text-xs tracking-wider uppercase text-muted-foreground mb-3'>
+            <div className="text-xs tracking-wider uppercase text-muted-foreground mb-3">
               Outcomes by Persona
             </div>
             <ul>
               {outcomes.map((item, idx) => {
-                const isActive =
-                  flowPhase === 'outcome' && activeOutcome === idx
+                const isActive = flowPhase === 'outcome' && activeOutcome === idx
                 const isPast = flowPhase === 'outcome' && activeOutcome > idx
 
                 return (
@@ -456,9 +447,7 @@ export const DAPFlowSection = ({
                       >
                         {item.label}
                       </span>
-                      <span className='text-xs text-muted-foreground'>
-                        {item.persona}
-                      </span>
+                      <span className="text-xs text-muted-foreground">{item.persona}</span>
                     </div>
                   </li>
                 )
@@ -466,31 +455,28 @@ export const DAPFlowSection = ({
             </ul>
 
             <Link
-              href='/contact'
-              className='mt-4 flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] text-white hover:opacity-90 transition-opacity text-sm font-medium shadow-md hover:shadow-lg hover:shadow-[#E94E87]/30'
+              href="/contact"
+              className="mt-4 flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] text-white hover:opacity-90 transition-opacity text-sm font-medium shadow-md hover:shadow-lg hover:shadow-[#E94E87]/30"
             >
               Request a Demo
-              <ArrowRight className='w-4 h-4' />
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </aside>
         </div>
 
         {/* Persona Tags */}
-        <div className='mt-10 flex flex-wrap items-center justify-center gap-3'>
-          <span className='text-muted-foreground text-sm'>Built for:</span>
-          {[
-            'Self-Funded Employers',
-            'Level-Funded Plans',
-            'Direct Care',
-            'Value-Based / ACOs',
-          ].map((persona) => (
-            <span
-              key={persona}
-              className='px-3 py-1.5 bg-card border border-border rounded-full text-foreground text-xs shadow-sm hover:border-accent/30 transition-colors'
-            >
-              {persona}
-            </span>
-          ))}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          <span className="text-muted-foreground text-sm">Built for:</span>
+          {['Self-Funded Employers', 'Level-Funded Plans', 'Direct Care', 'Value-Based / ACOs'].map(
+            (persona) => (
+              <span
+                key={persona}
+                className="px-3 py-1.5 bg-card border border-border rounded-full text-foreground text-xs shadow-sm hover:border-accent/30 transition-colors"
+              >
+                {persona}
+              </span>
+            )
+          )}
         </div>
       </div>
     </section>

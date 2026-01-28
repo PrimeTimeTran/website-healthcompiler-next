@@ -43,11 +43,7 @@ const integrations = [
 ]
 
 // Convert 2D percentage to 3D position
-const to3DPosition = (
-  x: number,
-  y: number,
-  index: number,
-): [number, number, number] => {
+const to3DPosition = (x: number, y: number, index: number): [number, number, number] => {
   const xPos = ((x - 50) / 50) * 5
   const yPos = ((50 - y) / 50) * 3.5
   const zPos = (index % 5) * 0.15 - 0.3 // subtle depth variation
@@ -64,16 +60,12 @@ const IntegrationCard = ({
 }) => {
   const position = useMemo(
     () => to3DPosition(integration.x, integration.y, index),
-    [integration.x, integration.y, index],
+    [integration.x, integration.y, index]
   )
 
   return (
     <group position={position}>
-      <Html
-        transform
-        distanceFactor={8}
-        style={{ pointerEvents: 'none' }}
-      >
+      <Html transform distanceFactor={8} style={{ pointerEvents: 'none' }}>
         <div
           className={`
             px-3 py-2 rounded-lg border text-xs font-medium whitespace-nowrap
@@ -92,13 +84,7 @@ const IntegrationCard = ({
 }
 
 // Animated particle traveling along a line
-const ConnectionLine = ({
-  start,
-  index,
-}: {
-  start: THREE.Vector3
-  index: number
-}) => {
+const ConnectionLine = ({ start, index }: { start: THREE.Vector3; index: number }) => {
   const particleRef = useRef<THREE.Mesh>(null)
   const end = useMemo(() => new THREE.Vector3(0, 0, 0), [])
 
@@ -110,10 +96,7 @@ const ConnectionLine = ({
 
   const points = useMemo(() => curve.getPoints(30), [curve])
 
-  const lineGeometry = useMemo(
-    () => new THREE.BufferGeometry().setFromPoints(points),
-    [points],
-  )
+  const lineGeometry = useMemo(() => new THREE.BufferGeometry().setFromPoints(points), [points])
   const lineMaterial = useMemo(
     () =>
       new THREE.LineBasicMaterial({
@@ -121,11 +104,11 @@ const ConnectionLine = ({
         transparent: true,
         opacity: 0.5,
       }),
-    [],
+    []
   )
   const lineObject = useMemo(
     () => new THREE.Line(lineGeometry, lineMaterial),
-    [lineGeometry, lineMaterial],
+    [lineGeometry, lineMaterial]
   )
 
   useFrame(({ clock }) => {
@@ -141,11 +124,7 @@ const ConnectionLine = ({
       <primitive object={lineObject} />
       <mesh ref={particleRef}>
         <sphereGeometry args={[0.04, 8, 8]} />
-        <meshBasicMaterial
-          color='#f97316'
-          transparent
-          opacity={0.9}
-        />
+        <meshBasicMaterial color="#f97316" transparent opacity={0.9} />
       </mesh>
     </group>
   )
@@ -166,17 +145,13 @@ const ConnectionLines = () => {
       new THREE.Vector3(-1.5, -3, 0),
       new THREE.Vector3(2, -3, 0),
     ],
-    [],
+    []
   )
 
   return (
     <group>
       {lines.map((start, i) => (
-        <ConnectionLine
-          key={i}
-          start={start}
-          index={i}
-        />
+        <ConnectionLine key={i} start={start} index={i} />
       ))}
     </group>
   )
@@ -186,40 +161,32 @@ const ConnectionLines = () => {
 const CentralHub = () => {
   return (
     <group position={[0, 0, 0.5]}>
-      <Html
-        transform
-        distanceFactor={6}
-        center
-      >
-        <div className='relative bg-white border border-border rounded-xl shadow-lg p-4 w-44'>
-          <div className='flex items-center gap-1.5 mb-3'>
-            <div className='w-2 h-2 rounded-full bg-red-400'></div>
-            <div className='w-2 h-2 rounded-full bg-yellow-400'></div>
-            <div className='w-2 h-2 rounded-full bg-green-400'></div>
+      <Html transform distanceFactor={6} center>
+        <div className="relative bg-white border border-border rounded-xl shadow-lg p-4 w-44">
+          <div className="flex items-center gap-1.5 mb-3">
+            <div className="w-2 h-2 rounded-full bg-red-400"></div>
+            <div className="w-2 h-2 rounded-full bg-yellow-400"></div>
+            <div className="w-2 h-2 rounded-full bg-green-400"></div>
           </div>
-          <div className='flex items-center gap-2 mb-2'>
-            <div className='w-5 h-5 bg-primary/20 rounded flex items-center justify-center'>
-              <span className='text-xs'>📊</span>
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-5 h-5 bg-primary/20 rounded flex items-center justify-center">
+              <span className="text-xs">📊</span>
             </div>
             <div>
-              <h3 className='text-base font-bold text-foreground leading-tight'>
-                Insights
-              </h3>
-              <p className='text-[9px] text-primary font-medium'>
-                HealthCompiler
-              </p>
+              <h3 className="text-base font-bold text-foreground leading-tight">Insights</h3>
+              <p className="text-[9px] text-primary font-medium">HealthCompiler</p>
             </div>
           </div>
-          <div className='space-y-1.5 mb-3'>
-            <div className='h-1.5 bg-muted rounded-full w-full'></div>
-            <div className='h-1.5 bg-muted rounded-full w-3/4'></div>
-            <div className='h-1.5 bg-muted rounded-full w-1/2'></div>
+          <div className="space-y-1.5 mb-3">
+            <div className="h-1.5 bg-muted rounded-full w-full"></div>
+            <div className="h-1.5 bg-muted rounded-full w-3/4"></div>
+            <div className="h-1.5 bg-muted rounded-full w-1/2"></div>
           </div>
-          <div className='flex items-end gap-0.5 h-8'>
+          <div className="flex items-end gap-0.5 h-8">
             {[30, 50, 40, 70, 55, 45, 65].map((h, i) => (
               <div
                 key={i}
-                className='flex-1 bg-primary/40 rounded-t-sm'
+                className="flex-1 bg-primary/40 rounded-t-sm"
                 style={{ height: `${h}%` }}
               ></div>
             ))}
@@ -232,11 +199,8 @@ const CentralHub = () => {
 
 export const IntegrationScene3D = () => {
   return (
-    <div className='w-full h-[550px] md:h-[650px] rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-border/50'>
-      <Canvas
-        camera={{ position: [0, 0, 8], fov: 50 }}
-        style={{ background: 'transparent' }}
-      >
+    <div className="w-full h-[550px] md:h-[650px] rounded-2xl overflow-hidden bg-linear-to-br from-slate-50 to-white border border-border/50">
+      <Canvas camera={{ position: [0, 0, 8], fov: 50 }} style={{ background: 'transparent' }}>
         <ambientLight intensity={0.8} />
         <Suspense fallback={<div>Loading 3D cluster...</div>}>
           <ConnectionLines />
@@ -244,11 +208,7 @@ export const IntegrationScene3D = () => {
         <CentralHub />
 
         {integrations.map((integration, index) => (
-          <IntegrationCard
-            key={integration.name}
-            integration={integration}
-            index={index}
-          />
+          <IntegrationCard key={integration.name} integration={integration} index={index} />
         ))}
       </Canvas>
     </div>

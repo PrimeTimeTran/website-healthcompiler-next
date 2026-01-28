@@ -11,10 +11,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html
-      lang='en'
-      suppressHydrationWarning
-    >
+    <html lang="en" suppressHydrationWarning>
       <body>
         <script
           dangerouslySetInnerHTML={{
@@ -31,14 +28,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           }}
         />
         <ThemeProvider
-          attribute='class'
-          storageKey='theme'
-          defaultTheme='light'
+          attribute="class"
+          storageKey="theme"
+          defaultTheme="light"
           enableSystem={false}
           disableTransitionOnChange
         >
           <Header />
-          <main className='min-h-screen'>{children}</main>
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

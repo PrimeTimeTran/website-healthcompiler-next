@@ -57,54 +57,49 @@ const HeroSection = () => {
 
   return (
     <GridSection>
-      <div className='container mx-auto px-6 py-24 lg:py-32'>
-        <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
-          <div className='space-y-8'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
-              Your Team, <span className='text-primary'>Extended</span>
+      <div className="container mx-auto px-6 py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
+              Your Team, <span className="text-primary">Extended</span>
             </h1>
 
-            <p className='text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl'>
-              Dedicated engineers embedded with your team to build, integrate,
-              and activate healthcare data solutions—from discovery to
-              production in weeks.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Dedicated engineers embedded with your team to build, integrate, and activate
+              healthcare data solutions—from discovery to production in weeks.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4'>
+            <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
-                link='/contact'
-                text='Book a scoping call'
+                link="/contact"
+                text="Book a scoping call"
                 iconSuffix={
-                  <ArrowRight className='ml-2 transition-transform group-hover:translate-x-1' />
+                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 }
               />
-              <Button
-                size='lg'
-                variant='outline'
-                asChild
-              >
-                <Link href='#deployments'>See example deployments</Link>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="#deployments">See example deployments</Link>
               </Button>
             </div>
 
-            <p className='text-sm text-muted-foreground flex items-center gap-4'>
-              <span className='flex items-center gap-1.5'>
-                <Calendar className='w-4 h-4 text-primary' /> 4-week sprints
+            <p className="text-sm text-muted-foreground flex items-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <Calendar className="w-4 h-4 text-primary" /> 4-week sprints
               </span>
-              <span className='flex items-center gap-1.5'>
-                <Users className='w-4 h-4 text-primary' /> Embedded team
+              <span className="flex items-center gap-1.5">
+                <Users className="w-4 h-4 text-primary" /> Embedded team
               </span>
-              <span className='flex items-center gap-1.5'>
-                <Target className='w-4 h-4 text-primary' /> Production-ready
+              <span className="flex items-center gap-1.5">
+                <Target className="w-4 h-4 text-primary" /> Production-ready
               </span>
             </p>
           </div>
-          <div className='relative h-[450px] flex items-center justify-center'>
-            <div className='relative w-full max-w-md'>
+          <div className="relative h-[450px] flex items-center justify-center">
+            <div className="relative w-full max-w-md">
               {/* Timeline track */}
-              <div className='absolute left-6 top-0 bottom-0 w-1 bg-border/30'>
+              <div className="absolute left-6 top-0 bottom-0 w-1 bg-border/30">
                 <div
-                  className='w-full bg-linear-to-b from-primary to-accent transition-all duration-700'
+                  className="w-full bg-linear-to-b from-primary to-accent transition-all duration-700"
                   style={{
                     height: `${((activeWeek + 1) / timeline.length) * 100}%`,
                   }}
@@ -112,7 +107,7 @@ const HeroSection = () => {
               </div>
 
               {/* Timeline items */}
-              <div className='space-y-6'>
+              <div className="space-y-6">
                 {timeline.map((item, idx) => (
                   <div
                     key={idx}
@@ -128,8 +123,7 @@ const HeroSection = () => {
                           : 'bg-white border-border'
                       }`}
                       style={{
-                        transform:
-                          idx === activeWeek ? 'scale(1.3)' : 'scale(1)',
+                        transform: idx === activeWeek ? 'scale(1.3)' : 'scale(1)',
                       }}
                     />
 
@@ -141,7 +135,7 @@ const HeroSection = () => {
                           : 'bg-slate-50/50 border-border/50'
                       }`}
                     >
-                      <div className='flex items-center gap-3 mb-3'>
+                      <div className="flex items-center gap-3 mb-3">
                         <span
                           className={`text-xs font-bold px-2 py-1 rounded ${
                             idx <= activeWeek
@@ -151,11 +145,9 @@ const HeroSection = () => {
                         >
                           {item.week}
                         </span>
-                        <span className='font-semibold text-foreground'>
-                          {item.title}
-                        </span>
+                        <span className="font-semibold text-foreground">{item.title}</span>
                       </div>
-                      <div className='flex flex-wrap gap-2'>
+                      <div className="flex flex-wrap gap-2">
                         {item.tasks.map((task, taskIdx) => (
                           <span
                             key={taskIdx}
@@ -203,29 +195,27 @@ const WhyFDESection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             Why Forward Deployed Engineering
           </h2>
         </div>
 
-        <div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {outcomes.map((item, idx) => {
             const Icon = item.icon
             return (
               <div
                 key={idx}
-                className='group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
+                className="group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
-                  <Icon className='w-7 h-7 text-primary' />
+                <div className="w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className='font-semibold text-foreground mb-2'>
-                  {item.title}
-                </h3>
-                <p className='text-sm text-muted-foreground'>{item.desc}</p>
+                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             )
           })}
@@ -269,7 +259,7 @@ const HowItWorksSection = () => {
       const rect = sectionRef.current.getBoundingClientRect()
       const progress = Math.max(
         0,
-        Math.min(1, (window.innerHeight - rect.top) / (rect.height + 200)),
+        Math.min(1, (window.innerHeight - rect.top) / (rect.height + 200))
       )
       const step = Math.min(3, Math.floor(progress * 4))
       setActiveStep(step)
@@ -280,56 +270,45 @@ const HowItWorksSection = () => {
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className='py-24 bg-linear-to-b from-slate-50 to-white'
-    >
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-4'>
+    <section ref={sectionRef} className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             The FDE Loop
           </h2>
-          <p className='text-muted-foreground'>
-            Discover → Integrate → Activate → Operationalize
-          </p>
+          <p className="text-muted-foreground">Discover → Integrate → Activate → Operationalize</p>
         </div>
 
         {/* Animation #2: Flow diagram */}
-        <div className='relative max-w-4xl mx-auto'>
-          <div className='absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block'>
+        <div className="relative max-w-4xl mx-auto">
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className='h-full bg-gradient-to-r from-primary to-accent transition-all duration-700'
+              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
 
           {/* Loop indicator */}
-          <svg className='absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 hidden lg:block opacity-30'>
+          <svg className="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 hidden lg:block opacity-30">
             <path
-              d='M 40 8 A 32 32 0 1 1 8 40'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              strokeDasharray='4 4'
-              className='text-primary'
+              d="M 40 8 A 32 32 0 1 1 8 40"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+              className="text-primary"
             />
-            <polygon
-              points='8,36 8,44 16,40'
-              fill='currentColor'
-              className='text-primary'
-            />
+            <polygon points="8,36 8,44 16,40" fill="currentColor" className="text-primary" />
           </svg>
 
-          <div className='grid md:grid-cols-4 gap-8 relative'>
+          <div className="grid md:grid-cols-4 gap-8 relative">
             {steps.map((step, idx) => {
               const Icon = step.icon
               return (
                 <div
                   key={idx}
                   className={`relative text-center transition-all duration-500 ${
-                    idx <= activeStep
-                      ? 'opacity-100 scale-100'
-                      : 'opacity-40 scale-95'
+                    idx <= activeStep ? 'opacity-100 scale-100' : 'opacity-40 scale-95'
                   }`}
                 >
                   <div
@@ -341,23 +320,19 @@ const HowItWorksSection = () => {
                   >
                     <Icon
                       className={`w-7 h-7 ${
-                        idx <= activeStep
-                          ? 'text-white'
-                          : 'text-muted-foreground'
+                        idx <= activeStep ? 'text-white' : 'text-muted-foreground'
                       }`}
                     />
                   </div>
 
                   <h3
                     className={`font-semibold mb-2 transition-colors ${
-                      idx <= activeStep
-                        ? 'text-foreground'
-                        : 'text-muted-foreground'
+                      idx <= activeStep ? 'text-foreground' : 'text-muted-foreground'
                     }`}
                   >
                     {step.title}
                   </h3>
-                  <p className='text-sm text-muted-foreground'>{step.desc}</p>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
               )
             })}
@@ -406,40 +381,33 @@ const WhatGetsDeployedSection = () => {
   ]
 
   return (
-    <section
-      id='deployments'
-      className='py-24 bg-white'
-    >
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section id="deployments" className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             What Gets Deployed
           </h2>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {tiles.map((tile, idx) => {
             const Icon = tile.icon
             return (
               <div
                 key={idx}
-                className='group relative p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer overflow-hidden'
+                className="group relative p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer overflow-hidden"
                 onMouseEnter={() => setHoveredTile(idx)}
                 onMouseLeave={() => setHoveredTile(null)}
               >
-                <div className='flex items-start gap-4'>
-                  <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
-                    <Icon className='w-6 h-6 text-primary' />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className='font-semibold text-foreground mb-1'>
-                      {tile.title}
-                    </h3>
+                    <h3 className="font-semibold text-foreground mb-1">{tile.title}</h3>
                     <p
                       className={`text-sm text-muted-foreground transition-all duration-300 ${
-                        hoveredTile === idx
-                          ? 'opacity-100 max-h-20'
-                          : 'opacity-0 max-h-0'
+                        hoveredTile === idx ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'
                       } overflow-hidden`}
                     >
                       {tile.detail}
@@ -468,45 +436,40 @@ const FDEInPracticeSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-white to-slate-50'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-linear-to-b from-white to-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             FDE in Practice
           </h2>
         </div>
 
         {/* Animation #3: Before/After flip cards */}
-        <div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {results.map((item, idx) => {
             const Icon = item.icon
             return (
-              <div
-                key={idx}
-                className='group perspective-1000'
-              >
-                <div className='relative h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180'>
+              <div key={idx} className="group perspective-1000">
+                <div className="relative h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                   {/* Before - Front */}
-                  <div className='absolute inset-0 backface-hidden'>
-                    <div className='h-full p-6 rounded-2xl bg-slate-100 border border-border flex flex-col items-center justify-center text-center'>
-                      <div className='text-xs uppercase tracking-wider text-muted-foreground mb-3'>
+                  <div className="absolute inset-0 backface-hidden">
+                    <div className="h-full p-6 rounded-2xl bg-slate-100 border border-border flex flex-col items-center justify-center text-center">
+                      <div className="text-xs uppercase tracking-wider text-muted-foreground mb-3">
                         Before
                       </div>
-                      <Icon className='w-8 h-8 text-muted-foreground mb-3' />
-                      <p className='text-foreground font-medium'>
-                        {item.before}
-                      </p>
+                      <Icon className="w-8 h-8 text-muted-foreground mb-3" />
+                      <p className="text-foreground font-medium">{item.before}</p>
                     </div>
                   </div>
 
                   {/* After - Back */}
-                  <div className='absolute inset-0 backface-hidden rotate-y-180'>
-                    <div className='h-full p-6 rounded-2xl bg-linear-to-br from-primary to-accent flex flex-col items-center justify-center text-center'>
-                      <div className='text-xs uppercase tracking-wider text-white/70 mb-3'>
+                  <div className="absolute inset-0 backface-hidden rotate-y-180">
+                    <div className="h-full p-6 rounded-2xl bg-linear-to-br from-primary to-accent flex flex-col items-center justify-center text-center">
+                      <div className="text-xs uppercase tracking-wider text-white/70 mb-3">
                         After
                       </div>
-                      <Icon className='w-8 h-8 text-white mb-3' />
-                      <p className='text-white font-medium'>{item.after}</p>
+                      <Icon className="w-8 h-8 text-white mb-3" />
+                      <p className="text-white font-medium">{item.after}</p>
                     </div>
                   </div>
                 </div>
@@ -528,19 +491,19 @@ const BuiltForSection = () => {
   ]
 
   return (
-    <section className='py-20 bg-slate-50'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-3xl mx-auto text-center'>
-          <h2 className='text-2xl md:text-3xl font-display font-bold text-foreground mb-8'>
+    <section className="py-20 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-8">
             Built for Healthcare Delivery
           </h2>
-          <div className='space-y-4'>
+          <div className="space-y-4">
             {points.map((point, idx) => (
               <div
                 key={idx}
-                className='flex items-center gap-3 justify-center text-muted-foreground'
+                className="flex items-center gap-3 justify-center text-muted-foreground"
               >
-                <CheckCircle className='w-5 h-5 text-primary flex-shrink-0' />
+                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>{point}</span>
               </div>
             ))}
@@ -554,19 +517,19 @@ const BuiltForSection = () => {
 // ========== FINAL CTA SECTION ==========
 const CTASection = () => {
   return (
-    <section className='py-24 bg-linear-to-br from-primary/5 via-white to-accent/5'>
-      <div className='container mx-auto px-6 text-center'>
-        <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-4'>
+    <section className="py-24 bg-linear-to-br from-primary/5 via-white to-accent/5">
+      <div className="container mx-auto px-6 text-center">
+        <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
           Turn Roadmap Items into Shipped Features
         </h2>
-        <p className='text-lg text-muted-foreground max-w-xl mx-auto mb-8'>
+        <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-8">
           Expert engineers. Embedded with your team. Production-ready in weeks.
         </p>
         <CTAButton
-          link='/contact'
-          text='Book a 20-min FDE scoping call'
+          link="/contact"
+          text="Book a 20-min FDE scoping call"
           iconSuffix={
-            <ArrowRight className='ml-2 transition-transform group-hover:translate-x-1' />
+            <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
           }
         />
       </div>

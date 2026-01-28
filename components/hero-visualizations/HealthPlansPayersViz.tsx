@@ -1,12 +1,5 @@
 import { useState, useEffect } from 'react'
-import {
-  Activity,
-  Users,
-  Target,
-  Shield,
-  TrendingUp,
-  BarChart3,
-} from 'lucide-react'
+import { Activity, Users, Target, Shield, TrendingUp, BarChart3 } from 'lucide-react'
 
 const HealthPlansPayersViz = () => {
   const [activeMetric, setActiveMetric] = useState(0)
@@ -64,66 +57,50 @@ const HealthPlansPayersViz = () => {
   }, [metrics.length])
 
   return (
-    <div className='relative h-[450px] flex items-center justify-center'>
+    <div className="relative h-[450px] flex items-center justify-center">
       {/* Central Dashboard Card */}
-      <div className='relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-80'>
-        <div className='flex items-center justify-between mb-4'>
+      <div className="relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-80">
+        <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className='font-semibold text-foreground text-sm'>
-              Plan Intelligence
-            </h3>
-            <p className='text-xs text-muted-foreground'>
-              Population Performance
-            </p>
+            <h3 className="font-semibold text-foreground text-sm">Plan Intelligence</h3>
+            <p className="text-xs text-muted-foreground">Population Performance</p>
           </div>
-          <div className='flex items-center gap-1.5'>
-            <span className='text-xs text-muted-foreground'>Live</span>
-            <span className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
+          <div className="flex items-center gap-1.5">
+            <span className="text-xs text-muted-foreground">Live</span>
+            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
           </div>
         </div>
 
         {/* Risk Stratification View */}
-        <div className='bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-4 mb-4'>
-          <p className='text-[10px] font-medium text-muted-foreground mb-3'>
-            Risk Stratification
-          </p>
-          <div className='flex gap-1 h-16 items-end'>
+        <div className="bg-linear-to-br from-primary/5 to-accent/5 rounded-xl p-4 mb-4">
+          <p className="text-[10px] font-medium text-muted-foreground mb-3">Risk Stratification</p>
+          <div className="flex gap-1 h-16 items-end">
             {[65, 48, 35, 28, 22, 15, 12, 8].map((height, idx) => (
               <div
                 key={idx}
                 className={`flex-1 rounded-t transition-all duration-500 ${
-                  idx < 3
-                    ? 'bg-green-400'
-                    : idx < 5
-                      ? 'bg-amber-400'
-                      : 'bg-rose-400'
+                  idx < 3 ? 'bg-green-400' : idx < 5 ? 'bg-amber-400' : 'bg-rose-400'
                 }`}
                 style={{ height: `${height}%` }}
               />
             ))}
           </div>
-          <div className='flex justify-between mt-2 text-[9px] text-muted-foreground'>
+          <div className="flex justify-between mt-2 text-[9px] text-muted-foreground">
             <span>Low Risk</span>
             <span>High Risk</span>
           </div>
         </div>
 
         {/* Main Metric Display */}
-        <div className='bg-slate-50 rounded-xl p-3 mb-4'>
-          <div className='flex items-center gap-3'>
+        <div className="bg-slate-50 rounded-xl p-3 mb-4">
+          <div className="flex items-center gap-3">
             {(() => {
               const Icon = metrics[activeMetric].icon
-              return (
-                <Icon className={`w-6 h-6 ${metrics[activeMetric].color}`} />
-              )
+              return <Icon className={`w-6 h-6 ${metrics[activeMetric].color}`} />
             })()}
-            <div className='flex-1'>
-              <p className='text-lg font-bold text-foreground'>
-                {metrics[activeMetric].value}
-              </p>
-              <p className='text-[10px] text-muted-foreground'>
-                {metrics[activeMetric].label}
-              </p>
+            <div className="flex-1">
+              <p className="text-lg font-bold text-foreground">{metrics[activeMetric].value}</p>
+              <p className="text-[10px] text-muted-foreground">{metrics[activeMetric].label}</p>
             </div>
             <span
               className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${
@@ -140,16 +117,14 @@ const HealthPlansPayersViz = () => {
         </div>
 
         {/* Mini Metrics Grid */}
-        <div className='grid grid-cols-6 gap-1.5'>
+        <div className="grid grid-cols-6 gap-1.5">
           {metrics.map((metric, idx) => {
             const Icon = metric.icon
             return (
               <div
                 key={idx}
                 className={`p-2 rounded-lg text-center transition-all duration-300 ${
-                  idx === activeMetric
-                    ? 'bg-primary/10 border border-primary/30'
-                    : 'bg-slate-50'
+                  idx === activeMetric ? 'bg-primary/10 border border-primary/30' : 'bg-slate-50'
                 }`}
               >
                 <Icon
@@ -186,12 +161,8 @@ const HealthPlansPayersViz = () => {
             >
               <Icon className={`w-4 h-4 ${metric.color}`} />
               <div>
-                <p className='text-xs font-semibold text-foreground'>
-                  {metric.value}
-                </p>
-                <p className='text-[10px] text-muted-foreground'>
-                  {metric.label}
-                </p>
+                <p className="text-xs font-semibold text-foreground">{metric.value}</p>
+                <p className="text-[10px] text-muted-foreground">{metric.label}</p>
               </div>
             </div>
           </div>
@@ -200,38 +171,24 @@ const HealthPlansPayersViz = () => {
 
       {/* Connection Ring */}
       <svg
-        className='absolute inset-0 w-full h-full pointer-events-none'
+        className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ transform: 'rotate(-90deg)' }}
       >
         <defs>
-          <linearGradient
-            id='payerRingGradient'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor='hsl(var(--primary))'
-              stopOpacity='0.3'
-            />
-            <stop
-              offset='100%'
-              stopColor='hsl(var(--accent))'
-              stopOpacity='0.3'
-            />
+          <linearGradient id="payerRingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.3" />
           </linearGradient>
         </defs>
         <circle
-          cx='50%'
-          cy='50%'
-          r='190'
-          fill='none'
-          stroke='url(#payerRingGradient)'
-          strokeWidth='1'
-          strokeDasharray='8 4'
-          className='animate-spin'
+          cx="50%"
+          cy="50%"
+          r="190"
+          fill="none"
+          stroke="url(#payerRingGradient)"
+          strokeWidth="1"
+          strokeDasharray="8 4"
+          className="animate-spin"
           style={{ animationDuration: '30s' }}
         />
       </svg>

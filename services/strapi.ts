@@ -67,9 +67,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
   }
 }
 
-export const fetchBlogPostBySlug = async (
-  slug: string,
-): Promise<BlogPost | null> => {
+export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null> => {
   try {
     const response = await fetch(
       `${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
@@ -77,7 +75,7 @@ export const fetchBlogPostBySlug = async (
         headers: {
           Authorization: `Bearer ${STRAPI_TOKEN}`,
         },
-      },
+      }
     )
 
     if (!response.ok) {
@@ -121,14 +119,11 @@ export const fetchBlogPostBySlug = async (
 
 export const fetchBlogPost = async (id: string): Promise<BlogPost | null> => {
   try {
-    const response = await fetch(
-      `${STRAPI_URL}/api/articles/${id}?populate=*`,
-      {
-        headers: {
-          Authorization: `Bearer ${STRAPI_TOKEN}`,
-        },
+    const response = await fetch(`${STRAPI_URL}/api/articles/${id}?populate=*`, {
+      headers: {
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
       },
-    )
+    })
     if (!response.ok) {
       if (response.status === 404) {
         return null

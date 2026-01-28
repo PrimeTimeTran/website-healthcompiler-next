@@ -19,34 +19,32 @@ const BrokersAdvisorsViz = () => {
   }, [])
 
   return (
-    <div className='relative h-[450px] flex items-center justify-center'>
+    <div className="relative h-[450px] flex items-center justify-center">
       {/* Central Dashboard */}
-      <div className='relative'>
-        <div className='absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse' />
+      <div className="relative">
+        <div className="absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse" />
 
-        <div className='relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]'>
-          <div className='absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5' />
+        <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]">
+          <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5" />
 
-          <div className='relative space-y-4'>
-            <div className='flex items-center gap-3'>
-              <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center'>
-                <Users className='w-6 h-6 text-white' />
+          <div className="relative space-y-4">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center">
+                <Users className="w-6 h-6 text-white" />
               </div>
               <div>
-                <div className='text-sm font-semibold text-foreground'>
-                  Advisor
-                </div>
-                <div className='text-xs text-muted-foreground'>Insights</div>
+                <div className="text-sm font-semibold text-foreground">Advisor</div>
+                <div className="text-xs text-muted-foreground">Insights</div>
               </div>
             </div>
 
             {/* Mini chart */}
-            <div className='pt-3 border-t border-border/50'>
-              <div className='flex items-end justify-between gap-1 h-12'>
+            <div className="pt-3 border-t border-border/50">
+              <div className="flex items-end justify-between gap-1 h-12">
                 {[45, 70, 55, 85, 65, 80, 92].map((h, i) => (
                   <div
                     key={i}
-                    className='flex-1 bg-primary/20 rounded-t transition-all duration-300 hover:bg-primary/40'
+                    className="flex-1 bg-primary/20 rounded-t transition-all duration-300 hover:bg-primary/40"
                     style={{ height: `${h}%` }}
                   />
                 ))}
@@ -79,29 +77,22 @@ const BrokersAdvisorsViz = () => {
           >
             <div
               className={`w-[110px] px-3 py-3 rounded-xl border backdrop-blur-sm transition-all duration-500 ${
-                isActive
-                  ? 'bg-white shadow-lg border-primary/30'
-                  : 'bg-white/80 border-border/50'
+                isActive ? 'bg-white shadow-lg border-primary/30' : 'bg-white/80 border-border/50'
               }`}
               style={{
                 boxShadow: isActive ? `0 0 25px ${metric.color}40` : 'none',
               }}
             >
-              <div className='flex items-center gap-2 mb-2'>
+              <div className="flex items-center gap-2 mb-2">
                 <div
-                  className='w-8 h-8 rounded-lg flex items-center justify-center'
+                  className="w-8 h-8 rounded-lg flex items-center justify-center"
                   style={{ backgroundColor: `${metric.color}15` }}
                 >
-                  <Icon
-                    className='w-4 h-4'
-                    style={{ color: metric.color }}
-                  />
+                  <Icon className="w-4 h-4" style={{ color: metric.color }} />
                 </div>
-                <span className='text-xs font-medium text-foreground'>
-                  {metric.label}
-                </span>
+                <span className="text-xs font-medium text-foreground">{metric.label}</span>
               </div>
-              <div className='flex items-center gap-1'>
+              <div className="flex items-center gap-1">
                 <TrendingUp
                   className={`w-3 h-3 ${metric.trend.startsWith('+') ? 'text-green-500' : 'text-primary'}`}
                 />
@@ -117,30 +108,12 @@ const BrokersAdvisorsViz = () => {
       })}
 
       {/* Connection Lines */}
-      <svg className='absolute inset-0 w-full h-full pointer-events-none'>
+      <svg className="absolute inset-0 w-full h-full pointer-events-none">
         <defs>
-          <linearGradient
-            id='brokersGrad'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='0%'
-          >
-            <stop
-              offset='0%'
-              stopColor='#E94E87'
-              stopOpacity='0.2'
-            />
-            <stop
-              offset='50%'
-              stopColor='#E94E87'
-              stopOpacity='0.5'
-            />
-            <stop
-              offset='100%'
-              stopColor='#E94E87'
-              stopOpacity='0.2'
-            />
+          <linearGradient id="brokersGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#E94E87" stopOpacity="0.2" />
+            <stop offset="50%" stopColor="#E94E87" stopOpacity="0.5" />
+            <stop offset="100%" stopColor="#E94E87" stopOpacity="0.2" />
           </linearGradient>
         </defs>
         {[
@@ -151,13 +124,13 @@ const BrokersAdvisorsViz = () => {
         ].map((pos, idx) => (
           <line
             key={idx}
-            x1='50%'
-            y1='50%'
+            x1="50%"
+            y1="50%"
             x2={`calc(50% + ${pos.x}px)`}
             y2={`calc(50% + ${pos.y}px)`}
-            stroke='url(#brokersGrad)'
+            stroke="url(#brokersGrad)"
             strokeWidth={idx === activeMetric ? '2' : '1'}
-            strokeDasharray='6 4'
+            strokeDasharray="6 4"
             className={`transition-opacity duration-500 ${idx === activeMetric ? 'opacity-80' : 'opacity-30'}`}
           />
         ))}

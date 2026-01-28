@@ -17,8 +17,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-sabina-singh',
     name: 'Dr. Sabina Singh',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Image-800w.jpeg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Image-800w.jpeg',
     title:
       'Dr. Sabina Singh and Ken Strmiska built a healthcare revolution, serving thousands in just three years.',
     subtitle: 'From a dream in Milwaukee to a thriving DPC practice-',
@@ -65,8 +64,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-hertz-s',
     name: 'Dr. Hertz',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Regenrated-da0cf67e-800w.png',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Regenrated-da0cf67e-800w.png',
     title: "Dr. Hertz's Leap: Reinventing Pediatric Care Through Direct Models",
     intro:
       '"Healthcare should prioritize patients - not systems," says Dr. Drew Hertz, pediatrician and founder of the Zest Pediatric Network. His journey from a corporate health executive to a direct care pioneer is a compelling example of how bold leadership can reshape the future of children\'s health.',
@@ -107,8 +105,7 @@ export const apexProfiles: ApexProfile[] = [
         ],
       },
       {
-        heading:
-          'Clarifying Identity: Direct Pediatric Care vs. Direct Primary Care',
+        heading: 'Clarifying Identity: Direct Pediatric Care vs. Direct Primary Care',
         content: [
           'To distinguish its model, the network uses the term Direct Pediatric Care (DPC) instead of the more generic Direct Primary Care. Key distinctions include home visits (a majority of pediatric DPC physicians conduct home visits), vaccinations (pediatric DPC practices prioritize vaccination access), wraparound services, more frequent visits especially during the first year, and specialized training.',
           'Currently, the Zest Pediatric Network includes six offices across Cleveland, Pittsburgh, and Weston. Each physician in the network operates as an independent LLC, offering business and tax flexibility.',
@@ -119,8 +116,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'allison-de-paoli',
     name: 'Allison De Paoli',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/1656768758328-800w.jpeg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/1656768758328-800w.jpeg',
     title: "Redefining Health Benefits: Allison's Passion-Driven Journey",
     intro:
       "In the evolving world of healthcare—where costs are skyrocketing, regulations are multiplying, and the system feels more confusing day by day, there are people who refuse to accept the status quo. Allison De Paoli from Altiqe is one of them. Her story isn't just about navigating the complexities of employee benefits; it's about a lifelong mission to make healthcare better for everyone.",
@@ -165,8 +161,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-garrison-bliss',
     name: 'Dr. Garrison Bliss',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Garrison_bliss-800w.jpeg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Garrison_bliss-800w.jpeg',
     title: 'Dr. Bliss and the Birth of Direct Primary Care',
     intro:
       '"You can commit yourself to a secure job that makes you hate your life, or you can do this." Dr. Garrison Bliss didn\'t stumble into Direct Primary Care. He built it, piece by piece, choice by choice, over decades of watching the system fail patients and physicians alike. Widely regarded as the founder of the modern DPC movement, Dr. Bliss\'s early years in medicine began conventionally.',
@@ -218,11 +213,9 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-brad',
     name: 'Dr. Brad Brown',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Brad+Brown-800w.jpg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Brad+Brown-800w.jpg',
     title: "Dr. Brad's Vision: Revolutionizing Patient-Centered Healthcare",
-    subtitle:
-      'Transforming primary care with innovation, transparency, and a focus on outcomes.',
+    subtitle: 'Transforming primary care with innovation, transparency, and a focus on outcomes.',
     intro:
       'Healthcare is at a turning point, burdened by inefficiencies and rising costs. Dr. Brad, founder of Strive Direct Health and creator of the Aero DPC platform, is leading a bold transformation through the Direct Primary Care (DPC) model. By eliminating middlemen and administrative barriers, Dr. Brad empowers physicians to focus on patients, fostering trust, personalized care, and better outcomes.',
     sections: [
@@ -234,8 +227,7 @@ export const apexProfiles: ApexProfile[] = [
         ],
       },
       {
-        heading:
-          'From Fee-for-Service to Direct Care: A Journey Toward Autonomy',
+        heading: 'From Fee-for-Service to Direct Care: A Journey Toward Autonomy',
         content: [
           "Dr. Brad's journey into DPC was shaped by his early frustrations with the limitations of the traditional fee-for-service healthcare model. After completing his residency, Dr. Brad entered the medical world with a deep passion for patient care, only to find that the system didn't allow for the level of personal attention he envisioned.",
           '"I realized that the system was broken. Doctors were being incentivized to treat more patients in less time, which meant sacrificing quality for quantity," says Dr. Brad. "I knew there had to be a better way."',
@@ -267,10 +259,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-alex-bugg',
     name: 'Dr. Alex Bugg',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Alex+bugg-800w.png',
-    title:
-      "Empowering Health: Dr. Alex Bugg's Vision for a Patient-Centered Future",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Alex+bugg-800w.png',
+    title: "Empowering Health: Dr. Alex Bugg's Vision for a Patient-Centered Future",
     intro:
       'In the complex landscape of American healthcare, where bureaucracy often overshadows patient care, a new paradigm is emerging. Direct Primary Care (DPC) stands at the forefront of this revolution, offering a beacon of hope for both patients and physicians alike. At the helm of this transformative movement is Dr. Alex Bugg, a visionary leader whose innovative approach at LevMed Health in St. Petersburg, Florida, is redefining the doctor-patient relationship.',
     sections: [
@@ -321,10 +311,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-diana-girnita',
     name: 'Dr. Diana Girnita',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/channels4_profile-800w.jpg',
-    title:
-      'Leading with Heart: How Dr. Diana Girnita is Transforming Specialty Care',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/channels4_profile-800w.jpg',
+    title: 'Leading with Heart: How Dr. Diana Girnita is Transforming Specialty Care',
     intro:
       '"Healthcare should be simple, accessible, and human," says Dr. Diana Girnita, the pioneering founder and CEO of Rheumatologist OnCall. In an industry often paralyzed by bureaucracy, long wait times, and rising costs, Dr. Girnita is leading a revolutionary shift that puts patients back at the center of care.',
     category: 'REIMAGINE HEALTHCARE',
@@ -376,10 +364,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-sara-pastoor',
     name: 'Dr. Sara Pastoor',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Sara-J.-Pastoor.jpg-800w.webp',
-    title:
-      "Where Medicine Meets Mission: Dr. Sara Pastoor's Vision for Healthcare's Future",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Sara-J.-Pastoor.jpg-800w.webp',
+    title: "Where Medicine Meets Mission: Dr. Sara Pastoor's Vision for Healthcare's Future",
     intro:
       'In the fast-paced world of modern healthcare, where efficiency often takes precedence over empathy and financial pressures shape priorities, the true essence of medicine feels at risk of being forgotten. Yet, amidst this turmoil, a determined voice is rising—a voice dedicated to restoring humanity to healthcare. That voice belongs to Dr. Sara Pastoor.',
     category: 'REIMAGINE HEALTHCARE',
@@ -440,8 +426,7 @@ export const apexProfiles: ApexProfile[] = [
     name: 'Dr. Jeff Panzer',
     image:
       'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Jeff+photo+Oct+2021+%283%29-800w.jpg',
-    title:
-      "From Family Traditions to Transformative Care: Dr. Jeff Panzer's Medical Journey",
+    title: "From Family Traditions to Transformative Care: Dr. Jeff Panzer's Medical Journey",
     intro:
       "Inspired by his father's legacy as a family doctor, Dr. Jeff Panzer has taken a transformative step in his career by embracing Direct Primary Care (DPC). In a conversation with Mohit Pande from Health Compiler, Dr. Panzer shares the inspiring story behind his transition from traditional medicine to a more patient-focused, relationship-driven approach.",
     category: 'REIMAGINE HEALTHCARE',
@@ -493,8 +478,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-tanner-moore',
     name: 'Dr. Tanner Moore',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Tanner+Moore-800w.png',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Tanner+Moore-800w.png',
     title:
       "From Serendipity to Healthcare Innovation: Dr. Tanner Moore's Journey to Direct Primary Care",
     intro:
@@ -543,8 +527,7 @@ export const apexProfiles: ApexProfile[] = [
     name: 'Dr. Vasanth Kainkaryam',
     image:
       'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Screenshot+2025-01-19+at+4.47.29-PM-800w.png',
-    title:
-      'Pioneering Patient-Centered Care: The Inspiring Journey of Dr. Vasanth Kainkaryam',
+    title: 'Pioneering Patient-Centered Care: The Inspiring Journey of Dr. Vasanth Kainkaryam',
     intro:
       'When Dr. Vasanth Kainkaryam speaks about transforming healthcare, he draws from a deeply personal experience as a 17-year-old thyroid cancer patient navigating the complex American healthcare system. This early encounter, coupled with the challenges faced as the child of immigrants, molded his vision of what healthcare should aspire to be.',
     category: 'REIMAGINE HEALTHCARE',
@@ -589,10 +572,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-ben-aiken',
     name: 'Dr. Ben Aiken',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Ben+Aiken-800w.png',
-    title:
-      "Transforming Primary Care: Dr. Ben Aiken's Vision for a Healthcare Revolution",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Ben+Aiken-800w.png',
+    title: "Transforming Primary Care: Dr. Ben Aiken's Vision for a Healthcare Revolution",
     intro:
       'Healthcare stands at a pivotal crossroads. The current system, burdened by inefficiencies and profit-driven priorities, often falls woefully short of delivering what matters most: meaningful, patient-focused care. Yet, in the midst of this challenging landscape, one physician is daring to envision a better way. Dr. Ben Aiken, a pioneer in Direct Primary Care (DPC), has devoted his career to challenging the status quo.',
     category: 'COST SAVINGS ELEVATED',
@@ -685,10 +666,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'bryan-perry',
     name: 'Bryan Perry',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Bryan-Perry-800w.jpg',
-    title:
-      "Enhancing Patient Care: Bryan's Vision for Data-Enhanced Direct Primary Care",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Bryan-Perry-800w.jpg',
+    title: "Enhancing Patient Care: Bryan's Vision for Data-Enhanced Direct Primary Care",
     intro:
       "In today's rapidly evolving healthcare landscape, innovative models like Direct Primary Care (DPC) and self-funded insurance are reshaping the way patients receive care and manage costs. Bryan Perry is a leading benefit advisor and a visionary in healthcare innovation.",
     category: 'COST SAVINGS ELEVATED',
@@ -705,8 +684,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-william-burkhart',
     name: 'Dr. William Burkhart',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+William+Burkhart-800w.png',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+William+Burkhart-800w.png',
     title:
       'Revolutionizing Primary Care with Technology: Ushering in a New Era of Patient-Centered Healthcare',
     intro:
@@ -714,8 +692,7 @@ export const apexProfiles: ApexProfile[] = [
     category: 'BENEFITS REDEFINED',
     sections: [
       {
-        heading:
-          'Dr. William Burkhart: Upholding a Legacy of Compassionate Care',
+        heading: 'Dr. William Burkhart: Upholding a Legacy of Compassionate Care',
         content: [
           "Dr. William Burkhart hails from Knoxville, Tennessee, and embodies a rich legacy of primary care. His journey into medicine is deeply entrenched in family tradition. His grandfather opened a medical practice in 1951, which was later joined by his father, continuing the family's dedication to healthcare. Initially pursuing a career in music, Dr. Burkhart eventually decided to follow in his family's footsteps. At the age of 30, he entered medical school, and after a rigorous training period that included the challenges of the COVID-19 pandemic, he completed his residency.",
           "Following his father's sudden retirement and the collapse of the family practice, Dr. Burkhart was determined to preserve the tradition of personalized, patient-focused care. Discovering the DPC model during his residency, he was inspired to establish his own practice, Burkhart Direct Family Care, right after completing his training in 2022. This model allows him to deliver comprehensive care without the constraints imposed by insurance companies, focusing instead on fostering strong, trusting relationships with his patients.",
@@ -792,10 +769,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'monica-mckitterick',
     name: 'Monica McKitterick',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Monica-800w.png',
-    title:
-      "From Solo Practitioner to Visionary CEO: Monica McKitterick's Success Story",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Monica-800w.png',
+    title: "From Solo Practitioner to Visionary CEO: Monica McKitterick's Success Story",
     intro:
       'As healthcare continues to evolve, the Direct Primary Care (DPC) model emerges as a shining example of innovation. Monica McKitterick, a family nurse practitioner and the founder of Impact Family Wellness, is at the forefront of this movement. With three thriving locations in the Austin area, a dedicated team and a growing patient base of 1800, Monica is redefining primary care. Her approach is not just about building a successful practice but about reimagining the entire healthcare system to prioritize patient care and provider satisfaction. In a recent conversation, Monica shared her journey, insights, and passion for transforming healthcare one patient at a time.',
     category: 'BENEFITS REDEFINED',
@@ -851,8 +826,7 @@ export const apexProfiles: ApexProfile[] = [
     name: 'Dr. Grace Torres-Hodges',
     image:
       'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Headshot-SoMeDocs-GTH-20220903--e1662346848641-800w.jpg',
-    title:
-      "A Physician's Vision: Building a More Patient-Centric Direct Specialty Care Practice",
+    title: "A Physician's Vision: Building a More Patient-Centric Direct Specialty Care Practice",
     intro:
       'In the midst of a profound transformation in healthcare, one visionary leader is paving the way for a more patient-centric future: Dr. Grace Torres-Hodges, podiatrist and foot surgeon. A passionate advocate of the direct care model, Dr. Torres-Hodges is at the forefront of a movement that prioritizes patient needs and leverages data-driven approaches. Her unique insights reveal how direct care is not only reshaping healthcare delivery but also revolutionizing the economic and operational frameworks that support the system.',
     category: 'BENEFITS REDEFINED',
@@ -917,8 +891,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-kristin-strange-s',
     name: 'Dr. Kristin Strange',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Kristin+Strange-800w.jpg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Kristin+Strange-800w.jpg',
     title:
       "Pioneering Change in Pediatric Care: Dr. Kristin Strange's Bold Shift to Direct Primary Care",
     intro:
@@ -983,8 +956,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dylan-gray',
     name: 'Dylan Gray',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dylan+Gray-800w.jpeg',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dylan+Gray-800w.jpeg',
     title:
       'Pioneering the Future of Healthcare: How Innovation in Direct Primary Care is Transforming Healthcare',
     intro:
@@ -1047,10 +1019,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'andrew-roberts',
     name: 'Andrew Roberts',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Andy+Photo+resized-800w.jpg',
-    title:
-      "Navigating the Evolution of Employee Benefits: Andrew Roberts' 30-Year Expedition",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Andy+Photo+resized-800w.jpg',
+    title: "Navigating the Evolution of Employee Benefits: Andrew Roberts' 30-Year Expedition",
     intro:
       "In an era where healthcare systems are rapidly evolving and costs are soaring, the role of employee benefits advisors has become increasingly critical. Andrew Roberts, with over 30 years of experience in this field, has navigated these complexities, guiding employers toward more effective and cost-efficient benefits solutions. The insights collected through surveys delve into Roberts' extensive career and incorporate learnings from modern direct care models, shedding light on how these innovations are reshaping the employee benefits landscape.",
     category: 'STRENGTH IN CARE',
@@ -1065,8 +1035,7 @@ export const apexProfiles: ApexProfile[] = [
         ],
       },
       {
-        heading:
-          'Pioneering Direct Care Models: A New Era of Healthcare Delivery',
+        heading: 'Pioneering Direct Care Models: A New Era of Healthcare Delivery',
         content: [
           'One of the most significant changes Roberts has observed is the rise of direct care models, which have been increasingly adopted as a way to deliver more personalized and cost-effective healthcare. The direct care model is reshaping how healthcare services are delivered and managed.',
           'Direct care providers eliminate intermediaries and align the interests of employers, employees, and healthcare providers. This model offers on-site clinics and telemedicine services that provide accessible, high-quality care while maintaining control over healthcare budgets.',
@@ -1109,8 +1078,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-dunbar',
     name: 'Dr. Dunbar',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dunbar-800w.webp',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dunbar-800w.webp',
     title:
       "From Billing to Building Relationships: Dr. Siatta Dunbar's Journey to Starting her Own DPC",
     intro:
@@ -1177,10 +1145,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'jessica-mccartin',
     name: 'Jessica McCartin',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Jessica-800w.jpg',
-    title:
-      "Revolutionizing Healthcare: Jessica's Journey from Burnout to Innovative Care",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Jessica-800w.jpg',
+    title: "Revolutionizing Healthcare: Jessica's Journey from Burnout to Innovative Care",
     intro:
       "In a world where the healthcare system often feels overwhelmed by bureaucracy and impersonal interactions, Jessica stands out as a catalyst for change. Her journey from a frazzled family nurse practitioner, trapped in a high-volume practice, to a trailblazer in direct primary care (DPC) highlights the profound impact of resilience and innovation in the medical field. Jessica's story is not just about her personal transformation; it serves as a guiding light for healthcare professionals grappling with similar challenges, offering insights into how to create a more compassionate, patient-centered approach to care.",
     category: 'ENHANCED ACCESS',
@@ -1246,12 +1212,9 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dakotah-asher',
     name: 'Dakotah Asher',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dakotah-800w.png',
-    title:
-      "Dakotah Asher, PA-C, RT (R) Journey from FFS grind to DPC's patient-centered design",
-    subtitle:
-      "Dakota's practice now thrives, with quality care where empathy lives.",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/dakotah-800w.png',
+    title: "Dakotah Asher, PA-C, RT (R) Journey from FFS grind to DPC's patient-centered design",
+    subtitle: "Dakota's practice now thrives, with quality care where empathy lives.",
     intro:
       'In the heart of Tennessee, a quiet revolution in healthcare is taking place. At its center stands Dakota, a passionate physician assistant (PA) who has transformed her frustration with the traditional healthcare system into a thriving direct primary care (DPC) practice. Her story is not just one of personal triumph, but a beacon of hope for both healthcare providers and patients alike, showcasing a model that prioritizes quality care over quantity of patients seen.',
     category: 'ENHANCED ACCESS',
@@ -1328,8 +1291,7 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'matt-ohrt',
     name: 'Matt Ohrt',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Matt+Ohrt+-800w.png',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Matt+Ohrt+-800w.png',
     title: 'Matt Ohrt: Transforming Employer Healthcare from the Inside Out',
     intro:
       "'I realized companies don't view the purchase of their health plan or healthcare the same way they view any other purchase.' That realization sent Matt Ohrt, a longtime HR leader who pivoted into healthcare innovation, on a mission to help employers buy better care. Through his work at Merrill Steel, his co-founding of Self-Fund Health, and new efforts like the Rise Up Health Plan, Matt has been building practical pathways employers can use to lower costs and improve care.",
@@ -1358,8 +1320,7 @@ export const apexProfiles: ApexProfile[] = [
         ],
       },
       {
-        heading:
-          "Don't Feed the Beast — Rethinking How Employers Manage Healthcare",
+        heading: "Don't Feed the Beast — Rethinking How Employers Manage Healthcare",
         content: [
           "Matt's 220-plus-page book, Don't Feed the Beast, lays out a six-part 'success formula' for employers to transform how they approach healthcare. Since its release, it has sold over 6,000 copies across the country and sparked a speaking tour that has taken him to around 40 cities.",
           "The book's core message is that employers should treat healthcare as a strategic business purchase rather than an administrative task managed solely by HR.",
@@ -1385,17 +1346,14 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'neer-patel',
     name: 'Neer Patel',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Neer+Patel-800w.png',
-    title:
-      'Transforming Healthcare Benefits: A Visionary Approach by Neer Patel',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Neer+Patel-800w.png',
+    title: 'Transforming Healthcare Benefits: A Visionary Approach by Neer Patel',
     intro:
       'In the midst of an ever-evolving healthcare landscape, where rising costs and inefficiencies continue to challenge employers, Neer Patel stands as a trailblazer with a transformative vision for the future of health benefits. As the co-founder of Virtuous Benefits and a key player in the growth of DirectMed DPC, Patel is reshaping how businesses approach healthcare for their employees. His journey from helping his wife, Dr. Katriny Ikbal, launch DirectMed DPC to creating innovative self-funded insurance models demonstrates the power of creativity, collaboration, and a patient-centric approach in overcoming the challenges of the broken healthcare system.',
     category: 'ENHANCED ACCESS',
     sections: [
       {
-        heading:
-          'Redefining Healthcare with Open Access and Direct Primary Care',
+        heading: 'Redefining Healthcare with Open Access and Direct Primary Care',
         content: [
           'Patel envisions a future where open access health plans become the norm for employers, removing network restrictions and providing employees with more flexible care options. Central to this vision is Direct Primary Care (DPC), a model that offers high-quality, personalized care for a predictable monthly fee, bypassing the costly and complex claims processes of traditional insurance.',
           "'When people have direct access to their primary care doctor, they feel more empowered and make better health decisions,' says Patel.",
@@ -1423,8 +1381,7 @@ export const apexProfiles: ApexProfile[] = [
         ],
       },
       {
-        heading:
-          'The Future of Health Benefits: Empowering Employers and Employees',
+        heading: 'The Future of Health Benefits: Empowering Employers and Employees',
         content: [
           "Neer Patel is reshaping healthcare benefits with a focus on empowering employers and improving employee health. Through self-funded insurance and Direct Primary Care, employers can lower healthcare costs while enhancing care quality. Patel's goal is to expand this model nationwide, creating a healthier, more sustainable healthcare ecosystem.",
           "'This is about more than saving money—it's about creating a healthier workforce,' Patel concludes.",
@@ -1442,10 +1399,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-jeffrey-hockings',
     name: 'Dr. Jeffrey Hockings',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Jeff+Headshot-800w.jpg',
-    title:
-      "Dr. Hockings's Mission: Reversing Type 2 Diabetes Through a Patented, Virtual Model",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Jeff+Headshot-800w.jpg',
+    title: "Dr. Hockings's Mission: Reversing Type 2 Diabetes Through a Patented, Virtual Model",
     intro:
       'For Dr. Jeffrey Hockings, the fight against diabetes began at home. He watched both his aunt and his father-in-law suffer and eventually lose their lives to complications from Type 2 Diabetes. The grief was heavy, but it also planted a conviction: there had to be a better way. Fifteen years ago, Dr. Hockings and his wife looked at the landscape of care and noticed something striking. While mainstream medicine had resigned itself to managing Type 2 Diabetes with a lifetime of medications, no one was building a true path to reversal. So, they decided to do it themselves.',
     category: 'ENHANCED ACCESS',
@@ -1504,10 +1459,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-maryal-concepcion',
     name: 'Dr. Maryal Concepcion',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Maryal+Concepcion-800w.jpg',
-    title:
-      'Dr. Maryal Concepcion Journey: From Corporate Chaos to Caring Hands',
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Maryal+Concepcion-800w.jpg',
+    title: 'Dr. Maryal Concepcion Journey: From Corporate Chaos to Caring Hands',
     intro:
       "Dr. Maryal Concepcion, MD, FAAFP (Fellow of the American Academy of Family Physicians), is a Filipinx family doctor with a passion to fix the problems in healthcare. As the Owner and CEO of Big Trees MD in Calaveras County, California, and the host of the My DPC Story podcast, she's proving that medicine can be personal, affordable, and focused on the patient. Her path is one of courage, rediscovery, and a strong commitment to revolutionizing healthcare. She chose DPC because she believes healthcare should be about building relationships, not rushing through appointments or dealing with insurance paperwork.",
     category: 'ENHANCED ACCESS',
@@ -1566,10 +1519,8 @@ export const apexProfiles: ApexProfile[] = [
   {
     slug: 'dr-raymond-kordonowy',
     name: 'Dr. Raymond Kordonowy',
-    image:
-      'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Raymond+Kordonowy-800w.png',
-    title:
-      "Direct, Transparent, and Personal: Inside Dr. Raymond Kordonowy's Approach to Care",
+    image: 'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/Dr.+Raymond+Kordonowy-800w.png',
+    title: "Direct, Transparent, and Personal: Inside Dr. Raymond Kordonowy's Approach to Care",
     intro:
       'From his early training to a pioneering practice in Florida, Dr. Raymond Kordonowy has built a career around challenging the status quo. Among the first physicians to experience hospital employment during the HMO boom, he saw firsthand how bureaucracy and third-party payers compromised patient care. Rather than accepting the system, he created his own path, developing a membership-based model that blends Direct Primary Care with inpatient advocacy, technology, and radical transparency.',
     category: 'ENHANCED ACCESS',

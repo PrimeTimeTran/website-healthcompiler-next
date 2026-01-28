@@ -39,23 +39,13 @@ const icpClusters = [
     id: 'directcare',
     title: 'Direct Care / Primary Care',
     color: 'hsl(var(--primary))',
-    outcomes: [
-      'AI Call Triage',
-      'AI Receptionist',
-      'Patient Engagement',
-      'Outcomes Reporting',
-    ],
+    outcomes: ['AI Call Triage', 'AI Receptionist', 'Patient Engagement', 'Outcomes Reporting'],
   },
   {
     id: 'valuebased',
     title: 'Value-Based / ACOs',
     color: 'hsl(16, 85%, 60%)',
-    outcomes: [
-      'HCC Suspecting',
-      'HEDIS & MIPS',
-      'Risk Adjustment',
-      'Quality Performance',
-    ],
+    outcomes: ['HCC Suspecting', 'HEDIS & MIPS', 'Risk Adjustment', 'Quality Performance'],
   },
 ]
 
@@ -82,87 +72,34 @@ export const HeroVisualization = () => {
   }, [])
 
   return (
-    <div
-      className='w-full h-[420px] relative'
-      onMouseLeave={handleMouseLeave}
-    >
-      <svg
-        viewBox='0 0 600 520'
-        className='w-full h-full'
-        preserveAspectRatio='xMidYMid meet'
-      >
+    <div className="w-full h-[420px] relative" onMouseLeave={handleMouseLeave}>
+      <svg viewBox="0 0 600 520" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
         <defs>
           {/* Gradients */}
-          <linearGradient
-            id='activationGradient'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='100%'
-          >
-            <stop
-              offset='0%'
-              stopColor='hsl(var(--accent))'
-              stopOpacity='0.9'
-            />
-            <stop
-              offset='100%'
-              stopColor='hsl(var(--primary))'
-              stopOpacity='0.9'
-            />
+          <linearGradient id="activationGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stopColor="hsl(var(--accent))" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
           </linearGradient>
 
-          <linearGradient
-            id='lineGradient'
-            x1='0%'
-            y1='0%'
-            x2='100%'
-            y2='0%'
-          >
-            <stop
-              offset='0%'
-              stopColor='hsl(var(--muted-foreground))'
-              stopOpacity='0.3'
-            />
-            <stop
-              offset='100%'
-              stopColor='hsl(var(--accent))'
-              stopOpacity='0.6'
-            />
+          <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="hsl(var(--muted-foreground))" stopOpacity="0.3" />
+            <stop offset="100%" stopColor="hsl(var(--accent))" stopOpacity="0.6" />
           </linearGradient>
 
           {/* Glow filters */}
-          <filter
-            id='softGlow'
-            x='-50%'
-            y='-50%'
-            width='200%'
-            height='200%'
-          >
-            <feGaussianBlur
-              stdDeviation='8'
-              result='blur'
-            />
+          <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="8" result="blur" />
             <feMerge>
-              <feMergeNode in='blur' />
-              <feMergeNode in='SourceGraphic' />
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
 
-          <filter
-            id='subtleGlow'
-            x='-30%'
-            y='-30%'
-            width='160%'
-            height='160%'
-          >
-            <feGaussianBlur
-              stdDeviation='3'
-              result='blur'
-            />
+          <filter id="subtleGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="3" result="blur" />
             <feMerge>
-              <feMergeNode in='blur' />
-              <feMergeNode in='SourceGraphic' />
+              <feMergeNode in="blur" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
@@ -177,54 +114,44 @@ export const HeroVisualization = () => {
               {/* Connection line to center */}
               <path
                 d={`M${xPos + 40},${yPos} Q${180},${yPos} ${260},${260}`}
-                fill='none'
-                stroke='url(#lineGradient)'
-                strokeWidth='1.5'
-                strokeDasharray='4 4'
-                opacity='0.5'
-                className='transition-opacity duration-500'
+                fill="none"
+                stroke="url(#lineGradient)"
+                strokeWidth="1.5"
+                strokeDasharray="4 4"
+                opacity="0.5"
+                className="transition-opacity duration-500"
               />
 
               {/* Animated particle */}
-              <circle
-                r='3'
-                fill='hsl(var(--accent))'
-                filter='url(#subtleGlow)'
-              >
+              <circle r="3" fill="hsl(var(--accent))" filter="url(#subtleGlow)">
                 <animateMotion
                   dur={`${2 + index * 0.3}s`}
-                  repeatCount='indefinite'
+                  repeatCount="indefinite"
                   path={`M${xPos + 40},${yPos} Q${180},${yPos} ${260},${260}`}
                 />
               </circle>
 
               {/* Input node */}
               <g
-                className='transition-transform duration-300 hover:scale-110'
+                className="transition-transform duration-300 hover:scale-110"
                 style={{ transformOrigin: `${xPos}px ${yPos}px` }}
               >
                 <circle
                   cx={xPos}
                   cy={yPos}
-                  r='22'
-                  fill='hsl(var(--card))'
-                  stroke='hsl(var(--border))'
-                  strokeWidth='1'
+                  r="22"
+                  fill="hsl(var(--card))"
+                  stroke="hsl(var(--border))"
+                  strokeWidth="1"
                 />
-                <circle
-                  cx={xPos}
-                  cy={yPos}
-                  r='18'
-                  fill='hsl(var(--muted))'
-                  opacity='0.5'
-                />
+                <circle cx={xPos} cy={yPos} r="18" fill="hsl(var(--muted))" opacity="0.5" />
               </g>
 
               {/* Label */}
               <text
                 x={xPos + 32}
                 y={yPos + 4}
-                className='fill-muted-foreground'
+                className="fill-muted-foreground"
                 style={{ fontSize: '11px' }}
               >
                 {input.label}
@@ -237,80 +164,58 @@ export const HeroVisualization = () => {
         <g>
           {/* Outer pulsing ring */}
           <circle
-            cx='300'
-            cy='260'
-            r='70'
-            fill='none'
-            stroke='hsl(var(--accent))'
-            strokeWidth='1'
-            opacity='0.3'
+            cx="300"
+            cy="260"
+            r="70"
+            fill="none"
+            stroke="hsl(var(--accent))"
+            strokeWidth="1"
+            opacity="0.3"
           >
+            <animate attributeName="r" values="70;80;70" dur="3s" repeatCount="indefinite" />
             <animate
-              attributeName='r'
-              values='70;80;70'
-              dur='3s'
-              repeatCount='indefinite'
-            />
-            <animate
-              attributeName='opacity'
-              values='0.3;0.1;0.3'
-              dur='3s'
-              repeatCount='indefinite'
+              attributeName="opacity"
+              values="0.3;0.1;0.3"
+              dur="3s"
+              repeatCount="indefinite"
             />
           </circle>
 
           {/* Second ring */}
           <circle
-            cx='300'
-            cy='260'
-            r='62'
-            fill='none'
-            stroke='hsl(var(--border))'
-            strokeWidth='1'
-            strokeDasharray='3 3'
-            opacity='0.4'
+            cx="300"
+            cy="260"
+            r="62"
+            fill="none"
+            stroke="hsl(var(--border))"
+            strokeWidth="1"
+            strokeDasharray="3 3"
+            opacity="0.4"
           />
 
           {/* Main activation orb */}
-          <circle
-            cx='300'
-            cy='260'
-            r='52'
-            fill='url(#activationGradient)'
-            filter='url(#softGlow)'
-          >
-            <animate
-              attributeName='r'
-              values='52;55;52'
-              dur='2s'
-              repeatCount='indefinite'
-            />
+          <circle cx="300" cy="260" r="52" fill="url(#activationGradient)" filter="url(#softGlow)">
+            <animate attributeName="r" values="52;55;52" dur="2s" repeatCount="indefinite" />
           </circle>
 
           {/* Inner glow */}
-          <circle
-            cx='300'
-            cy='260'
-            r='40'
-            fill='hsl(var(--card))'
-            opacity='0.3'
-          />
+          <circle cx="300" cy="260" r="40" fill="hsl(var(--card))" opacity="0.3" />
 
           {/* Center text */}
           <text
-            x='300'
-            y='255'
-            textAnchor='middle'
-            className='fill-primary-foreground font-semibold'
+            x="300"
+            y="255"
+            textAnchor="middle"
+            className="fill-primary-foreground font-semibold"
             style={{ fontSize: '14px' }}
           >
             Activation
           </text>
           <text
-            x='300'
-            y='273'
-            textAnchor='middle'
-            className='fill-primary-foreground'
+            x="300"
+            y="273"
+            textAnchor="middle"
+            className="fill-primary-foreground"
             style={{ fontSize: '12px', opacity: 0.9 }}
           >
             Layer
@@ -326,7 +231,7 @@ export const HeroVisualization = () => {
           return (
             <g
               key={cluster.id}
-              className='cursor-pointer transition-all duration-500'
+              className="cursor-pointer transition-all duration-500"
               onMouseEnter={() => handleICPHover(clusterIndex)}
               style={{
                 opacity: isActive ? 1 : 0.4,
@@ -336,24 +241,20 @@ export const HeroVisualization = () => {
               {/* Connection line from center */}
               <path
                 d={`M340,260 Q${360},${baseY + 40} ${xStart - 20},${baseY + 40}`}
-                fill='none'
+                fill="none"
                 stroke={cluster.color}
                 strokeWidth={isActive ? '2' : '1'}
                 strokeDasharray={isActive ? '0' : '4 4'}
                 opacity={isActive ? 0.8 : 0.3}
-                className='transition-all duration-500'
+                className="transition-all duration-500"
               />
 
               {/* Animated particle (only when active) */}
               {isActive && (
-                <circle
-                  r='4'
-                  fill={cluster.color}
-                  filter='url(#subtleGlow)'
-                >
+                <circle r="4" fill={cluster.color} filter="url(#subtleGlow)">
                   <animateMotion
-                    dur='1.5s'
-                    repeatCount='indefinite'
+                    dur="1.5s"
+                    repeatCount="indefinite"
                     path={`M340,260 Q${360},${baseY + 40} ${xStart - 20},${baseY + 40}`}
                   />
                 </circle>
@@ -363,20 +264,20 @@ export const HeroVisualization = () => {
               <rect
                 x={xStart - 10}
                 y={baseY}
-                width='200'
+                width="200"
                 height={95}
-                rx='8'
-                fill='hsl(var(--card))'
+                rx="8"
+                fill="hsl(var(--card))"
                 stroke={isActive ? cluster.color : 'hsl(var(--border))'}
                 strokeWidth={isActive ? '1.5' : '1'}
-                className='transition-all duration-300'
+                className="transition-all duration-300"
               />
 
               {/* Cluster title */}
               <text
                 x={xStart}
                 y={baseY + 20}
-                className='fill-foreground font-semibold'
+                className="fill-foreground font-semibold"
                 style={{ fontSize: '11px' }}
               >
                 {cluster.title}
@@ -388,11 +289,9 @@ export const HeroVisualization = () => {
                   <circle
                     cx={xStart + 6}
                     cy={baseY + 38 + outcomeIndex * 14}
-                    r='3'
-                    fill={
-                      isActive ? cluster.color : 'hsl(var(--muted-foreground))'
-                    }
-                    className='transition-colors duration-300'
+                    r="3"
+                    fill={isActive ? cluster.color : 'hsl(var(--muted-foreground))'}
+                    className="transition-colors duration-300"
                   />
                   <text
                     x={xStart + 16}
@@ -410,9 +309,9 @@ export const HeroVisualization = () => {
                 <rect
                   x={xStart - 10}
                   y={baseY}
-                  width='3'
+                  width="3"
                   height={95}
-                  rx='1.5'
+                  rx="1.5"
                   fill={cluster.color}
                 />
               )}
@@ -422,7 +321,7 @@ export const HeroVisualization = () => {
       </svg>
 
       {/* ICP indicator dots */}
-      <div className='absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2'>
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
         {icpClusters.map((cluster, index) => (
           <button
             key={cluster.id}

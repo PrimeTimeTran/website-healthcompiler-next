@@ -2,14 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import {
-  Brain,
-  Activity,
-  Workflow,
-  BarChart3,
-  ArrowRight,
-  CheckCircle,
-} from 'lucide-react'
+import { Brain, Activity, Workflow, BarChart3, ArrowRight, CheckCircle } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { CTAButton, GridSection } from '@/components/ui'
@@ -59,46 +52,41 @@ const UrgentCare = () => {
   return (
     <>
       <GridSection>
-        <div className='container mx-auto px-6 py-24 lg:py-32'>
-          <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
-            <div className='space-y-8'>
-              <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
-                Turn Urgent Care Data Into{' '}
-                <span className='text-primary'>Real-Time Decisions</span>
+        <div className="container mx-auto px-6 py-24 lg:py-32">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+            <div className="space-y-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
+                Turn Urgent Care Data Into <span className="text-primary">Real-Time Decisions</span>
               </h1>
 
-              <p className='text-xl text-muted-foreground mb-8'>
-                A unified data and AI activation layer that gives urgent care
-                organizations visibility across operations, utilization, and
-                financial performance — without replacing existing systems.
+              <p className="text-xl text-muted-foreground mb-8">
+                A unified data and AI activation layer that gives urgent care organizations
+                visibility across operations, utilization, and financial performance — without
+                replacing existing systems.
               </p>
 
-              <div className='flex flex-wrap gap-4 mb-6'>
-                <CTAButton
-                  link='/contact'
-                  text='Book a Demo'
-                  suffixIconDefault
-                />
+              <div className="flex flex-wrap gap-4 mb-6">
+                <CTAButton link="/contact" text="Book a Demo" suffixIconDefault />
               </div>
 
-              <div className='flex items-center gap-6 text-sm text-muted-foreground'>
-                <span className='flex items-center gap-1.5'>
-                  <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+              <div className="flex items-center gap-6 text-sm text-muted-foreground">
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                   HIPAA-aligned
                 </span>
-                <span className='flex items-center gap-1.5'>
-                  <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                   Secure by design
                 </span>
-                <span className='flex items-center gap-1.5'>
-                  <span className='w-1.5 h-1.5 rounded-full bg-green-500' />
+                <span className="flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
                   Built for scale
                 </span>
               </div>
             </div>
 
             {/* Right: Visualization */}
-            <div className='lg:pl-8'>
+            <div className="lg:pl-8">
               <UrgentCareViz />
             </div>
           </div>
@@ -106,25 +94,25 @@ const UrgentCare = () => {
       </GridSection>
 
       {/* Operational Clarity */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Operational Clarity at Every Level
             </h2>
-            <p className='text-lg text-muted-foreground mb-8'>
+            <p className="text-lg text-muted-foreground mb-8">
               Health Compiler helps urgent care organizations:
             </p>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {journeyBenefits.map((benefit, index) => (
                 <div
                   key={index}
-                  className='flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border/50'
+                  className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <div className='w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0'>
-                    <CheckCircle className='h-6 w-6 text-primary' />
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <CheckCircle className="h-6 w-6 text-primary" />
                   </div>
-                  <p className='text-foreground font-medium pt-2'>{benefit}</p>
+                  <p className="text-foreground font-medium pt-2">{benefit}</p>
                 </div>
               ))}
             </div>
@@ -133,42 +121,33 @@ const UrgentCare = () => {
       </section>
 
       {/* How We Support Urgent Care */}
-      <section className='py-20 bg-muted/30'>
-        <div className='container mx-auto px-4'>
-          <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-4 text-center'>
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4 text-center">
             How We Support Urgent Care Organizations
           </h2>
-          <p className='text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto'>
+          <p className="text-lg text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
             Comprehensive tools designed to help your organization thrive
           </p>
-          <div className='grid md:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {solutions.map((solution, index) => (
               <div
                 key={index}
-                className='bg-background rounded-2xl p-8 shadow-sm border border-border hover:border-primary/30 transition-colors group'
+                className="bg-background rounded-2xl p-8 shadow-sm border border-border hover:border-primary/30 transition-colors group"
               >
-                <div className='w-16 h-16 bg-linear-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform'>
-                  <solution.icon className='h-8 w-8 text-primary' />
+                <div className="w-16 h-16 bg-linear-to-br from-primary/20 to-primary/5 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-105 transition-transform">
+                  <solution.icon className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className='text-xl font-bold text-foreground mb-4'>
-                  {solution.title}
-                </h3>
-                <p className='text-muted-foreground leading-relaxed'>
-                  {solution.description}
-                </p>
+                <h3 className="text-xl font-bold text-foreground mb-4">{solution.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{solution.description}</p>
               </div>
             ))}
           </div>
-          <div className='flex justify-center mt-12'>
-            <Button
-              asChild
-              variant='outline'
-              size='lg'
-              className='gap-2'
-            >
-              <Link href='/platform'>
+          <div className="flex justify-center mt-12">
+            <Button asChild variant="outline" size="lg" className="gap-2">
+              <Link href="/platform">
                 Explore
-                <ArrowRight className='h-4 w-4' />
+                <ArrowRight className="h-4 w-4" />
               </Link>
             </Button>
           </div>
@@ -176,21 +155,21 @@ const UrgentCare = () => {
       </section>
 
       {/* Fits Into Your Existing Workflow */}
-      <section className='py-20 bg-background'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-4xl mx-auto text-center'>
-            <div className='inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4'>
-              <Workflow className='h-4 w-4' />
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4">
+              <Workflow className="h-4 w-4" />
               Seamless Integration
             </div>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               One Intelligence Layer. All Your Urgent Care Data.
             </h2>
-            <p className='text-lg text-muted-foreground mb-4'>
-              Health Compiler sits above your existing stack to unify clinical,
-              operational, and financial data into a single source of truth.
+            <p className="text-lg text-muted-foreground mb-4">
+              Health Compiler sits above your existing stack to unify clinical, operational, and
+              financial data into a single source of truth.
             </p>
-            <p className='text-xl font-semibold text-foreground mb-12'>
+            <p className="text-xl font-semibold text-foreground mb-12">
               No system changes. No workflow disruption.
             </p>
 
@@ -201,21 +180,17 @@ const UrgentCare = () => {
       </section>
 
       {/* Final CTA */}
-      <section className='py-20 bg-linear-to-br from-primary/5 via-background to-primary/5'>
-        <div className='container mx-auto px-4'>
-          <div className='max-w-3xl mx-auto text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold text-foreground mb-6'>
+      <section className="py-20 bg-linear-to-br from-primary/5 via-background to-primary/5">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Ready to See Across All Your Locations?
             </h2>
-            <p className='text-lg text-muted-foreground mb-8'>
-              Health Compiler helps urgent care organizations make faster, more
-              confident decisions with unified data visibility.
+            <p className="text-lg text-muted-foreground mb-8">
+              Health Compiler helps urgent care organizations make faster, more confident decisions
+              with unified data visibility.
             </p>
-            <CTAButton
-              link='/contact'
-              text='Book a Demo'
-              suffixIconDefault
-            />
+            <CTAButton link="/contact" text="Book a Demo" suffixIconDefault />
           </div>
         </div>
       </section>

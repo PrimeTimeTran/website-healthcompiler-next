@@ -39,8 +39,8 @@ const Form = () => {
 
   return (
     <>
-      <div className='flex justify-center  w-full min-h-[400px]'>
-        <div id='hubspot-form' />
+      <div className="flex justify-center  w-full min-h-[400px]">
+        <div id="hubspot-form" />
       </div>
     </>
   )

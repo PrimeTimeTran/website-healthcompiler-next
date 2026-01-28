@@ -122,20 +122,17 @@ const dataSources = [
 const pipelineSteps = [
   {
     title: 'Integrate',
-    description:
-      'Raw data is received from source systems & stored in a data lake.',
+    description: 'Raw data is received from source systems & stored in a data lake.',
     highlighted: false,
   },
   {
     title: 'Harmonize',
-    description:
-      'Data is parsed & codified, then stored in a simple data structure.',
+    description: 'Data is parsed & codified, then stored in a simple data structure.',
     highlighted: false,
   },
   {
     title: 'Unify',
-    description:
-      'Patient & provider information are aggregated into a single record.',
+    description: 'Patient & provider information are aggregated into a single record.',
     highlighted: true,
   },
   {
@@ -162,7 +159,7 @@ const CapabilitiesContent = () => {
   const router = useRouter()
   const tabFromUrl = searchParams.get('tab') as TabType | null
   const [activeTab, setActiveTab] = useState<TabType>(
-    tabFromUrl === 'platform' ? 'platform' : 'capabilities',
+    tabFromUrl === 'platform' ? 'platform' : 'capabilities'
   )
   const [activeIndex, setActiveIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
@@ -247,29 +244,29 @@ const CapabilitiesContent = () => {
 
   return (
     <>
-      <section className='section-padding bg-linear-to-b from-background to-background-secondary'>
-        <div className='container-tight mx-auto text-center'>
-          <p className='text-accent font-medium text-sm uppercase tracking-widest mb-4'>
+      <section className="section-padding bg-linear-to-b from-background to-background-secondary">
+        <div className="container-tight mx-auto text-center">
+          <p className="text-accent font-medium text-sm uppercase tracking-widest mb-4">
             Our Capabilities
           </p>
-          <h1 className='font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6'>
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             A Harmony of Healthcare
             <br />
-            <span className='text-primary'>Data Solutions</span>
+            <span className="text-primary">Data Solutions</span>
           </h1>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto mb-8'>
-            End-to-end healthcare data solutions from analytics to automation,
-            built with security and scalability at the core.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
+            End-to-end healthcare data solutions from analytics to automation, built with security
+            and scalability at the core.
           </p>
 
-          <div className='inline-flex bg-secondary rounded-full p-1'>
+          <div className="inline-flex bg-secondary rounded-full p-1">
             <button
               onClick={() => handleTabChange('capabilities')}
               className={cn(
                 'px-6 py-2 rounded-full text-sm font-medium transition-all duration-300',
                 activeTab === 'capabilities'
                   ? 'bg-accent text-accent-foreground'
-                  : 'text-muted-foreground hover:text-foreground',
+                  : 'text-muted-foreground hover:text-foreground'
               )}
             >
               Capabilities
@@ -280,7 +277,7 @@ const CapabilitiesContent = () => {
                 'px-6 py-2 rounded-full text-sm font-medium transition-all duration-300',
                 activeTab === 'platform'
                   ? 'bg-accent text-accent-foreground'
-                  : 'text-muted-foreground hover:text-foreground',
+                  : 'text-muted-foreground hover:text-foreground'
               )}
             >
               Platform
@@ -291,14 +288,11 @@ const CapabilitiesContent = () => {
 
       {activeTab === 'capabilities' ? (
         <>
-          <section
-            ref={sectionRef}
-            className='section-padding bg-background min-h-[80vh]'
-          >
-            <div className='container-tight mx-auto'>
-              <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16'>
-                <div className='lg:col-span-5'>
-                  <div className='space-y-1'>
+          <section ref={sectionRef} className="section-padding bg-background min-h-[80vh]">
+            <div className="container-tight mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+                <div className="lg:col-span-5">
+                  <div className="space-y-1">
                     {capabilities.map((capability, index) => (
                       <button
                         key={capability.number}
@@ -307,20 +301,18 @@ const CapabilitiesContent = () => {
                           'w-full text-left p-6 rounded-xl transition-all duration-300 group relative overflow-hidden',
                           activeIndex === index
                             ? 'bg-card shadow-card border border-border/50'
-                            : 'hover:bg-secondary/50',
+                            : 'hover:bg-secondary/50'
                         )}
                       >
                         {activeIndex === index && isAutoPlaying && (
-                          <div className='absolute bottom-0 left-0 h-1 bg-accent animate-progress' />
+                          <div className="absolute bottom-0 left-0 h-1 bg-accent animate-progress" />
                         )}
 
-                        <div className='flex items-start gap-4'>
+                        <div className="flex items-start gap-4">
                           <span
                             className={cn(
                               'text-2xl font-bold transition-colors duration-300',
-                              activeIndex === index
-                                ? 'text-accent'
-                                : 'text-muted-foreground/50',
+                              activeIndex === index ? 'text-accent' : 'text-muted-foreground/50'
                             )}
                           >
                             {capability.number}
@@ -329,9 +321,7 @@ const CapabilitiesContent = () => {
                             <p
                               className={cn(
                                 'text-xs uppercase tracking-widest mb-1 transition-colors duration-300',
-                                activeIndex === index
-                                  ? 'text-accent'
-                                  : 'text-muted-foreground',
+                                activeIndex === index ? 'text-accent' : 'text-muted-foreground'
                               )}
                             >
                               {capability.tagline}
@@ -339,9 +329,7 @@ const CapabilitiesContent = () => {
                             <h3
                               className={cn(
                                 'font-display text-lg font-semibold transition-colors duration-300',
-                                activeIndex === index
-                                  ? 'text-foreground'
-                                  : 'text-muted-foreground',
+                                activeIndex === index ? 'text-foreground' : 'text-muted-foreground'
                               )}
                             >
                               {capability.title}
@@ -353,47 +341,40 @@ const CapabilitiesContent = () => {
                   </div>
                 </div>
 
-                <div className='lg:col-span-7'>
-                  <div className='sticky top-24'>
+                <div className="lg:col-span-7">
+                  <div className="sticky top-24">
                     <div
                       key={activeIndex}
-                      className='bg-card rounded-2xl p-8 lg:p-12 shadow-card border border-border/50 animate-fade-in'
+                      className="bg-card rounded-2xl p-8 lg:p-12 shadow-card border border-border/50 animate-fade-in"
                     >
-                      <div className='w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-8'>
-                        <activeCapability.icon className='w-8 h-8 text-accent' />
+                      <div className="w-16 h-16 bg-secondary rounded-2xl flex items-center justify-center mb-8">
+                        <activeCapability.icon className="w-8 h-8 text-accent" />
                       </div>
 
-                      <h2 className='font-display text-2xl md:text-3xl font-bold text-foreground mb-4'>
+                      <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
                         {activeCapability.title}
                       </h2>
-                      <p className='text-muted-foreground mb-8 leading-relaxed text-lg'>
+                      <p className="text-muted-foreground mb-8 leading-relaxed text-lg">
                         {activeCapability.description}
                       </p>
 
-                      <ul className='space-y-4 mb-8'>
+                      <ul className="space-y-4 mb-8">
                         {activeCapability.features.map((feature, idx) => (
                           <li
                             key={feature}
-                            className='flex items-center gap-3 text-foreground'
+                            className="flex items-center gap-3 text-foreground"
                             style={{ animationDelay: `${idx * 100}ms` }}
                           >
-                            <div className='w-2 h-2 bg-accent rounded-full flex-shrink-0' />
+                            <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
                             <span>{feature}</span>
                           </li>
                         ))}
                       </ul>
 
-                      <Button
-                        variant='outline'
-                        asChild
-                        className='group'
-                      >
-                        <Link
-                          href='/contact'
-                          className='gap-2'
-                        >
+                      <Button variant="outline" asChild className="group">
+                        <Link href="/contact" className="gap-2">
                           Learn More
-                          <ArrowRight className='w-4 h-4 transition-transform group-hover:translate-x-1' />
+                          <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                         </Link>
                       </Button>
                     </div>
@@ -404,46 +385,43 @@ const CapabilitiesContent = () => {
           </section>
         </>
       ) : (
-        <section className='section-padding bg-background overflow-hidden min-h-[80vh]'>
-          <div className='container-tight mx-auto'>
-            <div className='text-center mb-16'>
-              <h2 className='font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4'>
+        <section className="section-padding bg-background overflow-hidden min-h-[80vh]">
+          <div className="container-tight mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 DAP turns healthcare data into
                 <br />
-                <span className='text-primary'>actionable intelligence</span>
+                <span className="text-primary">actionable intelligence</span>
               </h2>
-              <p className='text-muted-foreground text-lg'>
-                powered by{' '}
-                <span className='text-accent font-semibold'>
-                  HealthCompiler AI
-                </span>
+              <p className="text-muted-foreground text-lg">
+                powered by <span className="text-accent font-semibold">HealthCompiler AI</span>
               </p>
             </div>
 
-            <div className='relative'>
-              <div className='grid grid-cols-1 lg:grid-cols-12 gap-8 items-center'>
-                <div className='lg:col-span-2'>
-                  <div className='space-y-3'>
+            <div className="relative">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                <div className="lg:col-span-2">
+                  <div className="space-y-3">
                     {dataSources.map((source, idx) => (
                       <div
                         key={source.label}
-                        className='flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group'
+                        className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors group"
                         style={{ animationDelay: `${idx * 100}ms` }}
                       >
-                        <div className='w-8 h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-accent/20 transition-colors'>
-                          <source.icon className='w-4 h-4' />
+                        <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-accent/20 transition-colors">
+                          <source.icon className="w-4 h-4" />
                         </div>
-                        <span className='text-sm'>{source.label}</span>
+                        <span className="text-sm">{source.label}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
-                <div className='lg:col-span-8'>
-                  <div className='relative'>
-                    <div className='absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 hidden lg:block' />
+                <div className="lg:col-span-8">
+                  <div className="relative">
+                    <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-border -translate-y-1/2 hidden lg:block" />
 
-                    <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
+                    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
                       {pipelineSteps.map((step, idx) => (
                         <div
                           key={step.title}
@@ -451,27 +429,23 @@ const CapabilitiesContent = () => {
                             'relative p-4 rounded-xl text-center transition-all duration-300',
                             step.highlighted
                               ? 'bg-accent text-accent-foreground shadow-lg scale-105 z-10'
-                              : 'bg-card border border-border hover:border-accent/50',
+                              : 'bg-card border border-border hover:border-accent/50'
                           )}
                           style={{ animationDelay: `${idx * 150}ms` }}
                         >
                           <div
                             className={cn(
                               'w-12 h-12 rounded-xl mx-auto mb-3 flex items-center justify-center',
-                              step.highlighted
-                                ? 'bg-accent-foreground/20'
-                                : 'bg-secondary',
+                              step.highlighted ? 'bg-accent-foreground/20' : 'bg-secondary'
                             )}
                           >
-                            <div className='grid grid-cols-3 gap-0.5'>
+                            <div className="grid grid-cols-3 gap-0.5">
                               {[...Array(9)].map((_, i) => (
                                 <div
                                   key={i}
                                   className={cn(
                                     'w-1.5 h-1.5 rounded-full',
-                                    step.highlighted
-                                      ? 'bg-accent-foreground'
-                                      : 'bg-accent',
+                                    step.highlighted ? 'bg-accent-foreground' : 'bg-accent'
                                   )}
                                 />
                               ))}
@@ -481,9 +455,7 @@ const CapabilitiesContent = () => {
                           <h4
                             className={cn(
                               'font-display font-semibold mb-2',
-                              step.highlighted
-                                ? 'text-accent-foreground'
-                                : 'text-foreground',
+                              step.highlighted ? 'text-accent-foreground' : 'text-foreground'
                             )}
                           >
                             {step.title}
@@ -493,7 +465,7 @@ const CapabilitiesContent = () => {
                               'text-xs leading-relaxed',
                               step.highlighted
                                 ? 'text-accent-foreground/80'
-                                : 'text-muted-foreground',
+                                : 'text-muted-foreground'
                             )}
                           >
                             {step.description}
@@ -504,20 +476,18 @@ const CapabilitiesContent = () => {
                   </div>
                 </div>
 
-                <div className='lg:col-span-2'>
-                  <div className='space-y-4'>
+                <div className="lg:col-span-2">
+                  <div className="space-y-4">
                     {outcomes.map((outcome, idx) => (
                       <div
                         key={outcome.label}
-                        className='flex items-center gap-3 group'
+                        className="flex items-center gap-3 group"
                         style={{ animationDelay: `${idx * 100}ms` }}
                       >
-                        <div className='w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform'>
-                          <outcome.icon className='w-5 h-5 text-accent-foreground' />
+                        <div className="w-12 h-12 rounded-full bg-accent flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                          <outcome.icon className="w-5 h-5 text-accent-foreground" />
                         </div>
-                        <span className='text-sm text-foreground font-medium'>
-                          {outcome.label}
-                        </span>
+                        <span className="text-sm text-foreground font-medium">{outcome.label}</span>
                       </div>
                     ))}
                   </div>
@@ -528,26 +498,18 @@ const CapabilitiesContent = () => {
         </section>
       )}
 
-      <section className='section-padding bg-background-secondary'>
-        <div className='container-tight mx-auto text-center'>
-          <h2 className='font-display text-3xl md:text-4xl font-bold text-foreground mb-4'>
+      <section className="section-padding bg-background-secondary">
+        <div className="container-tight mx-auto text-center">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
             Ready to Get Started?
           </h2>
-          <p className='text-muted-foreground mb-8 max-w-xl mx-auto'>
-            Let's discuss how our capabilities can address your specific
-            healthcare data challenges.
+          <p className="text-muted-foreground mb-8 max-w-xl mx-auto">
+            Let's discuss how our capabilities can address your specific healthcare data challenges.
           </p>
-          <Button
-            variant='primary'
-            size='xl'
-            asChild
-          >
-            <Link
-              href='/contact'
-              className='gap-2'
-            >
+          <Button variant="primary" size="xl" asChild>
+            <Link href="/contact" className="gap-2">
               Book a Consultation
-              <ArrowRight className='w-5 h-5' />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </Button>
         </div>

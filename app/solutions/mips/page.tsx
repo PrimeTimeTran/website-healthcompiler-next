@@ -63,10 +63,10 @@ const HeroSection = () => {
   }, [])
 
   return (
-    <section className='relative min-h-[90vh] bg-linear-to-br from-slate-50 via-white to-slate-50 overflow-hidden'>
+    <section className="relative min-h-[90vh] bg-linear-to-br from-slate-50 via-white to-slate-50 overflow-hidden">
       {/* Subtle grid */}
       <div
-        className='absolute inset-0 opacity-[0.03] pointer-events-none'
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
                          linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
@@ -74,106 +74,78 @@ const HeroSection = () => {
         }}
       />
 
-      <div className='container mx-auto px-6 py-24 lg:py-32'>
-        <div className='grid lg:grid-cols-2 gap-16 lg:gap-20 items-center'>
+      <div className="container mx-auto px-6 py-24 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
           {/* Left - Content */}
-          <div className='space-y-8'>
-            <h1 className='text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]'>
-              MIPS Performance, <span className='text-primary'>Activated</span>
+          <div className="space-y-8">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-foreground leading-[1.1]">
+              MIPS Performance, <span className="text-primary">Activated</span>
             </h1>
 
-            <p className='text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl'>
-              Track, manage, and improve MIPS performance with real-time
-              insights and automated workflows—without manual reporting chaos.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+              Track, manage, and improve MIPS performance with real-time insights and automated
+              workflows—without manual reporting chaos.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4'>
+            <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
-                link='/contact'
-                text='Explore MIPS Performance'
+                link="/contact"
+                text="Explore MIPS Performance"
                 iconSuffix={
-                  <ArrowRight className='ml-2 transition-transform group-hover:translate-x-1' />
+                  <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 }
               />
-              <Button
-                size='lg'
-                variant='outline'
-                asChild
-              >
-                <Link href='/contact'>See a live demo</Link>
+              <Button size="lg" variant="outline" asChild>
+                <Link href="/contact">See a live demo</Link>
               </Button>
             </div>
 
-            <p className='text-sm text-muted-foreground flex items-center gap-4'>
-              <span className='flex items-center gap-1.5'>
-                <Zap className='w-4 h-4 text-primary' /> Real-time
+            <p className="text-sm text-muted-foreground flex items-center gap-4">
+              <span className="flex items-center gap-1.5">
+                <Zap className="w-4 h-4 text-primary" /> Real-time
               </span>
-              <span className='flex items-center gap-1.5'>
-                <RefreshCw className='w-4 h-4 text-primary' />{' '}
-                Measure-Act-Improve
+              <span className="flex items-center gap-1.5">
+                <RefreshCw className="w-4 h-4 text-primary" /> Measure-Act-Improve
               </span>
-              <span className='flex items-center gap-1.5'>
-                <Shield className='w-4 h-4 text-primary' /> Audit-ready
+              <span className="flex items-center gap-1.5">
+                <Shield className="w-4 h-4 text-primary" /> Audit-ready
               </span>
             </p>
           </div>
 
           {/* Right - Animation #1: MIPS Score Dial */}
-          <div className='relative h-[450px] flex items-center justify-center'>
+          <div className="relative h-[450px] flex items-center justify-center">
             {/* Main dial container */}
-            <div className='relative w-80 h-80'>
+            <div className="relative w-80 h-80">
               {/* Outer ring progress */}
-              <svg className='absolute inset-0 w-full h-full -rotate-90'>
+              <svg className="absolute inset-0 w-full h-full -rotate-90">
+                <circle cx="160" cy="160" r="140" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                 <circle
-                  cx='160'
-                  cy='160'
-                  r='140'
-                  fill='none'
-                  stroke='#e5e7eb'
-                  strokeWidth='12'
-                />
-                <circle
-                  cx='160'
-                  cy='160'
-                  r='140'
-                  fill='none'
-                  stroke='url(#scoreGradient)'
-                  strokeWidth='12'
-                  strokeLinecap='round'
+                  cx="160"
+                  cy="160"
+                  r="140"
+                  fill="none"
+                  stroke="url(#scoreGradient)"
+                  strokeWidth="12"
+                  strokeLinecap="round"
                   strokeDasharray={`${(score / 100) * 879} 879`}
-                  className='transition-all duration-300'
+                  className="transition-all duration-300"
                 />
                 <defs>
-                  <linearGradient
-                    id='scoreGradient'
-                    x1='0%'
-                    y1='0%'
-                    x2='100%'
-                    y2='0%'
-                  >
-                    <stop
-                      offset='0%'
-                      stopColor='#E94E87'
-                    />
-                    <stop
-                      offset='100%'
-                      stopColor='#10B981'
-                    />
+                  <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stopColor="#E94E87" />
+                    <stop offset="100%" stopColor="#10B981" />
                   </linearGradient>
                 </defs>
               </svg>
 
               {/* Inner content */}
-              <div className='absolute inset-8 rounded-full bg-white border border-border shadow-xl flex flex-col items-center justify-center'>
-                <div className='text-sm text-muted-foreground uppercase tracking-wider mb-2'>
+              <div className="absolute inset-8 rounded-full bg-white border border-border shadow-xl flex flex-col items-center justify-center">
+                <div className="text-sm text-muted-foreground uppercase tracking-wider mb-2">
                   MIPS Score
                 </div>
-                <div className='text-6xl font-display font-bold text-primary'>
-                  {score}
-                </div>
-                <div className='text-sm text-muted-foreground mt-1'>
-                  / 100 points
-                </div>
+                <div className="text-6xl font-display font-bold text-primary">{score}</div>
+                <div className="text-sm text-muted-foreground mt-1">/ 100 points</div>
 
                 {/* Performance indicator */}
                 <div
@@ -185,18 +157,13 @@ const HeroSection = () => {
                         : 'bg-red-100 text-red-700'
                   }`}
                 >
-                  {score >= 75
-                    ? 'Exceptional'
-                    : score >= 50
-                      ? 'On Track'
-                      : 'Needs Attention'}
+                  {score >= 75 ? 'Exceptional' : score >= 50 ? 'On Track' : 'Needs Attention'}
                 </div>
               </div>
 
               {/* Category indicators around the dial */}
               {categories.map((cat, idx) => {
-                const angle =
-                  (idx / categories.length) * Math.PI * 2 - Math.PI / 2
+                const angle = (idx / categories.length) * Math.PI * 2 - Math.PI / 2
                 const radius = 180
                 const x = Math.cos(angle) * radius + 160
                 const y = Math.sin(angle) * radius + 160
@@ -206,7 +173,7 @@ const HeroSection = () => {
                 return (
                   <div
                     key={cat.name}
-                    className='absolute transition-all duration-500'
+                    className="absolute transition-all duration-500"
                     style={{
                       left: x - 40,
                       top: y - 40,
@@ -218,23 +185,18 @@ const HeroSection = () => {
                       }`}
                       style={{
                         borderColor: isActive ? cat.color : '#e5e7eb',
-                        boxShadow: isActive
-                          ? `0 0 20px ${cat.color}30`
-                          : 'none',
+                        boxShadow: isActive ? `0 0 20px ${cat.color}30` : 'none',
                       }}
                     >
-                      <div className='flex flex-col items-center gap-1'>
+                      <div className="flex flex-col items-center gap-1">
                         <Icon
-                          className='w-5 h-5 transition-colors'
+                          className="w-5 h-5 transition-colors"
                           style={{ color: isActive ? cat.color : '#9ca3af' }}
                         />
-                        <span className='text-[9px] font-medium text-center leading-tight text-muted-foreground'>
+                        <span className="text-[9px] font-medium text-center leading-tight text-muted-foreground">
                           {cat.name}
                         </span>
-                        <span
-                          className='text-[10px] font-bold'
-                          style={{ color: cat.color }}
-                        >
+                        <span className="text-[10px] font-bold" style={{ color: cat.color }}>
                           {cat.weight}%
                         </span>
                       </div>
@@ -271,29 +233,27 @@ const WhyItMattersSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             Why MIPS Performance Matters
           </h2>
         </div>
 
-        <div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {outcomes.map((item, idx) => {
             const Icon = item.icon
             return (
               <div
                 key={idx}
-                className='group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300'
+                className="group text-center p-8 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
-                <div className='w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform'>
-                  <Icon className='w-7 h-7 text-primary' />
+                <div className="w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                  <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className='font-semibold text-foreground mb-2'>
-                  {item.title}
-                </h3>
-                <p className='text-sm text-muted-foreground'>{item.desc}</p>
+                <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                <p className="text-sm text-muted-foreground">{item.desc}</p>
               </div>
             )
           })}
@@ -337,7 +297,7 @@ const HowItWorksSection = () => {
       const rect = sectionRef.current.getBoundingClientRect()
       const progress = Math.max(
         0,
-        Math.min(1, (window.innerHeight - rect.top) / (rect.height + 200)),
+        Math.min(1, (window.innerHeight - rect.top) / (rect.height + 200))
       )
       const step = Math.min(3, Math.floor(progress * 4))
       setActiveStep(step)
@@ -348,57 +308,46 @@ const HowItWorksSection = () => {
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className='py-24 bg-linear-to-b from-slate-50 to-white'
-    >
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground mb-4'>
+    <section ref={sectionRef} className="py-24 bg-linear-to-b from-slate-50 to-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mb-4">
             From Measurement to Performance
           </h2>
-          <p className='text-muted-foreground'>
-            Continuous improvement, not year-end scrambles
-          </p>
+          <p className="text-muted-foreground">Continuous improvement, not year-end scrambles</p>
         </div>
 
         {/* Animation #2: Flow diagram with scroll-triggered highlights */}
-        <div className='relative max-w-4xl mx-auto'>
+        <div className="relative max-w-4xl mx-auto">
           {/* Connection line */}
-          <div className='absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block'>
+          <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className='h-full bg-gradient-to-r from-primary to-accent transition-all duration-700'
+              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
 
           {/* Loop indicator */}
-          <svg className='absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 hidden lg:block opacity-30'>
+          <svg className="absolute -right-8 top-1/2 -translate-y-1/2 w-16 h-16 hidden lg:block opacity-30">
             <path
-              d='M 40 8 A 32 32 0 1 1 8 40'
-              fill='none'
-              stroke='currentColor'
-              strokeWidth='2'
-              strokeDasharray='4 4'
-              className='text-primary'
+              d="M 40 8 A 32 32 0 1 1 8 40"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeDasharray="4 4"
+              className="text-primary"
             />
-            <polygon
-              points='8,36 8,44 16,40'
-              fill='currentColor'
-              className='text-primary'
-            />
+            <polygon points="8,36 8,44 16,40" fill="currentColor" className="text-primary" />
           </svg>
 
-          <div className='grid md:grid-cols-4 gap-8 relative'>
+          <div className="grid md:grid-cols-4 gap-8 relative">
             {steps.map((step, idx) => {
               const Icon = step.icon
               return (
                 <div
                   key={idx}
                   className={`relative text-center transition-all duration-500 ${
-                    idx <= activeStep
-                      ? 'opacity-100 scale-100'
-                      : 'opacity-40 scale-95'
+                    idx <= activeStep ? 'opacity-100 scale-100' : 'opacity-40 scale-95'
                   }`}
                 >
                   <div
@@ -408,31 +357,24 @@ const HowItWorksSection = () => {
                         : 'bg-slate-100 border border-border'
                     }`}
                     style={{
-                      animation:
-                        idx === activeStep
-                          ? 'pulse 2s ease-in-out infinite'
-                          : 'none',
+                      animation: idx === activeStep ? 'pulse 2s ease-in-out infinite' : 'none',
                     }}
                   >
                     <Icon
                       className={`w-7 h-7 ${
-                        idx <= activeStep
-                          ? 'text-white'
-                          : 'text-muted-foreground'
+                        idx <= activeStep ? 'text-white' : 'text-muted-foreground'
                       }`}
                     />
                   </div>
 
                   <h3
                     className={`font-semibold mb-2 transition-colors ${
-                      idx <= activeStep
-                        ? 'text-foreground'
-                        : 'text-muted-foreground'
+                      idx <= activeStep ? 'text-foreground' : 'text-muted-foreground'
                     }`}
                   >
                     {step.title}
                   </h3>
-                  <p className='text-sm text-muted-foreground'>{step.desc}</p>
+                  <p className="text-sm text-muted-foreground">{step.desc}</p>
                 </div>
               )
             })}
@@ -457,14 +399,12 @@ const WhatImprovesSection = () => {
     {
       icon: Activity,
       title: 'PI Measure Tracking',
-      detail:
-        'Monitor data completeness and interoperability requirements in real-time',
+      detail: 'Monitor data completeness and interoperability requirements in real-time',
     },
     {
       icon: ClipboardCheck,
       title: 'Improvement Activities',
-      detail:
-        'Track attestation evidence and activity completion automatically',
+      detail: 'Track attestation evidence and activity completion automatically',
     },
     {
       icon: DollarSign,
@@ -484,37 +424,33 @@ const WhatImprovesSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             What Improves Automatically
           </h2>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto'>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {tiles.map((tile, idx) => {
             const Icon = tile.icon
             return (
               <div
                 key={idx}
-                className='group relative p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer overflow-hidden'
+                className="group relative p-6 rounded-2xl border border-border/50 bg-slate-50/50 hover:bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300 cursor-pointer overflow-hidden"
                 onMouseEnter={() => setHoveredTile(idx)}
                 onMouseLeave={() => setHoveredTile(null)}
               >
-                <div className='flex items-start gap-4'>
-                  <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform'>
-                    <Icon className='w-6 h-6 text-primary' />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className='font-semibold text-foreground mb-1'>
-                      {tile.title}
-                    </h3>
+                    <h3 className="font-semibold text-foreground mb-1">{tile.title}</h3>
                     <p
                       className={`text-sm text-muted-foreground transition-all duration-300 ${
-                        hoveredTile === idx
-                          ? 'opacity-100 max-h-20'
-                          : 'opacity-0 max-h-0'
+                        hoveredTile === idx ? 'opacity-100 max-h-20' : 'opacity-0 max-h-0'
                       } overflow-hidden`}
                     >
                       {tile.detail}
@@ -551,48 +487,39 @@ const PerformanceSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-linear-to-b from-white to-slate-50'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground'>
+    <section className="py-24 bg-linear-to-b from-white to-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">
             Performance in Practice
           </h2>
         </div>
 
         {/* Animation #3: Before/After flip cards */}
-        <div className='grid md:grid-cols-3 gap-8 max-w-4xl mx-auto'>
+        <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {results.map((item, idx) => {
             const Icon = item.icon
             return (
-              <div
-                key={idx}
-                className='group perspective-1000'
-              >
-                <div className='relative h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180'>
+              <div key={idx} className="group perspective-1000">
+                <div className="relative h-48 transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                   {/* Before - Front */}
-                  <div className='absolute inset-0 backface-hidden rounded-2xl border border-border bg-slate-50 p-6 flex flex-col items-center justify-center text-center'>
-                    <div className='w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center mb-4'>
-                      <Icon className='w-6 h-6 text-muted-foreground' />
+                  <div className="absolute inset-0 backface-hidden rounded-2xl border border-border bg-slate-50 p-6 flex flex-col items-center justify-center text-center">
+                    <div className="w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-muted-foreground" />
                     </div>
-                    <div className='text-xs uppercase tracking-wider text-muted-foreground mb-2'>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground mb-2">
                       Before
                     </div>
-                    <p className='text-sm text-muted-foreground'>
-                      {item.before}
-                    </p>
+                    <p className="text-sm text-muted-foreground">{item.before}</p>
                   </div>
 
                   {/* After - Back */}
-                  <div className='absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-linear-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center'>
-                    <div className='w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center mb-4'>
-                      <Icon className='w-6 h-6 text-white' />
+                  <div className="absolute inset-0 backface-hidden rotate-y-180 rounded-2xl border border-primary/30 bg-linear-to-br from-primary/5 to-accent/5 p-6 flex flex-col items-center justify-center text-center">
+                    <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-white" />
                     </div>
-                    <div className='text-xs uppercase tracking-wider text-primary mb-2'>
-                      After
-                    </div>
-                    <p className='text-sm font-medium text-foreground'>
-                      {item.after}
-                    </p>
+                    <div className="text-xs uppercase tracking-wider text-primary mb-2">After</div>
+                    <p className="text-sm font-medium text-foreground">{item.after}</p>
                   </div>
                 </div>
               </div>
@@ -600,7 +527,7 @@ const PerformanceSection = () => {
           })}
         </div>
 
-        <p className='text-center text-sm text-muted-foreground mt-8'>
+        <p className="text-center text-sm text-muted-foreground mt-8">
           Hover to see the transformation
         </p>
       </div>
@@ -631,27 +558,25 @@ const BuiltForSection = () => {
   ]
 
   return (
-    <section className='py-24 bg-slate-50'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-3xl mx-auto'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-foreground text-center mb-12'>
+    <section className="py-24 bg-slate-50">
+      <div className="container mx-auto px-6">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground text-center mb-12">
             Built for Value-Based Care
           </h2>
 
-          <div className='space-y-6'>
+          <div className="space-y-6">
             {features.map((feature, idx) => {
               const Icon = feature.icon
               return (
                 <div
                   key={idx}
-                  className='flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300'
+                  className="flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className='w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0'>
-                    <Icon className='w-5 h-5 text-primary' />
+                  <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Icon className="w-5 h-5 text-primary" />
                   </div>
-                  <p className='text-foreground leading-relaxed'>
-                    {feature.text}
-                  </p>
+                  <p className="text-foreground leading-relaxed">{feature.text}</p>
                 </div>
               )
             })}
@@ -665,11 +590,11 @@ const BuiltForSection = () => {
 // ========== FINAL CTA SECTION ==========
 const FinalCTASection = () => {
   return (
-    <section className='py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden'>
+    <section className="py-24 bg-linear-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Background pattern */}
-      <div className='absolute inset-0 opacity-10'>
+      <div className="absolute inset-0 opacity-10">
         <div
-          className='absolute inset-0'
+          className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
             backgroundSize: '40px 40px',
@@ -677,19 +602,15 @@ const FinalCTASection = () => {
         />
       </div>
 
-      <div className='container mx-auto px-6 relative z-10'>
-        <div className='max-w-2xl mx-auto text-center'>
-          <h2 className='text-3xl md:text-4xl font-display font-bold text-white mb-4'>
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
             Turn MIPS from a Reporting Burden into a Performance Advantage
           </h2>
-          <p className='text-lg text-white/70 mb-8'>
+          <p className="text-lg text-white/70 mb-8">
             Measure less. Improve more. Stay ahead—automatically.
           </p>
-          <CTAButton
-            link='/contact'
-            text='Book a MIPS performance walkthrough'
-            suffixIconDefault
-          />
+          <CTAButton link="/contact" text="Book a MIPS performance walkthrough" suffixIconDefault />
         </div>
       </div>
     </section>

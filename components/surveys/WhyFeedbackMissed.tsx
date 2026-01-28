@@ -36,23 +36,18 @@ export function WhyFeedbackMissed() {
   const [activeChallenge, setActiveChallenge] = useState<string | null>(null)
 
   return (
-    <section className='py-20 md:py-28 bg-linear-to-b from-background to-muted/20 overflow-hidden'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-16'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            Why Feedback Often Gets Missed
-          </h2>
-          <p className='text-lg text-muted-foreground max-w-3xl mx-auto'>
-            Teams care deeply about experience. What's hard is collecting
-            feedback consistently, at the right moment, and without adding work.
+    <section className="py-20 md:py-28 bg-linear-to-b from-background to-muted/20 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Feedback Often Gets Missed</h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            Teams care deeply about experience. What's hard is collecting feedback consistently, at
+            the right moment, and without adding work.
           </p>
         </div>
 
-        <div className='max-w-4xl mx-auto'>
-          <div
-            className='relative'
-            style={{ perspective: '1000px' }}
-          >
+        <div className="max-w-4xl mx-auto">
+          <div className="relative" style={{ perspective: '1000px' }}>
             {challenges.map((challenge, index) => {
               const isActive = activeChallenge === challenge.id
               return (
@@ -73,7 +68,7 @@ export function WhyFeedbackMissed() {
                       isActive ? 'opacity-100' : 'opacity-60'
                     } transition-opacity`}
                   />
-                  <div className='relative flex items-center gap-4'>
+                  <div className="relative flex items-center gap-4">
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                         isActive ? 'bg-primary/20' : 'bg-muted/50'
@@ -90,7 +85,7 @@ export function WhyFeedbackMissed() {
                     </span>
                   </div>
                   {isActive && (
-                    <div className='absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse' />
+                    <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-3 h-3 rounded-full bg-primary animate-pulse" />
                   )}
                 </div>
               )
@@ -98,8 +93,8 @@ export function WhyFeedbackMissed() {
           </div>
 
           {/* Decorative elements */}
-          <div className='absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl' />
-          <div className='absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl' />
+          <div className="absolute -top-10 -left-10 w-40 h-40 bg-primary/5 rounded-full blur-3xl" />
+          <div className="absolute -bottom-10 -right-10 w-60 h-60 bg-accent/5 rounded-full blur-3xl" />
         </div>
       </div>
     </section>

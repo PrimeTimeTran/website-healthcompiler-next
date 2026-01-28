@@ -19,8 +19,7 @@ const steps = [
   {
     id: 'activate',
     title: 'Activate',
-    description:
-      'Deploy AI-driven automation and real-time insights that drive immediate action.',
+    description: 'Deploy AI-driven automation and real-time insights that drive immediate action.',
     icon: Zap,
   },
   {
@@ -48,10 +47,7 @@ export const FDELoop = () => {
       // Calculate progress through section
       const progress = Math.max(
         0,
-        Math.min(
-          1,
-          (windowHeight - sectionTop) / (windowHeight + sectionHeight),
-        ),
+        Math.min(1, (windowHeight - sectionTop) / (windowHeight + sectionHeight))
       )
       const stepIndex = Math.min(3, Math.floor(progress * 4))
 
@@ -65,59 +61,52 @@ export const FDELoop = () => {
   }, [])
 
   return (
-    <section
-      ref={sectionRef}
-      className='py-24 lg:py-32 bg-background'
-    >
-      <div className='container mx-auto px-6 lg:px-12'>
+    <section ref={sectionRef} className="py-24 lg:py-32 bg-background">
+      <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className='text-center mb-16 lg:mb-20'>
-          <h2 className='text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4'>
+        <div className="text-center mb-16 lg:mb-20">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
             The FDE Loop
           </h2>
-          <p className='text-lg text-muted-foreground max-w-2xl mx-auto'>
-            A proven methodology for turning complex healthcare data into
-            operational outcomes.
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A proven methodology for turning complex healthcare data into operational outcomes.
           </p>
         </div>
 
-        <div className='grid lg:grid-cols-2 gap-16 lg:gap-24 items-center'>
+        <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           {/* Left - Loop Diagram */}
-          <div className='relative flex justify-center'>
-            <div className='relative w-80 h-80 md:w-96 md:h-96'>
+          <div className="relative flex justify-center">
+            <div className="relative w-80 h-80 md:w-96 md:h-96">
               {/* Outer ring */}
-              <svg
-                className='absolute inset-0 w-full h-full'
-                viewBox='0 0 400 400'
-              >
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 400 400">
                 <circle
-                  cx='200'
-                  cy='200'
-                  r='160'
-                  fill='none'
-                  stroke='hsl(var(--border))'
-                  strokeWidth='2'
-                  strokeDasharray='8 8'
+                  cx="200"
+                  cy="200"
+                  r="160"
+                  fill="none"
+                  stroke="hsl(var(--border))"
+                  strokeWidth="2"
+                  strokeDasharray="8 8"
                 />
                 {/* Progress arc */}
                 <circle
-                  cx='200'
-                  cy='200'
-                  r='160'
-                  fill='none'
-                  stroke='hsl(var(--accent))'
-                  strokeWidth='3'
-                  strokeLinecap='round'
+                  cx="200"
+                  cy="200"
+                  r="160"
+                  fill="none"
+                  stroke="hsl(var(--accent))"
+                  strokeWidth="3"
+                  strokeLinecap="round"
                   strokeDasharray={`${(activeStep + 1) * 251.33} 1005.31`}
-                  transform='rotate(-90 200 200)'
-                  className='transition-all duration-700 ease-out'
+                  transform="rotate(-90 200 200)"
+                  className="transition-all duration-700 ease-out"
                 />
               </svg>
 
               {/* Center content */}
-              <div className='absolute inset-0 flex items-center justify-center'>
-                <div className='w-32 h-32 rounded-full bg-linear-to-br from-accent/20 to-primary/10 border border-accent/30 flex items-center justify-center backdrop-blur-sm'>
-                  <span className='text-lg font-semibold text-accent'>FDE</span>
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-32 h-32 rounded-full bg-linear-to-br from-accent/20 to-primary/10 border border-accent/30 flex items-center justify-center backdrop-blur-sm">
+                  <span className="text-lg font-semibold text-accent">FDE</span>
                 </div>
               </div>
 
@@ -132,9 +121,7 @@ export const FDELoop = () => {
                   <div
                     key={step.id}
                     className={`absolute w-14 h-14 -translate-x-1/2 -translate-y-1/2 transition-all duration-500 cursor-pointer ${
-                      activeStep === index
-                        ? 'scale-110 z-10'
-                        : 'opacity-70 hover:opacity-100'
+                      activeStep === index ? 'scale-110 z-10' : 'opacity-70 hover:opacity-100'
                     }`}
                     style={{
                       left: `${(x / 400) * 100}%`,
@@ -149,7 +136,7 @@ export const FDELoop = () => {
                           : 'bg-card border border-border text-muted-foreground hover:border-accent/50'
                       }`}
                     >
-                      <Icon className='w-5 h-5' />
+                      <Icon className="w-5 h-5" />
                     </div>
                     {/* Label */}
                     <span
@@ -172,7 +159,7 @@ export const FDELoop = () => {
           </div>
 
           {/* Right - Step Details */}
-          <div className='space-y-8'>
+          <div className="space-y-8">
             {steps.map((step, index) => {
               const Icon = step.icon
               return (
@@ -192,14 +179,12 @@ export const FDELoop = () => {
                         : 'bg-muted text-muted-foreground'
                     }`}
                   >
-                    <Icon className='w-4 h-4' />
+                    <Icon className="w-4 h-4" />
                   </div>
                   <div>
                     <h3
                       className={`text-lg font-semibold mb-1 transition-colors duration-300 ${
-                        activeStep === index
-                          ? 'text-foreground'
-                          : 'text-muted-foreground'
+                        activeStep === index ? 'text-foreground' : 'text-muted-foreground'
                       }`}
                     >
                       {step.title}
