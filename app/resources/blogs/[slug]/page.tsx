@@ -8,9 +8,7 @@ import { Button } from '@/components/ui/button'
 import { fetchBlogPostBySlug } from '@/services/strapi'
 import { SliderCarousel } from './slider-carousel'
 
-const getMediaUrl = (url: string) => {
-  return url ? `${process.env.STRAPI_URL}${url}` : null
-}
+const getMediaUrl = (url?: string) => (url ? `${process.env.STRAPI_URL}${url}` : undefined)
 
 const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
   const params = await props.params

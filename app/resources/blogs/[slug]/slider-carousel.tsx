@@ -5,7 +5,7 @@ import { useState } from 'react'
 type SliderCarouselProps = {
   files: any[]
 }
-const getMediaUrl = (url?: string) => (url?.startsWith('http') ? url : `${STRAPI_URL}${url}`)
+const getMediaUrl = (url?: string) => (url ? `${process.env.STRAPI_URL}${url}` : undefined)
 
 export function SliderCarousel({ files }: SliderCarouselProps) {
   const [index, setIndex] = useState(0)
