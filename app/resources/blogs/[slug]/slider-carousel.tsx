@@ -5,7 +5,6 @@ import { useState } from 'react'
 type SliderCarouselProps = {
   files: any[]
 }
-const getMediaUrl = (url?: string) => (url ? `${process.env.STRAPI_URL}${url}` : undefined)
 
 export function SliderCarousel({ files }: SliderCarouselProps) {
   const [index, setIndex] = useState(0)
@@ -17,7 +16,7 @@ export function SliderCarousel({ files }: SliderCarouselProps) {
       {/* Image */}
       <div className="relative overflow-hidden rounded-xl">
         <img
-          src={getMediaUrl(files[index].url)}
+          src={files[index].url}
           alt={files[index].alternativeText || ''}
           className="w-full h-auto transition-opacity duration-300"
         />
