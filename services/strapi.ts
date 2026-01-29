@@ -74,7 +74,6 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
     `&populate[blocks][on][shared.slider][populate]=*` +
     `&populate[blocks][on][shared.rich-text]=*` +
     `&populate[blocks][on][shared.quote]=*`
-
   console.log({ url })
   try {
     const response = await fetch(url, {
@@ -121,8 +120,16 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
           }
         }
 
+        if (block.__component === 'shared.media') {
+          return {
+            ...block,
+            file: withMediaUrl(block.file),
+          }
+        }
+
         return block
       }),
+
       description: item.description || item.attributes?.description,
     }
   } catch (error) {

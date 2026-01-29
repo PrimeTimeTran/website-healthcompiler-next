@@ -1,9 +1,15 @@
 'use client'
 
+import Image from 'next/image'
 import { useState } from 'react'
 
-type SliderCarouselProps = {
-  files: any[]
+interface SliderFile {
+  url: string
+  alternativeText?: string
+}
+
+interface SliderCarouselProps {
+  files: SliderFile[]
 }
 
 export function SliderCarousel({ files }: SliderCarouselProps) {
@@ -13,15 +19,17 @@ export function SliderCarousel({ files }: SliderCarouselProps) {
 
   return (
     <div className="my-12">
-      {/* Image */}
       <div className="relative overflow-hidden rounded-xl">
-        <img
+        <Image
+          unoptimized
           src={files[index].url}
           alt={files[index].alternativeText || ''}
+          width={0}
+          height={0}
+          sizes="100vw"
           className="w-full h-auto transition-opacity duration-300"
         />
 
-        {/* Prev */}
         <button
           onClick={() => setIndex((index - 1 + files.length) % files.length)}
           className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full"
@@ -29,7 +37,6 @@ export function SliderCarousel({ files }: SliderCarouselProps) {
           ‹
         </button>
 
-        {/* Next */}
         <button
           onClick={() => setIndex((index + 1) % files.length)}
           className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/50 text-white px-3 py-1 rounded-full"
@@ -38,7 +45,6 @@ export function SliderCarousel({ files }: SliderCarouselProps) {
         </button>
       </div>
 
-      {/* Indicators */}
       <div className="mt-4 flex justify-center gap-2">
         {files.map((_, i) => (
           <button

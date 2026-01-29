@@ -1,4 +1,4 @@
-import BlogsClient from './BlogsClient'
+import BlogsLayout from './blogs-layout'
 import { BlogPost } from '@/services/strapi'
 import { fetchBlogPosts } from '@/services/strapi'
 
@@ -21,7 +21,7 @@ const Blogs = async () => {
     console.error('Error loading blog posts:', err)
   }
 
-  return <BlogsClient error={error} posts={blogPosts} />
+  return <BlogsLayout error={error} posts={blogPosts} />
 }
 
 export default Blogs

@@ -5,35 +5,22 @@ import Image from 'next/image'
 import { useState } from 'react'
 import { Search, Loader2, Calendar, ArrowRight } from 'lucide-react'
 
+import BlogCardSkeleton from './loading'
 import { BlogPost } from '@/services/strapi'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
-import { Skeleton } from '@/components/ui/skeleton'
 
 const POSTS_PER_PAGE = 9
 
-const BlogCardSkeleton = () => (
-  <div className="group block animate-pulse">
-    <div className="relative overflow-hidden rounded-2xl bg-muted h-52 md:h-60 mb-5" />
-    <div className="space-y-3">
-      <Skeleton className="h-4 w-24 rounded-full" />
-      <Skeleton className="h-6 w-full" />
-      <Skeleton className="h-6 w-4/5" />
-      <Skeleton className="h-4 w-full" />
-      <Skeleton className="h-4 w-2/3" />
-    </div>
-  </div>
-)
-
-interface BlogsClientProps {
+interface BlogsLayoutProps {
   posts: BlogPost[]
   error?: string | null
 }
 
-const BlogsClient = ({ posts, error }: BlogsClientProps) => {
+const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
   const [searchQuery, setSearchQuery] = useState('')
   const [visiblePosts, setVisiblePosts] = useState(POSTS_PER_PAGE)
-  const [isLoading, setIsLoading] = useState(false) // For "Load More" button
+  const [isLoading, setIsLoading] = useState(false)
   const [loadingNewCards, setLoadingNewCards] = useState(false)
 
   const filteredPosts = posts.filter(
@@ -53,7 +40,6 @@ const BlogsClient = ({ posts, error }: BlogsClientProps) => {
     setIsLoading(true)
     setLoadingNewCards(true)
 
-    // Simulate loading delay like the source page
     setTimeout(() => {
       setVisiblePosts((prev) => Math.min(prev + POSTS_PER_PAGE, filteredPosts.length))
       setIsLoading(false)
@@ -61,7 +47,6 @@ const BlogsClient = ({ posts, error }: BlogsClientProps) => {
     }, 800)
   }
 
-  // Reset visible posts when search query changes
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value)
     setVisiblePosts(POSTS_PER_PAGE)
@@ -221,4 +206,4 @@ const BlogsClient = ({ posts, error }: BlogsClientProps) => {
   )
 }
 
-export default BlogsClient
+export default BlogsLayout
