@@ -1,37 +1,21 @@
 import { STRAPI_URL, STRAPI_TOKEN } from '../lib/constants'
 
-export interface StrapiBlogPost {
-  id: number
-  attributes: {
-    title: string
-    date: string
-    description: string
-    content?: string
-    slug?: string
-    image: {
-      data: {
-        attributes: {
-          url: string
-        }
-      }
-    }
-    link: string
-    createdAt: string
-    updatedAt: string
-    publishedAt: string
-  }
-}
-
 export interface BlogPost {
   id: number
-  title: string
   date: string
-  description: string
-  content?: string
-  slug?: string
-  image: string
   link: string
+  slug?: string
+  title: string
+  image: string
   blocks?: any[]
+  content?: string
+  description: string
+}
+
+export const strapiUrl = (path?: string | null) => {
+  if (!path) return ''
+  if (path.startsWith('http')) return path
+  return `${process.env.NEXT_PUBLIC_STRAPI_URL}${path}`
 }
 
 export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
@@ -50,16 +34,15 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
     }
     const data = await response.json()
 
-    // Transform Strapi response to our BlogPost format
     return data.data.map((item: any) => ({
       id: item.id,
+      link: item.link || item.attributes?.link,
+      slug: item.slug || item.attributes?.slug,
       title: item.title || item.attributes?.title,
       date: item.createdAt || item.attributes?.date,
-      description: item.description || item.attributes?.description,
       content: item.content || item.attributes?.content,
-      slug: item.slug || item.attributes?.slug,
+      description: item.description || item.attributes?.description,
       image: `${STRAPI_URL}${item.cover?.formats?.thumbnail?.url || ''}`,
-      link: item.link || item.attributes?.link,
     }))
   } catch (error) {
     console.error('Error fetching blog posts:', error)
@@ -68,15 +51,28 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
 }
 
 export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null> => {
+  // Note:
+  // Verbose but must be written this way to populate all fields,  title, description, cover, blocks, block media
+  const url =
+    `${STRAPI_URL}/api/articles` +
+    `?filters[slug][$eq]=${slug}` +
+    `&status=published` +
+    `&fields[0]=title` +
+    `&fields[1]=description` +
+    `&fields[2]=createdAt` +
+    '&populate[cover][populate]=*' +
+    `&populate[blocks][on][shared.media][populate]=*` +
+    `&populate[blocks][on][shared.slider][populate]=*` +
+    `&populate[blocks][on][shared.rich-text]=*` +
+    `&populate[blocks][on][shared.quote]=*`
+
+  console.log({ url })
   try {
-    const response = await fetch(
-      `${STRAPI_URL}/api/articles/?filters[slug][$eq]=${slug}&populate=*`,
-      {
-        headers: {
-          Authorization: `Bearer ${STRAPI_TOKEN}`,
-        },
-      }
-    )
+    const response = await fetch(url, {
+      headers: {
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
+      },
+    })
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
@@ -102,50 +98,17 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
 
     return {
       id: item.id,
+      image: getImageUrl(item),
+      slug: item.slug || item.attributes?.slug,
+      link: item.link || item.attributes?.link,
       title: item.title || item.attributes?.title,
       date: item.createdAt || item.attributes?.date,
-      description: item.description || item.attributes?.description,
       content: item.content || item.attributes?.content,
-      slug: item.slug || item.attributes?.slug,
-      image: getImageUrl(item),
-      link: item.link || item.attributes?.link,
       blocks: item.blocks || item.attributes?.blocks || [],
+      description: item.description || item.attributes?.description,
     }
   } catch (error) {
     console.error('Error fetching blog post by slug:', error)
-    throw error
-  }
-}
-
-export const fetchBlogPost = async (id: string): Promise<BlogPost | null> => {
-  try {
-    const response = await fetch(`${STRAPI_URL}/api/articles/${id}?populate=*`, {
-      headers: {
-        Authorization: `Bearer ${STRAPI_TOKEN}`,
-      },
-    })
-    if (!response.ok) {
-      if (response.status === 404) {
-        return null
-      }
-      throw new Error(`HTTP error! status: ${response.status}`)
-    }
-    const data = await response.json()
-
-    const item = data.data
-    return {
-      id: item.id,
-      title: item.title || item.attributes?.title,
-      date: item.createdAt || item.attributes?.date,
-      description: item.description || item.attributes?.description,
-      content: item.content || item.attributes?.content,
-      slug: item.slug || item.attributes?.slug,
-      image: `${STRAPI_URL}${item.cover.formats.thumbnail.url || ''}`,
-      // link: item.link || item.attributes?.link,
-      link: item.slug,
-    }
-  } catch (error) {
-    console.error('Error fetching blog post:', error)
     throw error
   }
 }

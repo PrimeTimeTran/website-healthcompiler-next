@@ -7,6 +7,10 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { fetchBlogPostBySlug } from '@/services/strapi'
 
+const getMediaUrl = (url: string) => {
+  return url ? `${process.env.STRAPI_URL}${url}` : null
+}
+
 const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
   const params = await props.params
   const { slug } = params
@@ -111,11 +115,41 @@ const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
                   </blockquote>
                 )
 
-              case 'shared.media':
-                return null
+              case 'shared.media': {
+                const file = block.file
+                if (!file) return null
+
+                console.log({ file })
+
+                return (
+                  <figure key={block.id} className="my-8">
+                    <img
+                      src={getMediaUrl(file.url)}
+                      alt={file.alternativeText || ''}
+                      width={file.width}
+                      height={file.height}
+                      className="rounded-lg"
+                    />
+                    {file.caption && (
+                      <figcaption className="text-sm text-gray-500 mt-2">{file.caption}</figcaption>
+                    )}
+                  </figure>
+                )
+              }
 
               case 'shared.slider':
-                return null
+                return (
+                  <div key={block.id} className="my-10 grid grid-cols-1 gap-6">
+                    {block.files?.map((file: any, i: number) => (
+                      <img
+                        key={i}
+                        src={getMediaUrl(file.url)}
+                        alt={file.alternativeText || ''}
+                        className="rounded-lg"
+                      />
+                    ))}
+                  </div>
+                )
 
               default:
                 return null
