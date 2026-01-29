@@ -6,6 +6,7 @@ import { ArrowLeft, Calendar, Clock, Share2 } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { fetchBlogPostBySlug } from '@/services/strapi'
+import { SliderCarousel } from './slider-carousel'
 
 const getMediaUrl = (url: string) => {
   return url ? `${process.env.STRAPI_URL}${url}` : null
@@ -102,54 +103,33 @@ const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
         )}
 
         <div className="prose prose-lg max-w-none">
-          {blogPost.blocks?.map((block: any) => {
+          {blogPost.blocks?.map((block: any, index: number) => {
+            const key = `${block.__component}-${block.id}-${index}`
+
             switch (block.__component) {
               case 'shared.rich-text':
-                return <ReactMarkdown key={block.id}>{block.body}</ReactMarkdown>
+                return <ReactMarkdown key={key}>{block.body}</ReactMarkdown>
 
               case 'shared.quote':
                 return (
-                  <blockquote key={block.id}>
+                  <blockquote key={key}>
                     <p>{block.body}</p>
                     {block.title && <cite>— {block.title}</cite>}
                   </blockquote>
                 )
 
-              case 'shared.media': {
-                const file = block.file
-                if (!file) return null
-
-                console.log({ file })
-
+              case 'shared.media':
                 return (
-                  <figure key={block.id} className="my-8">
-                    <img
-                      src={getMediaUrl(file.url)}
-                      alt={file.alternativeText || ''}
-                      width={file.width}
-                      height={file.height}
-                      className="rounded-lg"
-                    />
-                    {file.caption && (
-                      <figcaption className="text-sm text-gray-500 mt-2">{file.caption}</figcaption>
-                    )}
-                  </figure>
+                  <img
+                    key={key}
+                    src={getMediaUrl(block.file.url)}
+                    alt={block.file.alternativeText || ''}
+                    className="my-10 rounded-lg"
+                  />
                 )
-              }
 
               case 'shared.slider':
-                return (
-                  <div key={block.id} className="my-10 grid grid-cols-1 gap-6">
-                    {block.files?.map((file: any, i: number) => (
-                      <img
-                        key={i}
-                        src={getMediaUrl(file.url)}
-                        alt={file.alternativeText || ''}
-                        className="rounded-lg"
-                      />
-                    ))}
-                  </div>
-                )
+                return <SliderCarousel key={key} files={block.files} />
 
               default:
                 return null

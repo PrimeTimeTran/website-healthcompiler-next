@@ -12,6 +12,15 @@ export interface BlogPost {
   description: string
 }
 
+export const withMediaUrl = <T extends { url?: string }>(media?: T) => {
+  if (!media?.url) return null
+
+  return {
+    ...media,
+    url: media.url.startsWith('http') ? media.url : `${process.env.STRAPI_URL}${media.url}`,
+  }
+}
+
 export const strapiUrl = (path?: string | null) => {
   if (!path) return ''
   if (path.startsWith('http')) return path
@@ -104,7 +113,16 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
       title: item.title || item.attributes?.title,
       date: item.createdAt || item.attributes?.date,
       content: item.content || item.attributes?.content,
-      blocks: item.blocks || item.attributes?.blocks || [],
+      blocks: item.blocks?.map((block: any) => {
+        if (block.__component === 'shared.slider') {
+          return {
+            ...block,
+            files: block.files?.map(withMediaUrl),
+          }
+        }
+
+        return block
+      }),
       description: item.description || item.attributes?.description,
     }
   } catch (error) {

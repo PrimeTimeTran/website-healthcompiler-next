@@ -24,6 +24,9 @@ const nextConfig: NextConfig & { turbopack?: any } = {
   turbopack: {
     root: process.cwd(),
   },
+  env: {
+    STRAPI_URL: process.env.STRAPI_URL,
+  },
 }
 
 export default nextConfig
