@@ -262,7 +262,7 @@
 @layer base {
   * {
     @apply border-border;
-    @apply font-sans bg-background text-foreground antialiased;
+    @apply font-sans;
   }
   html {
     scroll-behavior: smooth;
