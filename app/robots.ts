@@ -1,16 +1,16 @@
-import type { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
 
 export default function robots(): MetadataRoute.Robots {
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://healthcompiler.com'
+
   return {
-    rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/_next/', '/api/', '/_not-found', '/index'],
-      },
-    ],
-    sitemap: 'https://healthcompiler.com/sitemap.xml',
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/_next/', '/api/', '/_not-found', '/index'],
+    },
+    sitemap: `${siteUrl}/sitemap.xml`,
   }
 }
