@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import { STRAPI_URL, STRAPI_TOKEN } from '../lib/constants'
 
 export interface BlogPost {
@@ -59,7 +60,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
   }
 }
 
-export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null> => {
+export const fetchBlogPostBySlug = cache(async (slug: string): Promise<BlogPost | null> => {
   // Note:
   // Verbose but must be written this way to populate all fields,  title, description, cover, blocks, block media
   const url =
@@ -74,8 +75,8 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
     `&populate[blocks][on][shared.slider][populate]=*` +
     `&populate[blocks][on][shared.rich-text]=*` +
     `&populate[blocks][on][shared.quote]=*`
-  console.log({ url })
-  try {
+
+    try {
     const response = await fetch(url, {
       headers: {
         Authorization: `Bearer ${STRAPI_TOKEN}`,
@@ -136,4 +137,4 @@ export const fetchBlogPostBySlug = async (slug: string): Promise<BlogPost | null
     console.error('Error fetching blog post by slug:', error)
     throw error
   }
-}
+})

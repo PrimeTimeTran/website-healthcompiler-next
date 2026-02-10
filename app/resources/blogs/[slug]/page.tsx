@@ -1,9 +1,50 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { ArrowLeft, Share2 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { BlogContent } from './blog-content'
 import { fetchBlogPostBySlug } from '@/services/strapi'
+
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>
+}): Promise<Metadata> {
+  const params = await props.params
+  const { slug } = params
+  const blogPost = await fetchBlogPostBySlug(slug)
+
+  if (!blogPost) {
+    return {
+      title: 'Blog Post Not Found',
+    }
+  }
+
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://healthcompiler.com'
+  const url = `${siteUrl}/resources/blogs/${slug}`
+
+  return {
+    title: blogPost.title,
+    description: blogPost.description,
+    openGraph: {
+      title: blogPost.title,
+      description: blogPost.description,
+      type: 'article',
+      url,
+      images: [
+        {
+          url: blogPost.image,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: blogPost.title,
+      description: blogPost.description,
+      images: [blogPost.image],
+      site: '@HealthCompiler',
+    },
+  }
+}
 
 const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
   const params = await props.params
