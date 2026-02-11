@@ -16,7 +16,7 @@ export async function generateMetadata(props: {
   if (!blogPost) {
     return {
       title: 'Blog Post Not Found',
-    }\
+    }
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://healthcompiler.com'
