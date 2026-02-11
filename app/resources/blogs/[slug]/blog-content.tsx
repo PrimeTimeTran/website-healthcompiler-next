@@ -65,7 +65,49 @@ export function BlogContent({ blogPost }: BlogContentProps) {
 
           switch (block.__component) {
             case 'shared.rich-text':
-              return <ReactMarkdown key={key}>{block.body}</ReactMarkdown>
+              return (
+                <ReactMarkdown
+                  key={key}
+                  components={{
+                    h1: ({ node, ...props }) => (
+                      <h1 className="text-3xl font-bold mt-8 mb-4 text-foreground" {...props} />
+                    ),
+                    h2: ({ node, ...props }) => (
+                      <h2 className="text-2xl font-bold mt-8 mb-4 text-foreground" {...props} />
+                    ),
+                    h3: ({ node, ...props }) => (
+                      <h3 className="text-xl font-bold mt-6 mb-3 text-foreground" {...props} />
+                    ),
+                    h4: ({ node, ...props }) => (
+                      <h4 className="text-lg font-bold mt-6 mb-3 text-foreground" {...props} />
+                    ),
+                    p: ({ node, ...props }) => (
+                      <p className="mb-4 leading-relaxed text-muted-foreground" {...props} />
+                    ),
+                    ul: ({ node, ...props }) => (
+                      <ul className="list-disc pl-6 mb-4 space-y-2" {...props} />
+                    ),
+                    ol: ({ node, ...props }) => (
+                      <ol className="list-decimal pl-6 mb-4 space-y-2" {...props} />
+                    ),
+                    li: ({ node, ...props }) => <li className="pl-1" {...props} />,
+                    a: ({ node, ...props }) => (
+                      <a
+                        className="text-primary hover:underline underline-offset-4 font-medium"
+                        {...props}
+                      />
+                    ),
+                    blockquote: ({ node, ...props }) => (
+                      <blockquote
+                        className="border-l-4 border-primary pl-4 italic my-6 text-lg text-muted-foreground"
+                        {...props}
+                      />
+                    ),
+                  }}
+                >
+                  {block.body}
+                </ReactMarkdown>
+              )
 
             case 'shared.quote':
               return (
