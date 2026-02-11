@@ -8,6 +8,7 @@ export interface BlogPost {
   slug?: string
   title: string
   image: string
+  publishedAt?: string
   blocks?: any[]
   content?: string
   description: string
@@ -30,15 +31,18 @@ export const strapiUrl = (path?: string | null) => {
 
 export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
   try {
-    const response = await fetch(`${STRAPI_URL}/api/articles?populate=cover`, {
-      headers: {
-        Authorization: `Bearer ${STRAPI_TOKEN}`,
-      },
-      next: {
-        tags: ['blog-posts'],
-        revalidate: 86400, // optional safety net
-      },
-    })
+    const response = await fetch(
+      `${STRAPI_URL}/api/articles?populate=cover&pagination[limit]=5000`,
+      {
+        headers: {
+          Authorization: `Bearer ${STRAPI_TOKEN}`,
+        },
+        next: {
+          tags: ['blog-posts'],
+          revalidate: 86400, // optional safety net
+        },
+      }
+    )
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`)
     }
@@ -70,13 +74,14 @@ export const fetchBlogPostBySlug = cache(async (slug: string): Promise<BlogPost 
     `&fields[0]=title` +
     `&fields[1]=description` +
     `&fields[2]=createdAt` +
+    `&fields[3]=publishedAt` +
     '&populate[cover][populate]=*' +
     `&populate[blocks][on][shared.media][populate]=*` +
     `&populate[blocks][on][shared.slider][populate]=*` +
     `&populate[blocks][on][shared.rich-text]=*` +
     `&populate[blocks][on][shared.quote]=*`
 
-    try {
+  try {
     const response = await fetch(url, {
       headers: {
         Authorization: `Bearer ${STRAPI_TOKEN}`,
@@ -112,6 +117,7 @@ export const fetchBlogPostBySlug = cache(async (slug: string): Promise<BlogPost 
       link: item.link || item.attributes?.link,
       title: item.title || item.attributes?.title,
       date: item.createdAt || item.attributes?.date,
+      publishedAt: item.publishedAt || item.attributes?.publishedAt,
       content: item.content || item.attributes?.content,
       blocks: item.blocks?.map((block: any) => {
         if (block.__component === 'shared.slider') {
