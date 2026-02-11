@@ -19,7 +19,9 @@ export const withMediaUrl = <T extends { url?: string }>(media?: T) => {
 
   return {
     ...media,
-    url: media.url.startsWith('http') ? media.url : `${process.env.STRAPI_URL}${media.url}`,
+    url: media.url.startsWith('http')
+      ? media.url
+      : `${process.env.NEXT_PUBLIC_STRAPI_URL}${media.url}`,
   }
 }
 
@@ -56,7 +58,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       date: item.createdAt || item.attributes?.date,
       content: item.content || item.attributes?.content,
       description: item.description || item.attributes?.description,
-      image: `${STRAPI_URL}${item.cover?.formats?.medium?.url || item.cover?.url || ''}`,
+      image: `${STRAPI_URL}${item.cover?.url || ''}`,
     }))
   } catch (error) {
     console.error('Error fetching blog posts:', error)
