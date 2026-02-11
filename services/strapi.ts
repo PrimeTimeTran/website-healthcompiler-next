@@ -56,7 +56,7 @@ export const fetchBlogPosts = async (): Promise<BlogPost[]> => {
       date: item.createdAt || item.attributes?.date,
       content: item.content || item.attributes?.content,
       description: item.description || item.attributes?.description,
-      image: `${STRAPI_URL}${item.cover?.formats?.thumbnail?.url || ''}`,
+      image: `${STRAPI_URL}${item.cover?.formats?.medium?.url || item.cover?.url || ''}`,
     }))
   } catch (error) {
     console.error('Error fetching blog posts:', error)
