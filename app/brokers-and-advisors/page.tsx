@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
+import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 import {
   Bot,
   Workflow,
@@ -15,10 +15,6 @@ import {
 import { Button } from '@/components/ui/button'
 import { CTAButton, GridSection } from '@/components/ui'
 import BrokersAdvisorsViz from '@/components/hero-visualizations/BrokersAdvisorsViz'
-
-import hintLogo from '@/assets/hint-logo.png'
-import elationLogo from '@/assets/elation-logo.png'
-import akuteLogo from '@/assets/akute-health-logo.png'
 
 const BrokersAndAdvisors = () => {
   const dataBenefits = [
@@ -53,12 +49,6 @@ const BrokersAndAdvisors = () => {
       description:
         'Consistent follow-ups and reporting without extra manual effort. Designed to keep clients informed and engaged throughout the plan year.',
     },
-  ]
-
-  const integrationLogos = [
-    { name: 'Elation', src: elationLogo },
-    { name: 'Hint', src: hintLogo },
-    { name: 'Akute', src: akuteLogo },
   ]
 
   return (
@@ -194,25 +184,7 @@ const BrokersAndAdvisors = () => {
             </div>
 
             {/* Integration logos */}
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 p-8 bg-muted/30 rounded-2xl border border-border/50">
-              {integrationLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={128}
-                    height={48}
-                    className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-              ))}
-              <div className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm">
-                <span className="text-muted-foreground text-sm font-medium">+ More</span>
-              </div>
-            </div>
+            <IntegrationLogosSection />
           </div>
         </div>
       </section>

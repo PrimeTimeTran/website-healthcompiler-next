@@ -73,42 +73,106 @@ const values = [
 const About = () => {
   return (
     <>
-      <section className="py-16 md:py-24 lg:py-32 bg-primary">
+      {/* Why We Exist */}
+      <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-b border-border/40">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl">
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 tracking-tight">
-              About Us
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="font-display text-4xl md:text-6xl font-bold text-foreground mb-8 tracking-tight">
+              Why We Exist
             </h1>
-            <div className="h-1 w-20 bg-primary-foreground/40 mb-8 rounded-full" />
-            <div className="space-y-5">
-              <p className="text-base md:text-lg text-primary-foreground/90 leading-relaxed">
-                Health Compiler serves independent primary care and specialty practices, Direct
-                Primary Care (DPC) networks, and self-funded healthcare purchasers including
-                employers, TPAs, brokers, and health plans who need clarity and control across care
-                and cost.
+            <div className="space-y-6 text-xl text-muted-foreground leading-relaxed">
+              <p>
+                Healthcare is built by people who care deeply about doing the right thing.
+                Clinicians, operators, and teams make important decisions every day that affect real
+                lives.
               </p>
-              <p className="text-base md:text-lg text-primary-foreground/85 leading-relaxed">
-                Built for modern, value-based healthcare, our platform unifies claims, clinical,
-                pharmacy, and engagement data and turns it into real-time insights, automated
-                workflows, and action. We go beyond dashboards by delivering AI-powered voice
-                agents, intelligent engagement tools, and forward-deployment engineering that adapts
-                to how care is actually delivered. Whether supporting independent and DPC practices,
-                scaling specialty and value-based care models, or enabling self-funded employers to
-                make smarter benefit decisions, Health Compiler helps organizations operate
-                efficiently, reduce waste, and deliver better outcomes with confidence.
+              <p>Too often, the systems meant to support those decisions fall short.</p>
+              <p>
+                Data is everywhere, but clarity is not. Information is fragmented across tools,
+                workflows, and formats, making it harder than it should be to see what matters and
+                act with confidence.
+              </p>
+              <p className="font-medium text-foreground text-2xl mt-8">
+                Health Compiler exists to change that.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-[#F5E6E0]">
+      {/* What We’re Building */}
+      <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+            <div>
+              <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
+                What We’re Building
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  We build AI-powered healthcare infrastructure that turns fragmented data into
+                  clear, confident decisions, inside real workflows, where care actually happens.
+                </p>
+                <p>
+                  Our systems are designed for how healthcare truly works. Messy data. Multiple
+                  systems. Real people operating under real constraints.
+                </p>
+                <p>
+                  Our vision is straightforward: a healthcare system where data reduces complexity
+                  instead of adding to it. Where care teams feel supported, not overwhelmed. Where
+                  better information leads to better care.
+                </p>
+                <p>
+                  We are building toward that future deliberately, one workflow and one decision at
+                  a time.
+                </p>
+              </div>
+            </div>
+            <div className="relative order-first lg:order-last">
+              {/* Visual abstraction of building/infrastructure */}
+              <div className="aspect-square bg-muted/30 rounded-[2rem] border border-border p-8 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+                <div className="grid grid-cols-2 gap-4 w-full max-w-sm relative z-10">
+                  <div className="bg-card p-6 rounded-2xl shadow-lg border border-border/50 flex flex-col items-center text-center animate-fade-in-up [animation-delay:0ms]">
+                    <Target className="w-8 h-8 text-primary mb-3" />
+                    <span className="font-semibold text-sm">Clear Decisions</span>
+                  </div>
+                  <div className="bg-card p-6 rounded-2xl shadow-lg border border-border/50 flex flex-col items-center text-center animate-fade-in-up [animation-delay:100ms] mt-8">
+                    <Code2 className="w-8 h-8 text-accent mb-3" />
+                    <span className="font-semibold text-sm">Robust Infra</span>
+                  </div>
+                  <div className="bg-card p-6 rounded-2xl shadow-lg border border-border/50 flex flex-col items-center text-center animate-fade-in-up [animation-delay:200ms] -mt-8">
+                    <Heart className="w-8 h-8 text-red-500 mb-3" />
+                    <span className="font-semibold text-sm">Better Care</span>
+                  </div>
+                  <div className="bg-card p-6 rounded-2xl shadow-lg border border-border/50 flex flex-col items-center text-center animate-fade-in-up [animation-delay:300ms]">
+                    <Handshake className="w-8 h-8 text-blue-500 mb-3" />
+                    <span className="font-semibold text-sm">Real Support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership Team */}
+      <section className="py-20 md:py-32 bg-muted/30 border-y border-border/40">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground mb-6 tracking-tight">
+              Leadership
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Guided by deep experience in healthcare, technology, and product building.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 lg:gap-12 max-w-5xl mx-auto">
             {leadershipTeam.map((leader) => (
               <div
                 key={leader.name}
-                className="bg-card rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group"
+                className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-border/50"
               >
                 <div className="aspect-[4/5] bg-muted relative overflow-hidden">
                   <Image
@@ -118,51 +182,14 @@ const About = () => {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <div className="p-5 text-center bg-card">
-                  <h3 className="font-display text-lg font-semibold text-foreground mb-1">
+                <div className="p-6 text-center">
+                  <h3 className="font-display text-xl font-bold text-foreground mb-1">
                     {leader.name}
                   </h3>
-                  <p className="text-muted-foreground text-sm">{leader.role}</p>
+                  <p className="text-primary font-medium text-sm">{leader.role}</p>
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24 bg-background">
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center max-w-6xl mx-auto">
-            <div className="order-2 lg:order-1">
-              <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-6 tracking-tight">
-                Simplifying <span className="text-primary">Healthcare Data</span>
-              </h2>
-              <div className="space-y-4">
-                <p className="text-muted-foreground leading-relaxed">
-                  Healthcare organizations generate massive amounts of data every day—from patient
-                  records and claims to operational metrics and financial reports. Yet most teams
-                  struggle to transform this data into actionable insights.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  HealthCompiler was founded to bridge this gap. We combine deep healthcare domain
-                  expertise with modern data engineering practices to build platforms that work.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our approach is straightforward: understand your workflows, design scalable
-                  architecture, and deliver solutions that drive real operational improvements.
-                </p>
-              </div>
-            </div>
-
-            <div className="order-1 lg:order-2 flex justify-center">
-              <div className="w-full max-w-sm aspect-square bg-[#F5E6E0] rounded-2xl flex items-center justify-center shadow-sm">
-                <div className="relative w-36 h-36">
-                  <div className="absolute inset-0 rounded-full border-[3px] border-primary/25 animate-pulse" />
-                  <div className="absolute inset-4 rounded-full border-[3px] border-primary/35" />
-                  <div className="absolute inset-10 rounded-full bg-primary/15" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

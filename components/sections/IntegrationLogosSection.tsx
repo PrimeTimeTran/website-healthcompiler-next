@@ -1,20 +1,20 @@
 'use client'
 
 import Image from 'next/image'
+import elationLogo from '@/assets/elation-logo.png'
+import hintLogo from '@/assets/hint-logo.png'
+import akuteLogo from '@/assets/akute-health-logo.png'
 
-interface Logo {
-  name: string
-  src: any
-}
+const integrationLogos = [
+  { name: 'Elation', src: elationLogo },
+  { name: 'Hint', src: hintLogo },
+  { name: 'Akute', src: akuteLogo },
+]
 
-interface IntegrationLogosSectionProps {
-  logos: Logo[]
-}
-
-export const IntegrationLogosSection = ({ logos }: IntegrationLogosSectionProps) => {
+export const IntegrationLogosSection = () => {
   return (
     <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 p-8 bg-muted/30 rounded-2xl border border-border/50">
-      {logos.map((logo, index) => (
+      {integrationLogos.map((logo, index) => (
         <div
           key={index}
           className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm"

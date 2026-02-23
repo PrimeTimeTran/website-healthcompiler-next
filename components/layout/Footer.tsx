@@ -8,10 +8,10 @@ import hipaaSoc2Badge from '@/assets/hipaa-soc2-badge.png'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Platform', href: '/platform' },
+  // { label: 'Platform', href: '/platform' },
   // { label: 'Solutions', href: '/solutions' },
-  { label: 'Who We Serve', href: '/who-we-serve' },
-  { label: 'Resources', href: '/resources' },
+  // { label: 'Who We Serve', href: '/who-we-serve' },
+  // { label: 'Resources', href: '/resources' },
   { label: 'Integrations', href: '/platform/integration' },
 ]
 

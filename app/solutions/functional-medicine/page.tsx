@@ -1,12 +1,10 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
+import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 import { Button } from '@/components/ui/button'
 import { Bot, Brain, Workflow, ArrowRight, TrendingUp, CheckCircle } from 'lucide-react'
-import elationLogo from '@/assets/elation-logo.png'
-import hintLogo from '@/assets/hint-logo.png'
-import akuteLogo from '@/assets/akute-health-logo.png'
+
 import { CTAButton, GridSection } from '@/components/ui'
 import FunctionalMedicineViz from '@/components/hero-visualizations/FunctionalMedicineViz'
 
@@ -38,12 +36,6 @@ const FunctionalMedicine = () => {
       description:
         'Tools that help practices educate, follow up, and stay connected with patients without adding manual effort.',
     },
-  ]
-
-  const integrationLogos = [
-    { name: 'Elation', src: elationLogo },
-    { name: 'Hint', src: hintLogo },
-    { name: 'Akute', src: akuteLogo },
   ]
 
   return (
@@ -167,26 +159,7 @@ const FunctionalMedicine = () => {
             </p>
 
             {/* Integration logos */}
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 p-8 bg-muted/30 rounded-2xl border border-border/50">
-              {integrationLogos.map((logo, index) => (
-                <div
-                  key={index}
-                  className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm"
-                >
-                  <Image
-                    src={logo.src}
-                    alt={logo.name}
-                    width={128}
-                    height={48}
-                    className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity"
-                  />
-                  <span className="hidden text-muted-foreground font-medium">{logo.name}</span>
-                </div>
-              ))}
-              <div className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm">
-                <span className="text-muted-foreground text-sm font-medium">+ More</span>
-              </div>
-            </div>
+            <IntegrationLogosSection />
           </div>
         </div>
       </section>

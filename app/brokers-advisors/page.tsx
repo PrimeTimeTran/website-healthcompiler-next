@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import {
@@ -20,10 +19,6 @@ import {
 import { CTAButton, GridSection } from '@/components/ui'
 import BrokersAdvisorsViz from '@/components/hero-visualizations/BrokersAdvisorsViz'
 import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
-
-import elationLogo from '@/assets/elation-logo.png'
-import hintLogo from '@/assets/hint-logo.png'
-import akuteLogo from '@/assets/akute-health-logo.png'
 
 const BrokersAdvisors = () => {
   const advisorBenefits = [
@@ -59,12 +54,6 @@ const BrokersAdvisors = () => {
       description:
         'Consistent follow-ups and reporting without extra manual effort. Designed to keep clients informed and engaged throughout the plan year.',
     },
-  ]
-
-  const integrationLogos = [
-    { name: 'Elation', src: elationLogo },
-    { name: 'Hint', src: hintLogo },
-    { name: 'Akute', src: akuteLogo },
   ]
 
   return (
@@ -191,7 +180,7 @@ const BrokersAdvisors = () => {
             </p>
 
             {/* Integration logos */}
-            <IntegrationLogosSection logos={integrationLogos} />
+            <IntegrationLogosSection />
           </div>
         </div>
       </section>

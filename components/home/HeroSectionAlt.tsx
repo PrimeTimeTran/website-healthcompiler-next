@@ -195,7 +195,7 @@ export const HeroSectionAlt = () => {
   const [activeWord, setActiveWord] = useState(0)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const heroRef = useRef<HTMLElement>(null)
-  const words = ['Activate', 'Unify', 'Transform']
+  const words = ['Data for Better Care']
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -307,7 +307,7 @@ export const HeroSectionAlt = () => {
             {/* Main headline */}
             <div className="space-y-2">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05]">
-                <span className="block opacity-90">
+                {/* <span className="block opacity-90">
                   {words.map((word, idx) => (
                     <span
                       key={word}
@@ -320,19 +320,23 @@ export const HeroSectionAlt = () => {
                       {idx === activeWord && word}
                     </span>
                   ))}
+                </span> */}
+                {/* <span className="block mt-2">Data for Better Care</span> */}
+                <span className="text-primary bg-clip-text bg-gradient-to-r">
+                  Data for Better Care
                 </span>
-                <span className="block mt-2">Healthcare Data.</span>
-                <span className="block text-muted-foreground mt-1">Drive Outcomes.</span>
               </h1>
             </div>
 
             {/* Description */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
-              Unifying healthcare data and AI-driven workflows to lower costs and improve care
+              Unify healthcare data and AI-driven workflows to lower costs and improve care for
+              self-funded, direct care, and value-based organizations.
+              {/* Unifying healthcare data and AI-driven workflows to lower costs and improve care
               across
               <span className="text-foreground font-medium"> self-funded</span>,
               <span className="text-foreground font-medium"> direct care</span>, and
-              <span className="text-foreground font-medium"> value-based</span> organizations.
+              <span className="text-foreground font-medium"> value-based</span> organizations. */}
             </p>
 
             {/* CTAs */}
@@ -347,39 +351,28 @@ export const HeroSectionAlt = () => {
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="border-border text-foreground hover:bg-muted px-8 py-6 text-base group"
-                asChild
-              >
-                <Link href="/capabilities">
-                  <Play className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform" />
-                  See How It Works
-                </Link>
-              </Button>
             </div>
 
             {/* Trust indicators */}
-            <div className="flex items-center gap-6 pt-6 border-t border-border">
+            <div className="flex items-center justify-center gap-6 pt-6 border-t border-border">
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">10M+</div>
+                <div className="text-2xl font-bold text-foreground">8M+</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                  Lives Managed
+                  Messages Processed
                 </div>
               </div>
               <div className="w-px h-10 bg-border" />
               <div className="text-center">
-                <div className="text-2xl font-bold text-foreground">$2B+</div>
+                <div className="text-2xl font-bold text-foreground">4M+</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">
-                  Claims Processed
+                  Lab Tests Analyzed
                 </div>
               </div>
-              <div className="w-px h-10 bg-border" />
+              {/* <div className="w-px h-10 bg-border" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">99.9%</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">Uptime</div>
-              </div>
+              </div> */}
             </div>
           </div>
 

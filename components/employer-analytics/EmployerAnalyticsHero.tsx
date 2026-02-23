@@ -58,7 +58,7 @@ export function EmployerAnalyticsHero() {
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
                 link="/contact"
-                text="See Your Intelligence Layer"
+                text="Request Demo"
                 iconSuffix={
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 }

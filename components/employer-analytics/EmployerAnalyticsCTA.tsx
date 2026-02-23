@@ -43,7 +43,7 @@ export function EmployerAnalyticsCTA() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <CTAButton
               link="/contact"
-              text="See Your Employer Intelligence Layer"
+              text="Request a Demo"
               iconSuffix={
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               }

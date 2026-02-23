@@ -4,6 +4,7 @@ import CTAButton from '@/components/ui/CTAButton'
 import { ArrowRight, CheckCircle } from 'lucide-react'
 
 import { GridSection } from '@/components/ui'
+import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 import AICallTriagingViz from '@/components/hero-visualizations/AICallTriagingViz'
 
 export const llms = {
@@ -68,7 +69,7 @@ const AICallTriaging = () => {
 
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
               Designed for Real Practice Workflows
             </h2>
@@ -82,17 +83,7 @@ const AICallTriaging = () => {
             </p>
           </div>
 
-          <div className="mt-12 flex flex-wrap gap-8 items-center opacity-70">
-            <div className="h-10 w-32 bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">
-              Integration Logo
-            </div>
-            <div className="h-10 w-32 bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">
-              Integration Logo
-            </div>
-            <div className="h-10 w-32 bg-muted rounded-md flex items-center justify-center text-sm text-muted-foreground">
-              Integration Logo
-            </div>
-          </div>
+          <IntegrationLogosSection />
         </div>
       </section>
 
