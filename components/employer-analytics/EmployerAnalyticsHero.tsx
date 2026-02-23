@@ -63,9 +63,9 @@ export function EmployerAnalyticsHero() {
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 }
               />
-              <Button asChild size="lg" variant="outline">
+              {/* <Button asChild size="lg" variant="outline">
                 <Link href="/contact">Talk to an Expert</Link>
-              </Button>
+              </Button> */}
             </div>
 
             <p className="text-sm text-muted-foreground flex items-center gap-4 flex-wrap">

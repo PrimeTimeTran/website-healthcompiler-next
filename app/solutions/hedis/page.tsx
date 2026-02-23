@@ -88,9 +88,9 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton link="/contact" text="Explore Quality Measures" suffixIconDefault />
-              <Button size="lg" variant="outline" asChild>
+              {/* <Button size="lg" variant="outline" asChild>
                 <Link href="/contact">See a live demo</Link>
-              </Button>
+              </Button> */}
             </div>
 
             <p className="text-sm text-muted-foreground flex items-center gap-4">

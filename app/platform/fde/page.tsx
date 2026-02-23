@@ -77,9 +77,9 @@ const HeroSection = () => {
                   <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
                 }
               />
-              <Button size="lg" variant="outline" asChild>
+              {/* <Button size="lg" variant="outline" asChild>
                 <Link href="#deployments">See example deployments</Link>
-              </Button>
+              </Button> */}
             </div>
 
             <p className="text-sm text-muted-foreground flex items-center gap-4">

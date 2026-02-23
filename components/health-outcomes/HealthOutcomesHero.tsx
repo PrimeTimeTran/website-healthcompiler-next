@@ -44,9 +44,9 @@ export function HealthOutcomesHero() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton link="/contact" text="Request a Demo" suffixIconDefault />
-              <Button size="lg" variant="outline" asChild>
+              {/* <Button size="lg" variant="outline" asChild>
                 <Link href="/contact">Talk to an Expert</Link>
-              </Button>
+              </Button> */}
             </div>
 
             <p className="text-sm text-muted-foreground flex items-center gap-4 flex-wrap">

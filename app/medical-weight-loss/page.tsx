@@ -239,9 +239,9 @@ const MedicalWeightLoss = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <CTAButton link="/contact" text="Book a Demo" suffixIconDefault />
-              <Button asChild variant="outline" size="lg" className="gap-2">
+              {/* <Button asChild variant="outline" size="lg" className="gap-2">
                 <Link href="/contact">Talk to Our Team</Link>
-              </Button>
+              </Button> */}
             </div>
           </div>
         </div>
