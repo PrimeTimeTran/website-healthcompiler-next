@@ -206,7 +206,7 @@ export const InferaPlatformCapabilities = () => {
                 <ul className="space-y-2 mb-4">
                   {card.bullets.map((bullet, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="w-1 h-1 rounded-full bg-primary/50 mt-2 flex-shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-primary/50 mt-2 shrink-0" />
                       {bullet}
                     </li>
                   ))}
@@ -228,7 +228,7 @@ export const InferaPlatformCapabilities = () => {
               From Insight to Action — Automatically
             </h3>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Infera doesn't just surface insights. It activates them across patient, provider, and
+              Infera doesn&apos;t just surface insights. It activates them across patient, provider, and
               employer workflows.
             </p>
           </div>
@@ -246,7 +246,7 @@ export const InferaPlatformCapabilities = () => {
                 <ul className="space-y-2 mb-4">
                   {card.bullets.map((bullet, i) => (
                     <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
-                      <span className="w-1 h-1 rounded-full bg-accent/50 mt-2 flex-shrink-0" />
+                      <span className="w-1 h-1 rounded-full bg-accent/50 mt-2 shrink-0" />
                       {bullet}
                     </li>
                   ))}
@@ -264,7 +264,7 @@ export const InferaPlatformCapabilities = () => {
       <section className="relative py-8 bg-white overflow-hidden">
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-center gap-4">
-            <div className="h-px w-16 md:w-32 bg-gradient-to-r from-transparent to-primary/30" />
+            <div className="h-px w-16 md:w-32 bg-linear-to-r from-transparent to-primary/30" />
             <div className="w-3 h-3 rounded-full bg-primary/30 animate-pulse" />
             <div className="h-px w-8 md:w-16 bg-primary/30" />
             <div
@@ -276,10 +276,10 @@ export const InferaPlatformCapabilities = () => {
               className="w-3 h-3 rounded-full bg-primary/30 animate-pulse"
               style={{ animationDelay: '1s' }}
             />
-            <div className="h-px w-16 md:w-32 bg-gradient-to-l from-transparent to-primary/30" />
+            <div className="h-px w-16 md:w-32 bg-linear-to-l from-transparent to-primary/30" />
           </div>
           <p className="text-xs text-muted-foreground text-center mt-4">
-            All workflows are powered by Infera's unified data foundation.
+            All workflows are powered by Infera&apos;s unified data foundation.
           </p>
         </div>
       </section>

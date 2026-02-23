@@ -58,11 +58,11 @@ export const FDEProof = () => {
 
                 {/* Arrow */}
                 <div className="flex items-center gap-4">
-                  <div className="flex-1 h-px bg-gradient-to-r from-border via-accent/50 to-border" />
+                  <div className="flex-1 h-px bg-linear-to-r from-border via-accent/50 to-border" />
                   <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
                     <ArrowRight className="w-4 h-4 text-accent group-hover:text-white transition-colors" />
                   </div>
-                  <div className="flex-1 h-px bg-gradient-to-r from-border via-accent/50 to-border" />
+                  <div className="flex-1 h-px bg-linear-to-r from-border via-accent/50 to-border" />
                 </div>
 
                 {/* After */}

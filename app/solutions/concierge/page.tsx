@@ -111,7 +111,7 @@ const ConciergeMedicine = () => {
                   key={index}
                   className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
                   <p className="text-foreground font-medium pt-2">{benefit.text}</p>
@@ -196,17 +196,17 @@ const ConciergeMedicine = () => {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">Preserves personal care relationships</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">
                     Shows impact clearly to patients and partners
                   </span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">Supports thoughtful growth</span>
                 </div>
               </div>

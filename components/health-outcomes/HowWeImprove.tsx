@@ -164,7 +164,7 @@ export function HowWeImprove() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* 3D Sphere */}
-          <div className="h-[400px] md:h-[500px] relative">
+          <div className="h-100 md:h-[500px] relative">
             <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
               <Scene />
             </Canvas>

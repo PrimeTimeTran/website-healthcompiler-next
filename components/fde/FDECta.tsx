@@ -23,7 +23,7 @@ export const FDECta = () => {
 
           <Button
             size="lg"
-            className="bg-gradient-to-r from-[hsl(340,75%,60%)] to-[hsl(28,90%,60%)] hover:from-[hsl(340,75%,55%)] hover:to-[hsl(28,90%,55%)] text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
+            className="bg-linear-to-r from-[hsl(340,75%,60%)] to-[hsl(28,90%,60%)] hover:from-[hsl(340,75%,55%)] hover:to-[hsl(28,90%,55%)] text-white font-semibold px-8 py-6 text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 group"
           >
             Start a conversation
             <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

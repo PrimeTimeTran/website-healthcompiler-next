@@ -103,7 +103,7 @@ const Pediatrics = () => {
                   key={index}
                   className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <CheckCircle className="h-6 w-6 text-primary" />
                   </div>
                   <p className="text-foreground font-medium pt-2">{benefit}</p>

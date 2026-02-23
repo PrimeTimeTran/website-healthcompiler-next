@@ -29,10 +29,10 @@ const ManagedServiceOrgsViz = () => {
   }, [])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* MSO Hub Center */}
       <div className="relative">
-        <div className="absolute inset-0 -m-6 rounded-full bg-gradient-to-r from-cyan-500/15 to-emerald-500/15 blur-2xl animate-pulse" />
+        <div className="absolute inset-0 -m-6 rounded-full bg-linear-to-r from-cyan-500/15 to-emerald-500/15 blur-2xl animate-pulse" />
 
         <div className="relative bg-white rounded-2xl border border-cyan-500/20 shadow-2xl p-6 w-[180px]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-cyan-500/5 to-emerald-500/5" />

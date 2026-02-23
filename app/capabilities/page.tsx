@@ -365,7 +365,7 @@ const CapabilitiesContent = () => {
                             className="flex items-center gap-3 text-foreground"
                             style={{ animationDelay: `${idx * 100}ms` }}
                           >
-                            <div className="w-2 h-2 bg-accent rounded-full flex-shrink-0" />
+                            <div className="w-2 h-2 bg-accent rounded-full shrink-0" />
                             <span>{feature}</span>
                           </li>
                         ))}

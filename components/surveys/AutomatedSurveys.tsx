@@ -58,7 +58,7 @@ export function AutomatedSurveys() {
                         <event.icon className="w-6 h-6" style={{ color: event.color }} />
                       </div>
                       <div className="flex-1">
-                        <div className="h-2 bg-gradient-to-r from-muted to-transparent rounded-full">
+                        <div className="h-2 bg-linear-to-r from-muted to-transparent rounded-full">
                           <div
                             className="h-2 rounded-full animate-pulse"
                             style={{

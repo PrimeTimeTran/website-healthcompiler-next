@@ -79,7 +79,7 @@ export function HealthBenefitsLayers() {
                     onMouseLeave={() => setActiveLayer(null)}
                   >
                     <div
-                      className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${layer.color} ${
+                      className={`absolute inset-0 rounded-2xl bg-linear-to-r ${layer.color} ${
                         isActive ? 'opacity-100' : 'opacity-60'
                       } transition-opacity`}
                     />

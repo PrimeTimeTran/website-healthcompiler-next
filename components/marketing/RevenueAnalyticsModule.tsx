@@ -61,7 +61,7 @@ const RevenueAnalyticsModule = () => {
                 key={index}
                 className="flex items-start gap-3 p-4 rounded-xl bg-muted/30 border border-border/50"
               >
-                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   <TrendingUp className="w-4 h-4 text-primary" />
                 </div>
                 <span className="text-foreground">{insight}</span>
@@ -118,7 +118,7 @@ const RevenueAnalyticsModule = () => {
                     }}
                   >
                     <div
-                      className="h-8 bg-gradient-to-r from-primary/80 to-primary/40 rounded flex items-center px-3"
+                      className="h-8 bg-linear-to-r from-primary/80 to-primary/40 rounded flex items-center px-3"
                       style={{ width: step.width }}
                     >
                       <span className="text-xs text-white font-medium truncate">{step.label}</span>

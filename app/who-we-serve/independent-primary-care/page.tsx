@@ -78,7 +78,7 @@ const LowerCostSection = () => {
           <div className="space-y-4">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{benefit}</p>
               </div>
             ))}
@@ -107,7 +107,7 @@ const EarlierVisibilitySection = () => {
           <div className="space-y-4">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{benefit}</p>
               </div>
             ))}
@@ -136,7 +136,7 @@ const LessDisruptionSection = () => {
           <div className="space-y-4 mb-8">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{benefit}</p>
               </div>
             ))}
@@ -168,7 +168,7 @@ const CollaborationSection = () => {
           <div className="space-y-4">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{benefit}</p>
               </div>
             ))}
@@ -197,7 +197,7 @@ const EHRCompatibilitySection = () => {
           <div className="space-y-4">
             {points.map((point, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{point}</p>
               </div>
             ))}
@@ -340,7 +340,7 @@ const SolutionSection = () => {
                 className="group p-8 rounded-2xl border border-border/50 bg-white hover:shadow-xl hover:border-primary/20 transition-all duration-300"
               >
                 <div className="flex items-start gap-5">
-                  <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
                   <div>
@@ -555,7 +555,7 @@ const OutcomesSection = () => {
                 key={idx}
                 className="flex items-center gap-3 p-4 rounded-xl bg-white border border-border/50 hover:shadow-lg hover:border-primary/20 transition-all"
               >
-                <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0">
+                <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0">
                   <Icon className="w-5 h-5 text-primary" />
                 </div>
                 <p className="text-sm font-medium text-foreground">{outcome.text}</p>

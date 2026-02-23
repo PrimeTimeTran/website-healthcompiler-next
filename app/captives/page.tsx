@@ -276,7 +276,7 @@ const Captives = () => {
               <div className="space-y-4">
                 {reportTypes.map((report, index) => (
                   <div key={index} className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                       <FileCheck className="w-4 h-4 text-primary" />
                     </div>
                     <span className="text-foreground">{report}</span>

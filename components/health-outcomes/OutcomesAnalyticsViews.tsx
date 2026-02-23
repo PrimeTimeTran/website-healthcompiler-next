@@ -131,7 +131,7 @@ export function OutcomesAnalyticsViews() {
           <ul className="space-y-3">
             {viewItems.map((item, idx) => (
               <li key={idx} className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-muted flex items-center justify-center shrink-0">
                   <item.icon className="w-4 h-4 text-primary" />
                 </div>
                 <span className="text-sm text-muted-foreground">{item.text}</span>

@@ -481,7 +481,7 @@ const Apex = () => {
                 {apexData.hero.h1}
               </h1>
               <div
-                className="mt-12 w-24 h-1 bg-gradient-to-r from-apex-accent to-apex-accent-warm rounded-full animate-fade-in"
+                className="mt-12 w-24 h-1 bg-linear-to-r from-apex-accent to-apex-accent-warm rounded-full animate-fade-in"
                 style={{ animationDelay: '300ms' }}
               />
             </div>

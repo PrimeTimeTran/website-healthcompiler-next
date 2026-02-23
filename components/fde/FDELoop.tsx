@@ -173,7 +173,7 @@ export const FDELoop = () => {
                   onClick={() => setActiveStep(index)}
                 >
                   <div
-                    className={`flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
+                    className={`shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-all duration-300 ${
                       activeStep === index
                         ? 'bg-accent text-white'
                         : 'bg-muted text-muted-foreground'

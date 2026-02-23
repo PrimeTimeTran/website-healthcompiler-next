@@ -29,10 +29,10 @@ const PediatricsViz = () => {
   }, [])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* Central Patient Hub */}
       <div className="relative">
-        <div className="absolute inset-0 -m-8 rounded-full bg-gradient-to-r from-cyan-400/20 to-violet-400/20 blur-3xl animate-pulse" />
+        <div className="absolute inset-0 -m-8 rounded-full bg-linear-to-r from-cyan-400/20 to-violet-400/20 blur-3xl animate-pulse" />
 
         <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[180px]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-cyan-50 to-violet-50" />

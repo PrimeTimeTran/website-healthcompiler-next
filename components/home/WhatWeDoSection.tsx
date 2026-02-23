@@ -157,7 +157,7 @@ export const WhatWeDoSection = () => {
                 {activeIndex === index && !isPaused && (
                   <span className="absolute inset-0 rounded-full overflow-hidden">
                     <span
-                      className="absolute bottom-0 left-0 h-0.5 bg-foreground/30 animate-[progress_4s_linear]"
+                      className="absolute bottom-0 left-0 h-0.5 bg-foreground/30 animate-progress"
                       style={{ width: '100%' }}
                     />
                   </span>
@@ -175,7 +175,7 @@ export const WhatWeDoSection = () => {
           </div>
 
           {/* Right - Floating Pills Container */}
-          <div className="relative h-[400px] lg:h-[500px] rounded-3xl overflow-hidden bg-linear-to-br from-secondary via-secondary/80 to-primary/20 order-3">
+          <div className="relative h-100 lg:h-125 rounded-3xl overflow-hidden bg-linear-to-br from-secondary via-secondary/80 to-primary/20 order-3">
             <CapabilityVisual active={active} activeIndex={activeIndex} />
           </div>
         </div>
@@ -234,7 +234,7 @@ const CapabilityVisual = ({
         key={activeIndex}
         className="absolute top-1/2 left-[30%] lg:left-[35%] -translate-x-1/2 -translate-y-1/2 animate-fade-in"
       >
-        <div className="bg-white rounded-2xl p-4 lg:p-5 shadow-xl min-w-[160px] lg:min-w-[180px]">
+        <div className="bg-white rounded-2xl p-4 lg:p-5 shadow-xl min-w-40 lg:min-w-45">
           <div className="text-xs font-semibold text-accent uppercase tracking-wide mb-2 lg:mb-3">
             Processing...
           </div>

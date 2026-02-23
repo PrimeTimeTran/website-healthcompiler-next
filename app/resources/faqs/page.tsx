@@ -187,7 +187,7 @@ const FAQs = () => {
                   >
                     <AccordionTrigger className="text-left text-base md:text-lg font-medium text-foreground hover:text-primary hover:no-underline px-6 py-5">
                       <span className="flex items-start gap-3">
-                        <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <HelpCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                         {faq.question}
                       </span>
                     </AccordionTrigger>

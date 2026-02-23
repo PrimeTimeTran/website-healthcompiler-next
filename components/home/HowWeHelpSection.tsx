@@ -40,7 +40,7 @@ export const HowWeHelpSection = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {benefits.map((benefit) => (
                 <div key={benefit.title} className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-card rounded-lg flex items-center justify-center flex-shrink-0 shadow-soft">
+                  <div className="w-10 h-10 bg-card rounded-lg flex items-center justify-center shrink-0 shadow-soft">
                     <benefit.icon className="w-5 h-5 text-accent" />
                   </div>
                   <div>

@@ -225,7 +225,7 @@ const SelfFundedHealthPlansGuide = () => {
                 key={index}
                 className="flex items-center gap-3 p-4 bg-card rounded-lg shadow-soft card-hover"
               >
-                <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary flex-shrink-0">
+                <span className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary shrink-0">
                   {index + 1}
                 </span>
                 <span className="text-foreground font-medium">{topic}</span>
@@ -297,7 +297,7 @@ const SelfFundedHealthPlansGuide = () => {
             {tpaResponsibilities.map((item, index) => (
               <div key={index} className="bg-card rounded-lg p-5 shadow-soft card-hover">
                 <div className="flex items-start gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <div>
                     <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
                     <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -415,7 +415,7 @@ const SelfFundedHealthPlansGuide = () => {
             {implementationSteps.map((step, index) => (
               <div key={index} className="bg-card rounded-xl p-6 shadow-card">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
                     <span className="text-primary-foreground font-bold">{step.step}</span>
                   </div>
                   <div>
@@ -451,7 +451,7 @@ const SelfFundedHealthPlansGuide = () => {
                     className="bg-card rounded-lg p-5 shadow-soft border-l-4 border-green-500"
                   >
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-green-600 shrink-0 mt-0.5" />
                       <div>
                         <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
                         <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -476,7 +476,7 @@ const SelfFundedHealthPlansGuide = () => {
                     className="bg-card rounded-lg p-5 shadow-soft border-l-4 border-destructive"
                   >
                     <div className="flex items-start gap-3">
-                      <XCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-0.5" />
+                      <XCircle className="h-5 w-5 text-destructive shrink-0 mt-0.5" />
                       <div>
                         <h4 className="font-bold text-foreground mb-1">{item.title}</h4>
                         <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -534,7 +534,7 @@ const SelfFundedHealthPlansGuide = () => {
                 key={index}
                 className="flex items-start gap-3 p-4 bg-card rounded-lg shadow-soft"
               >
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-muted-foreground">{practice}</p>
               </div>
             ))}

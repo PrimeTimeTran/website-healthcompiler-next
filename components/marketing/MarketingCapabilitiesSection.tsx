@@ -65,7 +65,7 @@ const MarketingCapabilitiesSection = () => {
                 <ul className="space-y-2 mb-4">
                   {cap.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <ArrowRight className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                       <span>{feature}</span>
                     </li>
                   ))}

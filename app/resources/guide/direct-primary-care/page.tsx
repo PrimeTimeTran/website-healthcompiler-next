@@ -143,7 +143,7 @@ const DirectPrimaryCareGuide = () => {
                 key={index}
                 className="flex items-start gap-3 p-4 rounded-lg bg-card shadow-soft card-hover"
               >
-                <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-muted-foreground">{point}</p>
               </div>
             ))}
@@ -157,7 +157,7 @@ const DirectPrimaryCareGuide = () => {
             <div className="space-y-3">
               {considerations.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <span className="h-2 w-2 rounded-full bg-accent mt-2 flex-shrink-0" />
+                  <span className="h-2 w-2 rounded-full bg-accent mt-2 shrink-0" />
                   <p className="text-muted-foreground">{item}</p>
                 </div>
               ))}
@@ -334,7 +334,7 @@ const DirectPrimaryCareGuide = () => {
             ].map((benefit, index) => (
               <div key={index} className="bg-card rounded-xl p-6 shadow-card">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
                     <CheckCircle className="h-5 w-5 text-primary" />
                   </div>
                   <div>
@@ -368,7 +368,7 @@ const DirectPrimaryCareGuide = () => {
             ].map((item, index) => (
               <div key={index} className="bg-card rounded-xl p-6 border border-destructive/20">
                 <div className="flex items-start gap-4">
-                  <AlertCircle className="h-5 w-5 text-destructive flex-shrink-0 mt-1" />
+                  <AlertCircle className="h-5 w-5 text-destructive shrink-0 mt-1" />
                   <div>
                     <h4 className="font-bold text-foreground mb-2">{item.title}</h4>
                     <p className="text-muted-foreground text-sm">{item.description}</p>
@@ -493,7 +493,7 @@ const DirectPrimaryCareGuide = () => {
             ))}
           </div>
 
-          <div className="bg-gradient-to-r from-primary/5 to-accent/5 rounded-xl p-6 md:p-8 border border-border">
+          <div className="bg-linear-to-r from-primary/5 to-accent/5 rounded-xl p-6 md:p-8 border border-border">
             <p className="text-muted-foreground mb-4">
               However, since DPC arrangements are commonly paired with high-deductible health plans,
               they may not be suitable for everyone. DPC may not be ideal for individuals requiring
@@ -565,7 +565,7 @@ const DirectPrimaryCareGuide = () => {
                   'Do not accept insurance or participate in government programs; rely solely on patient fees.',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary flex-shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center text-sm font-medium text-primary shrink-0">
                       {index + 1}
                     </span>
                     {item}
@@ -584,7 +584,7 @@ const DirectPrimaryCareGuide = () => {
                   'Typically serve higher-income populations.',
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3 text-muted-foreground">
-                    <span className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-sm font-medium text-accent flex-shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center text-sm font-medium text-accent shrink-0">
                       {index + 1}
                     </span>
                     {item}

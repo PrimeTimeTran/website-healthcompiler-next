@@ -69,7 +69,7 @@ export function HumanCapitalTriangle() {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* 3D Triangle Visualization */}
-          <div className="relative h-[400px] md:h-[500px]">
+          <div className="relative h-100 md:h-[500px]">
             {/* SVG Triangle Framework */}
             <svg viewBox="0 0 400 400" className="w-full h-full">
               {/* Gradient definitions */}

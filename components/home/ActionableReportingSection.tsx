@@ -13,7 +13,7 @@ export const ActionableReportingSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Visual (Report cards) */}
-          <div className="relative h-[400px] lg:h-[500px] order-2 lg:order-1">
+          <div className="relative h-100 lg:h-[500px] order-2 lg:order-1">
             {/* Main report card */}
             <div className="absolute inset-4 bg-card rounded-2xl shadow-elevated border border-border p-6">
               {/* Header */}

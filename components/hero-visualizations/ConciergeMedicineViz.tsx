@@ -19,10 +19,10 @@ const ConciergeMedicineViz = () => {
   }, [])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* VIP Center Hub */}
       <div className="relative">
-        <div className="absolute inset-0 -m-6 rounded-full bg-gradient-to-r from-violet-500/15 to-amber-500/15 blur-2xl animate-pulse" />
+        <div className="absolute inset-0 -m-6 rounded-full bg-linear-to-r from-violet-500/15 to-amber-500/15 blur-2xl animate-pulse" />
 
         <div className="relative bg-white rounded-2xl border border-violet-500/20 shadow-2xl p-6 w-[180px]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-violet-500/5 to-amber-500/5" />

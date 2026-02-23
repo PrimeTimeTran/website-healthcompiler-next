@@ -53,7 +53,7 @@ const AICallTriaging = () => {
             <div className="space-y-4 mb-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{benefit}</p>
                 </div>
               ))}

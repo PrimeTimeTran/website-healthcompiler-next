@@ -51,7 +51,7 @@ const AIReceptionistFlow = () => {
   }, [])
 
   return (
-    <div className="relative w-full h-[400px] flex items-center justify-center">
+    <div className="relative w-full h-100 flex items-center justify-center">
       <svg viewBox="0 0 500 350" className="w-full h-full max-w-lg">
         <defs>
           <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -255,8 +255,8 @@ const AIReceptionist = () => {
               Never Miss Another Call
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              AI Receptionist handles incoming communications so your team can focus on care. Here's
-              what becomes easier:
+              AI Receptionist handles incoming communications so your team can focus on care.
+              Here&apos;s what becomes easier:
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {receptionistBenefits.map((benefit, index) => (
@@ -264,7 +264,7 @@ const AIReceptionist = () => {
                   key={index}
                   className="flex items-start gap-4 p-6 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center shrink-0">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
                   <p className="text-foreground font-medium pt-2">{benefit.text}</p>
@@ -350,19 +350,19 @@ const AIReceptionist = () => {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Shield className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">HIPAA-compliant architecture</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <Bell className="h-5 w-5 text-primary flex-shrink-0" />
+                  <Bell className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">Appointment reminders and confirmations</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <UserPlus className="h-5 w-5 text-primary flex-shrink-0" />
+                  <UserPlus className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">New patient intake support</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <HelpCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <HelpCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">FAQ handling and general inquiries</span>
                 </div>
               </div>

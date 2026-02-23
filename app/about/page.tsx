@@ -130,8 +130,8 @@ const About = () => {
             </div>
             <div className="relative order-first lg:order-last">
               {/* Visual abstraction of building/infrastructure */}
-              <div className="aspect-square bg-muted/30 rounded-[2rem] border border-border p-8 flex items-center justify-center relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5" />
+              <div className="aspect-square bg-muted/30 rounded-4xl border border-border p-8 flex items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-linear-to-br from-primary/5 via-transparent to-accent/5" />
                 <div className="grid grid-cols-2 gap-4 w-full max-w-sm relative z-10">
                   <div className="bg-card p-6 rounded-2xl shadow-lg border border-border/50 flex flex-col items-center text-center animate-fade-in-up [animation-delay:0ms]">
                     <Target className="w-8 h-8 text-primary mb-3" />
@@ -174,7 +174,7 @@ const About = () => {
                 key={leader.name}
                 className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 group border border-border/50"
               >
-                <div className="aspect-[4/5] bg-muted relative overflow-hidden">
+                <div className="aspect-4/5 bg-muted relative overflow-hidden">
                   <Image
                     src={leader.photo}
                     alt={leader.name}
@@ -249,9 +249,9 @@ const About = () => {
               </h2>
               <div className="relative pl-5 border-l-4 border-primary/30">
                 <blockquote className="text-base md:text-lg text-muted-foreground italic leading-relaxed">
-                  "Before Health Compiler, compiling these metrics was a manual and time-consuming
+                  Before Health Compiler, compiling these metrics was a manual and time-consuming
                   process. Now, everything is captured automatically, and employers can access a
-                  dashboard with these metrics anytime."
+                  dashboard with these metrics anytime.
                 </blockquote>
                 <div className="mt-5">
                   <p className="font-display font-semibold text-foreground">Dr. Ken Rictor</p>
@@ -316,7 +316,7 @@ const About = () => {
               reporting
             </p>
             <p className="text-muted-foreground mb-8">
-              Ready to enhance your practice's efficiency and growth? Connect with us today.
+              Ready to enhance your practice&apos;s efficiency and growth? Connect with us today.
             </p>
             <Button variant="primary" size="lg" asChild>
               <Link href="/contact" className="gap-2">

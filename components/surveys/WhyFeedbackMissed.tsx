@@ -64,7 +64,7 @@ export function WhyFeedbackMissed() {
                   onMouseLeave={() => setActiveChallenge(null)}
                 >
                   <div
-                    className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${challenge.color} ${
+                    className={`absolute inset-0 rounded-2xl bg-linear-to-r ${challenge.color} ${
                       isActive ? 'opacity-100' : 'opacity-60'
                     } transition-opacity`}
                   />

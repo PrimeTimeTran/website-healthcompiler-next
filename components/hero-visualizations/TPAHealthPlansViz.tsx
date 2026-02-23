@@ -21,10 +21,10 @@ const TPAHealthPlansViz = () => {
   }, [])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* Central Dashboard */}
       <div className="relative">
-        <div className="absolute inset-0 -m-6 rounded-2xl bg-gradient-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse" />
+        <div className="absolute inset-0 -m-6 rounded-2xl bg-linear-to-r from-primary/15 to-accent/15 blur-2xl animate-pulse" />
 
         <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]">
           <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5" />

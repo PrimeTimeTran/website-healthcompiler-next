@@ -60,7 +60,7 @@ export function OutcomesMeasureCards() {
               {card.items.map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-muted-foreground">
                   <span
-                    className={`mt-2 w-1.5 h-1.5 rounded-full ${card.color.replace('text-', 'bg-')} flex-shrink-0`}
+                    className={`mt-2 w-1.5 h-1.5 rounded-full ${card.color.replace('text-', 'bg-')} shrink-0`}
                   />
                   <span className="text-sm">{item}</span>
                 </li>

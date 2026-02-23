@@ -47,9 +47,9 @@ export function DataFoundationPipeline() {
 
             {/* Pipeline flow */}
             <div className="hidden lg:flex items-center justify-center gap-2 mb-12">
-              <div className="flex-1 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-primary/50" />
+              <div className="flex-1 h-0.5 bg-linear-to-r from-transparent via-primary/30 to-primary/50" />
               <div className="w-4 h-4 rounded-full bg-primary/30 animate-pulse" />
-              <div className="flex-1 h-0.5 bg-gradient-to-r from-primary/50 via-primary/30 to-transparent" />
+              <div className="flex-1 h-0.5 bg-linear-to-r from-primary/50 via-primary/30 to-transparent" />
             </div>
 
             {/* Central processor */}

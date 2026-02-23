@@ -143,7 +143,7 @@ export function WorkforceHealthSphere() {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="h-[400px] md:h-[500px] relative">
+          <div className="h-100 md:h-125 relative">
             <Canvas camera={{ position: [0, 0, 6], fov: 50 }}>
               <Scene />
             </Canvas>

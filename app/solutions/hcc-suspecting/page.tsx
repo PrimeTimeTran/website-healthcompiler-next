@@ -1,9 +1,6 @@
 'use client'
 
-import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-
-import { Button } from '@/components/ui/button'
 
 import CTAButton from '@/components/ui/CTAButton'
 import {
@@ -79,7 +76,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right - Animation #1: Data flow to suspecting engine */}
-          <div className="relative h-[450px] flex items-center justify-center">
+          <div className="relative h-112.5 flex items-center justify-center">
             {/* Data sources flowing in */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 space-y-6">
               {dataSources.map((source, idx) => {
@@ -155,10 +152,10 @@ const HeroSection = () => {
             <div className="absolute right-0 top-1/2 -translate-y-1/2">
               <div className="relative">
                 {/* Glow effect */}
-                <div className="absolute inset-0 -m-4 rounded-3xl bg-gradient-to-r from-primary/20 to-accent/20 blur-2xl animate-pulse" />
+                <div className="absolute inset-0 -m-4 rounded-3xl bg-linear-to-r from-primary/20 to-accent/20 blur-2xl animate-pulse" />
 
                 {/* Engine card */}
-                <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]">
+                <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-50">
                   <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5" />
                   <div className="relative space-y-4">
                     <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center">
@@ -301,7 +298,7 @@ const HowItWorksSection = () => {
           {/* Connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
+              className="h-full bg-linear-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
@@ -457,7 +454,7 @@ const BuiltForHealthcareSection = () => {
                   key={idx}
                   className="flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <p className="text-foreground leading-relaxed">{feature.text}</p>

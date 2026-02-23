@@ -1,8 +1,5 @@
 'use client'
-
-import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-import { Button } from '@/components/ui/button'
 import {
   Zap,
   Code,
@@ -94,7 +91,7 @@ const HeroSection = () => {
               </span>
             </p>
           </div>
-          <div className="relative h-[450px] flex items-center justify-center">
+          <div className="relative h-112.5 flex items-center justify-center">
             <div className="relative w-full max-w-md">
               {/* Timeline track */}
               <div className="absolute left-6 top-0 bottom-0 w-1 bg-border/30">
@@ -283,7 +280,7 @@ const HowItWorksSection = () => {
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
+              className="h-full bg-linear-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
@@ -400,7 +397,7 @@ const WhatGetsDeployedSection = () => {
                 onMouseLeave={() => setHoveredTile(null)}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -487,7 +484,7 @@ const BuiltForSection = () => {
   const points = [
     'Supports ACOs, health systems, and value-based organizations',
     'Integrates with any EHR, claims system, or operational tool',
-    'Scales from pilot projects to enterprise rollouts',
+    'Scales from pilot projects to enterprise roll-outs',
   ]
 
   return (
@@ -503,7 +500,7 @@ const BuiltForSection = () => {
                 key={idx}
                 className="flex items-center gap-3 justify-center text-muted-foreground"
               >
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                 <span>{point}</span>
               </div>
             ))}

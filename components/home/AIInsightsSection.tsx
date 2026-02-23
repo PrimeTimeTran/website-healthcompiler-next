@@ -27,7 +27,7 @@ export const AIInsightsSection = () => {
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left - Visual (Dashboard with annotations) */}
-          <div className="relative h-[400px] lg:h-[500px] order-2 lg:order-1">
+          <div className="relative h-100 lg:h-[500px] order-2 lg:order-1">
             {/* Main dashboard card */}
             <div className="absolute inset-8 bg-card rounded-2xl shadow-elevated border border-border p-6">
               {/* Header */}

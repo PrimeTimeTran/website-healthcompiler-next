@@ -187,7 +187,7 @@ export const Header = () => {
         <nav className="flex items-center justify-between">
           <Link
             href="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity flex-shrink-0"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity shrink-0"
           >
             <Image src={logo} alt="HealthCompiler" className="h-8 md:h-10 w-auto" priority />
           </Link>
@@ -214,7 +214,7 @@ export const Header = () => {
 
               {openDropdown === 'Platform' && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
-                  <div className="bg-background border border-border rounded-xl shadow-2xl animate-fade-in p-6 w-[800px]">
+                  <div className="bg-background border border-border rounded-xl shadow-2xl animate-fade-in p-6 w-200">
                     <p className="text-xs font-medium text-muted-foreground uppercase tracking-wider mb-4">
                       Explore Platform
                     </p>
@@ -272,7 +272,7 @@ export const Header = () => {
 
               {openDropdown === 'Solutions' && (
                 <div className="absolute top-full left-0 pt-2 z-50">
-                  <div className="bg-background border border-border rounded-lg shadow-xl animate-fade-in w-[600px] p-6">
+                  <div className="bg-background border border-border rounded-lg shadow-xl animate-fade-in w-150 p-6">
                     <div className="grid grid-cols-3 gap-6">
                       {solutionsCategories.map((category) => (
                         <div key={category.category}>
@@ -323,7 +323,7 @@ export const Header = () => {
 
               {openDropdown === 'Who We Serve' && (
                 <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                  <div className="bg-background border border-border rounded-lg shadow-xl animate-fade-in w-[900px] p-6">
+                  <div className="bg-background border border-border rounded-lg shadow-xl animate-fade-in w-225 p-6">
                     <div className="grid grid-cols-4 gap-6">
                       {whoWeServeCategories.map((category) => (
                         <div key={category.category}>
@@ -380,7 +380,7 @@ export const Header = () => {
                   <div className="bg-background border border-border rounded-lg shadow-xl animate-fade-in p-5">
                     <div className="flex gap-10">
                       {resourcesCategories.map((category) => (
-                        <div key={category.category} className="min-w-[140px]">
+                        <div key={category.category} className="min-w-35">
                           <h4 className="font-semibold text-foreground mb-3 text-sm">
                             {category.category}
                           </h4>
@@ -407,11 +407,11 @@ export const Header = () => {
                                     </span>
                                     {guideNestedOpen && (
                                       <div
-                                        className="guide-nested-dropdown absolute left-full top-[-8px] ml-0 z-50"
+                                        className="guide-nested-dropdown absolute left-full -top-2 ml-0 z-50"
                                         onMouseEnter={() => setGuideNestedOpen(true)}
                                         onMouseLeave={() => setGuideNestedOpen(false)}
                                       >
-                                        <div className="bg-background border border-border rounded-lg shadow-xl p-3 min-w-[200px]">
+                                        <div className="bg-background border border-border rounded-lg shadow-xl p-3 min-w-50">
                                           <ul className="space-y-2">
                                             {guideSubItems.map((subItem) => (
                                               <li key={subItem.href}>

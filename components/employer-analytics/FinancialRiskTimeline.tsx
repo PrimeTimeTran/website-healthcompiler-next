@@ -47,7 +47,7 @@ export function FinancialRiskTimeline() {
           {/* 3D Timeline Visualization */}
           <div className="relative mb-16">
             {/* Timeline track */}
-            <div className="absolute top-1/2 left-0 right-0 h-1 bg-gradient-to-r from-red-500/50 via-yellow-500/50 to-green-500/50 rounded-full transform -translate-y-1/2" />
+            <div className="absolute top-1/2 left-0 right-0 h-1 bg-linear-to-r from-red-500/50 via-yellow-500/50 to-green-500/50 rounded-full transform -translate-y-1/2" />
 
             {/* AI prediction line */}
             <svg

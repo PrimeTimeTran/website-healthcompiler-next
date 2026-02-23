@@ -112,7 +112,7 @@ const BrokersAndAdvisors = () => {
                   key={index}
                   className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl border border-border/50"
                 >
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{benefit}</p>
                 </div>
               ))}
@@ -177,7 +177,7 @@ const BrokersAndAdvisors = () => {
             <div className="space-y-4 max-w-lg mx-auto mb-12">
               {integrationBenefits.map((benefit, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground text-left">{benefit}</p>
                 </div>
               ))}
@@ -207,15 +207,15 @@ const BrokersAndAdvisors = () => {
               </p>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">Client-ready reporting and dashboards</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">ROI tracking and benchmarking</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                  <CheckCircle className="h-5 w-5 text-primary shrink-0" />
                   <span className="text-foreground">Data-backed plan recommendations</span>
                 </div>
               </div>

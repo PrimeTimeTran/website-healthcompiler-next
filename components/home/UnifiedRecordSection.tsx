@@ -45,7 +45,7 @@ export const UnifiedRecordSection = () => {
           </div>
 
           {/* Right - Visual */}
-          <div className="relative h-[400px] lg:h-[500px]">
+          <div className="relative h-100 lg:h-125">
             {/* Stacked cards on left */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 space-y-3">
               {dataSourceCards.map((card, index) => {
@@ -104,7 +104,7 @@ export const UnifiedRecordSection = () => {
             </svg>
 
             {/* Central unified record card */}
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[200px] lg:w-[240px]">
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-50 lg:w-60">
               <div className="bg-card rounded-2xl p-6 shadow-elevated border border-border">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center">

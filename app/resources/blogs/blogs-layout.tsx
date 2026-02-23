@@ -56,7 +56,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
     <>
       <section className="relative py-20 md:py-28 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-b from-secondary/50 via-background to-background" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] rounded-full bg-primary/10 blur-3xl opacity-60" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 rounded-full bg-primary/10 blur-3xl opacity-60" />
 
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
@@ -73,7 +73,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
           </p>
 
           <div className="max-w-xl mx-auto relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+            <div className="absolute -inset-1 bg-linear-to-r from-primary/20 to-accent/20 rounded-2xl blur-lg opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
             <div className="relative">
               <Input
                 type="text"
@@ -118,7 +118,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
                 className="group block"
               >
                 <div className="relative overflow-hidden rounded-2xl mb-5 bg-muted">
-                  <div className="aspect-[16/10]">
+                  <div className="aspect-16/10">
                     <Image
                       fill
                       unoptimized
@@ -127,7 +127,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
                       className="object-cover transition-all duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-linear-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                     <span className="text-white text-sm font-medium">Read Article</span>
@@ -169,7 +169,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
                 No results found
               </h3>
               <p className="text-muted-foreground">
-                Try adjusting your search to find what you're looking for.
+                Try adjusting your search to find what you&apos;re looking for.
               </p>
             </div>
           )}
@@ -180,7 +180,7 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
                 onClick={handleLoadMore}
                 disabled={isLoading}
                 size="lg"
-                className="group px-10 py-6 bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
+                className="group px-10 py-6 bg-linear-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground font-semibold rounded-xl shadow-lg shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
               >
                 {isLoading ? (
                   <>

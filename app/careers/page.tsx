@@ -84,7 +84,7 @@ export default function Careers() {
                   <h3 className="font-bold text-xl">Integrity over shortcuts.</h3>
                 </div>
                 <p className="text-muted-foreground">
-                  We do the right thing, even when it's harder or takes longer.
+                  We do the right thing, even when it&apos;s harder or takes longer.
                 </p>
               </div>
             </div>
@@ -144,7 +144,7 @@ export default function Careers() {
               Join the Team
             </h2>
 
-            <div className="bg-muted/20 rounded-3xl p-12 border border-border dashed border-2">
+            <div className="bg-muted/20 rounded-3xl p-12 border border-border dashed">
               <p className="text-xl text-muted-foreground mb-2">
                 We don’t have any open roles right now.
               </p>

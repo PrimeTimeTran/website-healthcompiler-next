@@ -1,6 +1,6 @@
+import './globals.css'
 import { ReactNode } from 'react'
 import Script from 'next/script'
-import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 
 import { Header } from '../components/layout/Header'

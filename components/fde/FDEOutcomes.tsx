@@ -29,7 +29,7 @@ export const FDEOutcomes = () => {
               className="group flex items-center gap-5 p-6 bg-card/60 backdrop-blur-sm rounded-2xl border border-border/50 hover:border-accent/30 hover:shadow-lg transition-all duration-300 scroll-reveal"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
+              <div className="shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 group-hover:scale-110 transition-all duration-300">
                 <outcome.icon className="w-5 h-5 text-accent" />
               </div>
               <div>

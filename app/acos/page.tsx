@@ -77,7 +77,7 @@ const ACOAnalyticsSection = () => {
           <div className="space-y-4 mb-8">
             {features.map((feature, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{feature}</p>
               </div>
             ))}
@@ -118,7 +118,7 @@ const CareCoordinationSection = () => {
           <div className="space-y-4 mb-8">
             {benefits.map((benefit, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{benefit}</p>
               </div>
             ))}
@@ -154,7 +154,7 @@ const ACOComplexitySection = () => {
           <div className="space-y-4 mb-8">
             {features.map((feature, idx) => (
               <div key={idx} className="flex items-start gap-3">
-                <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                 <p className="text-foreground">{feature}</p>
               </div>
             ))}
@@ -323,7 +323,7 @@ const SharedPlatformSection = () => {
                     <span className="text-sm font-bold text-foreground">94%</span>
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
-                    <div className="h-full w-[94%] bg-gradient-to-r from-primary to-accent rounded-full" />
+                    <div className="h-full w-[94%] bg-linear-to-r from-primary to-accent rounded-full" />
                   </div>
                 </div>
                 <div className="bg-white rounded-xl p-4 border border-border/50">

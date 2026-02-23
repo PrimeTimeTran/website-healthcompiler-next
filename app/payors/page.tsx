@@ -147,7 +147,7 @@ const Payors = () => {
                 'Reduce reliance on broad, retrospective chart reviews',
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{item}</p>
                 </div>
               ))}
@@ -175,7 +175,7 @@ const Payors = () => {
                 'Focus outreach and review where it matters most',
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{item}</p>
                 </div>
               ))}
@@ -202,7 +202,7 @@ const Payors = () => {
                 'Stronger oversight of value-based arrangements',
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{item}</p>
                 </div>
               ))}
@@ -225,7 +225,7 @@ const Payors = () => {
                 'No workflow disruption',
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start gap-3">
-                  <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                  <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                   <p className="text-foreground">{item}</p>
                 </div>
               ))}
@@ -431,7 +431,7 @@ const Payors = () => {
               <div className="space-y-4">
                 {useCases.map((useCase, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="h-6 w-6 text-primary shrink-0 mt-0.5" />
                     <p className="text-foreground">{useCase}</p>
                   </div>
                 ))}

@@ -274,7 +274,7 @@ export const DAPFlowSection = ({
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${flowPhase === 'source' ? 'scale-125' : 'scale-100'}`}
                 >
                   <div
-                    className={`w-3 h-3 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] ${flowPhase === 'source' ? 'animate-pulse' : ''}`}
+                    className={`w-3 h-3 rounded-full bg-linear-to-r from-[#E94E87] to-[#F97316] ${flowPhase === 'source' ? 'animate-pulse' : ''}`}
                   />
                 </div>
                 {flowPhase === 'source' && (
@@ -301,7 +301,7 @@ export const DAPFlowSection = ({
               {[0, 1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className="absolute top-1/2 w-3 h-3 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] shadow-lg shadow-[#E94E87]/50"
+                  className="absolute top-1/2 w-3 h-3 rounded-full bg-linear-to-r from-[#E94E87] to-[#F97316] shadow-lg shadow-[#E94E87]/50"
                   style={{
                     animation: `particleStream 4s ease-in-out infinite`,
                     animationDelay: `${i * 0.8}s`,
@@ -379,7 +379,7 @@ export const DAPFlowSection = ({
                       <div
                         className={`w-3 h-1 rounded-full transition-all duration-300 ${
                           isProcessing || isPast
-                            ? 'bg-gradient-to-r from-[#E94E87] to-[#F97316]'
+                            ? 'bg-linear-to-r from-[#E94E87] to-[#F97316]'
                             : 'bg-border'
                         }`}
                       />
@@ -399,7 +399,7 @@ export const DAPFlowSection = ({
                   className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${flowPhase === 'outcome' ? 'scale-125' : 'scale-100'}`}
                 >
                   <div
-                    className={`w-3 h-3 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] ${flowPhase === 'outcome' ? 'animate-pulse' : ''}`}
+                    className={`w-3 h-3 rounded-full bg-linear-to-r from-[#E94E87] to-[#F97316] ${flowPhase === 'outcome' ? 'animate-pulse' : ''}`}
                   />
                 </div>
                 {flowPhase === 'outcome' && (
@@ -429,7 +429,7 @@ export const DAPFlowSection = ({
                     }`}
                   >
                     <span
-                      className={`w-7 h-7 rounded-full flex-shrink-0 flex items-center justify-center mt-0.5 transition-all duration-300 ${
+                      className={`w-7 h-7 rounded-full shrink-0 flex items-center justify-center mt-0.5 transition-all duration-300 ${
                         isActive
                           ? 'bg-linear-to-br from-[#E94E87] to-[#F97316] scale-110 shadow-lg shadow-[#E94E87]/30'
                           : isPast
@@ -456,7 +456,7 @@ export const DAPFlowSection = ({
 
             <Link
               href="/contact"
-              className="mt-4 flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-gradient-to-r from-[#E94E87] to-[#F97316] text-white hover:opacity-90 transition-opacity text-sm font-medium shadow-md hover:shadow-lg hover:shadow-[#E94E87]/30"
+              className="mt-4 flex items-center justify-center gap-2 py-3 px-4 rounded-full bg-linear-to-r from-[#E94E87] to-[#F97316] text-white hover:opacity-90 transition-opacity text-sm font-medium shadow-md hover:shadow-lg hover:shadow-[#E94E87]/30"
             >
               Request a Demo
               <ArrowRight className="w-4 h-4" />

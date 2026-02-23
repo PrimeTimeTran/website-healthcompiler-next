@@ -59,7 +59,7 @@ const IndependentPrimaryCareViz = () => {
   }, [metrics.length])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* Central Dashboard Card */}
       <div className="relative z-10 bg-white rounded-2xl border border-border shadow-xl p-6 w-72">
         <div className="flex items-center justify-between mb-4">

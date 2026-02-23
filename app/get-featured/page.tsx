@@ -180,7 +180,7 @@ const GetFeatured = () => {
                   'Connection with the APEX community',
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                    <CheckCircle className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                     <span className="text-muted-foreground">{item}</span>
                   </div>
                 ))}

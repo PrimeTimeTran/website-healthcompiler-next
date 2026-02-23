@@ -19,7 +19,7 @@ const ACOsViz = () => {
   }, [])
 
   return (
-    <div className="relative h-[450px] flex items-center justify-center">
+    <div className="relative h-112.5 flex items-center justify-center">
       {/* Left: Data Sources */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 space-y-4">
         {dataFlows.map((flow, idx) => {
@@ -88,7 +88,7 @@ const ACOsViz = () => {
       {/* Right: ACO Intelligence Hub */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2">
         <div className="relative">
-          <div className="absolute inset-0 -m-4 rounded-3xl bg-gradient-to-r from-primary/20 to-accent/20 blur-2xl animate-pulse" />
+          <div className="absolute inset-0 -m-4 rounded-3xl bg-linear-to-r from-primary/20 to-accent/20 blur-2xl animate-pulse" />
 
           <div className="relative bg-white rounded-2xl border border-primary/20 shadow-2xl p-6 w-[200px]">
             <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5" />

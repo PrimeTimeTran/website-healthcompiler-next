@@ -379,7 +379,7 @@ export function IntegrationHub() {
         <div className="overflow-x-auto pb-4 -mx-4 px-4">
           <div className="flex gap-3 min-w-max">
             {integrations.map((integration, idx) => (
-              <div key={integration.name} className="flex-shrink-0">
+              <div key={integration.name} className="shrink-0">
                 <IntegrationTile {...integration} index={idx} totalCount={integrations.length} />
               </div>
             ))}

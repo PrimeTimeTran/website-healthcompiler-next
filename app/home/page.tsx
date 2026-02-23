@@ -204,7 +204,7 @@ const Home = () => {
 
         {/* Section 2: Signals That Matter */}
         <section className="py-20 md:py-32 bg-background relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent pointer-events-none" />
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-linear-to-l from-primary/5 to-transparent pointer-events-none" />
           <div className="container mx-auto px-6 max-w-7xl relative">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
               <div>
@@ -238,11 +238,11 @@ const Home = () => {
               </div>
               <div className="relative">
                 {/* Abstract visual representation of signals */}
-                <div className="aspect-square md:aspect-video rounded-[2rem] bg-muted/30 border border-border p-8 flex items-center justify-center relative overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background opacity-50" />
+                <div className="aspect-square md:aspect-video rounded-4xl bg-muted/30 border border-border p-8 flex items-center justify-center relative overflow-hidden shadow-2xl">
+                  <div className="absolute inset-0 bg-linear-to-br from-background via-muted/20 to-background opacity-50" />
 
                   {/* Decorative Elements */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent animate-pulse-slow" />
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent animate-pulse-slow" />
 
                   <div className="grid grid-cols-2 gap-6 w-full max-w-md relative z-10">
                     <div className="bg-card p-6 rounded-2xl shadow-xl border border-border/50 animate-fade-in-up [animation-delay:0ms] hover:-translate-y-1 transition-transform duration-300">
@@ -305,7 +305,7 @@ const Home = () => {
           <div className="container mx-auto px-6 max-w-7xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               <div className="order-2 lg:order-1 relative flex justify-center lg:justify-end">
-                <div className="relative w-full max-w-[500px] aspect-square">
+                <div className="relative w-full max-w-125 aspect-square">
                   {/* Background Circles */}
                   <div className="absolute inset-0 rounded-full border border-primary/20 animate-[spin-slow_20s_linear_infinite]" />
                   <div className="absolute inset-[15%] rounded-full border border-accent/20 animate-[spin-reverse_15s_linear_infinite]" />
@@ -315,7 +315,7 @@ const Home = () => {
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-card/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-border/50 w-[320px] relative z-20">
                       <div className="flex items-center space-x-4 mb-8">
-                        <div className="h-14 w-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
+                        <div className="h-14 w-14 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
                           JD
                         </div>
                         <div>
@@ -450,8 +450,8 @@ const Home = () => {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-muted/50 to-background rounded-[2rem] p-10 md:p-14 max-w-5xl mx-auto border border-border/50 relative overflow-hidden">
-              <div className="absolute right-0 top-0 h-full w-1/3 bg-gradient-to-l from-primary/5 to-transparent" />
+            <div className="bg-linear-to-r from-muted/50 to-background rounded-4xl p-10 md:p-14 max-w-5xl mx-auto border border-border/50 relative overflow-hidden">
+              <div className="absolute right-0 top-0 h-full w-1/3 bg-linear-to-l from-primary/5 to-transparent" />
               <div className="flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
                 <div className="text-left max-w-xl">
                   <h3 className="text-2xl md:text-3xl font-bold mb-4">

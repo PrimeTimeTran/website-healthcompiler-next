@@ -1,6 +1,4 @@
 'use client'
-
-import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
 import {
   Zap,
@@ -20,7 +18,6 @@ import {
   ClipboardCheck,
 } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
 import CTAButton from '@/components/ui/CTAButton'
 
 const HeroSection = () => {
@@ -114,7 +111,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right - Animation #1: MIPS Score Dial */}
-          <div className="relative h-[450px] flex items-center justify-center">
+          <div className="relative h-112.5 flex items-center justify-center">
             {/* Main dial container */}
             <div className="relative w-80 h-80">
               {/* Outer ring progress */}
@@ -322,7 +319,7 @@ const HowItWorksSection = () => {
           {/* Connection line */}
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
+              className="h-full bg-linear-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
@@ -443,7 +440,7 @@ const WhatImprovesSection = () => {
                 onMouseLeave={() => setHoveredTile(null)}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -573,7 +570,7 @@ const BuiltForSection = () => {
                   key={idx}
                   className="flex items-start gap-4 p-6 rounded-xl bg-white border border-border/50 hover:border-primary/20 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-lg bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0">
                     <Icon className="w-5 h-5 text-primary" />
                   </div>
                   <p className="text-foreground leading-relaxed">{feature.text}</p>

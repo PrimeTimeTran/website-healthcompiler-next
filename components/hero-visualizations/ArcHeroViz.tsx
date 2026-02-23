@@ -40,7 +40,7 @@ const ArcHeroViz = ({
   }, [segments.length, cycleMs])
 
   return (
-    <div className="relative w-full h-[400px] flex items-center justify-center">
+    <div className="relative w-full h-100 flex items-center justify-center">
       <svg
         viewBox="0 0 400 400"
         className="w-full h-full max-w-md"

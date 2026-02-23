@@ -1,8 +1,6 @@
-import Link from 'next/link'
 import { useState, useEffect } from 'react'
 import { Star, Zap, Mail, Share2, ThumbsUp, Smartphone, MessageSquare } from 'lucide-react'
 
-import { Button } from '@/components/ui/button'
 import { CTAButton, GridSection } from '@/components/ui'
 const orbitData = [
   { label: 'NPS Surveys', icon: Star, color: '#f97316' },
@@ -57,14 +55,14 @@ export function SurveysHero() {
           </div>
 
           {/* Right - Orbiting Visualization */}
-          <div className="relative h-[450px] flex items-center justify-center">
+          <div className="relative h-112.5 flex items-center justify-center">
             {/* Central Core */}
             <div className="relative">
               {/* Glow effect */}
-              <div className="absolute inset-0 -m-8 rounded-full bg-gradient-to-r from-primary/20 to-accent/20 blur-3xl animate-pulse" />
+              <div className="absolute inset-0 -m-8 rounded-full bg-linear-to-r from-primary/20 to-accent/20 blur-3xl animate-pulse" />
 
               {/* Core card */}
-              <div className="relative bg-white rounded-2xl border-2 border-primary/20 shadow-2xl p-6 w-[180px] z-10">
+              <div className="relative bg-white rounded-2xl border-2 border-primary/20 shadow-2xl p-6 w-45 z-10">
                 <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-primary/5 to-accent/5" />
                 <div className="relative text-center space-y-3">
                   <div className="w-14 h-14 mx-auto rounded-xl bg-linear-to-br from-primary to-accent flex items-center justify-center">

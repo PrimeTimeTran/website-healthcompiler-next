@@ -1,9 +1,6 @@
 'use client'
 
-import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-
-import { Button } from '@/components/ui/button'
 import {
   Zap,
   Eye,
@@ -38,7 +35,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setMeasures((prev) =>
-        prev.map((measure, idx) => ({
+        prev.map((measure) => ({
           ...measure,
           status: Math.min(2, measure.status + (Math.random() > 0.6 ? 1 : 0)),
         }))
@@ -107,7 +104,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right - Animation #1: Quality Score Grid */}
-          <div className="relative h-[450px] flex items-center justify-center">
+          <div className="relative h-112.5 flex items-center justify-center">
             <div className="relative w-full max-w-sm">
               {/* Header */}
               <div className="bg-white rounded-t-2xl border border-b-0 border-border p-4">
@@ -164,7 +161,7 @@ const HeroSection = () => {
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <div
-                      className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700 rounded-full"
+                      className="h-full bg-linear-to-r from-primary to-accent transition-all duration-700 rounded-full"
                       style={{
                         width: `${
                           (measures.filter((m) => m.status === 2).length / measures.length) * 100
@@ -291,7 +288,7 @@ const HowItWorksSection = () => {
         <div className="relative max-w-4xl mx-auto">
           <div className="absolute top-1/2 left-0 right-0 h-1 bg-border/30 -translate-y-1/2 hidden md:block">
             <div
-              className="h-full bg-gradient-to-r from-primary to-accent transition-all duration-700"
+              className="h-full bg-linear-to-r from-primary to-accent transition-all duration-700"
               style={{ width: `${(activeStep + 1) * 25}%` }}
             />
           </div>
@@ -408,7 +405,7 @@ const MeasuresSection = () => {
                 onMouseLeave={() => setHoveredTile(null)}
               >
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-linear-to-br from-primary/10 to-accent/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -515,7 +512,7 @@ const BuiltForSection = () => {
                 key={idx}
                 className="flex items-center gap-3 justify-center text-muted-foreground"
               >
-                <CheckCircle className="w-5 h-5 text-primary flex-shrink-0" />
+                <CheckCircle className="w-5 h-5 text-primary shrink-0" />
                 <span>{point}</span>
               </div>
             ))}

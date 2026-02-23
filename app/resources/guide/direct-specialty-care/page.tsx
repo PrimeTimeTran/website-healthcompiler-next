@@ -128,7 +128,7 @@ const DirectSpecialtyCareGuide = () => {
                 key={index}
                 className="flex items-center gap-3 p-4 bg-card rounded-lg shadow-soft card-hover"
               >
-                <ArrowRight className="h-5 w-5 text-primary flex-shrink-0" />
+                <ArrowRight className="h-5 w-5 text-primary shrink-0" />
                 <span className="text-foreground font-medium">{item}</span>
               </div>
             ))}
@@ -313,7 +313,7 @@ const DirectSpecialtyCareGuide = () => {
                     },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-3">
-                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                       <p className="text-muted-foreground">
                         <strong className="text-foreground">{item.label}:</strong> {item.desc}
                       </p>
@@ -581,7 +581,7 @@ const DirectSpecialtyCareGuide = () => {
                             key={pidx}
                             className="flex items-start gap-2 text-muted-foreground text-sm"
                           >
-                            <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                            <span className="h-1.5 w-1.5 rounded-full bg-primary mt-2 shrink-0" />
                             {point}
                           </li>
                         ))}

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
-import { ArrowRight, Play } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 
@@ -60,7 +60,7 @@ const MiniChart = ({ data, color, type }: { data: number[]; color: string; type:
   if (type === 'bar') {
     const barWidth = (width - padding * 2) / data.length - 2
     return (
-      <svg width={width} height={height} className="transform perspective-[100px] rotateX-[10deg]">
+      <svg width={width} height={height} className="transform perspective-dramatic rotateX-[10deg]">
         <defs>
           <linearGradient id={`barGrad-${color}`} x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor={color} stopOpacity="1" />
@@ -118,7 +118,7 @@ const MiniChart = ({ data, color, type }: { data: number[]; color: string; type:
     },${height - padding}`
 
     return (
-      <svg width={width} height={height} className="transform perspective-[100px] rotateX-[10deg]">
+      <svg width={width} height={height} className="transform perspective-dramatic rotateX-[10deg]">
         <defs>
           <linearGradient id={`areaGrad-${color}`} x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stopColor={color} stopOpacity="0.6" />
@@ -162,17 +162,23 @@ const MiniChart = ({ data, color, type }: { data: number[]; color: string; type:
   return null
 }
 
+// Simple seeded random number generator
+const seededRandom = (seed: number) => {
+  const x = Math.sin(seed) * 10000
+  return x - Math.floor(x)
+}
+
 // Floating data particles
 const FloatingParticle = ({ index, total }: { index: number; total: number }) => {
   const angle = (index / total) * Math.PI * 2
-  const radius = 220 + Math.random() * 80
-  const duration = 25 + Math.random() * 15
+  const radius = 220 + seededRandom(index + 1) * 80
+  const duration = 25 + seededRandom(index + 2) * 15
   const delay = index * 0.5
-  const size = 3 + Math.random() * 3
+  const size = 3 + seededRandom(index + 3) * 3
 
   return (
     <div
-      className="absolute rounded-full bg-gradient-to-r from-accent to-primary opacity-30"
+      className="absolute rounded-full bg-linear-to-r from-accent to-primary opacity-30"
       style={
         {
           width: size,
@@ -192,10 +198,8 @@ const FloatingParticle = ({ index, total }: { index: number; total: number }) =>
 
 export const HeroSectionAlt = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
-  const [activeWord, setActiveWord] = useState(0)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const heroRef = useRef<HTMLElement>(null)
-  const words = ['Data for Better Care']
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -209,13 +213,6 @@ export const HeroSectionAlt = () => {
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveWord((prev) => (prev + 1) % words.length)
-    }, 3000)
-    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -234,7 +231,7 @@ export const HeroSectionAlt = () => {
         />
         {/* Radial glow */}
         <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-200 h-200 rounded-full"
           style={{
             background:
               'radial-gradient(circle, rgba(233,78,135,0.08) 0%, rgba(249,115,22,0.05) 40%, transparent 70%)',
@@ -313,7 +310,7 @@ export const HeroSectionAlt = () => {
                       key={word}
                       className={`inline-block transition-all duration-700 ${
                         idx === activeWord
-                          ? 'text-primary bg-clip-text bg-gradient-to-r  scale-105'
+                          ? 'text-primary bg-clip-text bg-linear-to-r  scale-105'
                           : 'text-muted-foreground/20 scale-100 hidden'
                       }`}
                     >
@@ -322,7 +319,7 @@ export const HeroSectionAlt = () => {
                   ))}
                 </span> */}
                 {/* <span className="block mt-2">Data for Better Care</span> */}
-                <span className="text-primary bg-clip-text bg-gradient-to-r">
+                <span className="text-primary bg-clip-text bg-linear-to-r">
                   Data for Better Care
                 </span>
               </h1>
@@ -343,7 +340,7 @@ export const HeroSectionAlt = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
+                className="group bg-linear-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <Link href="/book-a-demo">
@@ -377,7 +374,7 @@ export const HeroSectionAlt = () => {
           </div>
 
           {/* Right - Visualization */}
-          <div className="relative h-[600px] w-full flex items-center justify-center">
+          <div className="relative h-150 w-full flex items-center justify-center">
             {/* Floating particles */}
             {Array.from({ length: 15 }).map((_, i) => (
               <FloatingParticle key={i} index={i} total={15} />
@@ -487,7 +484,7 @@ export const HeroSectionAlt = () => {
                           className="w-2 h-2 rounded-full animate-pulse"
                           style={{ backgroundColor: card.color }}
                         />
-                        <span className="text-[10px] font-semibold text-slate-600 max-w-[100px] truncate">
+                        <span className="text-[10px] font-semibold text-slate-600 max-w-25 truncate">
                           {card.metric}
                         </span>
                       </div>
@@ -606,7 +603,7 @@ export const HeroSectionAlt = () => {
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-background to-transparent" />
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">

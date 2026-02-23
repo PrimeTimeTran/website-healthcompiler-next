@@ -51,7 +51,7 @@ export const FDEHero = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-[hsl(340,75%,60%)] to-[hsl(28,90%,60%)] hover:from-[hsl(340,75%,55%)] hover:to-[hsl(28,90%,55%)] text-white font-medium px-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                className="bg-linear-to-r from-[hsl(340,75%,60%)] to-[hsl(28,90%,60%)] hover:from-[hsl(340,75%,55%)] hover:to-[hsl(28,90%,55%)] text-white font-medium px-6 shadow-lg hover:shadow-xl transition-all duration-300"
               >
                 <Calendar className="w-4 h-4 mr-2" />
                 Book a 20-min FDE scoping call
@@ -112,7 +112,7 @@ export const FDEHero = () => {
                     }`}
                   >
                     {/* Node */}
-                    <div className="relative z-10 flex-shrink-0">
+                    <div className="relative z-10 shrink-0">
                       <div
                         className={`w-11 h-11 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
                           activePhase === index

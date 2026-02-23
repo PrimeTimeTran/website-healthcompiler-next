@@ -37,7 +37,7 @@ export function WhyAutomatedFeedback() {
                   className="flex items-center justify-center gap-4 p-6 rounded-2xl bg-card border hover:shadow-lg transition-all duration-300"
                 >
                   <div
-                    className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0"
+                    className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0"
                     style={{ backgroundColor: `${benefit.color}15` }}
                   >
                     <Icon className="w-7 h-7" style={{ color: benefit.color }} />
