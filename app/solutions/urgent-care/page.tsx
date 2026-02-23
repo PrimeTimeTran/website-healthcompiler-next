@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { Brain, Activity, Workflow, BarChart3, ArrowRight, CheckCircle } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -9,9 +8,6 @@ import { CTAButton, GridSection } from '@/components/ui'
 import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 
 import UrgentCareViz from '@/components/hero-visualizations/UrgentCareViz'
-import elationLogo from '@/assets/elation-logo.png'
-import hintLogo from '@/assets/hint-logo.png'
-import akuteLogo from '@/assets/akute-health-logo.png'
 
 const UrgentCare = () => {
   const journeyBenefits = [
@@ -41,12 +37,6 @@ const UrgentCare = () => {
       description:
         'Clear insight across all locations without replacing existing systems. See what matters at every level.',
     },
-  ]
-
-  const integrationLogos = [
-    { name: 'Elation', src: elationLogo },
-    { name: 'Hint', src: hintLogo },
-    { name: 'Akute', src: akuteLogo },
   ]
 
   return (
@@ -174,7 +164,7 @@ const UrgentCare = () => {
             </p>
 
             {/* Integration logos */}
-            <IntegrationLogosSection logos={integrationLogos} />
+            <IntegrationLogosSection />
           </div>
         </div>
       </section>
