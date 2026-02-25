@@ -1,3 +1,4 @@
+import { fetchBlogPosts } from '@/services/strapi'
 import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
@@ -63,11 +64,29 @@ const ROUTES = [
   '/who-we-serve/independent-primary-care',
 ]
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return ROUTES.map((route) => ({
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const staticRoutes: MetadataRoute.Sitemap = ROUTES.map((route) => ({
     url: `${BASE_URL}${route}`,
     lastModified: LAST_MOD,
     changeFrequency: 'weekly',
     priority: route === '/' ? 1 : 0.8,
   }))
+
+  let blogRoutes: MetadataRoute.Sitemap = []
+
+  try {
+    const blogPosts = await fetchBlogPosts()
+    blogRoutes = blogPosts
+      .filter((post) => post.slug)
+      .map((post) => ({
+        url: `${BASE_URL}/resources/blogs/${post.slug}`,
+        lastModified: new Date(post.publishedAt || post.date || LAST_MOD),
+        changeFrequency: 'weekly',
+        priority: 0.8,
+      }))
+  } catch (error) {
+    console.error('Failed to fetch blog posts for sitemap:', error)
+  }
+
+  return [...staticRoutes, ...blogRoutes]
 }
