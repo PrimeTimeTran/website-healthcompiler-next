@@ -47,8 +47,10 @@ export function EmployerAnalyticsHero() {
             </h2>
 
             <p className="text-muted-foreground/80 max-w-lg">
-              Unifying claims, clinical data, benefits, and people data into actionable employer
-              insight.
+              Your benefits data shouldn't live in fifteen different spreadsheets from six different
+              vendors. HealthCompiler brings claims, clinical, pharmacy, benefits, HRIS, and
+              wearable data together — and turns it into something you can actually act on. One
+              login. One source of truth. Real answers before your next renewal.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
