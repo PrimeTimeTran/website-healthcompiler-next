@@ -3,22 +3,23 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
 import {
-  ArrowRight,
-  BarChart3,
+  Lock,
   Users,
-  FileText,
-  Activity,
-  MessageSquare,
   Phone,
   Shield,
-  CheckCircle2,
+  FileText,
+  Activity,
   Layers,
   Database,
-  Lock,
+  BarChart3,
+  ArrowRight,
   Stethoscope,
+  CheckCircle2,
+  MessageSquare,
 } from 'lucide-react'
-
 import { HeroSectionAlt } from '@/components/home/HeroSectionAlt'
+import { TestimonialsSection } from '@/components/home/TestimonialsSection'
+import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 import { Button } from '@/components/ui/button'
 
 const Home = () => {
@@ -478,6 +479,8 @@ const Home = () => {
           </div>
         </section>
 
+        <IntegrationLogosSection />
+
         {/* Section 5: Built for the Healthcare Ecosystem */}
         <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-t border-border/40">
           <div className="container mx-auto px-6 max-w-7xl">
@@ -532,6 +535,8 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        <TestimonialsSection />
 
         {/* Section 6: Make your data useful. */}
         <section className="py-20 md:py-32 bg-background">

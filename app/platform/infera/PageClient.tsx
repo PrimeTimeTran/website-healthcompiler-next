@@ -2,22 +2,96 @@
 
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { DAPFlowSection } from '@/components/platform/DAPFlowSection'
 import {
-  ArrowRight,
-  BarChart3,
-  Users,
-  Activity,
   Bot,
+  Zap,
+  Plug,
+  Brain,
+  Users,
   Shield,
   Layers,
-  CheckCircle2,
-  Database,
-  Building2,
-  Stethoscope,
-  LayoutDashboard,
+  Network,
   FileText,
-  Zap,
+  Database,
+  Activity,
+  Building2,
+  BarChart3,
+  ArrowRight,
+  TrendingUp,
+  Stethoscope,
+  CheckCircle2,
+  LayoutDashboard,
 } from 'lucide-react'
+
+const capabilityCards = [
+  {
+    icon: Building2,
+    title: 'Employer Intelligence',
+    bullets: [
+      'Total cost & PMPM visibility',
+      'Utilization & leakage analysis',
+      'Engagement & outcome tracking',
+      'Stop-loss & risk insights',
+    ],
+    footer: 'Built for employers, advisors, and captives seeking clarity.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Measurable Outcomes',
+    bullets: [
+      'Gap-in-care visibility',
+      'Preventive & chronic tracking',
+      'Quality measures over time',
+      'Outcome-based reporting',
+    ],
+    footer: 'Turn care delivery into measurable progress.',
+  },
+  {
+    icon: Network,
+    title: 'Network Intelligence',
+    bullets: [
+      'Multi-EHR data unification',
+      'Attribution & population views',
+      'Practice-level performance',
+      'CIN & ACO readiness',
+    ],
+    footer: 'Designed for fragmented networks operating as one.',
+  },
+  {
+    icon: Activity,
+    title: 'Care Operations',
+    bullets: [
+      'Utilization patterns',
+      'Referral & access signals',
+      'Care coordination insights',
+      'Real-time operational awareness',
+    ],
+    footer: 'See issues early — not after the quarter closes.',
+  },
+  {
+    icon: Brain,
+    title: 'AI-Driven Intelligence',
+    bullets: [
+      'Pattern detection across datasets',
+      'Automated insights & alerts',
+      'Cohort analysis at scale',
+      'Decision support workflows',
+    ],
+    footer: 'AI that augments judgment — not replaces it.',
+  },
+  {
+    icon: Plug,
+    title: 'Built to Integrate',
+    bullets: [
+      'Custom data pipelines',
+      'EHR, claims, labs, wearables, HRIS',
+      'CRM & workflow integrations',
+      'Purpose-built analytics',
+    ],
+    footer: 'We adapt to your ecosystem.',
+  },
+]
 
 const Infera = () => {
   return (
@@ -55,7 +129,7 @@ const Infera = () => {
       </section>
 
       {/* One Clear View of Your Data */}
-      <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-y border-border/40">
+      <section className="py-20 md:py-32 bg-slate-50 border-y border-border/40">
         <div className="container mx-auto px-6 max-w-7xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
@@ -210,7 +284,7 @@ const Infera = () => {
       </section>
 
       {/* Built to Fit Your Systems */}
-      <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-y border-border/40">
+      <section className="py-20 md:py-32 bg-slate-50 border-y border-border/40">
         <div className="container mx-auto px-6 max-w-7xl text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
             Built to Fit Your Systems
@@ -243,6 +317,52 @@ const Infera = () => {
         </div>
       </section>
 
+      <section className="relative py-20 md:py-28 bg-white overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px), linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
+            backgroundSize: '80px 80px',
+          }}
+        />
+
+        <div className="container mx-auto px-6 relative">
+          <div className="text-center mb-14">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Core Analytics Capabilities
+            </h3>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              Everything you need to transform healthcare data into actionable intelligence.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {capabilityCards.map((card, index) => (
+              <div
+                key={index}
+                className="group p-6 bg-white border border-border/50 rounded-2xl hover:shadow-xl hover:border-primary/20 transition-all duration-300 hover:-translate-y-1"
+              >
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/15 transition-colors">
+                  <card.icon className="w-6 h-6 text-primary" />
+                </div>
+                <h4 className="font-semibold text-lg text-foreground mb-3">{card.title}</h4>
+                <ul className="space-y-2 mb-4">
+                  {card.bullets.map((bullet, i) => (
+                    <li key={i} className="text-sm text-muted-foreground flex items-start gap-2">
+                      <span className="w-1 h-1 rounded-full bg-primary/50 mt-2 shrink-0" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
+                <p className="text-xs text-muted-foreground/80 italic border-t border-border/30 pt-3">
+                  {card.footer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Built For */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -270,6 +390,8 @@ const Infera = () => {
           </div>
         </div>
       </section>
+
+      <DAPFlowSection />
 
       {/* Turn insight into action */}
       <section className="py-20 md:py-32 bg-background">
