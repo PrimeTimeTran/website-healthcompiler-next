@@ -435,7 +435,7 @@ const Home = () => {
                 <div className="h-16 w-16 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 text-accent">
                   <Lock className="h-8 w-8" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">SOC-aligned</h3>
+                <h3 className="text-xl font-bold mb-3">SOC 2 Type II certified</h3>
                 <p className="text-center text-muted-foreground">
                   Rigorous security controls, monitoring, and audit processes.
                 </p>

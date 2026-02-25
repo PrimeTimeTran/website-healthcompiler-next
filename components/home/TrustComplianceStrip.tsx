@@ -2,7 +2,7 @@ import { Shield, Lock, CheckCircle2 } from 'lucide-react'
 
 const trustItems = [
   { icon: Shield, label: 'HIPAA-ready' },
-  { icon: Lock, label: 'SOC-aligned' },
+  { icon: Lock, label: 'SOC 2 Type II certified' },
   { icon: CheckCircle2, label: 'Secure by design' },
 ]
 
