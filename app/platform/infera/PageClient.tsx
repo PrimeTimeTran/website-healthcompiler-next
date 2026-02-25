@@ -199,6 +199,8 @@ const Infera = () => {
         </div>
       </section>
 
+      <DAPFlowSection />
+
       {/* What You Can Do with Infera */}
       <section className="py-20 md:py-32 bg-background">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -390,8 +392,6 @@ const Infera = () => {
           </div>
         </div>
       </section>
-
-      <DAPFlowSection />
 
       {/* Turn insight into action */}
       <section className="py-20 md:py-32 bg-background">
