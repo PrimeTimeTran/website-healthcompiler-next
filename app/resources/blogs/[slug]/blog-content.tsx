@@ -34,11 +34,6 @@ export function BlogContent({ blogPost }: BlogContentProps) {
             <Clock className="w-3 h-3" />5 min read
           </Badge>
         </div>
-
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight font-display">
-          {blogPost.title}
-        </h1>
-
         <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl">
           {blogPost.description}
         </p>

@@ -48,12 +48,6 @@ export function EmployerAnalyticsCTA() {
                 <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" />
               }
             />
-            <Button asChild variant="outline" size="lg" className="px-8">
-              <Link href="/contact">
-                <MessageCircle className="mr-2 w-5 h-5" />
-                Talk to an Expert
-              </Link>
-            </Button>
           </div>
         </div>
       </div>

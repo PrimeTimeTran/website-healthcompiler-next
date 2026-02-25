@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import elationLogo from '@/assets/elation-logo.png'
 import hintLogo from '@/assets/hint-logo.png'
 import akuteLogo from '@/assets/akute-health-logo.png'
@@ -29,9 +30,12 @@ export const IntegrationLogosSection = () => {
           <span className="hidden text-muted-foreground font-medium">{logo.name}</span>
         </div>
       ))}
-      <div className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm">
+      <Link
+        href="/platform/integration"
+        className="h-12 w-32 bg-background rounded-lg flex items-center justify-center p-2 shadow-sm hover:shadow-md transition-all"
+      >
         <span className="text-muted-foreground text-sm font-medium">+ More</span>
-      </div>
+      </Link>
     </div>
   )
 }

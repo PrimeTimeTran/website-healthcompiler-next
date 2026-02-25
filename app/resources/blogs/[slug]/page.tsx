@@ -5,6 +5,7 @@ import { ArrowLeft, Share2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { BlogContent } from './blog-content'
 import { fetchBlogPostBySlug } from '@/services/strapi'
+import { STRAPI_URL, STRAPI_TOKEN } from '@/lib/constants'
 
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
@@ -45,6 +46,46 @@ export async function generateMetadata(props: {
       site: '@HealthCompiler',
     },
   }
+}
+
+export async function fetchAllBlogSlugs() {
+  try {
+    const res = await fetch(`${STRAPI_URL}/api/articles?fields=slug&pagination[limit]=5000`, {
+      headers: {
+        Authorization: `Bearer ${STRAPI_TOKEN}`,
+      },
+      next: { revalidate: 300 },
+    })
+
+    if (!res.ok) {
+      console.error('Failed to fetch blog slugs:', res.status, res.statusText)
+      return []
+    }
+
+    const data = await res.json()
+
+    console.log(`Fetched ${data?.data?.length} slugs from Strapi`)
+
+    if (!data?.data) {
+      console.error('No data in Strapi response for slugs')
+      return []
+    }
+
+    return data.data
+      .map((post: any) => post.slug || post.attributes?.slug)
+      .filter((slug: any) => typeof slug === 'string')
+  } catch (error) {
+    console.error('Error fetching blog slugs:', error)
+    return []
+  }
+}
+
+export async function generateStaticParams() {
+  const slugs = await fetchAllBlogSlugs()
+
+  return slugs.map((slug: string) => ({
+    slug,
+  }))
 }
 
 const BlogPost = async (props: { params: Promise<{ slug: string }> }) => {
