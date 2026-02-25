@@ -1,26 +1,15 @@
-'use client'
-import { EmployerAnalyticsHero } from '@/components/employer-analytics/EmployerAnalyticsHero'
-import { HealthBenefitsLayers } from '@/components/employer-analytics/HealthBenefitsLayers'
-import { WorkforceHealthSphere } from '@/components/employer-analytics/WorkforceHealthSphere'
-import { HumanCapitalTriangle } from '@/components/employer-analytics/HumanCapitalTriangle'
-import { FinancialRiskTimeline } from '@/components/employer-analytics/FinancialRiskTimeline'
-import { FiduciaryShield } from '@/components/employer-analytics/FiduciaryShield'
-import { DataFoundationPipeline } from '@/components/employer-analytics/DataFoundationPipeline'
-import { EmployerAnalyticsCTA } from '@/components/employer-analytics/EmployerAnalyticsCTA'
+import { Metadata } from 'next'
+import PageClient from './PageClient'
 
-const EmployerAnalytics = () => {
-  return (
-    <>
-      <EmployerAnalyticsHero />
-      <HealthBenefitsLayers />
-      <WorkforceHealthSphere />
-      <HumanCapitalTriangle />
-      <FinancialRiskTimeline />
-      <FiduciaryShield />
-      <DataFoundationPipeline />
-      <EmployerAnalyticsCTA />
-    </>
-  )
+export const metadata: Metadata = {
+  title: 'Employer Healthcare Analytics and Workforce Health Intelligence',
+  description:
+    'Unify claims, clinical, benefits, and workforce data to analyze healthcare spend, predict risk, and improve employee health, productivity, and retention outcomes.',
+  alternates: {
+    canonical: 'https://marketing.compile.health/who-we-serve/employer-analytics',
+  },
 }
 
-export default EmployerAnalytics
+export default function Page() {
+  return <PageClient />
+}

@@ -1,27 +1,15 @@
-'use client'
+import { Metadata } from 'next'
+import PageClient from './PageClient'
 
-import { SurveysHero } from '@/components/surveys/SurveysHero'
-import { WhyFeedbackMissed } from '@/components/surveys/WhyFeedbackMissed'
-import { AutomatedSurveys } from '@/components/surveys/AutomatedSurveys'
-import { SurveyFeatures } from '@/components/surveys/SurveyFeatures'
-import { IntegratedTools } from '@/components/surveys/IntegratedTools'
-import { ForwardDeployment } from '@/components/surveys/ForwardDeployment'
-import { WhyAutomatedFeedback } from '@/components/surveys/WhyAutomatedFeedback'
-import { SurveysCTA } from '@/components/surveys/SurveysCTA'
-
-const Surveys = () => {
-  return (
-    <>
-      <SurveysHero />
-      <WhyFeedbackMissed />
-      <AutomatedSurveys />
-      <SurveyFeatures />
-      <IntegratedTools />
-      <ForwardDeployment />
-      <WhyAutomatedFeedback />
-      <SurveysCTA />
-    </>
-  )
+export const metadata: Metadata = {
+  title: 'Healthcare Patient Surveys and Feedback Solutions',
+  description:
+    'Collect and analyze patient experience feedback to surface insights, drive care improvements, and understand satisfaction across your healthcare population and services.',
+  alternates: {
+    canonical: 'https://marketing.compile.health/solutions/surveys',
+  },
 }
 
-export default Surveys
+export default function Page() {
+  return <PageClient />
+}

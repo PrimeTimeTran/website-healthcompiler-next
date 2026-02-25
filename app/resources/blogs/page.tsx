@@ -1,27 +1,15 @@
-import BlogsLayout from './blogs-layout'
-import { BlogPost } from '@/services/strapi'
-import { fetchBlogPosts } from '@/services/strapi'
+import { Metadata } from 'next'
+import PageClient from './PageClient'
 
-export const metadata = {
-  title: 'Blog - Insights & Resources',
+export const metadata: Metadata = {
+  title: 'Healthcare Analytics and Industry Insights Blog',
   description:
-    'Discover insights on Direct Primary Care, Wellness, Health Analytics, and innovative healthcare solutions.',
+    'Read expert articles on healthcare data, analytics, quality performance, population health, risk adjustment, value based care, and practice optimization.',
+  alternates: {
+    canonical: 'https://marketing.compile.health/resources/blogs',
+  },
 }
 
-export const revalidate = 86400
-
-const Blogs = async () => {
-  let error = null
-  let blogPosts: BlogPost[] = []
-
-  try {
-    blogPosts = await fetchBlogPosts()
-  } catch (err) {
-    error = err instanceof Error ? err.message : 'Failed to load blog posts'
-    console.error('Error loading blog posts:', err)
-  }
-
-  return <BlogsLayout error={error} posts={blogPosts} />
+export default function Page() {
+  return <PageClient />
 }
-
-export default Blogs
