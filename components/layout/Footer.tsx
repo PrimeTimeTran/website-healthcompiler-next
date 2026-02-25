@@ -119,7 +119,7 @@ export const Footer = () => {
             <div className="flex items-center gap-8">
               <Image
                 src={hipaaSoc2Badge}
-                alt="HIPAA Compliant and AICPA SOC 2"
+                alt="HIPAA Compliant and AICPA SOC 2 Type II certified"
                 className="h-20 w-auto object-contain"
               />
               <Image

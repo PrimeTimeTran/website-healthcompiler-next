@@ -223,7 +223,9 @@ const Infera = () => {
             <div className="bg-card p-8 rounded-3xl border border-border/50 flex flex-col items-center">
               <Shield className="h-12 w-12 text-primary mb-4" />
               <h3 className="text-xl font-bold mb-2">Secure & Compliant</h3>
-              <p className="text-muted-foreground">Secure, HIPAA-compliant, and SOC 2 aligned.</p>
+              <p className="text-muted-foreground">
+                Secure, HIPAA-compliant, and SOC 2 Type II certified.
+              </p>
             </div>
             <div className="bg-card p-8 rounded-3xl border border-border/50 flex flex-col items-center">
               <Layers className="h-12 w-12 text-accent mb-4" />
