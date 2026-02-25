@@ -72,9 +72,9 @@ export const DAPFlowSection = ({
 
   // Main flow animation cycle
   useEffect(() => {
-    const phases = ['source', 'processing', 'outcome'] as const
-    let phaseIndex = 0
-    let stepIndex = 0
+    // const phases = ['source', 'processing', 'outcome'] as const
+    // let phaseIndex = 0
+    // let stepIndex = 0
 
     const interval = setInterval(() => {
       if (flowPhase === 'source') {
@@ -319,7 +319,7 @@ export const DAPFlowSection = ({
               return (
                 <article
                   key={idx}
-                  className={`relative rounded-2xl p-5 min-h-[180px] shadow-lg transition-all duration-500 z-10 ${
+                  className={`relative rounded-2xl p-5 min-h-45 shadow-lg transition-all duration-500 z-10 ${
                     isHighlight
                       ? 'bg-linear-to-br from-[#E94E87] to-[#F97316] text-white scale-[1.02]'
                       : 'bg-card text-card-foreground border border-border'

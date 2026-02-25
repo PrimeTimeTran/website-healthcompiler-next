@@ -26,13 +26,13 @@ interface IntegrationTileProps {
   totalCount: number
 }
 
-function IntegrationTile({ name, category, index, totalCount }: IntegrationTileProps) {
+function IntegrationTile({ name, category, index }: IntegrationTileProps) {
   const tileRef = useRef<HTMLDivElement>(null)
   const [offset, setOffset] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     let animationId: number
-    let startTime = Date.now()
+    const startTime = Date.now()
 
     const animate = () => {
       const elapsed = (Date.now() - startTime) / 1000
@@ -323,12 +323,12 @@ export function IntegrationHub() {
     <div className="relative py-12">
       {/* Desktop layout */}
       <div className="hidden md:block">
-        <div className="relative min-h-[500px]">
+        <div className="relative min-h-125">
           {/* SVG Connectors */}
           <ConnectorPaths />
 
           {/* Left column - Wearables */}
-          <div className="absolute left-0 top-0 w-[200px] space-y-3">
+          <div className="absolute left-0 top-0 w-50 space-y-3">
             {wearables.slice(0, 5).map((integration, idx) => (
               <IntegrationTile
                 key={integration.name}
@@ -340,7 +340,7 @@ export function IntegrationHub() {
           </div>
 
           {/* Left column bottom */}
-          <div className="absolute left-0 bottom-0 w-[200px] space-y-3">
+          <div className="absolute left-0 bottom-0 w-50 space-y-3">
             {wearables.slice(5).map((integration, idx) => (
               <IntegrationTile
                 key={integration.name}
@@ -357,7 +357,7 @@ export function IntegrationHub() {
           </div>
 
           {/* Right column - Clinical */}
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[200px] space-y-3">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-50 space-y-3">
             {clinical.map((integration, idx) => (
               <IntegrationTile
                 key={integration.name}

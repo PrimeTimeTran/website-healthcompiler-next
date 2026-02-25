@@ -49,7 +49,7 @@ export function HowItWorksSection() {
               {/* Connector line */}
               {i < steps.length - 1 && (
                 <div
-                  className="hidden md:block absolute top-16 left-[calc(100%)] w-full h-0.5 bg-gradient-to-r from-primary/30 to-primary/10 z-0"
+                  className="hidden md:block absolute top-16 left-[calc(100%)] w-full h-0.5 bg-linear-to-r from-primary/30 to-primary/10 z-0"
                   style={{ width: 'calc(100% - 4rem)', left: 'calc(50% + 2rem)' }}
                 />
               )}

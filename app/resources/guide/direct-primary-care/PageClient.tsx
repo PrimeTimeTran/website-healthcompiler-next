@@ -84,7 +84,7 @@ const DirectPrimaryCareGuide = () => {
     <>
       {/* Hero Section */}
       <section className="relative bg-linear-to-br from-primary/10 via-background to-background py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,var(--tw-gradient-stops))] from-primary/5 via-transparent to-transparent" />
         <div className="container mx-auto px-4 md:px-6 relative">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="fade-in">
@@ -195,9 +195,9 @@ const DirectPrimaryCareGuide = () => {
 
           <p className="text-lg text-muted-foreground mb-12 max-w-4xl">
             Instead of paying monthly health insurance premiums or copays, you pay your healthcare
-            provider a monthly fee. Since DPC practices don't bill insurance companies, they do not
-            accept any form of insurance. However, most individuals using DPC are also enrolled in a
-            high-deductible health plan.
+            provider a monthly fee. Since DPC practices don&apos;t bill insurance companies, they do
+            not accept any form of insurance. However, most individuals using DPC are also enrolled
+            in a high-deductible health plan.
           </p>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -329,7 +329,7 @@ const DirectPrimaryCareGuide = () => {
               {
                 title: 'Accessibility and Convenience',
                 description:
-                  'DPC often comes with several perks, including same-day and next-day visits, appointments lasting 30 to 60 minutes, telehealth options such as phone calls, emails, texts, and video visits, and around-the-clock access to your healthcare professional.',
+                  'DPC often comes with several perks, including same-day and next-day visits, appointments lasting 30 to 60 minutes, tele-health options such as phone calls, emails, texts, and video visits, and around-the-clock access to your healthcare professional.',
               },
             ].map((benefit, index) => (
               <div key={index} className="bg-card rounded-xl p-6 shadow-card">
@@ -436,8 +436,8 @@ const DirectPrimaryCareGuide = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-10 max-w-3xl">
-            While DPC's monthly fee may be less than a health insurance premium, relying solely on
-            DPC can leave you vulnerable to medical debt. To avoid incurring unmanageable medical
+            While DPC&apos;s monthly fee may be less than a health insurance premium, relying solely
+            on DPC can leave you vulnerable to medical debt. To avoid incurring unmanageable medical
             bills, DPC is often paired with:
           </p>
 
@@ -516,9 +516,9 @@ const DirectPrimaryCareGuide = () => {
           </h2>
 
           <p className="text-lg text-muted-foreground mb-6 max-w-4xl">
-            In today's rapidly evolving healthcare landscape, prioritizing patient engagement and
-            delivering efficient care have become essential. Seamless integration of EHR software is
-            now more critical than ever.
+            In today&apos;s rapidly evolving healthcare landscape, prioritizing patient engagement
+            and delivering efficient care have become essential. Seamless integration of EHR
+            software is now more critical than ever.
           </p>
 
           <p className="text-muted-foreground mb-6 max-w-4xl">

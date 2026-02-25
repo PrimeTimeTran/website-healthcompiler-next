@@ -49,7 +49,7 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-muted/50 rounded-xl p-8 flex flex-col justify-between min-h-[320px]"
+              className="bg-muted/50 rounded-xl p-8 flex flex-col justify-between min-h-80"
             >
               <div>
                 <Quote className="w-8 h-8 text-accent mb-6 rotate-180" fill="currentColor" />
