@@ -9,6 +9,7 @@ export interface BlogPost {
   title: string
   image: string
   publishedAt?: string
+  canonicalUrl?: string
   blocks?: any[]
   content?: string
   description: string
@@ -77,6 +78,7 @@ export const fetchBlogPostBySlug = cache(async (slug: string): Promise<BlogPost 
     `&fields[1]=description` +
     `&fields[2]=createdAt` +
     `&fields[3]=publishedAt` +
+    `&fields[4]=canonicalUrl` +
     '&populate[cover][populate]=*' +
     `&populate[blocks][on][shared.media][populate]=*` +
     `&populate[blocks][on][shared.slider][populate]=*` +
@@ -117,6 +119,7 @@ export const fetchBlogPostBySlug = cache(async (slug: string): Promise<BlogPost 
       image: getImageUrl(item),
       slug: item.slug || item.attributes?.slug,
       link: item.link || item.attributes?.link,
+      canonicalUrl: item.canonicalUrl || item.attributes?.canonicalUrl,
       title: item.title || item.attributes?.title,
       date: item.createdAt || item.attributes?.date,
       publishedAt: item.publishedAt || item.attributes?.publishedAt,

@@ -21,11 +21,14 @@ export async function generateMetadata(props: {
   }
 
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://healthcompiler.com'
-  const url = `${siteUrl}/resources/blogs/${slug}`
+  const url = blogPost.canonicalUrl || `${siteUrl}/resources/blogs/${slug}`
 
   return {
     title: blogPost.title,
     description: blogPost.description,
+    alternates: {
+      canonical: url,
+    },
     openGraph: {
       title: blogPost.title,
       description: blogPost.description,
