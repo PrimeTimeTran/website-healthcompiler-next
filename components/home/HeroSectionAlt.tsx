@@ -198,8 +198,10 @@ const FloatingParticle = ({ index, total }: { index: number; total: number }) =>
 
 export const HeroSectionAlt = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [activeWord, setActiveWord] = useState(0)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const heroRef = useRef<HTMLElement>(null)
+  const words = ['Activate', 'Unify', 'Transform']
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -213,6 +215,13 @@ export const HeroSectionAlt = () => {
 
     window.addEventListener('mousemove', handleMouseMove)
     return () => window.removeEventListener('mousemove', handleMouseMove)
+  }, [])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveWord((prev) => (prev + 1) % words.length)
+    }, 3000)
+    return () => clearInterval(interval)
   }, [])
 
   return (
@@ -245,7 +254,8 @@ export const HeroSectionAlt = () => {
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px), linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
+                           linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -303,7 +313,7 @@ export const HeroSectionAlt = () => {
             {/* Main headline */}
             <div className="space-y-2">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05]">
-                {/* <span className="block opacity-90">
+                <span className="block opacity-90">
                   {words.map((word, idx) => (
                     <span
                       key={word}
@@ -316,11 +326,9 @@ export const HeroSectionAlt = () => {
                       {idx === activeWord && word}
                     </span>
                   ))}
-                </span> */}
-                {/* <span className="block mt-2">Data for Better Care</span> */}
-                <span className="text-primary bg-clip-text bg-linear-to-r">
-                  Data for Better Care
                 </span>
+                <span className="block mt-2">Healthcare Data.</span>
+                <span className="block text-muted-foreground mt-1">Drive Outcomes.</span>
               </h1>
             </div>
 

@@ -16,7 +16,7 @@ const categories = [
   'Membership',
   'Billing',
   'RX',
-  'Other',
+  // 'Other',
 ] as const
 
 type Category = (typeof categories)[number]
@@ -106,6 +106,11 @@ const integrations: IntegrationItem[] = [
     name: 'ManifestRx',
     category: ['RX'],
     description: 'Prescription and pharmacy data integration via ManifestRx',
+  },
+  {
+    name: 'TrumpRx',
+    category: ['RX'],
+    description: 'Prescription and pharmacy data integration via TrumpRx',
   },
   {
     name: 'Azalea Health',
@@ -198,11 +203,11 @@ const integrations: IntegrationItem[] = [
     description: 'DPC membership and billing data from Hint Health',
     connected: true,
   },
-  {
-    name: 'Specter',
-    category: ['Other'],
-    description: 'Market intelligence and data enrichment via Specter',
-  },
+  // {
+  //   name: 'Specter',
+  //   category: ['Other'],
+  //   description: 'Market intelligence and data enrichment via Specter',
+  // },
   {
     name: 'Apple Health',
     category: ['Fitness'],
