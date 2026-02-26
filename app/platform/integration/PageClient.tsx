@@ -30,6 +30,11 @@ interface IntegrationItem {
 
 const integrations: IntegrationItem[] = [
   {
+    name: 'Canvas Medical',
+    category: ['EHR / EMR'],
+    description: 'Connect patient records from Canvas Medical directly into HealthCompiler',
+  },
+  {
     name: 'Epic',
     category: ['EHR / EMR'],
     description: 'Connect patient records from Epic directly into HealthCompiler',
@@ -174,7 +179,7 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'Google Console',
-    category: ['Communication', 'Marketing'],
+    category: ['Marketing'],
     description: 'Search performance and indexing data from Google Console',
   },
   {
