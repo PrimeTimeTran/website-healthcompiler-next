@@ -5,6 +5,7 @@ import { Linkedin, Instagram, Mail, Youtube } from 'lucide-react'
 import fmmaBadge from '@/assets/fmma-badge.png'
 import logo from '@/assets/healthcompiler-logo.webp'
 import hipaaSoc2Badge from '@/assets/hipaa-soc2-badge.png'
+import dpcAlliance from '@/assets/dpc-alliance.png'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -13,6 +14,9 @@ const quickLinks = [
   // { label: 'Who We Serve', href: '/who-we-serve' },
   // { label: 'Resources', href: '/resources' },
   { label: 'Integrations', href: '/platform/integration' },
+  { label: 'Employer Analytics', href: '/solutions/employer-analytics' },
+  { label: 'Health Outcomes', href: '/solutions/health-outcomes' },
+  { label: 'AI Call Triaging', href: '/solutions/ai-call-triaging' },
 ]
 
 const resourcesLinks = [
@@ -126,6 +130,11 @@ export const Footer = () => {
                 src={fmmaBadge}
                 alt="Free Market Medical Association"
                 className="h-20 w-auto object-contain mix-blend-multiply"
+              />
+              <Image
+                src={dpcAlliance}
+                alt="Free Market Medical Association"
+                className="h-12 w-auto object-contain mix-blend-multiply"
               />
             </div>
           </div>
