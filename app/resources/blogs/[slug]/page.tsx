@@ -7,6 +7,8 @@ import { BlogContent } from './blog-content'
 import { fetchBlogPostBySlug } from '@/services/strapi'
 import { STRAPI_URL, STRAPI_TOKEN } from '@/lib/constants'
 
+export const revalidate = 86400
+
 export async function generateMetadata(props: {
   params: Promise<{ slug: string }>
 }): Promise<Metadata> {

@@ -6,6 +6,7 @@ import fmmaBadge from '@/assets/fmma-badge.png'
 import logo from '@/assets/healthcompiler-logo.webp'
 import hipaaSoc2Badge from '@/assets/hipaa-soc2-badge.png'
 import dpcAlliance from '@/assets/dpc-alliance.png'
+import amplify from '@/assets/amplify.png'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
@@ -133,7 +134,12 @@ export const Footer = () => {
               />
               <Image
                 src={dpcAlliance}
-                alt="Free Market Medical Association"
+                alt="DPC Alliance"
+                className="h-12 w-auto object-contain mix-blend-multiply"
+              />
+              <Image
+                src={amplify}
+                alt="Amplify DPC"
                 className="h-12 w-auto object-contain mix-blend-multiply"
               />
             </div>
