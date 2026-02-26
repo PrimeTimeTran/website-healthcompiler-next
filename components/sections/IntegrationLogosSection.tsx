@@ -28,7 +28,7 @@ const integrationLogos = [
 
 export const IntegrationLogosSection = () => {
   return (
-    <div className="w-full bg-muted/30 py-12 border-y border-border/40">
+    <div className="w-full bg-transparent py-6">
       <div className="flex flex-nowrap items-center gap-10 overflow-x-auto px-0 pb-4 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
         {integrationLogos.map((logo, index) => (
           <div

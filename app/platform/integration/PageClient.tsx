@@ -9,8 +9,7 @@ import { Search, ArrowRight, Zap, ExternalLink } from 'lucide-react'
 const categories = [
   'All',
   'EHR / EMR',
-  'Billing & Payments',
-  'Analytics',
+  'Communication',
   'Marketing',
   'Fitness',
   'Lab & Diagnostics',
@@ -150,34 +149,28 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'Stripe',
-    category: ['Billing & Payments'],
+    category: ['Billing'],
     description: 'Payment processing and subscription management via Stripe',
   },
   {
     name: 'QuickBooks',
-    category: ['Billing & Payments'],
+    category: ['Billing'],
     description: 'Accounting and billing data synced from QuickBooks',
   },
   {
     name: 'TriNet',
-    category: ['Billing & Payments'],
+    category: ['Billing'],
     description: 'HR and payroll data integration through TriNet',
   },
   {
     name: 'Google Analytics',
-    category: ['Analytics'],
-    description: 'Website and engagement analytics from Google Analytics',
+    category: ['Marketing'],
+    description: 'Website and engagement Marketing from Google Analytics',
   },
   {
     name: 'Google Console',
-    category: ['Analytics'],
+    category: ['Communication'],
     description: 'Search performance and indexing data from Google Console',
-  },
-  {
-    name: 'Insights',
-    category: ['Analytics'],
-    description: 'HealthCompiler native analytics and reporting engine',
-    connected: true,
   },
   {
     name: 'Quest',
@@ -240,17 +233,51 @@ const integrations: IntegrationItem[] = [
     category: ['EHR / EMR'],
     description: 'Lab results and diagnostics data from AtlasMD',
   },
+  {
+    name: 'Dialpad',
+    category: ['Communication'],
+    description: 'Communication and collaboration data from Dialpad',
+  },
+  {
+    name: 'Weave',
+    category: ['Communication'],
+    description: 'Communication and collaboration data from Weave',
+  },
+  {
+    name: 'Spruce Health',
+    category: ['Communication'],
+    description: 'Lab results and diagnostics data from Spruce Health',
+  },
+  {
+    name: 'RingCentral',
+    category: ['Communication'],
+    description: 'Communication and collaboration data from RingCentral',
+  },
+  {
+    name: 'Zoom',
+    category: ['Communication'],
+    description: 'Video conferencing and collaboration data from Zoom',
+  },
+  {
+    name: 'Microsoft Teams',
+    category: ['Communication'],
+    description: 'Communication and collaboration data from Microsoft Teams',
+  },
+  {
+    name: 'Slack',
+    category: ['Communication'],
+    description: 'Communication and collaboration data from Slack',
+  },
 ]
 
 const getCategoryColor = (cat: Category): string => {
   const colors: Record<string, string> = {
     'EHR / EMR': 'bg-primary/15 text-primary-foreground',
-    'Billing & Payments': 'bg-secondary text-secondary-foreground',
+    Billing: 'bg-secondary text-secondary-foreground',
     Analytics: 'bg-muted text-muted-foreground',
     Fitness: 'bg-accent/10 text-accent-foreground',
     Marketing: 'bg-primary/12 text-primary-foreground',
     'Lab & Diagnostics': 'bg-primary/10 text-primary-foreground',
-    Billing: 'bg-primary/10 text-primary-foreground',
     RX: 'bg-primary/10 text-primary-foreground',
     Other: 'bg-muted text-muted-foreground',
   }
