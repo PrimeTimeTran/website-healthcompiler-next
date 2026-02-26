@@ -174,7 +174,7 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'Google Console',
-    category: ['Communication'],
+    category: ['Communication', 'Marketing'],
     description: 'Search performance and indexing data from Google Console',
   },
   {
