@@ -218,7 +218,7 @@ export const HeroSectionAlt = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
+      className="relative min-h-11/12 pt-32 py-16 overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0">
@@ -245,8 +245,7 @@ export const HeroSectionAlt = () => {
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
-          backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
-                           linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
+          backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px), linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -297,7 +296,7 @@ export const HeroSectionAlt = () => {
         }
       `}</style>
 
-      <div className="container mx-auto px-6 relative z-10 min-h-screen flex items-center">
+      <div className="container mx-auto px-6 relative z-10 flex items-center">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-20">
           {/* Left - Content */}
           <div className="space-y-8">

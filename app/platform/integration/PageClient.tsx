@@ -9,7 +9,6 @@ import { Search, ArrowRight, Zap, ExternalLink } from 'lucide-react'
 const categories = [
   'All',
   'EHR / EMR',
-  'Wearables & Devices',
   'Billing & Payments',
   'Analytics',
   'Marketing',
@@ -116,37 +115,37 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'Fitbit',
-    category: ['Wearables & Devices', 'Fitness'],
+    category: ['Fitness'],
     description: 'Track patient activity and wellness data from Fitbit',
   },
   {
     name: 'OURA',
-    category: ['Wearables & Devices'],
+    category: ['Fitness'],
     description: 'Sleep and readiness data from OURA Ring integrated',
   },
   {
     name: 'Garmin',
-    category: ['Wearables & Devices', 'Fitness'],
+    category: ['Fitness'],
     description: 'Fitness and health metrics from Garmin devices',
   },
   {
     name: 'Wahoo',
-    category: ['Wearables & Devices', 'Fitness'],
+    category: ['Fitness'],
     description: 'Cycling and fitness performance data from Wahoo',
   },
   {
     name: 'Dexcom',
-    category: ['Wearables & Devices'],
+    category: ['Fitness'],
     description: 'Continuous glucose monitoring data from Dexcom CGM',
   },
   {
     name: 'OMRON',
-    category: ['Wearables & Devices'],
+    category: ['Fitness'],
     description: 'Blood pressure and vital sign data from OMRON devices',
   },
   {
     name: 'Google Fit',
-    category: ['Wearables & Devices', 'Fitness'],
+    category: ['Fitness'],
     description: 'Aggregate fitness data from Google Fit ecosystem',
   },
   {
@@ -222,21 +221,30 @@ const integrations: IntegrationItem[] = [
     description: 'Health data from Samsung Health',
   },
   {
-    name: 'Wahoo',
-    category: ['Fitness'],
-    description: 'Health data from Wahoo devices',
-  },
-  {
     name: 'Whoop',
     category: ['Fitness'],
     description: 'Health data from Whoop devices',
+  },
+  {
+    name: 'LabCorp',
+    category: ['Lab & Diagnostics'],
+    description: 'Lab results and diagnostics data from Lab Corp',
+  },
+  {
+    name: 'SigmaMD',
+    category: ['EHR / EMR'],
+    description: 'Lab results and diagnostics data from SigmaMD',
+  },
+  {
+    name: 'AtlasMD',
+    category: ['EHR / EMR'],
+    description: 'Lab results and diagnostics data from AtlasMD',
   },
 ]
 
 const getCategoryColor = (cat: Category): string => {
   const colors: Record<string, string> = {
     'EHR / EMR': 'bg-primary/15 text-primary-foreground',
-    'Wearables & Devices': 'bg-accent/15 text-accent-foreground',
     'Billing & Payments': 'bg-secondary text-secondary-foreground',
     Analytics: 'bg-muted text-muted-foreground',
     Fitness: 'bg-accent/10 text-accent-foreground',
@@ -344,11 +352,16 @@ const Integration = () => {
                     </div>
                     <div className="min-w-0">
                       <h3 className="font-semibold text-foreground truncate">{item.name}</h3>
-                      <span
-                        className={`inline-block mt-1 px-2 py-0.5 rounded-full text-[11px] font-medium ${getCategoryColor(item.category[0])}`}
-                      >
-                        {item.category[0]}
-                      </span>
+                      <div className="flex flex-wrap gap-1 mt-1">
+                        {item.category.map((cat) => (
+                          <span
+                            key={cat}
+                            className={`inline-block px-2 py-0.5 rounded-full text-[11px] font-medium ${getCategoryColor(cat)}`}
+                          >
+                            {cat}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4 line-clamp-2">
