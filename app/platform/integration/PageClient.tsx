@@ -12,9 +12,12 @@ const categories = [
   'Wearables & Devices',
   'Billing & Payments',
   'Analytics',
-  'CRM',
+  'Marketing',
   'Fitness',
   'Lab & Diagnostics',
+  'Membership',
+  'Billing',
+  'RX',
   'Other',
 ] as const
 
@@ -103,7 +106,7 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'ManifestRx',
-    category: ['EHR / EMR'],
+    category: ['RX'],
     description: 'Prescription and pharmacy data integration via ManifestRx',
   },
   {
@@ -184,22 +187,22 @@ const integrations: IntegrationItem[] = [
   },
   {
     name: 'GoHighLevel',
-    category: ['CRM'],
-    description: 'Marketing automation, CRM, and pipeline management via GoHighLevel',
+    category: ['Marketing'],
+    description: 'Marketing automation, Marketing, and pipeline management via GoHighLevel',
   },
   {
     name: 'HubSpot',
-    category: ['CRM'],
-    description: 'CRM, marketing, and sales hub integration through HubSpot',
+    category: ['Marketing'],
+    description: 'Marketing, marketing, and sales hub integration through HubSpot',
   },
   {
     name: 'Lemlist',
-    category: ['Other'],
+    category: ['Marketing'],
     description: 'Outreach and email automation powered by Lemlist',
   },
   {
     name: 'Hint',
-    category: ['Other'],
+    category: ['EHR / EMR', 'Membership', 'Billing'],
     description: 'DPC membership and billing data from Hint Health',
     connected: true,
   },
@@ -207,6 +210,26 @@ const integrations: IntegrationItem[] = [
     name: 'Specter',
     category: ['Other'],
     description: 'Market intelligence and data enrichment via Specter',
+  },
+  {
+    name: 'Apple Health',
+    category: ['Fitness'],
+    description: 'Health data from Apple Health',
+  },
+  {
+    name: 'Samsung Health',
+    category: ['Fitness'],
+    description: 'Health data from Samsung Health',
+  },
+  {
+    name: 'Wahoo',
+    category: ['Fitness'],
+    description: 'Health data from Wahoo devices',
+  },
+  {
+    name: 'Whoop',
+    category: ['Fitness'],
+    description: 'Health data from Whoop devices',
   },
 ]
 
@@ -217,8 +240,10 @@ const getCategoryColor = (cat: Category): string => {
     'Billing & Payments': 'bg-secondary text-secondary-foreground',
     Analytics: 'bg-muted text-muted-foreground',
     Fitness: 'bg-accent/10 text-accent-foreground',
-    CRM: 'bg-primary/12 text-primary-foreground',
+    Marketing: 'bg-primary/12 text-primary-foreground',
     'Lab & Diagnostics': 'bg-primary/10 text-primary-foreground',
+    Billing: 'bg-primary/10 text-primary-foreground',
+    RX: 'bg-primary/10 text-primary-foreground',
     Other: 'bg-muted text-muted-foreground',
   }
   return colors[cat] || 'bg-muted text-muted-foreground'

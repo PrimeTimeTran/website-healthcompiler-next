@@ -55,7 +55,7 @@ const solutionsCategories: SubMenuCategory[] = [
   {
     category: 'Analytics',
     items: [
-      { label: 'Employer Analytics', href: '/who-we-serve/employer-analytics' },
+      { label: 'Employer Analytics', href: '/solutions/employer-analytics' },
       { label: 'Health Outcomes', href: '/solutions/health-outcomes' },
       { label: 'Surveys', href: '/solutions/surveys' },
     ],
@@ -64,10 +64,10 @@ const solutionsCategories: SubMenuCategory[] = [
     category: 'Patient Engagement',
     items: [
       { label: 'AI Receptionist', href: '/solutions/ai-receptionist' },
-      { label: 'AI Call Triaging', href: '/ai-call-triaging' },
+      { label: 'AI Call Triaging', href: '/solutions/ai-call-triaging' },
       {
         label: 'Marketing Automation',
-        href: '/marketing-automation',
+        href: '/solutions/marketing-automation',
       },
     ],
   },
@@ -93,29 +93,29 @@ const whoWeServeCategories: SubMenuCategory[] = [
         label: 'DPC Networks',
         href: '/who-we-serve/direct-primary-care-networks',
       },
-      { label: 'Concierge', href: '/solutions/concierge' },
+      { label: 'Concierge', href: '/who-we-serve/concierge' },
       {
         label: 'Managed Service Orgs',
-        href: '/solutions/managed-service-orgs',
+        href: '/who-we-serve/managed-service-orgs',
       },
     ],
   },
   {
     category: 'Specialty Care',
     items: [
-      { label: 'Functional Medicine', href: '/solutions/functional-medicine' },
-      { label: 'Urgent Care', href: '/solutions/urgent-care' },
-      { label: 'Pediatrics', href: '/solutions/pediatrics' },
-      { label: 'Medical Weight Loss', href: '/medical-weight-loss' },
+      { label: 'Functional Medicine', href: '/who-we-serve/functional-medicine' },
+      { label: 'Urgent Care', href: '/who-we-serve/urgent-care' },
+      { label: 'Pediatrics', href: '/who-we-serve/pediatrics' },
+      { label: 'Medical Weight Loss', href: '/who-we-serve/medical-weight-loss' },
     ],
   },
   {
     category: 'Care Purchasers',
     items: [
-      { label: "TPA's & Health Plans", href: '/tpa-health-plans' },
-      { label: 'Brokers & Advisors', href: '/brokers-advisors' },
-      { label: 'Employers', href: '/solutions/employers' },
-      { label: 'Captives & Union', href: '/captives' },
+      { label: "TPA's & Health Plans", href: '/who-we-serve/tpa-health-plans' },
+      { label: 'Brokers & Advisors', href: '/who-we-serve/brokers-advisors' },
+      { label: 'Employers', href: '/who-we-serve/employers' },
+      { label: 'Captives & Union', href: '/who-we-serve/captives' },
     ],
   },
   {
@@ -125,9 +125,9 @@ const whoWeServeCategories: SubMenuCategory[] = [
         label: 'Independent Primary Care',
         href: '/who-we-serve/independent-primary-care',
       },
-      { label: 'ACOs & Registries', href: '/acos' },
-      { label: 'CINs', href: '/cins' },
-      { label: 'Health Plans & Payers', href: '/payors' },
+      { label: 'ACOs & Registries', href: '/who-we-serve/acos' },
+      { label: 'CINs', href: '/who-we-serve/cins' },
+      { label: 'Health Plans & Payers', href: '/who-we-serve/payors' },
     ],
   },
 ]

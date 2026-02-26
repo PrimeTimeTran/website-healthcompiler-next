@@ -486,7 +486,7 @@ const FinalCTASection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-            Start Capturing the Risk You Deserve
+            Capture every condition that reflects your patients’  risk
           </h2>
           <p className="text-lg text-white/70 mb-8">
             Turn suspect conditions into documented HCCs with confidence.

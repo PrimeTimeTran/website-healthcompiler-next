@@ -29,6 +29,11 @@ const Home = () => {
         fallback={<div className="flex h-screen items-center justify-center">Loading...</div>}
       >
         <HeroSectionAlt />
+        {/* TODO:
+          Add from these:
+          https://www.healthcompiler.com/
+        */}
+        <IntegrationLogosSection />
 
         {/* Section 1: One Platform. Many Solutions. */}
         <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-b border-border/40">
@@ -478,8 +483,6 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        <IntegrationLogosSection />
 
         {/* Section 5: Built for the Healthcare Ecosystem */}
         <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-t border-border/40">
