@@ -218,7 +218,7 @@ export const HeroSectionAlt = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-11/12 pt-32 py-16 overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
+      className="relative min-h-11/12 pt-16 overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0">

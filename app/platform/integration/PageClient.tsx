@@ -368,7 +368,7 @@ const Integration = () => {
                     {item.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    {item.connected ? (
+                    {item.connected && false ? (
                       <span className="inline-flex items-center gap-1.5 text-xs font-medium text-primary">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary" />
                         Connected
