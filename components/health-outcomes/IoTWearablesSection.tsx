@@ -28,12 +28,12 @@ export function IoTWearablesSection() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <CTAButton text="See Integrations" link="/integration" suffixIconDefault />
-            <Button variant="outline" size="lg" asChild>
+            {/* <Button variant="outline" size="lg" asChild>
               <Link href="/book-a-demo">
                 <Calendar className="mr-2 h-4 w-4" />
                 Book a Demo
               </Link>
-            </Button>
+            </Button> */}
           </div>
         </div>
 
