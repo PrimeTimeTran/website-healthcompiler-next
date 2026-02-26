@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState, useMemo } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -198,10 +198,13 @@ const FloatingParticle = ({ index, total }: { index: number; total: number }) =>
 
 export const HeroSectionAlt = () => {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 })
+  const [text, setText] = useState('')
+  const [isDeleting, setIsDeleting] = useState(false)
   const [activeWord, setActiveWord] = useState(0)
   const [hoveredCard, setHoveredCard] = useState<number | null>(null)
   const heroRef = useRef<HTMLElement>(null)
-  const words = ['Activate', 'Unify', 'Transform']
+
+  const words = useMemo(() => ['Activate', 'Unify', 'Transform'], [])
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -218,11 +221,33 @@ export const HeroSectionAlt = () => {
   }, [])
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveWord((prev) => (prev + 1) % words.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
+    const currentWord = words[activeWord]
+
+    if (isDeleting) {
+      if (text === '') {
+        setIsDeleting(false)
+        setActiveWord((prev) => (prev + 1) % words.length)
+        return
+      }
+
+      const timer = setTimeout(() => {
+        setText(currentWord.substring(0, text.length - 1))
+      }, 50)
+      return () => clearTimeout(timer)
+    } else {
+      if (text === currentWord) {
+        const timer = setTimeout(() => {
+          setIsDeleting(true)
+        }, 2000)
+        return () => clearTimeout(timer)
+      }
+
+      const timer = setTimeout(() => {
+        setText(currentWord.substring(0, text.length + 1))
+      }, 150)
+      return () => clearTimeout(timer)
+    }
+  }, [text, isDeleting, activeWord, words])
 
   return (
     <section
@@ -260,7 +285,6 @@ export const HeroSectionAlt = () => {
         }}
       />
 
-      {/* CSS for animations */}
       <style>{`
         @keyframes orbit {
           from {
@@ -313,19 +337,9 @@ export const HeroSectionAlt = () => {
             {/* Main headline */}
             <div className="space-y-2">
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground leading-[1.05]">
-                <span className="block opacity-90">
-                  {words.map((word, idx) => (
-                    <span
-                      key={word}
-                      className={`inline-block transition-all duration-700 ${
-                        idx === activeWord
-                          ? 'text-primary bg-clip-text bg-linear-to-r  scale-105'
-                          : 'text-muted-foreground/20 scale-100 hidden'
-                      }`}
-                    >
-                      {idx === activeWord && word}
-                    </span>
-                  ))}
+                <span className="block opacity-90 text-primary min-h-[1.1em]">
+                  {text}
+                  <span className="animate-pulse ml-1 font-light">|</span>
                 </span>
                 <span className="block mt-2">Healthcare Data.</span>
                 <span className="block text-muted-foreground mt-1">Drive Outcomes.</span>
@@ -336,9 +350,7 @@ export const HeroSectionAlt = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
               Unify healthcare data and AI-driven workflows to lower costs and improve care for
               self-funded, direct care, and value-based organizations.
-              {/* Unifying healthcare data and AI-driven workflows to lower costs and improve care
-              across
-              <span className="text-foreground font-medium"> self-funded</span>,
+              {/* <span className="text-foreground font-medium"> self-funded</span>,
               <span className="text-foreground font-medium"> direct care</span>, and
               <span className="text-foreground font-medium"> value-based</span> organizations. */}
             </p>
@@ -347,7 +359,7 @@ export const HeroSectionAlt = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <Button
                 size="lg"
-                className="group bg-linear-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
+                className="group bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold px-8 py-6 text-base shadow-xl shadow-primary/20 hover:shadow-primary/30 transition-all duration-300 hover:scale-105"
                 asChild
               >
                 <Link href="/book-a-demo">
