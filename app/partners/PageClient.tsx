@@ -10,6 +10,7 @@ import drgLogo from '@/assets/drg-logo.png'
 import somedocsLogo from '@/assets/somedocs-logo.png'
 import dpcAlliance from '@/assets/dpc-alliance.png'
 import amplify from '@/assets/amplify.png'
+import dpcMomentum from '@/assets/dpc-momentum.png'
 
 const partners = [
   {
@@ -45,28 +46,35 @@ const partners = [
     logoImage: amplify,
     description:
       'Amplify DPC empowers Direct Primary Care practices with tools and strategic support to grow, streamline operations, and better serve employers and patients.',
-    link: 'https://doctorsonsocialmedia.com/',
+    link: 'https://amplifydpc.com/',
   },
   {
     name: 'DPC Alliance',
     logoImage: dpcAlliance,
     description:
       'A national community uniting Direct Primary Care practices to share resources, strengthen advocacy, and accelerate the growth of the DPC model.',
-    link: 'https://doctorsonsocialmedia.com/',
+    link: 'https://www.dpcalliance.org/',
   },
   {
     name: 'Diabetes Reversal Group (DRG)',
     logoImage: drgLogo,
     description:
       "Diabetes Reversal Group (DRG) is the world's first clinically led, one-stop service focused on reversing Type 2 Diabetes naturally. With over 13 years of success, DRG offers a patented, non drug approach, combining personalized nutrition, targeted supplements, and exercise protocols. Led by experts like Dr. Kristine Burke and Dr. Hockings, the company empowers patients to restore metabolic balance and reduce reliance on medications.",
-    link: 'https://www.akutehealth.com/features/seamless-integrations',
+    link: 'https://diabetesreversalgroup.com/',
   },
   {
     name: 'SomeDocs',
     logoImage: somedocsLogo,
     description:
       "Health Compiler is a proud member of SomeDocs, the ultimate hub for healthcare professionals seeking to amplify their impact. SomeDocs offers cutting-edge tools, resources, and a vibrant community to help doctors build strong online presences, connect with peers, and share expertise. By joining this dynamic network, Health Compiler aligns with SomeDocs' mission to empower healthcare providers and drive innovation in the industry.",
-    link: 'https://doctorsonsocialmedia.com/',
+    link: 'https://doctorsonsocialmedia.com',
+  },
+  {
+    name: 'DPC Momentum',
+    logoImage: dpcMomentum,
+    description:
+      'DPC Momentum is an all-in-one practice management platform that helps Direct Primary Care and telehealth providers run their business from a single place — including CRM, appointments, billing, communications, marketing, and automation tools.',
+    link: 'https://dpcmomentum.com',
   },
 ]
 
@@ -94,7 +102,7 @@ const Partners = () => {
                 className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col"
               >
                 {/* Logo Area */}
-                <div className="bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-[180px] relative">
+                <div className="bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-45 relative">
                   {/* Corner brackets */}
                   <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-border/50"></div>
                   <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-border/50"></div>
@@ -110,7 +118,9 @@ const Partners = () => {
                       className={`w-auto mx-auto ${
                         partner.name === 'FMMA Member'
                           ? 'h-20 md:h-24 mix-blend-multiply'
-                          : 'h-12 md:h-16'
+                          : partner.name === 'DPC Momentum'
+                            ? 'h-20 md:h-24 scale-250'
+                            : 'h-12 md:h-16'
                       }`}
                     />
                   </div>

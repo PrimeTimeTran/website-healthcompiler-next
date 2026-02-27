@@ -24,14 +24,16 @@ const resourcesLinks = [
   { label: 'APEX', href: '/resources/apex' },
   { label: 'Blogs', href: '/resources/blogs' },
   { label: 'About Us', href: '/about' },
-  { label: 'Careers', href: '/careers' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Guides', href: '/resources/faqs' },
+  { label: 'Whitepapers', href: '/resources/whitepaper' },
 ]
 
 const contactLinks = [
   { label: 'Tech Support', href: 'mailto:support@healthcompiler.com' },
   { label: 'Customer Success', href: 'mailto:success@healthcompiler.com' },
   { label: 'Sales', href: 'mailto:info@healthcompiler.com' },
+  { label: 'Careers', href: '/careers' },
+  { label: 'Contact Us', href: '/contact' },
 ]
 
 const socialLinks = [

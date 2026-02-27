@@ -59,17 +59,15 @@ const BlogsLayout = ({ posts, error }: BlogsLayoutProps) => {
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-200 h-100 rounded-full bg-primary/10 blur-3xl opacity-60" />
 
         <div className="container mx-auto px-4 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+          {/* <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">Insights & Resources</span>
-          </div>
-
+          </div> */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-5 font-display tracking-tight">
             Our Blog
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
-            Discover insights on Direct Primary Care, Wellness, Health Analytics, and innovative
-            healthcare solutions.
+            Discover insights across care, healthtech and beyond
           </p>
 
           <div className="max-w-xl mx-auto relative group">
