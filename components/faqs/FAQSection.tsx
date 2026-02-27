@@ -1,7 +1,7 @@
 import {
   Accordion,
-  AccordionContent,
   AccordionItem,
+  AccordionContent,
   AccordionTrigger,
 } from '@/components/ui/accordion'
 import { HelpCircle } from 'lucide-react'
@@ -14,7 +14,7 @@ interface FAQ {
 interface FAQSectionProps {
   id: string
   title: string
-  icon: React.ElementType
+  icon: any
   intro: string
   faqs: FAQ[]
   bgClass?: string
@@ -34,7 +34,7 @@ export function FAQSection({
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <IconComponent className="w-6 h-6 text-primary" />
+              <IconComponent />
             </div>
             <h2 className="text-3xl font-bold text-foreground">{title}</h2>
           </div>
@@ -51,7 +51,7 @@ export function FAQSection({
                 >
                   <AccordionTrigger className="text-left text-base md:text-lg font-medium text-foreground hover:text-primary hover:no-underline px-6 py-5">
                     <span className="flex items-start gap-3">
-                      <HelpCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <HelpCircle className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                       {faq.question}
                     </span>
                   </AccordionTrigger>

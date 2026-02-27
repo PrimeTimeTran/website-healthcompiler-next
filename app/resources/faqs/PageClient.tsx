@@ -105,7 +105,7 @@ const FAQs = () => {
                   href={`#${category.anchor}`}
                   className="group bg-card border border-border rounded-2xl overflow-hidden hover:shadow-elevated transition-all duration-300 hover:-translate-y-1 flex flex-col"
                 >
-                  <div className="bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-[140px] relative">
+                  <div className="bg-muted/30 p-8 md:p-10 flex items-center justify-center min-h-35 relative">
                     <div className="absolute top-4 left-4 w-6 h-6 border-l-2 border-t-2 border-border/50"></div>
                     <div className="absolute top-4 right-4 w-6 h-6 border-r-2 border-t-2 border-border/50"></div>
                     <div className="absolute bottom-4 left-4 w-6 h-6 border-l-2 border-b-2 border-border/50"></div>
