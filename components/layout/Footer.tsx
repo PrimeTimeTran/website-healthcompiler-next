@@ -137,11 +137,11 @@ export const Footer = () => {
                 alt="DPC Alliance"
                 className="h-12 w-auto object-contain mix-blend-multiply"
               />
-              <Image
+              {/* <Image
                 src={amplify}
                 alt="Amplify DPC"
                 className="h-12 w-auto object-contain mix-blend-multiply"
-              />
+              /> */}
             </div>
           </div>
 

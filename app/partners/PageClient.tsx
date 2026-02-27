@@ -8,6 +8,8 @@ import hintLogo from '@/assets/hint-logo.png'
 import akuteHealthLogo from '@/assets/akute-health-logo.png'
 import drgLogo from '@/assets/drg-logo.png'
 import somedocsLogo from '@/assets/somedocs-logo.png'
+import dpcAlliance from '@/assets/dpc-alliance.png'
+import amplify from '@/assets/amplify.png'
 
 const partners = [
   {
@@ -37,6 +39,20 @@ const partners = [
     description:
       'Akute Health is a modern EHR platform designed for direct-to-patient care models like DPC, concierge, and digital health. It combines scheduling, charting, billing, telemedicine, and patient communication into one seamless system. Built for ease of use and rapid growth, Akute helps providers streamline operations, improve patient experience, and scale efficiently without the complexity of traditional healthcare software.',
     link: 'https://www.akutehealth.com/features/seamless-integrations',
+  },
+  {
+    name: 'Amplify DPC',
+    logoImage: amplify,
+    description:
+      'Amplify DPC empowers Direct Primary Care practices with tools and strategic support to grow, streamline operations, and better serve employers and patients.',
+    link: 'https://doctorsonsocialmedia.com/',
+  },
+  {
+    name: 'DPC Alliance',
+    logoImage: dpcAlliance,
+    description:
+      'A national community uniting Direct Primary Care practices to share resources, strengthen advocacy, and accelerate the growth of the DPC model.',
+    link: 'https://doctorsonsocialmedia.com/',
   },
   {
     name: 'Diabetes Reversal Group (DRG)',
