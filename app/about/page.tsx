@@ -157,6 +157,14 @@ export default function AboutPage() {
       <section className="py-20 md:py-32 bg-background border-b border-border/40">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div className="relative">
+              <div className="aspect-square md:aspect-4/3 rounded-3xl bg-muted overflow-hidden border border-border shadow-xl relative">
+                <Image src={focusPatients} alt="Focus on Patients" fill className="object-cover" />
+              </div>
+              {/* Decorative elements */}
+              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
+              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/10 rounded-full -z-10" />
+            </div>
             <div className="space-y-8">
               <h2 className="font-display text-3xl md:text-5xl font-bold text-foreground tracking-tight">
                 Focus on Patients, Not Paperwork
@@ -181,14 +189,6 @@ export default function AboutPage() {
                   ))}
                 </div>
               </div>
-            </div>
-            <div className="relative">
-              <div className="aspect-square md:aspect-4/3 rounded-3xl bg-muted overflow-hidden border border-border shadow-xl relative">
-                <Image src={focusPatients} alt="Focus on Patients" fill className="object-cover" />
-              </div>
-              {/* Decorative elements */}
-              <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
-              <div className="absolute -top-6 -right-6 w-32 h-32 bg-accent/10 rounded-full -z-10" />
             </div>
           </div>
         </div>
