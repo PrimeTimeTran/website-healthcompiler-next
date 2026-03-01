@@ -36,21 +36,6 @@ export function BlogContent({ blogPost }: BlogContentProps) {
         </div>
       </header>
 
-      {blogPost.image && (
-        <div className="mb-12">
-          <div className="relative overflow-hidden rounded-2xl bg-muted">
-            <Image
-              unoptimized
-              width={800}
-              height={400}
-              src={blogPost.image}
-              alt={blogPost.title}
-              className="w-full h-auto"
-            />
-          </div>
-        </div>
-      )}
-
       <div className="prose prose-lg max-w-none">
         {blogPost.blocks?.map((block: any, index: number) => {
           const key = `${block.__component}-${block.id}-${index}`
