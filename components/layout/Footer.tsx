@@ -24,7 +24,7 @@ const resourcesLinks = [
   { label: 'APEX', href: '/resources/apex' },
   { label: 'Blogs', href: '/resources/blogs' },
   { label: 'About Us', href: '/about' },
-  { label: 'Guides', href: '/resources/faqs' },
+  { label: 'FAQs', href: '/resources/faqs' },
   { label: 'Whitepapers', href: '/resources/whitepaper' },
 ]
 

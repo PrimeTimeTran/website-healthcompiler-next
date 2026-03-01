@@ -25,7 +25,7 @@ const partners = [
     logoImage: fmmaLogo,
     description:
       'The Free Market Medical Association (FMMA) promotes transparency and competition in healthcare, advocating for a system where patients can shop for medical services at competitive prices through platforms like ShopHealth, organizing events such as their annual conference to foster collaboration and innovation in the direct care movement.',
-    link: 'https://www.healthcompiler.com/health-compiler-joins-fmma-to-promote-healthcare-transparency',
+    link: 'https://fmma.org/',
   },
   {
     name: 'Hint',
