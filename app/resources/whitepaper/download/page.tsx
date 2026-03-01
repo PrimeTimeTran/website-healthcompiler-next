@@ -16,10 +16,12 @@ const DownloadForm = () => {
     company: '',
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus(null)
 
     try {
       const fileName = paper ? `${paper}.pdf` : 'how-to-dpc.pdf'
@@ -55,6 +57,7 @@ const DownloadForm = () => {
       }
 
       toast.success('Thank you! Your download is starting.')
+      setSubmitStatus('success')
       setFormData({ name: '', email: '', company: '' })
 
       // Trigger download
@@ -64,9 +67,17 @@ const DownloadForm = () => {
       document.body.appendChild(link)
       link.click()
       document.body.removeChild(link)
+
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
     } catch (err) {
       console.error(err)
+      setSubmitStatus('error')
       toast.error('Failed to process the request. Please try again.')
+      setTimeout(() => {
+        setSubmitStatus(null)
+      }, 5000)
     } finally {
       setIsSubmitting(false)
     }
@@ -135,6 +146,16 @@ const DownloadForm = () => {
               <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
                 {isSubmitting ? 'Processing...' : 'Download Guide'}
               </Button>
+              {submitStatus === 'success' && (
+                <div className="p-3 bg-green-50 text-green-700 rounded-lg text-sm text-center">
+                  Thank you! Your download should start automatically.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-3 bg-red-50 text-red-700 rounded-lg text-sm text-center">
+                  Something went wrong. Please try again later.
+                </div>
+              )}
             </form>
           </div>
 
