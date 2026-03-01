@@ -259,9 +259,10 @@ export default function AboutPage() {
                 },
                 {
                   year: '2022',
-                  title: 'Scaling Impact',
+                  title: 'Health Integration Engine',
                   description:
                     'Expanded to support over 50 clinics, processing millions of data points to improve patient outcomes.',
+                  href: 'https://marketplace.microsoft.com/en-us/product/saas/healthcompilerinc1675684784648.hc_saas?tab=overview',
                 },
                 {
                   year: '2023',
@@ -277,6 +278,12 @@ export default function AboutPage() {
                 },
               ].map((item, index) => (
                 <div
+                  onClick={() => {
+                    if (item.href) {
+                      const newWindow = window.open(item.href, '_blank')
+                      newWindow?.focus()
+                    }
+                  }}
                   key={item.year}
                   className={`relative flex items-center justify-between ${
                     index % 2 === 0 ? 'flex-row-reverse' : ''

@@ -8,6 +8,7 @@ import { Search, ArrowRight, Zap, ExternalLink } from 'lucide-react'
 
 const categories = [
   'All',
+  'Claims',
   'EHR / EMR',
   'Communication',
   'Marketing',
@@ -15,6 +16,7 @@ const categories = [
   'Lab & Diagnostics',
   'Membership',
   'Billing',
+  'HR',
   'RX',
   // 'Other',
 ] as const
@@ -27,8 +29,31 @@ interface IntegrationItem {
   description: string
   connected?: boolean
 }
-
+// Elation, Cerbo, Hint, Akute
 const integrations: IntegrationItem[] = [
+  {
+    name: 'Elation',
+    category: ['EHR / EMR'],
+    description: 'Primary care data from Elation Health connected in real time',
+    connected: true,
+  },
+  {
+    name: 'Cerbo',
+    category: ['EHR / EMR'],
+    description: 'Concierge and DPC practice data from Cerbo EHR',
+  },
+  {
+    name: 'Hint',
+    category: ['EHR / EMR', 'Membership', 'Billing'],
+    description: 'DPC membership and billing data from Hint Health',
+    connected: true,
+  },
+  {
+    name: 'AkuteHealth',
+    category: ['EHR / EMR'],
+    description: 'Connect AkuteHealth for DPC practice management data',
+    connected: true,
+  },
   {
     name: 'Canvas Medical',
     category: ['EHR / EMR'],
@@ -86,26 +111,9 @@ const integrations: IntegrationItem[] = [
     description: 'Specialty-specific EHR data from Modernizing Medicine',
   },
   {
-    name: 'AkuteHealth',
-    category: ['EHR / EMR'],
-    description: 'Connect AkuteHealth for DPC practice management data',
-    connected: true,
-  },
-  {
     name: 'CharmHealth',
     category: ['EHR / EMR'],
     description: 'Integrate CharmHealth EHR and practice management',
-  },
-  {
-    name: 'Elation',
-    category: ['EHR / EMR'],
-    description: 'Primary care data from Elation Health connected in real time',
-    connected: true,
-  },
-  {
-    name: 'Cerbo',
-    category: ['EHR / EMR'],
-    description: 'Concierge and DPC practice data from Cerbo EHR',
   },
   {
     name: 'ManifestRx',
@@ -168,9 +176,9 @@ const integrations: IntegrationItem[] = [
     description: 'Accounting and billing data synced from QuickBooks',
   },
   {
-    name: 'TriNet',
-    category: ['Billing'],
-    description: 'HR and payroll data integration through TriNet',
+    name: 'Lemlist',
+    category: ['Marketing'],
+    description: 'Outreach and email automation powered by Lemlist',
   },
   {
     name: 'Google Analytics',
@@ -196,17 +204,6 @@ const integrations: IntegrationItem[] = [
     name: 'HubSpot',
     category: ['Marketing'],
     description: 'Marketing, marketing, and sales hub integration through HubSpot',
-  },
-  {
-    name: 'Lemlist',
-    category: ['Marketing'],
-    description: 'Outreach and email automation powered by Lemlist',
-  },
-  {
-    name: 'Hint',
-    category: ['EHR / EMR', 'Membership', 'Billing'],
-    description: 'DPC membership and billing data from Hint Health',
-    connected: true,
   },
   // {
   //   name: 'Specter',
@@ -277,6 +274,30 @@ const integrations: IntegrationItem[] = [
     name: 'Slack',
     category: ['Communication'],
     description: 'Communication and collaboration data from Slack',
+  },
+  {
+    name: 'Yuzu',
+    category: ['Claims'],
+    description:
+      "Ingest medical, pharmacy, and eligibility claims from Yuzu into Health Compiler's AI engine for automated normalization, cost driver detection, and employer ROI modeling across self-funded plan populations",
+  },
+  {
+    name: 'JP Farley',
+    category: ['Claims'],
+    description:
+      'Connect JP Farley TPA claims, eligibility, and reporting feeds for AI-powered risk segmentation, utilization trend analysis, and employer healthcare cost transparency dashboards',
+  },
+  {
+    name: 'Trinet',
+    category: ['HR'],
+    description:
+      'Sync employee census, eligibility, and payroll data from TriNet for accurate benefits administration and population health analytics',
+  },
+  {
+    name: 'ADP',
+    category: ['HR'],
+    description:
+      'Sync workforce data from ADP to automate eligibility updates and maintain accurate employee census records for health plan management',
   },
 ]
 

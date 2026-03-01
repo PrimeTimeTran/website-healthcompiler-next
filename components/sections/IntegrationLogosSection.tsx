@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import akuteLogo from '@/assets/akute-health-logo.png'
 import athenaLogo from '@/assets/logos/athena.png'
 import cerboLogo from '@/assets/logos/cerbo.png'
 import eclinicalWorksLogo from '@/assets/logos/eclinical-works.png'
@@ -26,7 +25,7 @@ const integrationLogos = [
   { name: 'Yuzu', src: yuzuLogo },
 ]
 
-export const IntegrationLogosSection = () => {
+export const IntegrationLogosSection = ({ className }: { className?: string }) => {
   const logosContent = (
     <>
       {integrationLogos.map((logo, index) => (
@@ -49,7 +48,15 @@ export const IntegrationLogosSection = () => {
   )
 
   return (
-    <div className="w-full bg-transparent py-6 overflow-hidden">
+    <div className={`w-full bg-transparent py-10 overflow-hidden relative z-10 ${className}`}>
+      <Link
+        href="/platform/integration"
+        className="group/link flex flex-col space-y-1 relative z-20 cursor-pointer w-full"
+      >
+        <h2 className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-widest mb-8 group-hover/link:text-primary transition-colors">
+          Our Integrations
+        </h2>
+      </Link>
       <div className="flex w-max animate-marquee">
         <div className="flex items-center gap-10 pr-10">{logosContent}</div>
         <div className="flex items-center gap-10 pr-10">{logosContent}</div>

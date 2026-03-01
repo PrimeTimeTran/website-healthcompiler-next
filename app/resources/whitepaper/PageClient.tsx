@@ -8,8 +8,8 @@ const whitepapers = [
     description: 'A guide for initiating and expanding your Direct primary care practice.',
     image:
       'https://lirp.cdn-website.com/c9f7398c/dms3rep/multi/opt/How+to+DPC+whitepaper+thumbnail-1920w.png',
-    downloadLink: '/resources/whitepaper/download?paper=how-to-dpc',
-    redirect: true,
+    downloadLink: 'https://share.hsforms.com/1uK6-kVJSS1SuLvnyLsPWaAcy0ih',
+    redirect: false,
   },
   {
     title: 'Employer Gains with DPC',

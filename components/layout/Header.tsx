@@ -49,6 +49,7 @@ interface SubMenuItem {
 interface SubMenuCategory {
   category: string
   items: SubMenuItem[]
+  href?: string
 }
 
 const solutionsCategories: SubMenuCategory[] = [
@@ -84,6 +85,7 @@ const solutionsCategories: SubMenuCategory[] = [
 const whoWeServeCategories: SubMenuCategory[] = [
   {
     category: 'Primary Care',
+    href: '/primary-care',
     items: [
       {
         label: 'Direct Primary Care',
@@ -102,6 +104,7 @@ const whoWeServeCategories: SubMenuCategory[] = [
   },
   {
     category: 'Specialty Care',
+    href: '/specialty-care',
     items: [
       { label: 'Functional Medicine', href: '/who-we-serve/functional-medicine' },
       { label: 'Urgent Care', href: '/who-we-serve/urgent-care' },
@@ -111,6 +114,7 @@ const whoWeServeCategories: SubMenuCategory[] = [
   },
   {
     category: 'Care Purchasers',
+    href: '/care-purchasers',
     items: [
       { label: "TPA's & Health Plans", href: '/who-we-serve/tpa-health-plans' },
       { label: 'Brokers & Advisors', href: '/who-we-serve/brokers-advisors' },
@@ -120,6 +124,7 @@ const whoWeServeCategories: SubMenuCategory[] = [
   },
   {
     category: 'Value Based Care',
+    href: '/value-based-care',
     items: [
       {
         label: 'Independent Primary Care',
@@ -327,9 +332,11 @@ export const Header = () => {
                     <div className="grid grid-cols-4 gap-6">
                       {whoWeServeCategories.map((category) => (
                         <div key={category.category}>
-                          <h4 className="font-semibold text-foreground mb-3 text-sm">
-                            {category.category}
-                          </h4>
+                          <Link href={category.href!} className="cursor-pointer">
+                            <h4 className="font-semibold text-foreground mb-2 text-sm">
+                              {category.category}
+                            </h4>
+                          </Link>
                           <ul className="space-y-2">
                             {category.items.map((item) => (
                               <li key={item.href}>
@@ -584,9 +591,11 @@ export const Header = () => {
                   <div className="pl-4 pb-2 animate-fade-in">
                     {whoWeServeCategories.map((category) => (
                       <div key={category.category} className="mb-4">
-                        <h4 className="font-semibold text-foreground mb-2 text-sm">
-                          {category.category}
-                        </h4>
+                        <Link href={category.href!} className="cursor-pointer">
+                          <h4 className="font-semibold text-foreground mb-2 text-sm">
+                            {category.category}
+                          </h4>
+                        </Link>
                         {category.items.map((item) => (
                           <Link
                             key={item.href}

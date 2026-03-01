@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useEffect, useRef, useState, useMemo } from 'react'
 import { ArrowRight } from 'lucide-react'
+import { IntegrationLogosSection } from '@/components/sections/IntegrationLogosSection'
 
 import { Button } from '@/components/ui/button'
 
@@ -171,7 +172,8 @@ const seededRandom = (seed: number) => {
 // Floating data particles
 const FloatingParticle = ({ index, total }: { index: number; total: number }) => {
   const angle = (index / total) * Math.PI * 2
-  const radius = 220 + seededRandom(index + 1) * 80
+  // Reduce radius by ~30% for smaller visualization (220 -> 150)
+  const radius = 150 + seededRandom(index + 1) * 60
   const duration = 25 + seededRandom(index + 2) * 15
   const delay = index * 0.5
   const size = 3 + seededRandom(index + 3) * 3
@@ -252,7 +254,7 @@ export const HeroSectionAlt = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-11/12 pt-16 overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100"
+      className="relative min-h-11/12 overflow-hidden bg-linear-to-br from-slate-50 via-white to-slate-100 pt-16"
     >
       {/* Animated background gradient */}
       <div className="absolute inset-0">
@@ -280,7 +282,7 @@ export const HeroSectionAlt = () => {
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(#1a1a2e 1px, transparent 1px),
-                           linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
+                          linear-gradient(90deg, #1a1a2e 1px, transparent 1px)`,
           backgroundSize: '60px 60px',
         }}
       />
@@ -330,7 +332,7 @@ export const HeroSectionAlt = () => {
         }
       `}</style>
 
-      <div className="container mx-auto px-6 relative z-10 flex items-center">
+      <div className="container mx-auto relative z-10 flex items-center">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full py-20">
           {/* Left - Content */}
           <div className="space-y-8">
@@ -349,7 +351,7 @@ export const HeroSectionAlt = () => {
             {/* Description */}
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
               Unify healthcare data and AI-driven workflows to lower costs and improve care for
-              self-funded, direct care, and value-based organizations.
+              self-funded, direct and value-based care.
               {/* <span className="text-foreground font-medium"> self-funded</span>,
               <span className="text-foreground font-medium"> direct care</span>, and
               <span className="text-foreground font-medium"> value-based</span> organizations. */}
@@ -370,7 +372,7 @@ export const HeroSectionAlt = () => {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex items-center justify-center gap-6 pt-6 border-t border-border">
+            {/* <div className="flex items-center justify-center gap-6 pt-6 border-t border-border">
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">8M+</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">
@@ -384,16 +386,16 @@ export const HeroSectionAlt = () => {
                   Lab Tests Analyzed
                 </div>
               </div>
-              {/* <div className="w-px h-10 bg-border" />
+              <div className="w-px h-10 bg-border" />
               <div className="text-center">
                 <div className="text-2xl font-bold text-foreground">99.9%</div>
                 <div className="text-xs text-muted-foreground uppercase tracking-wider">Uptime</div>
-              </div> */}
-            </div>
+              </div>
+            </div> */}
           </div>
 
           {/* Right - Visualization */}
-          <div className="relative h-150 w-full flex items-center justify-center">
+          <div className="relative h-112.5 w-full flex items-center justify-center">
             {/* Floating particles */}
             {Array.from({ length: 15 }).map((_, i) => (
               <FloatingParticle key={i} index={i} total={15} />
@@ -410,7 +412,7 @@ export const HeroSectionAlt = () => {
               }}
             >
               {/* Outer glow rings */}
-              <div className="absolute -inset-16">
+              <div className="absolute -inset-12">
                 <div
                   className="absolute inset-0 rounded-full border-2 border-primary/30"
                   style={{ animation: 'pulse-ring 3s ease-out infinite' }}
@@ -427,7 +429,7 @@ export const HeroSectionAlt = () => {
 
               {/* Central orb - larger */}
               <div
-                className="relative w-52 h-52 rounded-full"
+                className="relative w-36 h-36 rounded-full"
                 style={{ animation: 'glow-light 4s ease-in-out infinite' }}
               >
                 {/* Glass sphere effect */}
@@ -436,10 +438,10 @@ export const HeroSectionAlt = () => {
                 <div className="absolute inset-4 rounded-full bg-white border border-border shadow-inner flex items-center justify-center overflow-hidden">
                   {/* Inner content */}
                   <Link href="/platform/infera" className="text-center group cursor-pointer">
-                    <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">
+                    <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-0.5">
                       Powered by
                     </div>
-                    <div className="text-2xl font-display font-bold text-primary group-hover:scale-105 transition-transform">
+                    <div className="text-xl font-display font-bold text-primary group-hover:scale-105 transition-transform">
                       Infera
                     </div>
                   </Link>
@@ -451,19 +453,19 @@ export const HeroSectionAlt = () => {
             {metricCards.map((card, idx) => {
               // Position 6 cards around the orb
               const positionStyles: Record<string, string>[] = [
-                { top: '5%', left: '0' }, // Top left
-                { top: '5%', right: '0' }, // Top right
+                { top: '0%', left: '0' }, // Top left
+                { top: '0%', right: '0' }, // Top right
                 { top: '42%', left: '0' }, // Middle left
                 { top: '42%', right: '0' }, // Middle right
-                { bottom: '10%', left: '0' }, // Bottom left
-                { bottom: '10%', right: '0' }, // Bottom right
+                { bottom: '5%', left: '0' }, // Bottom left
+                { bottom: '5%', right: '0' }, // Bottom right
               ]
               const pos = positionStyles[idx] || positionStyles[0]
 
               return (
                 <div
                   key={card.label}
-                  className="metric-card absolute cursor-pointer"
+                  className="metric-card absolute cursor-pointer scale-90 origin-center"
                   style={{
                     ...pos,
                     animationDelay: `${idx * 0.8}s`,
@@ -473,7 +475,7 @@ export const HeroSectionAlt = () => {
                   onMouseLeave={() => setHoveredCard(null)}
                 >
                   <div
-                    className="relative px-4 py-3 rounded-xl bg-white border-2 transition-all duration-300 shadow-lg"
+                    className="relative px-3 py-2.5 rounded-xl bg-white border-2 transition-all duration-300 shadow-lg"
                     style={{
                       borderColor: hoveredCard === idx ? card.color : `${card.color}40`,
                       boxShadow:
@@ -486,7 +488,7 @@ export const HeroSectionAlt = () => {
                     {/* Card content */}
                     <div className="relative z-10">
                       <div
-                        className="text-[12px] font-bold tracking-wide mb-2 whitespace-nowrap"
+                        className="text-[11px] font-bold tracking-wide mb-1.5 whitespace-nowrap"
                         style={{ color: card.color }}
                       >
                         {card.label}
@@ -500,7 +502,7 @@ export const HeroSectionAlt = () => {
                       {/* Metric indicator */}
                       <div className="flex items-center gap-1.5 mt-2">
                         <div
-                          className="w-2 h-2 rounded-full animate-pulse"
+                          className="w-1.5 h-1.5 rounded-full animate-pulse"
                           style={{ backgroundColor: card.color }}
                         />
                         <span className="text-[10px] font-semibold text-slate-600 max-w-25 truncate">
@@ -514,7 +516,7 @@ export const HeroSectionAlt = () => {
             })}
 
             {/* Animated connection lines */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-10 ">
               <defs>
                 {metricCards.map((card, idx) => (
                   <linearGradient
@@ -535,14 +537,14 @@ export const HeroSectionAlt = () => {
               {[
                 {
                   x1: '18%',
-                  y1: '12%',
+                  y1: '8%',
                   x2: '50%',
                   y2: '50%',
                   color: metricCards[0].color,
                 },
                 {
                   x1: '82%',
-                  y1: '12%',
+                  y1: '8%',
                   x2: '50%',
                   y2: '50%',
                   color: metricCards[1].color,
@@ -563,14 +565,14 @@ export const HeroSectionAlt = () => {
                 },
                 {
                   x1: '18%',
-                  y1: '85%',
+                  y1: '92%',
                   x2: '50%',
                   y2: '50%',
                   color: metricCards[4].color,
                 },
                 {
                   x1: '82%',
-                  y1: '85%',
+                  y1: '92%',
                   x2: '50%',
                   y2: '50%',
                   color: metricCards[5].color,
@@ -615,7 +617,6 @@ export const HeroSectionAlt = () => {
               .animate-flow-line {
                 animation: flowLine 1.5s linear infinite;
               }
-              }
             `}</style>
           </div>
         </div>
@@ -629,6 +630,7 @@ export const HeroSectionAlt = () => {
         <span className="text-xs uppercase tracking-widest">Scroll</span>
         <div className="w-px h-8 bg-linear-to-b from-muted-foreground to-transparent animate-pulse" />
       </div> */}
+      <IntegrationLogosSection />
     </section>
   )
 }

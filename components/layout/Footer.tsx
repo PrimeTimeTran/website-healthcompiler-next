@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { Linkedin, Instagram, Mail, Youtube } from 'lucide-react'
@@ -6,14 +8,11 @@ import fmmaBadge from '@/assets/fmma-badge.png'
 import logo from '@/assets/healthcompiler-logo.webp'
 import hipaaSoc2Badge from '@/assets/hipaa-soc2-badge.png'
 import dpcAlliance from '@/assets/dpc-alliance.png'
-import amplify from '@/assets/amplify.png'
+import chromeStore from '@/assets/logos/chrome-store.png'
+import gcmIcon from '@/assets/logos/gcm-icon-logo.png'
 
 const quickLinks = [
   { label: 'Home', href: '/' },
-  // { label: 'Platform', href: '/platform' },
-  // { label: 'Solutions', href: '/solutions' },
-  // { label: 'Who We Serve', href: '/who-we-serve' },
-  // { label: 'Resources', href: '/resources' },
   { label: 'Integrations', href: '/platform/integration' },
   { label: 'Employer Analytics', href: '/solutions/employer-analytics' },
   { label: 'Health Outcomes', href: '/solutions/health-outcomes' },
@@ -139,11 +138,36 @@ export const Footer = () => {
                 alt="DPC Alliance"
                 className="h-12 w-auto object-contain mix-blend-multiply"
               />
-              {/* <Image
-                src={amplify}
-                alt="Amplify DPC"
-                className="h-12 w-auto object-contain mix-blend-multiply"
-              /> */}
+              <Image
+                src={chromeStore}
+                alt="Chrome Store"
+                width={180}
+                height={48}
+                className="object-contain mix-blend-multiply cursor-pointer"
+                onClick={() => {
+                  const newWindow = window.open(
+                    'https://chromewebstore.google.com/detail/healthcompiler-sidecar/cegmdcnobidpggfpllgnjnlpjibnjgab',
+                    '_blank'
+                  )
+
+                  newWindow?.focus()
+                }}
+              />
+              <Image
+                width={100}
+                height={20}
+                src={gcmIcon}
+                alt="Google Cloud Marketplace"
+                className="object-contain mix-blend-multiply cursor-pointer bg-red-500"
+                onClick={() => {
+                  const newWindow = window.open(
+                    'https://console.cloud.google.com/marketplace/product/healthcompiler-public/hc-insights?project=prime-phalanx-348007',
+                    '_blank'
+                  )
+
+                  newWindow?.focus()
+                }}
+              />
             </div>
           </div>
 

@@ -33,7 +33,7 @@ const Home = () => {
           Add from these:
           https://www.healthcompiler.com/
         */}
-        <IntegrationLogosSection />
+        {/* <IntegrationLogosSection /> */}
 
         {/* Section 1: One Platform. Many Solutions. */}
         <section className="py-20 md:py-32 bg-linear-to-b from-background to-muted/20 border-b border-border/40">
@@ -318,50 +318,74 @@ const Home = () => {
                   <div className="absolute inset-[30%] rounded-full border border-secondary-foreground/10" />
 
                   {/* Central Card */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="bg-card/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-border/50 w-[320px] relative z-20">
-                      <div className="flex items-center space-x-4 mb-8">
-                        <div className="h-14 w-14 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
-                          JD
+                  <div className="flex flex-col">
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="bg-card/90 backdrop-blur-md p-8 rounded-3xl shadow-2xl border border-border/50 w-[320px] relative z-20">
+                        <div className="flex items-center space-x-4 mb-8">
+                          <div className="h-14 w-14 rounded-full bg-linear-to-br from-primary to-accent flex items-center justify-center text-primary-foreground font-bold text-xl shadow-lg">
+                            JD
+                          </div>
+                          <div>
+                            <div className="font-bold text-lg">John Doe</div>
+                            <div className="text-sm text-muted-foreground font-medium">
+                              Patient ID: #84920
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <div className="font-bold text-lg">John Doe</div>
-                          <div className="text-sm text-muted-foreground font-medium">
-                            Patient ID: #84920
+                        <div className="space-y-4 mb-8">
+                          <div className="space-y-2">
+                            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+                              <span>Risk Score</span>
+                              <span>High</span>
+                            </div>
+                            <div className="h-2 bg-muted rounded-full overflow-hidden">
+                              <div className="h-full bg-destructive w-[85%] rounded-full" />
+                            </div>
+                          </div>
+                          <div className="space-y-2">
+                            <div className="flex justify-between text-xs font-medium text-muted-foreground">
+                              <span>Adherence</span>
+                              <span>Good</span>
+                            </div>
+                            <div className="h-2 bg-muted rounded-full overflow-hidden">
+                              <div className="h-full bg-success w-[70%] rounded-full" />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex -space-x-3">
+                          {[1, 2, 3, 4].map((i) => (
+                            <div
+                              key={i}
+                              className="h-10 w-10 rounded-full bg-background border-2 border-card flex items-center justify-center text-xs font-bold text-muted-foreground shadow-sm"
+                            >
+                              {i}
+                            </div>
+                          ))}
+                          <div className="h-10 px-3 rounded-full bg-primary/10 border-2 border-card flex items-center justify-center text-xs font-bold text-primary shadow-sm z-10">
+                            +5
                           </div>
                         </div>
                       </div>
-                      <div className="space-y-4 mb-8">
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-xs font-medium text-muted-foreground">
-                            <span>Risk Score</span>
-                            <span>High</span>
-                          </div>
-                          <div className="h-2 bg-muted rounded-full overflow-hidden">
-                            <div className="h-full bg-destructive w-[85%] rounded-full" />
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          <div className="flex justify-between text-xs font-medium text-muted-foreground">
-                            <span>Adherence</span>
-                            <span>Good</span>
-                          </div>
-                          <div className="h-2 bg-muted rounded-full overflow-hidden">
-                            <div className="h-full bg-success w-[70%] rounded-full" />
-                          </div>
+                    </div>
+                    <div className="flex items-center justify-center gap-6 pt-6 border-t border-border mt-128">
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-foreground">8M+</div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                          Messages Processed
                         </div>
                       </div>
-                      <div className="flex -space-x-3">
-                        {[1, 2, 3, 4].map((i) => (
-                          <div
-                            key={i}
-                            className="h-10 w-10 rounded-full bg-background border-2 border-card flex items-center justify-center text-xs font-bold text-muted-foreground shadow-sm"
-                          >
-                            {i}
-                          </div>
-                        ))}
-                        <div className="h-10 px-3 rounded-full bg-primary/10 border-2 border-card flex items-center justify-center text-xs font-bold text-primary shadow-sm z-10">
-                          +5
+                      <div className="w-px h-10 bg-border" />
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-foreground">4M+</div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                          Lab Tests Analyzed
+                        </div>
+                      </div>
+                      <div className="w-px h-10 bg-border" />
+                      <div className="text-center">
+                        <div className="text-2xl font-bold text-foreground">99.9%</div>
+                        <div className="text-xs text-muted-foreground uppercase tracking-wider">
+                          Uptime
                         </div>
                       </div>
                     </div>
@@ -379,6 +403,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
+
               <div className="order-1 lg:order-2">
                 <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
                   One Clear Record
@@ -503,37 +528,43 @@ const Home = () => {
                   icon: Stethoscope,
                   color: 'text-blue-500',
                   bg: 'bg-blue-500/10',
+                  href: '/primary-care',
                 },
                 {
                   title: 'Specialty Care',
                   icon: Activity,
                   color: 'text-purple-500',
                   bg: 'bg-purple-500/10',
+                  href: '/specialty-care',
                 },
                 {
                   title: 'Care Purchasers',
                   icon: Users,
                   color: 'text-emerald-500',
                   bg: 'bg-emerald-500/10',
+                  href: '/care-purchasers',
                 },
                 {
                   title: 'Value-Based Care',
                   icon: BarChart3,
                   color: 'text-orange-500',
                   bg: 'bg-orange-500/10',
+                  href: '/value-based-care',
                 },
               ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-card hover:bg-card/80 transition-all duration-300 p-8 rounded-3xl border border-border/50 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-lg cursor-default"
-                >
+                <a href={item.href} key={i}>
                   <div
-                    className={`h-16 w-16 ${item.bg} rounded-full flex items-center justify-center ${item.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    key={i}
+                    className="bg-card hover:bg-card/80 transition-all duration-300 p-8 rounded-3xl border border-border/50 flex flex-col items-center text-center group hover:-translate-y-2 hover:shadow-lg cursor-pointer"
                   >
-                    <item.icon className="h-8 w-8" />
+                    <div
+                      className={`h-16 w-16 ${item.bg} rounded-full flex items-center justify-center ${item.color} mb-6 group-hover:scale-110 transition-transform duration-300`}
+                    >
+                      <item.icon className="h-8 w-8" />
+                    </div>
+                    <h3 className="font-bold text-lg md:text-xl">{item.title}</h3>
                   </div>
-                  <h3 className="font-bold text-lg md:text-xl">{item.title}</h3>
-                </div>
+                </a>
               ))}
             </div>
           </div>
